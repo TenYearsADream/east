@@ -47,5 +47,8 @@
 <PLC Tags><Name>инкремент</Name><Path>AM</Path><Data Type>Int</Data Type><Logical Address>%MW760</Logical Address><Comment></Comment><Hmi Visible>True</Hmi Visible><Hmi Accessible>True</Hmi Accessible></PLC Tags>
 <PLC Tags><Name>декремент</Name><Path>AM</Path><Data Type>Int</Data Type><Logical Address>%MW764</Logical Address><Comment></Comment><Hmi Visible>True</Hmi Visible><Hmi Accessible>True</Hmi Accessible></PLC Tags>
 <PLC Tags><Name>номер&#160;выхода</Name><Path>AM</Path><Data Type>Int</Data Type><Logical Address>%MW766</Logical Address><Comment></Comment><Hmi Visible>True</Hmi Visible><Hmi Accessible>True</Hmi Accessible></PLC Tags>
+<PLC Tags><Name>real</Name><Path>AM</Path><Data Type>Real</Data Type><Logical Address>%MD768</Logical Address><Comment></Comment><Hmi Visible>True</Hmi Visible><Hmi Accessible>True</Hmi Accessible></PLC Tags>
+<PLC Tags><Name>dint</Name><Path>AM</Path><Data Type>DInt</Data Type><Logical Address>%MD772</Logical Address><Comment></Comment><Hmi Visible>True</Hmi Visible><Hmi Accessible>True</Hmi Accessible></PLC Tags>
+<PLC Tags><Name>bool</Name><Path>AM</Path><Data Type>Bool</Data Type><Logical Address>%M776.0</Logical Address><Comment></Comment><Hmi Visible>True</Hmi Visible><Hmi Accessible>True</Hmi Accessible></PLC Tags>
 <PLC Tags><Name></Name><Path></Path><Data Type></Data Type><Logical Address></Logical Address><Comment></Comment><Hmi Visible></Hmi Visible><Hmi Accessible></Hmi Accessible></PLC Tags>
 </dataroot>

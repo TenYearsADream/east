@@ -43,8 +43,11 @@ namespace lasetCtrl
 
         private void updateSignals(object sender, EventArgs e)
         {
-            tb_inc.Text = m_plc.tags.getInc().ToString();
+            tb_inc.Text = m_plc.tags.get_ust_tolshh_sloya().ToString();
 
+            tb_real.Text = m_plc.tags.get_real().ToString();
+            tb_dint.Text = m_plc.tags.get_dint().ToString();
+            tb_bool.Text = m_plc.tags.get_bool().ToString();
 
         }
 
@@ -54,8 +57,14 @@ namespace lasetCtrl
 
         private void btCtl_Click(object sender, EventArgs e)
         {
-            var val = UInt16.Parse(tb_ctl.Text);
-            m_plc.tags.setInc(val);
+            var val = Int16.Parse(tb_ctl.Text);
+            //m_plc.tags.setInc(val);
+            m_plc.tags.set_nomer_vyhoda(val);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            m_plc.tags.set_bool(checkBox1.Checked);
         }
     }
 }

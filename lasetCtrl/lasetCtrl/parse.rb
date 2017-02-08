@@ -10,10 +10,17 @@ f.puts "using System;\n"
 f.puts " namespace lasetCtrl {\n\n" +   "partial class Tags {\n" 
 result = ""
 
-doc = Nokogiri::XML(File.open("tags/am.xml"))
+files = Dir["tags/*"]
 
 
+files.each do |file|
+doc = Nokogiri::XML(File.open(file))
+
+f.puts "//-----------------------------------------------------------------------------"
+f.puts "//" + file
+f.puts "//-----------------------------------------------------------------------------" + "\n"
 doc.xpath('//PLC').each do |el|
+
 
 
 name =  Translit.convert(el.xpath('Name').text, :english).downcase
@@ -24,9 +31,9 @@ name3 = name1.gsub /[^A-Za-z0-9]/, '_'
 path = el.xpath('Path').text
 type = el.xpath('Data').text
 addr = el.xpath('Logical').text
-addrval = addr.gsub /[^0-9]/,''
+addrval = addr.gsub /[^0-9\.]/,''
 addrwidth = addr.gsub /[^A-Z]/ , ''
-puts name3 + "  " + path  + "  " + type + "  " + addrval + "  " + addrwidth
+#puts name3 + "  " + path  + "  " + type + "  " + addrval + "  " + addrwidth
 if name3 != ""
 nameCyr = el.xpath('Name').text.encode('windows-1251', {
   :invalid => :replace,
@@ -34,16 +41,37 @@ nameCyr = el.xpath('Name').text.encode('windows-1251', {
       :replace => '?'
       })
 
-f.puts "/\/\ #{nameCyr},   #{type}, #{addr}  "
-result = "    public #{type == "Real" ? "float" : type == "Int" ? "Int16" : type == "DInt" ? "Int64" : "nan" } get_#{name3} ()\n" \
-"    { return (#{type == "Real" ? "float" : type == "Int" ? "Int16" : type == "DInt" ? "Int64" : "nan" }) m_plc.get#{path == "AM" ? "M": "X"}#{ type == "Int" ? "Word": type == "DInt" ? "DWord" : type == "Real" ? "Real" : "X"}(#{addrval}); }\n\n"
+region = !!( addr =~ /M/)	  ? "M" : "X"
+width = !!( addr =~ /\%.D\d/) ? "UInt32" :!!( addr =~ /\%.W\d/) ? "UInt16" : !!( addr =~ /\%.\d/) ? "Bit" : "X"
+varType = type == "Real" ? "float" : type == "Int" ? "Int16" : type == "DInt" ? "Int32" : type == "Bool" ? "bool" : "nan"
+
+
+addrParts = addrval.split(".")
+intAdrr =  addrParts[0].to_s 
+bitAddr = addrParts.count > 1 ? addrParts[1].to_s : "x"
+signatura = type == "Bool" ? "#{intAdrr}, #{bitAddr}" : intAdrr
+	  
+getingType = type == "Real" ? "Float" : width	  
+	  
+f.puts "/\/\ #{nameCyr},   #{type}, #{addr}   reg = #{region}  width = #{width}"
+
+result = "    public #{varType} get_#{name3} ()\n" \
+"    { return (#{varType}) m_mem.get#{region}#{ getingType}(#{signatura}); }\n\n"
  puts result
 
-f.puts result
-end
-end
+outType = type == "Real" ? "float" : type == "Int" ? "UInt16" : type == "DInt" ? "UInt32" : type == "Bool" ? "bool" : "nan"
 
+setter =  "    public void set_#{name3} (#{varType} val)\n" \
+"    { m_mem.set#{region}#{ getingType}(#{signatura}, (#{outType}) val); }\n\n"
+
+f.puts result
+f.puts setter
+end
+end
+end
 f.puts "    }\n }"
+
+
 
 }
 #File.write('tags_ag.cs', allfunctions1)

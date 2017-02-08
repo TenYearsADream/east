@@ -11,21 +11,11 @@ namespace lasetCtrl
 
         public Tags(Memory val)
         {
-            m_plc = val;
+            m_mem = val;
 
         }
 
-        public UInt16 getInc()
-        {
-            return m_plc.getMWord(760);
-        }
-
-        public  void setInc(UInt16 val)
-        {
-            m_plc.setWord(S7Consts.S7AreaMK, 766, val);
-        }
-
-        Memory m_plc;
+        Memory m_mem;
 
     }
 }

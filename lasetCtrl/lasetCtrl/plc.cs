@@ -50,7 +50,7 @@ namespace lasetCtrl
                 if (isConnect)
                 {
 
-                    res = client.ReadArea(S7Consts.S7AreaMK, 1, 0, 1000, S7Consts.S7WLByte, m_mem.m_mRegion);
+                    res = client.ReadArea(S7Consts.S7AreaMK, 0, 0, 800, S7Consts.S7WLByte, m_mem.m_mRegion);
 
                     if (m_mem.getStoreElement(ref el))
                     {
