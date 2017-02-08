@@ -10,6 +10,8 @@ f.puts "using System;\n"
 f.puts " namespace lasetCtrl {\n\n" +   "partial class Tags {\n" 
 result = ""
 
+usMap = Array.new(1000) 
+
 files = Dir["tags/*"]
 
 
@@ -24,9 +26,11 @@ doc.xpath('//PLC').each do |el|
 
 
 name =  Translit.convert(el.xpath('Name').text, :english).downcase
-name1 = name.gsub('(', '_').gsub(')','_').gsub('-','').gsub(' ','')
+puts name
+name1 = name.gsub('(', '_').gsub(')','_').gsub('-','_').gsub(' ','')
 name3 = name1.gsub /[^A-Za-z0-9]/, '_'
-
+name3 = name3.gsub /__/, '_'
+name3 = name3.gsub /_$/, ''
 
 path = el.xpath('Path').text
 type = el.xpath('Data').text
@@ -64,6 +68,11 @@ outType = type == "Real" ? "float" : type == "Int" ? "UInt16" : type == "DInt" ?
 setter =  "    public void set_#{name3} (#{varType} val)\n" \
 "    { m_mem.set#{region}#{ getingType}(#{signatura}, (#{outType}) val); }\n\n"
 
+usMap[intAdrr.to_i] = 1
+usMap[intAdrr.to_i + 1] = 1 if width == "UInt32" || width == "UInt16"
+usMap[intAdrr.to_i + 2] = 1 if width == "UInt32" 
+usMap[intAdrr.to_i + 3] = 1 if width == "UInt32" 
+
 f.puts result
 f.puts setter
 end
@@ -71,7 +80,13 @@ end
 end
 f.puts "    }\n }"
 
-
-
+for j in 0..9
+val = ""
+for i in 0..99
+   val += usMap[j*100 + i] == 1 ? "+" : "_"
+  
+end
+ puts val
+ end
 }
 #File.write('tags_ag.cs', allfunctions1)

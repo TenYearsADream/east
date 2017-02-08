@@ -58,7 +58,7 @@ namespace lasetCtrl
                     }
                 }
 
-                Thread.Sleep(50);
+                Thread.Sleep(100);
             }
 
         }

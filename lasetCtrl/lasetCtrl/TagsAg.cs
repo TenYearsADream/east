@@ -13,17 +13,17 @@ partial class Tags {
     { m_mem.setMFloat(604, (float) val); }
 
 // темп (1-3),   Real, %MD608   reg = M  width = UInt32
-    public float get_temp__13_ ()
+    public float get_temp_1_3 ()
     { return (float) m_mem.getMFloat(608); }
 
-    public void set_temp__13_ (float val)
+    public void set_temp_1_3 (float val)
     { m_mem.setMFloat(608, (float) val); }
 
 // темп (4-6),   Real, %MD612   reg = M  width = UInt32
-    public float get_temp__46_ ()
+    public float get_temp_4_6 ()
     { return (float) m_mem.getMFloat(612); }
 
-    public void set_temp__46_ (float val)
+    public void set_temp_4_6 (float val)
     { m_mem.setMFloat(612, (float) val); }
 
 // давл9,   Real, %MD616   reg = M  width = UInt32
@@ -48,24 +48,24 @@ partial class Tags {
     { m_mem.setMFloat(624, (float) val); }
 
 // кл63-1,   Int, %MW628   reg = M  width = UInt16
-    public Int16 get_kl631 ()
+    public Int16 get_kl63_1 ()
     { return (Int16) m_mem.getMUInt16(628); }
 
-    public void set_kl631 (Int16 val)
+    public void set_kl63_1 (Int16 val)
     { m_mem.setMUInt16(628, (UInt16) val); }
 
 // кл63-2,   Int, %MW630   reg = M  width = UInt16
-    public Int16 get_kl632 ()
+    public Int16 get_kl63_2 ()
     { return (Int16) m_mem.getMUInt16(630); }
 
-    public void set_kl632 (Int16 val)
+    public void set_kl63_2 (Int16 val)
     { m_mem.setMUInt16(630, (UInt16) val); }
 
 // кл100-3,   Int, %MW632   reg = M  width = UInt16
-    public Int16 get_kl1003 ()
+    public Int16 get_kl100_3 ()
     { return (Int16) m_mem.getMUInt16(632); }
 
-    public void set_kl1003 (Int16 val)
+    public void set_kl100_3 (Int16 val)
     { m_mem.setMUInt16(632, (UInt16) val); }
 
 // пневм1,   Int, %MW634   reg = M  width = UInt16
@@ -265,17 +265,17 @@ partial class Tags {
     { m_mem.setMFloat(738, (float) val); }
 
 // ТЭН (1-3) тек мощн,   Real, %MD678   reg = M  width = UInt32
-    public float get_tjen__13__tek_moshhn ()
+    public float get_tjen_1_3_tek_moshhn ()
     { return (float) m_mem.getMFloat(678); }
 
-    public void set_tjen__13__tek_moshhn (float val)
+    public void set_tjen_1_3_tek_moshhn (float val)
     { m_mem.setMFloat(678, (float) val); }
 
 // ТЭН (4-6) тек мощн,   Real, %MD742   reg = M  width = UInt32
-    public float get_tjen__46__tek_moshhn ()
+    public float get_tjen_4_6_tek_moshhn ()
     { return (float) m_mem.getMFloat(742); }
 
-    public void set_tjen__46__tek_moshhn (float val)
+    public void set_tjen_4_6_tek_moshhn (float val)
     { m_mem.setMFloat(742, (float) val); }
 
 // охл скан,   Int, %MW746   reg = M  width = UInt16
@@ -359,45 +359,45 @@ partial class Tags {
 //tags/com.xml
 //-----------------------------------------------------------------------------
 // ком кл63-1 откр,   Bool, %M517.0   reg = M  width = Bit
-    public bool get_kom_kl631_otkr ()
+    public bool get_kom_kl63_1_otkr ()
     { return (bool) m_mem.getMBit(517, 0); }
 
-    public void set_kom_kl631_otkr (bool val)
+    public void set_kom_kl63_1_otkr (bool val)
     { m_mem.setMBit(517, 0, (bool) val); }
 
 // ком кл63-1 закр,   Bool, %M517.1   reg = M  width = Bit
-    public bool get_kom_kl631_zakr ()
+    public bool get_kom_kl63_1_zakr ()
     { return (bool) m_mem.getMBit(517, 1); }
 
-    public void set_kom_kl631_zakr (bool val)
+    public void set_kom_kl63_1_zakr (bool val)
     { m_mem.setMBit(517, 1, (bool) val); }
 
 // ком кл63-2 откр,   Bool, %M517.2   reg = M  width = Bit
-    public bool get_kom_kl632_otkr ()
+    public bool get_kom_kl63_2_otkr ()
     { return (bool) m_mem.getMBit(517, 2); }
 
-    public void set_kom_kl632_otkr (bool val)
+    public void set_kom_kl63_2_otkr (bool val)
     { m_mem.setMBit(517, 2, (bool) val); }
 
 // ком кл63-2 закр,   Bool, %M517.3   reg = M  width = Bit
-    public bool get_kom_kl632_zakr ()
+    public bool get_kom_kl63_2_zakr ()
     { return (bool) m_mem.getMBit(517, 3); }
 
-    public void set_kom_kl632_zakr (bool val)
+    public void set_kom_kl63_2_zakr (bool val)
     { m_mem.setMBit(517, 3, (bool) val); }
 
 // ком кл100-3 откр,   Bool, %M517.4   reg = M  width = Bit
-    public bool get_kom_kl1003_otkr ()
+    public bool get_kom_kl100_3_otkr ()
     { return (bool) m_mem.getMBit(517, 4); }
 
-    public void set_kom_kl1003_otkr (bool val)
+    public void set_kom_kl100_3_otkr (bool val)
     { m_mem.setMBit(517, 4, (bool) val); }
 
 // ком кл100-3 закр,   Bool, %M517.5   reg = M  width = Bit
-    public bool get_kom_kl1003_zakr ()
+    public bool get_kom_kl100_3_zakr ()
     { return (bool) m_mem.getMBit(517, 5); }
 
-    public void set_kom_kl1003_zakr (bool val)
+    public void set_kom_kl100_3_zakr (bool val)
     { m_mem.setMBit(517, 5, (bool) val); }
 
 // ком замок шериф,   Bool, %M517.6   reg = M  width = Bit
@@ -618,10 +618,10 @@ partial class Tags {
     { m_mem.setMBit(522, 6, (bool) val); }
 
 // ком обнулить линейку,   Bool, %M522.7   reg = M  width = Bit
-    public bool get_kom_obnulit__linejku ()
+    public bool get_kom_obnulit_linejku ()
     { return (bool) m_mem.getMBit(522, 7); }
 
-    public void set_kom_obnulit__linejku (bool val)
+    public void set_kom_obnulit_linejku (bool val)
     { m_mem.setMBit(522, 7, (bool) val); }
 
 // ком ш2 реле,   Bool, %M523.0   reg = M  width = Bit
@@ -653,17 +653,17 @@ partial class Tags {
     { m_mem.setMBit(524, 2, (bool) val); }
 
 // ком ТЭН(1-3),   Bool, %M524.3   reg = M  width = Bit
-    public bool get_kom_tjen_13_ ()
+    public bool get_kom_tjen_1_3 ()
     { return (bool) m_mem.getMBit(524, 3); }
 
-    public void set_kom_tjen_13_ (bool val)
+    public void set_kom_tjen_1_3 (bool val)
     { m_mem.setMBit(524, 3, (bool) val); }
 
 // ком ТЭН(4-6),   Bool, %M524.4   reg = M  width = Bit
-    public bool get_kom_tjen_46_ ()
+    public bool get_kom_tjen_4_6 ()
     { return (bool) m_mem.getMBit(524, 4); }
 
-    public void set_kom_tjen_46_ (bool val)
+    public void set_kom_tjen_4_6 (bool val)
     { m_mem.setMBit(524, 4, (bool) val); }
 
 // ком нул точ,   Bool, %M524.5   reg = M  width = Bit
@@ -838,17 +838,17 @@ partial class Tags {
     { m_mem.setMFloat(232, (float) val); }
 
 // уст темп ТЭН(1-3),   Real, %MD236   reg = M  width = UInt32
-    public float get_ust_temp_tjen_13_ ()
+    public float get_ust_temp_tjen_1_3 ()
     { return (float) m_mem.getMFloat(236); }
 
-    public void set_ust_temp_tjen_13_ (float val)
+    public void set_ust_temp_tjen_1_3 (float val)
     { m_mem.setMFloat(236, (float) val); }
 
 // уст темп ТЭН(4-6),   Real, %MD240   reg = M  width = UInt32
-    public float get_ust_temp_tjen_46_ ()
+    public float get_ust_temp_tjen_4_6 ()
     { return (float) m_mem.getMFloat(240); }
 
-    public void set_ust_temp_tjen_46_ (float val)
+    public void set_ust_temp_tjen_4_6 (float val)
     { m_mem.setMFloat(240, (float) val); }
 
 // уст слой кар поз слева,   Real, %MD132   reg = M  width = UInt32
@@ -929,73 +929,73 @@ partial class Tags {
     { m_mem.setMFloat(200, (float) val); }
 
 // ТЭН (1-3)_Gain,   Real, %MD212   reg = M  width = UInt32
-    public float get_tjen__13__gain ()
+    public float get_tjen_1_3_gain ()
     { return (float) m_mem.getMFloat(212); }
 
-    public void set_tjen__13__gain (float val)
+    public void set_tjen_1_3_gain (float val)
     { m_mem.setMFloat(212, (float) val); }
 
 // ТЭН (1-3)_PWeighting,   Real, %MD220   reg = M  width = UInt32
-    public float get_tjen__13__pweighting ()
+    public float get_tjen_1_3_pweighting ()
     { return (float) m_mem.getMFloat(220); }
 
-    public void set_tjen__13__pweighting (float val)
+    public void set_tjen_1_3_pweighting (float val)
     { m_mem.setMFloat(220, (float) val); }
 
 // ТЭН (1-3)_Ti,   Real, %MD244   reg = M  width = UInt32
-    public float get_tjen__13__ti ()
+    public float get_tjen_1_3_ti ()
     { return (float) m_mem.getMFloat(244); }
 
-    public void set_tjen__13__ti (float val)
+    public void set_tjen_1_3_ti (float val)
     { m_mem.setMFloat(244, (float) val); }
 
 // ТЭН (1-3)_Td,   Real, %MD248   reg = M  width = UInt32
-    public float get_tjen__13__td ()
+    public float get_tjen_1_3_td ()
     { return (float) m_mem.getMFloat(248); }
 
-    public void set_tjen__13__td (float val)
+    public void set_tjen_1_3_td (float val)
     { m_mem.setMFloat(248, (float) val); }
 
 // ТЭН (1-3)_DWeighting,   Real, %MD252   reg = M  width = UInt32
-    public float get_tjen__13__dweighting ()
+    public float get_tjen_1_3_dweighting ()
     { return (float) m_mem.getMFloat(252); }
 
-    public void set_tjen__13__dweighting (float val)
+    public void set_tjen_1_3_dweighting (float val)
     { m_mem.setMFloat(252, (float) val); }
 
 // ТЭН (4-6)_Gain,   Real, %MD256   reg = M  width = UInt32
-    public float get_tjen__46__gain ()
+    public float get_tjen_4_6_gain ()
     { return (float) m_mem.getMFloat(256); }
 
-    public void set_tjen__46__gain (float val)
+    public void set_tjen_4_6_gain (float val)
     { m_mem.setMFloat(256, (float) val); }
 
 // ТЭН (4-6)_PWeighting,   Real, %MD260   reg = M  width = UInt32
-    public float get_tjen__46__pweighting ()
+    public float get_tjen_4_6_pweighting ()
     { return (float) m_mem.getMFloat(260); }
 
-    public void set_tjen__46__pweighting (float val)
+    public void set_tjen_4_6_pweighting (float val)
     { m_mem.setMFloat(260, (float) val); }
 
 // ТЭН (4-6)_Ti,   Real, %MD264   reg = M  width = UInt32
-    public float get_tjen__46__ti ()
+    public float get_tjen_4_6_ti ()
     { return (float) m_mem.getMFloat(264); }
 
-    public void set_tjen__46__ti (float val)
+    public void set_tjen_4_6_ti (float val)
     { m_mem.setMFloat(264, (float) val); }
 
 // ТЭН (4-6)_Td,   Real, %MD268   reg = M  width = UInt32
-    public float get_tjen__46__td ()
+    public float get_tjen_4_6_td ()
     { return (float) m_mem.getMFloat(268); }
 
-    public void set_tjen__46__td (float val)
+    public void set_tjen_4_6_td (float val)
     { m_mem.setMFloat(268, (float) val); }
 
 // ТЭН (4-6)_DWeighting,   Real, %MD272   reg = M  width = UInt32
-    public float get_tjen__46__dweighting ()
+    public float get_tjen_4_6_dweighting ()
     { return (float) m_mem.getMFloat(272); }
 
-    public void set_tjen__46__dweighting (float val)
+    public void set_tjen_4_6_dweighting (float val)
     { m_mem.setMFloat(272, (float) val); }
 
 // уст стол отн расст авто,   Real, %MD204   reg = M  width = UInt32
@@ -1013,17 +1013,17 @@ partial class Tags {
     { m_mem.setMUInt32(156, (UInt32) val); }
 
 // уст время ТЭН 1-3,   DInt, %MD160   reg = M  width = UInt32
-    public Int32 get_ust_vremya_tjen_13 ()
+    public Int32 get_ust_vremya_tjen_1_3 ()
     { return (Int32) m_mem.getMUInt32(160); }
 
-    public void set_ust_vremya_tjen_13 (Int32 val)
+    public void set_ust_vremya_tjen_1_3 (Int32 val)
     { m_mem.setMUInt32(160, (UInt32) val); }
 
 // уст время ТЭН 4-6,   DInt, %MD164   reg = M  width = UInt32
-    public Int32 get_ust_vremya_tjen_46 ()
+    public Int32 get_ust_vremya_tjen_4_6 ()
     { return (Int32) m_mem.getMUInt32(164); }
 
-    public void set_ust_vremya_tjen_46 (Int32 val)
+    public void set_ust_vremya_tjen_4_6 (Int32 val)
     { m_mem.setMUInt32(164, (UInt32) val); }
 
 // ТЭН стола макс мощн,   Real, %MD276   reg = M  width = UInt32
@@ -1034,17 +1034,17 @@ partial class Tags {
     { m_mem.setMFloat(276, (float) val); }
 
 // ТЭН (1-3) макс мощн,   Real, %MD280   reg = M  width = UInt32
-    public float get_tjen__13__max_moshhn ()
+    public float get_tjen_1_3_max_moshhn ()
     { return (float) m_mem.getMFloat(280); }
 
-    public void set_tjen__13__max_moshhn (float val)
+    public void set_tjen_1_3_max_moshhn (float val)
     { m_mem.setMFloat(280, (float) val); }
 
 // ТЭН (4-6) макс мощн,   Real, %MD284   reg = M  width = UInt32
-    public float get_tjen__46__max_moshhn ()
+    public float get_tjen_4_6_max_moshhn ()
     { return (float) m_mem.getMFloat(284); }
 
-    public void set_tjen__46__max_moshhn (float val)
+    public void set_tjen_4_6_max_moshhn (float val)
     { m_mem.setMFloat(284, (float) val); }
 
 // уст врем раб ш3,   Real, %MD288   reg = M  width = UInt32
@@ -1114,66 +1114,66 @@ partial class Tags {
     { m_mem.setMBit(510, 6, (bool) val); }
 
 // кл 100-3 закр,   Bool, %M510.7   reg = M  width = Bit
-    public bool get_kl_1003_zakr ()
+    public bool get_kl_100_3_zakr ()
     { return (bool) m_mem.getMBit(510, 7); }
 
-    public void set_kl_1003_zakr (bool val)
+    public void set_kl_100_3_zakr (bool val)
     { m_mem.setMBit(510, 7, (bool) val); }
 
 // кл 100-3 откр,   Bool, %M511.0   reg = M  width = Bit
-    public bool get_kl_1003_otkr ()
+    public bool get_kl_100_3_otkr ()
     { return (bool) m_mem.getMBit(511, 0); }
 
-    public void set_kl_1003_otkr (bool val)
+    public void set_kl_100_3_otkr (bool val)
     { m_mem.setMBit(511, 0, (bool) val); }
 
 // кл 63-2 закр,   Bool, %M511.1   reg = M  width = Bit
-    public bool get_kl_632_zakr ()
+    public bool get_kl_63_2_zakr ()
     { return (bool) m_mem.getMBit(511, 1); }
 
-    public void set_kl_632_zakr (bool val)
+    public void set_kl_63_2_zakr (bool val)
     { m_mem.setMBit(511, 1, (bool) val); }
 
 // кл 63-2 откр,   Bool, %M511.2   reg = M  width = Bit
-    public bool get_kl_632_otkr ()
+    public bool get_kl_63_2_otkr ()
     { return (bool) m_mem.getMBit(511, 2); }
 
-    public void set_kl_632_otkr (bool val)
+    public void set_kl_63_2_otkr (bool val)
     { m_mem.setMBit(511, 2, (bool) val); }
 
 // кл 63-1 закр,   Bool, %M511.3   reg = M  width = Bit
-    public bool get_kl_631_zakr ()
+    public bool get_kl_63_1_zakr ()
     { return (bool) m_mem.getMBit(511, 3); }
 
-    public void set_kl_631_zakr (bool val)
+    public void set_kl_63_1_zakr (bool val)
     { m_mem.setMBit(511, 3, (bool) val); }
 
 // кл 63-1 откр,   Bool, %M511.4   reg = M  width = Bit
-    public bool get_kl_631_otkr ()
+    public bool get_kl_63_1_otkr ()
     { return (bool) m_mem.getMBit(511, 4); }
 
-    public void set_kl_631_otkr (bool val)
+    public void set_kl_63_1_otkr (bool val)
     { m_mem.setMBit(511, 4, (bool) val); }
 
 // хрень от кл63-1,   Bool, %M512.7   reg = M  width = Bit
-    public bool get_hren__ot_kl631 ()
+    public bool get_hren_ot_kl63_1 ()
     { return (bool) m_mem.getMBit(512, 7); }
 
-    public void set_hren__ot_kl631 (bool val)
+    public void set_hren_ot_kl63_1 (bool val)
     { m_mem.setMBit(512, 7, (bool) val); }
 
 // хрень от кл63-2,   Bool, %M513.0   reg = M  width = Bit
-    public bool get_hren__ot_kl632 ()
+    public bool get_hren_ot_kl63_2 ()
     { return (bool) m_mem.getMBit(513, 0); }
 
-    public void set_hren__ot_kl632 (bool val)
+    public void set_hren_ot_kl63_2 (bool val)
     { m_mem.setMBit(513, 0, (bool) val); }
 
 // крень от кл100-3,   Bool, %M513.1   reg = M  width = Bit
-    public bool get_kren__ot_kl1003 ()
+    public bool get_kren_ot_kl100_3 ()
     { return (bool) m_mem.getMBit(513, 1); }
 
-    public void set_kren__ot_kl1003 (bool val)
+    public void set_kren_ot_kl100_3 (bool val)
     { m_mem.setMBit(513, 1, (bool) val); }
 
 // пит каретки,   Bool, %M513.2   reg = M  width = Bit
@@ -1541,10 +1541,10 @@ partial class Tags {
     { m_mem.setMBit(512, 0, (bool) val); }
 
 // деталь гот,   Bool, %M512.1   reg = M  width = Bit
-    public bool get_detal__got ()
+    public bool get_detal_got ()
     { return (bool) m_mem.getMBit(512, 1); }
 
-    public void set_detal__got (bool val)
+    public void set_detal_got (bool val)
     { m_mem.setMBit(512, 1, (bool) val); }
 
 // дм1,   DInt, %MD512   reg = M  width = UInt32
@@ -1586,45 +1586,45 @@ partial class Tags {
     { m_mem.setMBit(500, 4, (bool) val); }
 
 // выхд кл63-1 откр,   Bool, %M500.5   reg = M  width = Bit
-    public bool get_vyhd_kl631_otkr ()
+    public bool get_vyhd_kl63_1_otkr ()
     { return (bool) m_mem.getMBit(500, 5); }
 
-    public void set_vyhd_kl631_otkr (bool val)
+    public void set_vyhd_kl63_1_otkr (bool val)
     { m_mem.setMBit(500, 5, (bool) val); }
 
 // выхд кл63-1 закр,   Bool, %M500.6   reg = M  width = Bit
-    public bool get_vyhd_kl631_zakr ()
+    public bool get_vyhd_kl63_1_zakr ()
     { return (bool) m_mem.getMBit(500, 6); }
 
-    public void set_vyhd_kl631_zakr (bool val)
+    public void set_vyhd_kl63_1_zakr (bool val)
     { m_mem.setMBit(500, 6, (bool) val); }
 
 // выхд кл63-2 откр,   Bool, %M500.7   reg = M  width = Bit
-    public bool get_vyhd_kl632_otkr ()
+    public bool get_vyhd_kl63_2_otkr ()
     { return (bool) m_mem.getMBit(500, 7); }
 
-    public void set_vyhd_kl632_otkr (bool val)
+    public void set_vyhd_kl63_2_otkr (bool val)
     { m_mem.setMBit(500, 7, (bool) val); }
 
 // выхд кл63-2 закр,   Bool, %M501.0   reg = M  width = Bit
-    public bool get_vyhd_kl632_zakr ()
+    public bool get_vyhd_kl63_2_zakr ()
     { return (bool) m_mem.getMBit(501, 0); }
 
-    public void set_vyhd_kl632_zakr (bool val)
+    public void set_vyhd_kl63_2_zakr (bool val)
     { m_mem.setMBit(501, 0, (bool) val); }
 
 // выхд кл100-3 откр,   Bool, %M501.1   reg = M  width = Bit
-    public bool get_vyhd_kl1003_otkr ()
+    public bool get_vyhd_kl100_3_otkr ()
     { return (bool) m_mem.getMBit(501, 1); }
 
-    public void set_vyhd_kl1003_otkr (bool val)
+    public void set_vyhd_kl100_3_otkr (bool val)
     { m_mem.setMBit(501, 1, (bool) val); }
 
 // выхд кл100-3 закр,   Bool, %M501.2   reg = M  width = Bit
-    public bool get_vyhd_kl1003_zakr ()
+    public bool get_vyhd_kl100_3_zakr ()
     { return (bool) m_mem.getMBit(501, 2); }
 
-    public void set_vyhd_kl1003_zakr (bool val)
+    public void set_vyhd_kl100_3_zakr (bool val)
     { m_mem.setMBit(501, 2, (bool) val); }
 
 // выхд ш3 вперёд,   Bool, %M501.3   reg = M  width = Bit
@@ -1733,17 +1733,17 @@ partial class Tags {
     { m_mem.setMBit(503, 1, (bool) val); }
 
 // выхд ТЭН (1-3),   Bool, %M503.2   reg = M  width = Bit
-    public bool get_vyhd_tjen__13_ ()
+    public bool get_vyhd_tjen_1_3 ()
     { return (bool) m_mem.getMBit(503, 2); }
 
-    public void set_vyhd_tjen__13_ (bool val)
+    public void set_vyhd_tjen_1_3 (bool val)
     { m_mem.setMBit(503, 2, (bool) val); }
 
 // выхд ТЭН (4-6),   Bool, %M503.3   reg = M  width = Bit
-    public bool get_vyhd_tjen__46_ ()
+    public bool get_vyhd_tjen_4_6 ()
     { return (bool) m_mem.getMBit(503, 3); }
 
-    public void set_vyhd_tjen__46_ (bool val)
+    public void set_vyhd_tjen_4_6 (bool val)
     { m_mem.setMBit(503, 3, (bool) val); }
 
 // выхд ТЭН стола,   Bool, %M503.4   reg = M  width = Bit
@@ -1761,94 +1761,94 @@ partial class Tags {
     { m_mem.setMBit(503, 5, (bool) val); }
 
 // выхд резерв(1),   Bool, %M503.6   reg = M  width = Bit
-    public bool get_vyhd_rezerv_1_ ()
+    public bool get_vyhd_rezerv_1 ()
     { return (bool) m_mem.getMBit(503, 6); }
 
-    public void set_vyhd_rezerv_1_ (bool val)
+    public void set_vyhd_rezerv_1 (bool val)
     { m_mem.setMBit(503, 6, (bool) val); }
 
 // выхд резерв(2),   Bool, %M503.7   reg = M  width = Bit
-    public bool get_vyhd_rezerv_2_ ()
+    public bool get_vyhd_rezerv_2 ()
     { return (bool) m_mem.getMBit(503, 7); }
 
-    public void set_vyhd_rezerv_2_ (bool val)
+    public void set_vyhd_rezerv_2 (bool val)
     { m_mem.setMBit(503, 7, (bool) val); }
 
 // выхд резерв(3),   Bool, %M504.0   reg = M  width = Bit
-    public bool get_vyhd_rezerv_3_ ()
+    public bool get_vyhd_rezerv_3 ()
     { return (bool) m_mem.getMBit(504, 0); }
 
-    public void set_vyhd_rezerv_3_ (bool val)
+    public void set_vyhd_rezerv_3 (bool val)
     { m_mem.setMBit(504, 0, (bool) val); }
 
 // выхд резерв(4),   Bool, %M504.1   reg = M  width = Bit
-    public bool get_vyhd_rezerv_4_ ()
+    public bool get_vyhd_rezerv_4 ()
     { return (bool) m_mem.getMBit(504, 1); }
 
-    public void set_vyhd_rezerv_4_ (bool val)
+    public void set_vyhd_rezerv_4 (bool val)
     { m_mem.setMBit(504, 1, (bool) val); }
 
 // выхд резерв(5),   Bool, %M504.2   reg = M  width = Bit
-    public bool get_vyhd_rezerv_5_ ()
+    public bool get_vyhd_rezerv_5 ()
     { return (bool) m_mem.getMBit(504, 2); }
 
-    public void set_vyhd_rezerv_5_ (bool val)
+    public void set_vyhd_rezerv_5 (bool val)
     { m_mem.setMBit(504, 2, (bool) val); }
 
 // выхд резерв(6),   Bool, %M504.3   reg = M  width = Bit
-    public bool get_vyhd_rezerv_6_ ()
+    public bool get_vyhd_rezerv_6 ()
     { return (bool) m_mem.getMBit(504, 3); }
 
-    public void set_vyhd_rezerv_6_ (bool val)
+    public void set_vyhd_rezerv_6 (bool val)
     { m_mem.setMBit(504, 3, (bool) val); }
 
 // выхд резерв(7),   Bool, %M504.4   reg = M  width = Bit
-    public bool get_vyhd_rezerv_7_ ()
+    public bool get_vyhd_rezerv_7 ()
     { return (bool) m_mem.getMBit(504, 4); }
 
-    public void set_vyhd_rezerv_7_ (bool val)
+    public void set_vyhd_rezerv_7 (bool val)
     { m_mem.setMBit(504, 4, (bool) val); }
 
 // выхд резерв(8),   Bool, %M504.5   reg = M  width = Bit
-    public bool get_vyhd_rezerv_8_ ()
+    public bool get_vyhd_rezerv_8 ()
     { return (bool) m_mem.getMBit(504, 5); }
 
-    public void set_vyhd_rezerv_8_ (bool val)
+    public void set_vyhd_rezerv_8 (bool val)
     { m_mem.setMBit(504, 5, (bool) val); }
 
 // выхд резерв(9),   Bool, %M504.6   reg = M  width = Bit
-    public bool get_vyhd_rezerv_9_ ()
+    public bool get_vyhd_rezerv_9 ()
     { return (bool) m_mem.getMBit(504, 6); }
 
-    public void set_vyhd_rezerv_9_ (bool val)
+    public void set_vyhd_rezerv_9 (bool val)
     { m_mem.setMBit(504, 6, (bool) val); }
 
 // выхд резерв(10),   Bool, %M504.7   reg = M  width = Bit
-    public bool get_vyhd_rezerv_10_ ()
+    public bool get_vyhd_rezerv_10 ()
     { return (bool) m_mem.getMBit(504, 7); }
 
-    public void set_vyhd_rezerv_10_ (bool val)
+    public void set_vyhd_rezerv_10 (bool val)
     { m_mem.setMBit(504, 7, (bool) val); }
 
 // выхд резерв(11),   Bool, %M505.0   reg = M  width = Bit
-    public bool get_vyhd_rezerv_11_ ()
+    public bool get_vyhd_rezerv_11 ()
     { return (bool) m_mem.getMBit(505, 0); }
 
-    public void set_vyhd_rezerv_11_ (bool val)
+    public void set_vyhd_rezerv_11 (bool val)
     { m_mem.setMBit(505, 0, (bool) val); }
 
 // выхд резерв(12),   Bool, %M505.1   reg = M  width = Bit
-    public bool get_vyhd_rezerv_12_ ()
+    public bool get_vyhd_rezerv_12 ()
     { return (bool) m_mem.getMBit(505, 1); }
 
-    public void set_vyhd_rezerv_12_ (bool val)
+    public void set_vyhd_rezerv_12 (bool val)
     { m_mem.setMBit(505, 1, (bool) val); }
 
 // выхд резерв(13),   Bool, %M505.2   reg = M  width = Bit
-    public bool get_vyhd_rezerv_13_ ()
+    public bool get_vyhd_rezerv_13 ()
     { return (bool) m_mem.getMBit(505, 2); }
 
-    public void set_vyhd_rezerv_13_ (bool val)
+    public void set_vyhd_rezerv_13 (bool val)
     { m_mem.setMBit(505, 2, (bool) val); }
 
 // выхд ш2 вперёд,   Bool, %M505.3   reg = M  width = Bit
