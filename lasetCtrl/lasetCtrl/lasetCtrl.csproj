@@ -50,6 +50,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InputBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Memory.cs" />
     <Compile Include="plc.cs" />
     <Compile Include="Program.cs" />

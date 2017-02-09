@@ -48,6 +48,17 @@ namespace lasetCtrl
             tb_real.Text = m_plc.tags.get_real().ToString();
             tb_dint.Text = m_plc.tags.get_dint().ToString();
             tb_bool.Text = m_plc.tags.get_bool().ToString();
+            
+            //karetka
+            tb_karetka_position.Text = m_plc.tags.get_ust_karetka_poziciya().ToString();
+            tb_kar_step_width.Text = m_plc.tags.get_ust_karetka_rasst().ToString();
+            tb_kar_righet_speed.Text = m_plc.tags.get_ust_karetka_skor_vpravo().ToString();
+            tb_kar_position.Text = m_plc.tags.get_vyhd_kar_abs().ToString();
+            tb_kar_left_speed.Text = m_plc.tags.get_ust_karetka_skor_vlevo().ToString();
+            cb_kar_goto_zero_busy.Checked = m_plc.tags.get_vyhd_kar_dom();
+
+           // cb_kar_error.Checked =m_plc.tags.get_vyhd_ka
+
 
         }
 
@@ -60,11 +71,89 @@ namespace lasetCtrl
             var val = Int16.Parse(tb_ctl.Text);
             //m_plc.tags.setInc(val);
             m_plc.tags.set_nomer_vyhoda(val);
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             m_plc.tags.set_bool(checkBox1.Checked);
+
+            m_plc.tags.set_real(0);
+            m_plc.tags.set_dint(0);
         }
+
+        private void ipTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxWithLabel1_DoubleClick(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void tb_karetka_position_DoubleClick(object sender, EventArgs e)
+        {
+
+            InputBox input = InputBox.Show(((TextBoxWithLabel)sender).LabelText, new InputBoxItem("Val", ((TextBox)sender).Text), InputBoxButtons.OKCancel);
+            if (input.Result == InputBoxResult.OK)
+                m_plc.tags.set_ust_karetka_poziciya(float.Parse(input.Items["Val"]));
+        }
+
+        private void tb_kar_step_width_DoubleClick(object sender, EventArgs e)
+        {
+            InputBox input = InputBox.Show(((TextBoxWithLabel)sender).LabelText, new InputBoxItem("Val", ((TextBox)sender).Text), InputBoxButtons.OKCancel);
+            if (input.Result == InputBoxResult.OK)
+                m_plc.tags.set_ust_karetka_rasst(float.Parse(input.Items["Val"]));
+        }
+
+        private void bt_kar_goto_zero_Click(object sender, EventArgs e)
+        {
+            m_plc.tags.set_kom_kar_poisk_nulya(true);
+        }
+
+
+        private void tb_kar_righet_speed_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            InputBox input = InputBox.Show(((TextBoxWithLabel)sender).LabelText, new InputBoxItem("Val", ((TextBox)sender).Text), InputBoxButtons.OKCancel);
+            if (input.Result == InputBoxResult.OK)
+                m_plc.tags.set_ust_karetka_skor_vpravo(float.Parse(input.Items["Val"]));
+        }
+
+        private void tb_kar_left_speed_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            InputBox input = InputBox.Show(((TextBoxWithLabel)sender).LabelText, new InputBoxItem("Val", ((TextBox)sender).Text), InputBoxButtons.OKCancel);
+            if (input.Result == InputBoxResult.OK)
+                m_plc.tags.set_ust_karetka_skor_vlevo(float.Parse(input.Items["Val"]));
+        }
+
+        private void bt_kar_start_Click(object sender, EventArgs e)
+        {
+            m_plc.tags.set_kom_kar_abs(true);
+        }
+
+        private void bt_kar_com_left_Click(object sender, EventArgs e)
+        {
+            m_plc.tags.set_kom_kar_otn_vlevo(true);
+        }
+
+        private void bt_kar_com_right_Click(object sender, EventArgs e)
+        {
+            m_plc.tags.set_kom_kar_otn_vpravo(true);
+        }
+
+        private void bt_kar_com_stop_Click(object sender, EventArgs e)
+        {
+            m_plc.tags.set_kom_karetka_stop(true);
+        }
+
+        private void bt_kar_com_clear_error_Click(object sender, EventArgs e)
+        {
+            m_plc.tags.set_kom_karetka_sbros(true);
+        }
+
+
+
     }
 }

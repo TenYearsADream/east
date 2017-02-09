@@ -16,7 +16,7 @@ namespace lasetCtrl
             client = new S7Client();
             m_mem = new Memory();
             tags = new Tags(m_mem);
-            isThereadActive = true;
+            Thread.VolatileWrite(ref isThereadActive, 1);
             m_Thread = new Thread(plcStep);
             m_Thread.IsBackground = true;
             m_Thread.Start();
@@ -25,7 +25,8 @@ namespace lasetCtrl
 
         ~plc()
         {
-            isThereadActive = false;
+         
+            Thread.VolatileWrite(ref isThereadActive, 0);
             isConnect = false;
             m_Thread.Join();
             client.Disconnect();
@@ -43,9 +44,10 @@ namespace lasetCtrl
         private void plcStep()
         {
            int res = 0;
+
             lsqElement el = new lsqElement();
 
-            while (isThereadActive)
+            while (Thread.VolatileRead(ref isThereadActive) != 0)
             {
                 if (isConnect)
                 {
@@ -69,6 +71,7 @@ namespace lasetCtrl
         Thread m_Thread;
 
         bool isConnect = false;
-        bool isThereadActive = false;
+        int isThereadActive = 0;
+        
     }
 }
