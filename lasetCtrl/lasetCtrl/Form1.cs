@@ -53,9 +53,11 @@ namespace lasetCtrl
             tb_karetka_position.Text = m_plc.tags.get_ust_karetka_poziciya().ToString();
             tb_kar_step_width.Text = m_plc.tags.get_ust_karetka_rasst().ToString();
             tb_kar_righet_speed.Text = m_plc.tags.get_ust_karetka_skor_vpravo().ToString();
-            tb_kar_position.Text = m_plc.tags.get_vyhd_kar_abs().ToString();
+            tb_kar_position.Text = m_plc.tags.get_kar_tek_poz().ToString();
             tb_kar_left_speed.Text = m_plc.tags.get_ust_karetka_skor_vlevo().ToString();
             cb_kar_goto_zero_busy.Checked = m_plc.tags.get_vyhd_kar_dom();
+            cb_konc_left.Checked = m_plc.tags.get_karetka_sleva();
+            cb_konc_right.Checked = m_plc.tags.get_karetka_sprava();
 
            // cb_kar_error.Checked =m_plc.tags.get_vyhd_ka
 
