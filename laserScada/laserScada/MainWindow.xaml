@@ -1,8 +1,9 @@
-﻿<Window x:Class="laserScada.MainWindow"
+﻿<Controls:MetroWindow x:Class="laserScada.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:laserScada"
         mc:Ignorable="d"
         Title="MainWindow" Height="569.535" Width="887.574">
@@ -13,7 +14,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1">
-            <TabControl x:Name="tabControl"   >
+            <TabControl x:Name="tabControl" Height="218" Margin="0,0,-0.2,0"   >
                 <TabItem Header="Соединение">
                     <StackPanel Background="#FFE5E5E5" >
                         <StackPanel Orientation="Horizontal">
@@ -28,36 +29,107 @@
                 </TabItem>
                 <TabItem Header="Каретка">
 
-            
-                        <StackPanel Background="#FFE5E5E5">
+
+                    <StackPanel Background="#FFE5E5E5">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition/>
                                 <RowDefinition/>
                                 <RowDefinition/>
                                 <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
                                 <ColumnDefinition Width="200"/>
-                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
                             </Grid.ColumnDefinitions>
-                            <Label Content="позиция"  Grid.Row="0" Grid.Column="0"/>
-                            <TextBox Width="100" x:Name="kar_tb_position" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1"/>
-                            <Label Content="Шаг" Grid.Row="1" Grid.Column="0"/>
-                            <TextBox Width="100" x:Name="kar_tb_step" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
 
-                            <Label Content="скорость влево" Grid.Row="2" Grid.Column="0"/>
-                            <TextBox Width="100" x:Name="kar_tb_left_speed" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1"/>
-                            <Label Content="скорость вправо"  Grid.Row="3" Grid.Column="0"/>
-                            <TextBox Width="100" x:Name="kar_tb_right_speed" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1"/>
+                            <Label Content="Текущая позиция" Grid.Row="0" Grid.Column="0"/>
+                            <TextBox Width="100" x:Name="kar_tb_current_pos" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                            <CheckBox Content="ЛК"  x:Name="kar_cb_lk" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" ></CheckBox>
+                            <CheckBox Content="ПК"  x:Name="kar_cb_pk" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center"></CheckBox>
+                            <CheckBox Content="Ошибка"  x:Name="kar_cb_error" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center"></CheckBox>
+                            <Button Content="Стоп"  x:Name="kar_bt_stop"  Grid.Row="0" Grid.Column="2" Click="kar_bt_stop_Click" />
+
+                            <Label Content="Перейти к"  Grid.Row="1" Grid.Column="0"/>
+                            <TextBox Width="100" Grid.Row="1" Grid.Column="1" x:Name="kar_tb_position" HorizontalAlignment="Left" VerticalAlignment="Center" PreviewMouseDoubleClick="kar_tb_position_PreviewMouseDoubleClick" />
+                            <Button Content="Пуск" x:Name="kar_bt_start" Grid.Row="1" Grid.Column="2" Click="kar_bt_start_Click" />
+                            <Button Content="Поиск нуля"  x:Name="kar_bt_find_orign" Grid.Column="2"  Click="kar_bt_find_orign_Click" />
+
+
+
+
+                            <Label Content="Шаг" Grid.Row="2" Grid.Column="0"/>
+                            <TextBox Width="100" x:Name="kar_tb_step" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" MouseDoubleClick="kar_tb_step_MouseDoubleClick"/>
+                            <Button Content="Влево"  x:Name="kar_bt_vlevo" Grid.Row="2" Grid.Column="2" Click="kar_bt_vlevo_Click"/>
+                            <Button Content="Вправо" x:Name="kar_bt_vpravo" Grid.Row="2" Grid.Column="3" Click="kar_bt_vpravo_Click"/>
+
+                            <Label Content="скорость влево" Grid.Row="3" Grid.Column="0"/>
+                            <TextBox Width="100" x:Name="kar_tb_left_speed" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" MouseDoubleClick="kar_tb_left_speed_MouseDoubleClick"/>
+                            <Label Content="скорость вправо"  Grid.Row="4" Grid.Column="0"/>
+                            <TextBox Width="100" x:Name="kar_tb_right_speed" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" MouseDoubleClick="kar_tb_right_speed_MouseDoubleClick"/>
 
                         </Grid>
                     </StackPanel>
 
                 </TabItem>
+                <TabItem Header="Стол">
+                    <Grid Background="#FFE5E5E5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Поз. поршня отн 0" Grid.Row="0" Grid.Column="0"/>
+                        <TextBox Width="100" x:Name="stol_tb_porsh_otn0"  Grid.Row="0" Grid.Column="1" /> 
+                        <Button Content="Поиск нуля"  x:Name="stol_bt_find_zero"  Grid.Row="0" Grid.Column="2" Click="stol_bt_find_zero_Click" />
+                        <Button Content="Установка нуля"  x:Name="stol_bt_set_zero"  Grid.Row="0" Grid.Column="3" Click="stol_bt_set_zero_Click" />
+
+                        <Label Content="Толщина плиты" Grid.Row="1" Grid.Column="0"/>
+                        <TextBox Width="100" x:Name="stol_tb_plita_width"  Grid.Row="1" Grid.Column="1" MouseDoubleClick="stol_tb_plita_width_MouseDoubleClick" />
+
+                        <Label Content="Позиция" Grid.Row="2" Grid.Column="0"/>
+                        <TextBox Width="100" x:Name="stol_tb_position"  Grid.Row="2" Grid.Column="1" MouseDoubleClick="stol_tb_position_MouseDoubleClick" />
+                        <Button Content="Пуск"  x:Name="stol_bt_go_to_position"  Grid.Row="2" Grid.Column="2" Height="25" Margin="0.4,0.4,0.4,0" Grid.RowSpan="2" VerticalAlignment="Top" Click="stol_bt_go_to_position_Click" />
+                        
+                        <Label Content="Шаг" Grid.Row="3" Grid.Column="0"/>
+                        <TextBox Width="100" x:Name="stol_tb_step_value"  Grid.Row="3" Grid.Column="1" MouseDoubleClick="stol_tb_step_value_MouseDoubleClick" />
+                        <Button Content="Ввверх"  x:Name="stol_bt_step_up"  Grid.Row="3" Grid.Column="2" Click="stol_bt_step_up_Click" />
+                        <Button Content="Вниз"  x:Name="stol_bt_step_down"  Grid.Row="3" Grid.Column="3" Click="stol_bt_step_down_Click" />
+
+                        <Label Content="Скорость" Grid.Row="4" Grid.Column="0"/>
+                        <TextBox Width="100" x:Name="stol_tb_speed"  Grid.Row="4" Grid.Column="1" MouseDoubleClick="stol_tb_speed_MouseDoubleClick" />
+                        <Button Content="Стоп"  x:Name="stol_bt_stop"  Grid.Row="4" Grid.Column="2" Click="stol_bt_stop_Click" />
+                        <Button Content="Сброс ошибки"  x:Name="stol_bt_cler_Error"  Grid.Row="4" Grid.Column="3" Click="stol_bt_cler_Error_Click" />
+
+                        <Label Content="Линейка" Grid.Row="5" Grid.Column="0"/>
+                        <TextBox Width="100" x:Name="stol_tb_line"  Grid.Row="5" Grid.Column="1" MouseDoubleClick="stol_tb_line_MouseDoubleClick" />
+                        <Button Content="Обнулить"  x:Name="stol_bt_line_clearing"  Grid.Row="5" Grid.Column="2" Click="stol_bt_line_clearing_Click" />
+                        <Button Content="Контроль по линейке"  x:Name="stol_bt_line_control"  Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Click="stol_bt_line_control_Click"  />
+
+                    </Grid >
+                </TabItem>
             </TabControl>
         </StackPanel>
 
     </Grid>
-</Window>
+</Controls:MetroWindow>
