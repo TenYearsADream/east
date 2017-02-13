@@ -116,6 +116,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1\ClassLibrary1.csproj">
+      <Project>{3a0087ce-ed9c-4618-b921-9fffd5e504aa}</Project>
+      <Name>ClassLibrary1</Name>
+    </ProjectReference>
     <ProjectReference Include="..\sharp7\sharp7.csproj">
       <Project>{9cbaa2a1-4622-4ffb-93c3-a6e44ed566bd}</Project>
       <Name>sharp7</Name>

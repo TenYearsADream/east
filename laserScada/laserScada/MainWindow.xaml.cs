@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
-
+using SpIceControllerLib;
 namespace laserScada
 {
     /// <summary>
@@ -38,9 +38,20 @@ namespace laserScada
           
 
             this.Loaded += MainWindow_Loaded;
+            this.Closing += MainWindow_Closing;
 
         }
 
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            SpIceController.deinitialize();
+          //  throw new NotImplementedException();
+        }
+
+        ~MainWindow()
+            {
+            SpIceController.deinitialize();
+        }
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             timer.Interval = new TimeSpan(0, 0, 0, 0, 200);
@@ -231,6 +242,11 @@ namespace laserScada
         private void stol_bt_line_control_Click(object sender, RoutedEventArgs e)
         {
             m_plc.tags.set_kom_pereschjot(true);
+        }
+
+        private void spIceCtl_Click(object sender, RoutedEventArgs e)
+        {
+            SpIceControllerLib.SpIceController.initForm();
         }
     }
 }

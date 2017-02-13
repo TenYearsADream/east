@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "laserScada", "laserScada\la
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sharp7", "sharp7\sharp7.csproj", "{9CBAA2A1-4622-4FFB-93C3-A6E44ED566BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1\ClassLibrary1.csproj", "{3A0087CE-ED9C-4618-B921-9FFFD5E504AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9CBAA2A1-4622-4FFB-93C3-A6E44ED566BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CBAA2A1-4622-4FFB-93C3-A6E44ED566BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CBAA2A1-4622-4FFB-93C3-A6E44ED566BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A0087CE-ED9C-4618-B921-9FFFD5E504AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A0087CE-ED9C-4618-B921-9FFFD5E504AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A0087CE-ED9C-4618-B921-9FFFD5E504AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A0087CE-ED9C-4618-B921-9FFFD5E504AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

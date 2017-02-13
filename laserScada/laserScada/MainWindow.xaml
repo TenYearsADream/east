@@ -18,13 +18,14 @@
                 <TabItem Header="Соединение">
                     <StackPanel Background="#FFE5E5E5" >
                         <StackPanel Orientation="Horizontal">
-                            <TextBox x:Name="tbDeviceIP" Text="TextBox"  TextChanged="tbDeviceIP_TextChanged" VerticalAlignment="Center"/>
+                            <Label Content="Ip адрес"/>
+                            <TextBox x:Name="tbDeviceIP" Text="192.168.100.2" Width="100"  TextChanged="tbDeviceIP_TextChanged" VerticalAlignment="Center"/>
                             <Label x:Name="lbConectedStatus" Content="Label" VerticalAlignment="Center" />
                             <CheckBox x:Name="cb_cnt_autoconnect" Content="Автоматическое соединение" VerticalAlignment="Center"/>
                         </StackPanel >
 
-                        <TextBox x:Name="tbCounter" Text="TextBox"  />
-                        <Button Content="123"/>
+                        <TextBox x:Name="tbCounter" Text="TextBox" Width="200" HorizontalAlignment="Left"  />
+                        
                     </StackPanel>
                 </TabItem>
                 <TabItem Header="Каретка">
@@ -100,7 +101,7 @@
                         </Grid.ColumnDefinitions>
 
                         <Label Content="Поз. поршня отн 0" Grid.Row="0" Grid.Column="0"/>
-                        <TextBox Width="100" x:Name="stol_tb_porsh_otn0"  Grid.Row="0" Grid.Column="1" /> 
+                        <TextBox Width="100" x:Name="stol_tb_porsh_otn0"  Grid.Row="0" Grid.Column="1" />
                         <Button Content="Поиск нуля"  x:Name="stol_bt_find_zero"  Grid.Row="0" Grid.Column="2" Click="stol_bt_find_zero_Click" />
                         <Button Content="Установка нуля"  x:Name="stol_bt_set_zero"  Grid.Row="0" Grid.Column="3" Click="stol_bt_set_zero_Click" />
 
@@ -110,7 +111,7 @@
                         <Label Content="Позиция" Grid.Row="2" Grid.Column="0"/>
                         <TextBox Width="100" x:Name="stol_tb_position"  Grid.Row="2" Grid.Column="1" MouseDoubleClick="stol_tb_position_MouseDoubleClick" />
                         <Button Content="Пуск"  x:Name="stol_bt_go_to_position"  Grid.Row="2" Grid.Column="2" Height="25" Margin="0.4,0.4,0.4,0" Grid.RowSpan="2" VerticalAlignment="Top" Click="stol_bt_go_to_position_Click" />
-                        
+
                         <Label Content="Шаг" Grid.Row="3" Grid.Column="0"/>
                         <TextBox Width="100" x:Name="stol_tb_step_value"  Grid.Row="3" Grid.Column="1" MouseDoubleClick="stol_tb_step_value_MouseDoubleClick" />
                         <Button Content="Ввверх"  x:Name="stol_bt_step_up"  Grid.Row="3" Grid.Column="2" Click="stol_bt_step_up_Click" />
@@ -130,6 +131,9 @@
                 </TabItem>
             </TabControl>
         </StackPanel>
+        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="33,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.262,0.263" Width="47"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="173,49,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="spIceCtl" Content="SpIce" HorizontalAlignment="Left" Margin="282,48,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.063,0.552" Click="spIceCtl_Click"/>
 
     </Grid>
 </Controls:MetroWindow>
