@@ -74,6 +74,8 @@ namespace laserScada
             kar_tb_right_speed.Text = m_plc.tags.get_ust_karetka_skor_vpravo().ToString();
             kar_cb_lk.IsChecked = m_plc.tags.get_karetka_sleva();
             kar_cb_pk.IsChecked = m_plc.tags.get_karetka_sprava();
+
+            
             // kar_cb_error.IsChecked ??? 
 
             //stol
@@ -247,6 +249,11 @@ namespace laserScada
         private void spIceCtl_Click(object sender, RoutedEventArgs e)
         {
             SpIceControllerLib.SpIceController.initForm();
+        }
+
+        private void main_bt_startLayer_Click(object sender, RoutedEventArgs e)
+        {
+            SpIceController.StartLayer_(true);
         }
     }
 }

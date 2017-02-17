@@ -268,6 +268,18 @@ namespace SpIceControllerLib
             m_dirtyRunSignal = val;
         }
 
+        public static void StartLayer_(bool val)
+        {
+            if (m_state == IntState.Wait)
+            {
+               // if (val && !m_dirtyRunSignal)
+                {
+                    m_inputSignals |= IntSignals.Run;
+                }
+
+            }
+            m_dirtyRunSignal = val;
+        }
         public static void ResetSignal(bool val)
         {
             if (m_state != IntState.Wait)

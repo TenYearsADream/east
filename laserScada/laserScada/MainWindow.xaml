@@ -25,7 +25,7 @@
                         </StackPanel >
 
                         <TextBox x:Name="tbCounter" Text="TextBox" Width="200" HorizontalAlignment="Left"  />
-                        
+
                     </StackPanel>
                 </TabItem>
                 <TabItem Header="Каретка">
@@ -131,9 +131,18 @@
                 </TabItem>
             </TabControl>
         </StackPanel>
-        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="33,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.262,0.263" Width="47"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="173,49,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="spIceCtl" Content="SpIce" HorizontalAlignment="Left" Margin="282,48,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.063,0.552" Click="spIceCtl_Click"/>
+        <Label x:Name="main_lb_connect" Content="Соединение" HorizontalAlignment="Left" Margin="21,37,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.262,0.263" Width="93"/>
+        <Button x:Name="button" Content="Каретка - поиск 0" HorizontalAlignment="Left" Margin="163,19,0,0" VerticalAlignment="Top" Width="115"/>
+        <Button x:Name="spIceCtl" Content="SpIce настройка" HorizontalAlignment="Left" Margin="442,19,0,0" VerticalAlignment="Top" Width="115" RenderTransformOrigin="-0.063,0.552" Click="spIceCtl_Click"/>
+        <Button x:Name="button1" Content="Стол - поиск 0" HorizontalAlignment="Left" Margin="163,61,0,0" VerticalAlignment="Top" Width="115"/>
+        <Button x:Name="button2" Content="Питание лазера" HorizontalAlignment="Left" Margin="306,43,0,0" VerticalAlignment="Top" Width="113"/>
+        <Button x:Name="main_bt_startLayer" Content="Прожиг" HorizontalAlignment="Left" Margin="580,19,0,0" VerticalAlignment="Top" Width="112" Click="main_bt_startLayer_Click"/>
+        <Button x:Name="button3" Content="Пауза" HorizontalAlignment="Left" Margin="716,19,0,0" VerticalAlignment="Top" Width="109"/>
+        <Button x:Name="button4" Content="Сброс" HorizontalAlignment="Left" Margin="716,61,0,0" VerticalAlignment="Top" Width="109"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="638,56,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="54"/>
+        <Label x:Name="label1" Content="Клол-во" HorizontalAlignment="Left" Margin="574,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.19,-0.301"/>
+        <Label x:Name="label2" Content="File: galtel.script" HorizontalAlignment="Left" Margin="442,46,0,0" VerticalAlignment="Top" Width="115"/>
+        <Label x:Name="label3" Content="Кор: 001.gcd" HorizontalAlignment="Left" Margin="442,68,0,0" VerticalAlignment="Top" Width="115" Height="27"/>
 
     </Grid>
 </Controls:MetroWindow>
