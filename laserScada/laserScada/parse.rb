@@ -6,7 +6,7 @@ require 'cyrillizer'
 open('TagsAg.cs', 'w') { |f|
 
 f.puts "using System;\n"
-
+f.puts "using log4netSample.Logging;\n"
 f.puts " namespace lasetCtrl {\n\n" +   "partial class Tags {\n" 
 result = ""
 
@@ -66,7 +66,8 @@ result = "    public #{varType} get_#{name3} ()\n" \
 outType = type == "Real" ? "float" : type == "Int" ? "UInt16" : type == "DInt" ? "UInt32" : type == "Bool" ? "bool" : "nan"
 
 setter =  "    public void set_#{name3} (#{varType} val)\n" \
-"    { m_mem.set#{region}#{ getingType}(#{signatura}, (#{outType}) val); }\n\n"
+"    { m_mem.set#{region}#{ getingType}(#{signatura}, (#{outType}) val); \n"\
+"      Log.Write(LogLevel.Info, \"set #{name3} to \" + val.ToString());}\n\n"
 
 usMap[intAdrr.to_i] = 1
 usMap[intAdrr.to_i + 1] = 1 if width == "UInt32" || width == "UInt16"

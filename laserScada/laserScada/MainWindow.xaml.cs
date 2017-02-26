@@ -45,7 +45,7 @@ namespace laserScada
             InitializeComponent();
           //  Logger.InitLogger();
           //  Logger.Log.Info("____");
-            Log.Write(LogLevel.Debug, "tst");
+            Log.Write(LogLevel.Debug, "Start program");
             
             m_plc = new plc();
 
@@ -79,7 +79,7 @@ namespace laserScada
 
         private void updateSignals(object sender, EventArgs e)
         {
-            Log.Write(LogLevel.Debug, "tst");
+           // Log.Write(LogLevel.Debug, "tst");
 
             //connect
             tbCounter.Text = m_plc.tags.get_dint().ToString();
