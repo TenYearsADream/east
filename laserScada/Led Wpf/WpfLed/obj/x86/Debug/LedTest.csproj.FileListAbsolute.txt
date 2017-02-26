@@ -1,0 +1,63 @@
+C:\Documents and Settings\Administrator\Documenti\Visual Studio 2010\Projects\WpfLed\WpfLed\bin\Debug\WpfLed.exe
+C:\Documents and Settings\Administrator\Documenti\Visual Studio 2010\Projects\WpfLed\WpfLed\bin\Debug\WpfLed.pdb
+C:\Documents and Settings\Administrator\Documenti\Visual Studio 2010\Projects\WpfLed\WpfLed\bin\Debug\MyWpfLibrary.dll
+C:\Documents and Settings\Administrator\Documenti\Visual Studio 2010\Projects\WpfLed\WpfLed\bin\Debug\MyWpfLibrary.pdb
+C:\Documents and Settings\Administrator\Documenti\Visual Studio 2010\Projects\WpfLed\WpfLed\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Documenti\Visual Studio 2010\Projects\WpfLed\WpfLed\obj\x86\Debug\MainWindow.baml
+C:\Documents and Settings\Administrator\Documenti\Visual Studio 2010\Projects\WpfLed\WpfLed\obj\x86\Debug\MainWindow.g.cs
+C:\Documents and Settings\Administrator\Documenti\Visual Studio 2010\Projects\WpfLed\WpfLed\obj\x86\Debug\App.g.cs
+C:\Documents and Settings\Administrator\Documenti\Visual Studio 2010\Projects\WpfLed\WpfLed\obj\x86\Debug\WpfLed_MarkupCompile.cache
+C:\Documents and Settings\Administrator\Documenti\Visual Studio 2010\Projects\WpfLed\WpfLed\obj\x86\Debug\WpfLed.g.resources
+C:\Documents and Settings\Administrator\Documenti\Visual Studio 2010\Projects\WpfLed\WpfLed\obj\x86\Debug\LedTest.Properties.Resources.resources
+C:\Documents and Settings\Administrator\Documenti\Visual Studio 2010\Projects\WpfLed\WpfLed\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\Documenti\Visual Studio 2010\Projects\WpfLed\WpfLed\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\Documenti\Visual Studio 2010\Projects\WpfLed\WpfLed\obj\x86\Debug\WpfLed.exe
+C:\Documents and Settings\Administrator\Documenti\Visual Studio 2010\Projects\WpfLed\WpfLed\obj\x86\Debug\WpfLed.pdb
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\obj\x86\Debug\WpfLed.exe
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\obj\x86\Debug\WpfLed.pdb
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\bin\Debug\WpfLed.exe
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\bin\Debug\WpfLed.pdb
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\bin\Debug\LedControl.dll
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\bin\Debug\LedControl.pdb
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\obj\x86\Debug\MainWindow.g.cs
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\obj\x86\Debug\App.g.cs
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\obj\x86\Debug\WpfLed_MarkupCompile.cache
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\obj\x86\Debug\WpfLed_MarkupCompile.lref
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\obj\x86\Debug\MainWindow.baml
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\obj\x86\Debug\WpfLed.g.resources
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\obj\x86\Debug\LedTest.Properties.Resources.resources
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Coel_Luca\Documenti\Visual Studio 2010\Projects\WPF Controls\Led Wpf\WpfLed\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\x86\Debug\WpfLed.exe
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\x86\Debug\WpfLed.pdb
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\bin\Debug\WpfLed.exe
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\bin\Debug\WpfLed.pdb
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\bin\Debug\LedControl.pdb
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\x86\Debug\MainWindow.g.cs
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\x86\Debug\App.g.cs
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\x86\Debug\WpfLed_MarkupCompile.cache
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\x86\Debug\WpfLed_MarkupCompile.lref
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\x86\Debug\MainWindow.baml
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\x86\Debug\WpfLed.g.resources
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\x86\Debug\LedTest.Properties.Resources.resources
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\bin\Debug\WpfLed.exe
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\bin\Debug\WpfLed.pdb
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\bin\Debug\LedControl.pdb
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\x86\Debug\LedTest.csprojResolveAssemblyReference.cache
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\x86\Debug\MainWindow.g.cs
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\x86\Debug\App.g.cs
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\x86\Debug\WpfLed_MarkupCompile.cache
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\x86\Debug\WpfLed_MarkupCompile.lref
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\x86\Debug\MainWindow.baml
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\x86\Debug\WpfLed.g.resources
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\x86\Debug\LedTest.Properties.Resources.resources
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\x86\Debug\LedTest.csproj.GenerateResource.Cache
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\x86\Debug\WpfLed.exe
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\x86\Debug\WpfLed.pdb

@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using SpIceControllerLib;
+using log4netSample.Logging;
 namespace laserScada
 {
     /// <summary>
@@ -24,17 +25,33 @@ namespace laserScada
     public partial class MainWindow : MetroWindow
 
     {
+        bool pr_main_connect
+        {
+            set
+            {
+                main_led_connect.IsActive = value;
+                if (value == true)
+                    lbConectedStatus.Content = "Соединение установлено";
+                else
+                    lbConectedStatus.Content = "Ошибка соединения";
+            }
+        }
+
         plc m_plc;
         private DispatcherTimer timer = new DispatcherTimer();
 
         public MainWindow()
         {
             InitializeComponent();
- 
+          //  Logger.InitLogger();
+          //  Logger.Log.Info("____");
+            Log.Write(LogLevel.Debug, "tst");
+            
             m_plc = new plc();
 
+            pr_main_connect = m_plc.connect();
 
-            lbConectedStatus.Content = m_plc.connect() ? "Ok" : "Fail";
+            
           
 
             this.Loaded += MainWindow_Loaded;
@@ -62,8 +79,8 @@ namespace laserScada
 
         private void updateSignals(object sender, EventArgs e)
         {
+            Log.Write(LogLevel.Debug, "tst");
 
-           
             //connect
             tbCounter.Text = m_plc.tags.get_dint().ToString();
             //karetka
@@ -72,10 +89,11 @@ namespace laserScada
             kar_tb_step.Text = m_plc.tags.get_ust_karetka_rasst().ToString();
             kar_tb_left_speed.Text = m_plc.tags.get_ust_karetka_skor_vlevo().ToString();
             kar_tb_right_speed.Text = m_plc.tags.get_ust_karetka_skor_vpravo().ToString();
-            kar_cb_lk.IsChecked = m_plc.tags.get_karetka_sleva();
-            kar_cb_pk.IsChecked = m_plc.tags.get_karetka_sprava();
+            //kar_cb_lk.IsChecked = m_plc.tags.get_karetka_sleva();
+            //kar_cb_pk.IsChecked = m_plc.tags.get_karetka_sprava();
+            kar_led_lk.IsActive = m_plc.tags.get_karetka_sleva();
+            kar_led_pk.IsActive = m_plc.tags.get_karetka_sleva();
 
-            
             // kar_cb_error.IsChecked ??? 
 
             //stol
@@ -254,6 +272,16 @@ namespace laserScada
         private void main_bt_startLayer_Click(object sender, RoutedEventArgs e)
         {
             SpIceController.StartLayer_(true);
+        }
+
+        private void main_bt_light(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_svet(true);
+        }
+
+        private void main_laser_power(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_got_lazer(true);
         }
     }
 }

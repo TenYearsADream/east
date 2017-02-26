@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:uc="clr-namespace:LedControl;assembly=LedControl"
+        xmlns:vw="clr-namespace:log4netSample.Views"
         xmlns:local="clr-namespace:laserScada"
         mc:Ignorable="d"
         Title="MainWindow" Height="569.535" Width="887.574">
@@ -49,13 +51,15 @@
                                 <ColumnDefinition Width="100"/>
                                 <ColumnDefinition Width="100"/>
                                 <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
                             </Grid.ColumnDefinitions>
 
                             <Label Content="Текущая позиция" Grid.Row="0" Grid.Column="0"/>
                             <TextBox Width="100" x:Name="kar_tb_current_pos" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" />
-                            <CheckBox Content="ЛК"  x:Name="kar_cb_lk" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" ></CheckBox>
-                            <CheckBox Content="ПК"  x:Name="kar_cb_pk" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center"></CheckBox>
-                            <CheckBox Content="Ошибка"  x:Name="kar_cb_error" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center"></CheckBox>
+                            <uc:Led x:Name="kar_led_lk" IsActive="{Binding LedStatus, Mode=OneWay}" Flashing="{Binding Flash}" HorizontalAlignment="Center" ColorNull="Gray"  Grid.Column="3" Grid.Row="0" Text="ЛК" ColorOn="Red" ColorOff="Gray"/>
+                            <uc:Led x:Name="kar_led_pk" IsActive="{Binding LedStatus, Mode=OneWay}" Flashing="{Binding Flash}" HorizontalAlignment="Center" ColorNull="Gray"  Grid.Column="4" Grid.Row="0" Text="ЛК" ColorOn="Red" ColorOff="Gray"/>
+                            <uc:Led x:Name="kar_led_err" IsActive="{Binding LedStatus, Mode=OneWay}" Flashing="{Binding Flash}" HorizontalAlignment="Center" ColorNull="Gray"  Grid.Column="5" Grid.Row="0" Text="Ошибка" ColorOn="Red" ColorOff="Gray"/>
+
                             <Button Content="Стоп"  x:Name="kar_bt_stop"  Grid.Row="0" Grid.Column="2" Click="kar_bt_stop_Click" />
 
                             <Label Content="Перейти к"  Grid.Row="1" Grid.Column="0"/>
@@ -125,17 +129,17 @@
                         <Label Content="Линейка" Grid.Row="5" Grid.Column="0"/>
                         <TextBox Width="100" x:Name="stol_tb_line"  Grid.Row="5" Grid.Column="1" MouseDoubleClick="stol_tb_line_MouseDoubleClick" />
                         <Button Content="Обнулить"  x:Name="stol_bt_line_clearing"  Grid.Row="5" Grid.Column="2" Click="stol_bt_line_clearing_Click" />
-                        <Button Content="Контроль по линейке"  x:Name="stol_bt_line_control"  Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Click="stol_bt_line_control_Click"  />
+                        <Button Content="Контроль по линейке"  x:Name="stol_bt_line_control"  Grid.ColumnSpan="2" Click="stol_bt_line_control_Click"  />
 
                     </Grid >
                 </TabItem>
             </TabControl>
         </StackPanel>
-        <Label x:Name="main_lb_connect" Content="Соединение" HorizontalAlignment="Left" Margin="21,37,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.262,0.263" Width="93"/>
-        <Button x:Name="button" Content="Каретка - поиск 0" HorizontalAlignment="Left" Margin="163,19,0,0" VerticalAlignment="Top" Width="115"/>
+        <uc:Led x:Name="main_led_connect" IsActive="{Binding LedStatus, Mode=OneWay}" Flashing="{Binding Flash}"  ColorNull="Gray"  Text="Соединение" ColorOn="Green" ColorOff="Red" Margin="10,10,726.8,58"/>
+        <Button x:Name="button" Content="Каретка - поиск 0" HorizontalAlignment="Left" Margin="163,19,0,0" VerticalAlignment="Top" Width="115" Click="kar_bt_find_orign_Click"/>
         <Button x:Name="spIceCtl" Content="SpIce настройка" HorizontalAlignment="Left" Margin="442,19,0,0" VerticalAlignment="Top" Width="115" RenderTransformOrigin="-0.063,0.552" Click="spIceCtl_Click"/>
-        <Button x:Name="button1" Content="Стол - поиск 0" HorizontalAlignment="Left" Margin="163,61,0,0" VerticalAlignment="Top" Width="115"/>
-        <Button x:Name="button2" Content="Питание лазера" HorizontalAlignment="Left" Margin="306,43,0,0" VerticalAlignment="Top" Width="113"/>
+        <Button x:Name="button1" Content="Стол - Уст 0" HorizontalAlignment="Left" Margin="163,61,0,0" VerticalAlignment="Top" Width="115" Click="stol_bt_set_zero_Click"/>
+        <Button x:Name="button2" Content="Питание лазера" HorizontalAlignment="Left" Margin="306,43,0,0" VerticalAlignment="Top" Width="113" Click="main_laser_power"/>
         <Button x:Name="main_bt_startLayer" Content="Прожиг" HorizontalAlignment="Left" Margin="580,19,0,0" VerticalAlignment="Top" Width="112" Click="main_bt_startLayer_Click"/>
         <Button x:Name="button3" Content="Пауза" HorizontalAlignment="Left" Margin="716,19,0,0" VerticalAlignment="Top" Width="109"/>
         <Button x:Name="button4" Content="Сброс" HorizontalAlignment="Left" Margin="716,61,0,0" VerticalAlignment="Top" Width="109"/>
@@ -143,6 +147,8 @@
         <Label x:Name="label1" Content="Клол-во" HorizontalAlignment="Left" Margin="574,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.19,-0.301"/>
         <Label x:Name="label2" Content="File: galtel.script" HorizontalAlignment="Left" Margin="442,46,0,0" VerticalAlignment="Top" Width="115"/>
         <Label x:Name="label3" Content="Кор: 001.gcd" HorizontalAlignment="Left" Margin="442,68,0,0" VerticalAlignment="Top" Width="115" Height="27"/>
+        <Button x:Name="main_liht" Content="Свет" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="119" Height="19" Click="main_bt_light"/>
+        <vw:NotificationView x:Name="textBox1"  HorizontalAlignment="Left" Height="96" Grid.Row="2"  VerticalAlignment="Top" Width="622"/>
 
     </Grid>
 </Controls:MetroWindow>

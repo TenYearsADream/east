@@ -1,0 +1,14 @@
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\bin\Release\LedControl.dll
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\bin\Release\LedControl.pdb
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\Release\ResolveAssemblyReference.cache
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\Release\Led.g.cs
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\Release\LedControl_MarkupCompile.cache
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\Release\LedControl_MarkupCompile.lref
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\Release\Led.baml
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\Release\LedControl.g.resources
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\Release\LedControl.Properties.Resources.resources
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\Release\GenerateResource.read.1.tlog
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\Release\GenerateResource.write.1.tlog
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\Release\LedControl.dll
+C:\Users\mesta\Desktop\Led Wpf\WpfLed\obj\Release\LedControl.pdb
