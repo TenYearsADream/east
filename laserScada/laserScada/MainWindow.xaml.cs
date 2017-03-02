@@ -25,8 +25,15 @@ namespace laserScada
     public partial class MainWindow : MetroWindow
 
     {
+        bool laerFinish = false;
+        bool lastLaerFinish = false;
+
+        bool pauseFinish = false;
+        bool lastPauseFinish = false;
+
         bool pr_main_connect
         {
+           
             set
             {
                 main_led_connect.IsActive = value;
@@ -104,8 +111,52 @@ namespace laserScada
             stol_tb_speed.Text = m_plc.tags.get_ust_stol_skor_vverh().ToString();
             stol_tb_line.Text = m_plc.tags.get_linejka().ToString();
 
+            //dat
+            dat_po1.Data = m_plc.tags.get_ga_po1().ToString();
+            dat_po2.Data = m_plc.tags.get_ga_po2().ToString();
+            dat_po3.Data = m_plc.tags.get_ga_po3().ToString();
+            dat_ph2.Data = m_plc.tags.get_ga_ph2().ToString();
+            dat_T1.Data = m_plc.tags.get_ga_t1().ToString();
+            dat_T2.Data = m_plc.tags.get_ga_t2().ToString();
+            dat_T3.Data = m_plc.tags.get_ga_t3().ToString();
+            dat_T4.Data = m_plc.tags.get_ga_t4().ToString();
+            dat_davl9.Data = m_plc.tags.get_davl9().ToString();
+            dat_davl10.Data = m_plc.tags.get_davl10().ToString();
+            dat_davl11.Data = m_plc.tags.get_davl11().ToString();
 
+            dat_sk_pot.IsActive = m_plc.tags.get_prot_skanator();
+            //dat_sk_tmp.IsActive = m_plc.tags.get_te
+            dat_kl_pot.IsActive = m_plc.tags.get_prot_gol_laz_i_kalimator();
+            //dat_kl_tmp.IsActive
+            dat_ls_pot.IsActive = m_plc.tags.get_prot_lazer();
+            //dat_ls_temp.IsActive
 
+            //autoFire
+            laerFinish = (lastLaerFinish == true && !m_plc.tags.get_sloj_rab());               
+            lastLaerFinish = m_plc.tags.get_sloj_rab();
+
+            pauseFinish = (lastPauseFinish == true && !m_plc.tags.get_kom_pauza());
+            lastPauseFinish = m_plc.tags.get_kom_pauza();
+
+            bool s1 = m_plc.tags.get_ust_kol_slojov() >0 && laerFinish && !m_plc.tags.get_kom_pauza() && !m_plc.tags.get_kom_prer();
+            bool s2 = m_plc.tags.get_sloi_nepr_rab() && pauseFinish && m_plc.tags.get_kom_rab_do_pauzy() &&  !m_plc.tags.get_kom_prer();
+
+            if (s1 || s2)
+            {
+                Log.Write(LogLevel.Info, "start laer ");
+                SpIceController.StartLayer_(true);
+            }
+
+            //main
+            m_main_layerCount_finish.Text = m_plc.tags.get_schjot_slojov().ToString();
+            m_main_layerCount.Text = m_plc.tags.get_ust_kol_slojov().ToString();
+
+            //shnek
+            snek_s1_tb.Data = m_plc.tags.get_ust_vrem_rab_sh1().ToString();
+            snek_s2_tb.Data = m_plc.tags.get_ust_vrem_rab_sh2().ToString();
+            snek_s3_tb.Data = m_plc.tags.get_ust_vrem_rab_sh3().ToString();
+            snek_s3_tb_nagr.Data = m_plc.tags.get_tok_sh3().ToString();
+            snek_s3_lo.IsActive = m_plc.tags.get_nizhn_ur_poroshka();
         }
 
         private void tbDeviceIP_TextChanged(object sender, TextChangedEventArgs e)
@@ -271,6 +322,7 @@ namespace laserScada
 
         private void main_bt_startLayer_Click(object sender, RoutedEventArgs e)
         {
+            Log.Write(LogLevel.Info, "start layer ");
             SpIceController.StartLayer_(true);
         }
 
@@ -282,6 +334,103 @@ namespace laserScada
         private void main_laser_power(object sender, RoutedEventArgs e)
         {
             m_plc.tags.set_kom_got_lazer(true);
+        }
+
+        private void m_main_layerCount_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var dialog = new inputDialog("Количество слоев", ((TextBox)sender).Text);
+            if (dialog.ShowDialog() == true)
+            {
+                m_plc.tags.set_ust_kol_slojov(short.Parse(dialog.ResponseText));
+            }
+        }
+
+        private void main_bt_start_Click(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_sloj(true);
+        }
+
+        private void main_bt_process_Click(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_proc_obshh(true);
+
+        }
+
+        private void main_bt_pause_Click(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_pauza(true);
+        }
+
+        private void main_bt_interupt_Click(object sender, RoutedEventArgs e)
+        {
+            //  m_plc.tags.set_kom_p
+            Log.Write(LogLevel.Info, "Unimplemented!!!!");
+        }
+
+        private void snek_s1_bt_start_Click(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_sh1_rele(true);
+        }
+
+        private void snek_s1_tb_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var dialog = new inputDialog("Время работы", ((dataField)sender).Data);
+            if (dialog.ShowDialog() == true)
+            {
+                m_plc.tags.set_ust_vrem_rab_sh1(float.Parse(dialog.ResponseText));
+            }
+        }
+
+        private void snek_s2_tb_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var dialog = new inputDialog("Время работы", ((dataField)sender).Data);
+            if (dialog.ShowDialog() == true)
+            {
+                m_plc.tags.set_ust_vrem_rab_sh2(float.Parse(dialog.ResponseText));
+            }
+        }
+
+        private void snek_s3_tb_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var dialog = new inputDialog("Время работы", ((dataField)sender).Data);
+            if (dialog.ShowDialog() == true)
+            {
+                m_plc.tags.set_ust_vrem_rab_sh3(float.Parse(dialog.ResponseText));
+            }
+        }
+
+        private void snek_s3_tb_nagr_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void snek_s3_tb_nagr_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var dialog = new inputDialog("Нагрузка", ((dataField)sender).Data);
+            if (dialog.ShowDialog() == true)
+            {
+                m_plc.tags.set_tok_sh3(float.Parse(dialog.ResponseText));
+            }
+        }
+
+        private void snek_s2_bt_Click(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_sh2_rele(true);
+        }
+
+        private void snek_s3_bt_Click(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_sh3_vperjod(true);
+        }
+
+        private void main_power_scanator_Click(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_pit_skan(true);
+        }
+
+        private void layer_time_rot_m3_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

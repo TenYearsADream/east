@@ -28,7 +28,7 @@
                 </RadialGradientBrush>
             </Border.BorderBrush>
         </Border>
-        <Label  x:Name="caption" Content="sts">
+        <Label  x:Name="caption" Content="sts" HorizontalAlignment="Center" VerticalAlignment="Center">
             </Label>
         </StackPanel>
     </Grid>

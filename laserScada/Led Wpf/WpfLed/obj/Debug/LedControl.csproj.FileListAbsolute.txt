@@ -24,3 +24,4 @@ D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\Debug\LedControl.Properties.
 D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\Debug\LedControl.csproj.GenerateResource.Cache
 D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\Debug\LedControl.dll
 D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\Debug\LedControl.pdb
+D:\arduino\laserScada\laserScada\Led Wpf\WpfLed\obj\Debug\LedControl.csprojResolveAssemblyReference.cache
