@@ -25,6 +25,7 @@ namespace laserScada
             InitializeComponent();
             lb_name_var.Text = nameVar;
             ResponseTextBox.Text = initVal;
+            ResponseTextBox.SelectAll();
         }
 
         public string ResponseText
@@ -47,6 +48,12 @@ namespace laserScada
         {
             DialogResult = false;
 
+        }
+
+        private void ResponseTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+                DialogResult = true;
         }
     }
 }

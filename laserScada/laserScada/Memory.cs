@@ -35,12 +35,12 @@ namespace laserScada
 
         public UInt16 getMUInt16(UInt16 offset)
         {
-            return (UInt16)((((UInt16)m_mRegion[offset + 1]) << 8) | ((UInt16)m_mRegion[offset]));
+            return (UInt16)((((UInt16)m_mRegion[offset ]) << 8) | ((UInt16)m_mRegion[offset +1]));
         }
 
         public UInt32 getMUInt32(UInt16 offset)
         {
-            return (UInt32)((((UInt32)m_mRegion[offset + 3]) << 8 * 3) | (((UInt32)m_mRegion[offset + 2]) << 8 * 2) | (((UInt32)m_mRegion[offset + 1]) << 8 * 1) | ((UInt16)m_mRegion[offset]));
+            return (UInt32)((((UInt32)m_mRegion[offset ]) << 8 * 3) | (((UInt32)m_mRegion[offset + 1]) << 8 * 2) | (((UInt32)m_mRegion[offset + 2]) << 8 * 1) | ((UInt16)m_mRegion[offset+3]));
         }
 
         public float getMFloat(UInt16 offset)

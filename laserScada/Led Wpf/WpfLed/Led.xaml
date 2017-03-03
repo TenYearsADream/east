@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:conveters="clr-namespace:LedControl.Converters"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="50" d:DesignWidth="200">
     <UserControl.Resources>
         <conveters:WidthToBorderThickConverter x:Key="BorderThickConverter" />  
     </UserControl.Resources>

@@ -7,9 +7,9 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
         Title="inputDialog" Height="101.786" Width="300">
-    <StackPanel>
+    <StackPanel FocusManager.FocusedElement="{Binding ElementName=ResponseTextBox}">
         <TextBlock Text="Enter some text" x:Name="lb_name_var"/>
-        <TextBox x:Name="ResponseTextBox" TextChanged="ResponseTextBox_TextChanged" />
+        <TextBox x:Name="ResponseTextBox" TextChanged="ResponseTextBox_TextChanged" KeyDown="ResponseTextBox_KeyDown" />
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
           <Button Content="OK" Width="100"  Click="OKButton_Click" />
             <Button Content="Отмена"   Width="100" Click="FailButton_Click"  />

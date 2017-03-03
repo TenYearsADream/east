@@ -157,6 +157,16 @@ namespace laserScada
             snek_s3_tb.Data = m_plc.tags.get_ust_vrem_rab_sh3().ToString();
             snek_s3_tb_nagr.Data = m_plc.tags.get_tok_sh3().ToString();
             snek_s3_lo.IsActive = m_plc.tags.get_nizhn_ur_poroshka();
+            snek_s3_up.IsActive = m_plc.tags.get_verhn_ur_poroshka();
+            //sloi
+            layer_widh.Data = m_plc.tags.get_ust_tolshh_sloya().ToString();
+            layer_time_rot_m3.Data = m_plc.tags.get_ust_vrem_vrashh_na_meste().ToString();
+            layer_stop_m3.Data = m_plc.tags.get_ust_kar_poz_otkl_sh3().ToString();
+            layer_doz_num.Data = m_plc.tags.get_ust_kol_slojov_dlya_dozatora().ToString();
+            layer_doz_rem.Data = m_plc.tags.get_ost_slojov_dlya_dozatora().ToString();
+            layer_pusk_num.Data = m_plc.tags.get_ust_kol_slojov().ToString();
+            layer_pusk_rem.Data = m_plc.tags.get_ost_slojov().ToString();
+            layer_pusk_gotov.Data = m_plc.tags.get_schjot_slojov().ToString();
         }
 
         private void tbDeviceIP_TextChanged(object sender, TextChangedEventArgs e)
@@ -431,6 +441,66 @@ namespace laserScada
         private void layer_time_rot_m3_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void layer_avtomat_d_Click(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_dozator_avtomat(true);
+        }
+
+        private void layer_avtomat_pusk_Click(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_sloj(true);
+        }
+
+        private void layer_time_rot_m3_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var dialog = new inputDialog("Время вращения М3 на месте", ((dataField)sender).Data);
+            if (dialog.ShowDialog() == true)
+            {
+                m_plc.tags.set_ust_vrem_vrashh_na_meste(float.Parse(dialog.ResponseText));
+            }
+        }
+
+        private void layer_stop_m3_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var dialog = new inputDialog("Позиция отключения М3", ((dataField)sender).Data);
+            if (dialog.ShowDialog() == true)
+            {
+                m_plc.tags.set_ust_kar_poz_otkl_sh3(float.Parse(dialog.ResponseText));
+            }
+        }
+
+        private void layer_doz_num_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var dialog = new inputDialog("Дозатор -количество слоёв", ((dataField)sender).Data);
+            if (dialog.ShowDialog() == true)
+            {
+                m_plc.tags.set_ust_kol_slojov_dlya_dozatora(short.Parse(dialog.ResponseText));
+            }
+        }
+
+        private void layer_pusk_num_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var dialog = new inputDialog("Количество слоёв", ((dataField)sender).Data);
+            if (dialog.ShowDialog() == true)
+            {
+                m_plc.tags.set_ust_kol_slojov(short.Parse(dialog.ResponseText));
+            }
+        }
+
+        private void layer_avtomat_reset_Click(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_sloj_sbros_schjotchika(true);
+        }
+
+        private void layer_widh_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var dialog = new inputDialog("Толщина слоя", ((dataField)sender).Data);
+            if (dialog.ShowDialog() == true)
+            {
+                m_plc.tags.set_ust_tolshh_sloya(short.Parse(dialog.ResponseText));
+            }
         }
     }
 }
