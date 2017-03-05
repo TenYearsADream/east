@@ -314,6 +314,10 @@ namespace SpIceControllerLib
             return m_currenlList;
         }
 
+        public static String getScripFileName()
+        {
+            return fileLoader.m_cs.scriptPath;
+        }
         public static string getStateString()
         {
             return string.Format("Controller: {0, -20} isFinished: [{1}] TimeExecution: {2, 10}, Layer: {3, 6}", 

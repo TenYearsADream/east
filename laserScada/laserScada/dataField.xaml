@@ -5,16 +5,16 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:laserScada"
              mc:Ignorable="d" 
-             d:DesignHeight="250.595" d:DesignWidth="300">
-    <Grid >
+             >
+    <Grid HorizontalAlignment="Stretch" >
                     <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.5*"/>
-                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
 
             </Grid.ColumnDefinitions>
 
-        <Label x:Name="lb_text" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"  Content="Label"/>
-            <TextBox x:Name="tb_data" Grid.Column="1"/>
+        <Label x:Name="lb_text" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"  Content="Labelklkllklklkoioiooioioioioioi"/>
+            <TextBox x:Name="tb_data" Grid.Column="1" MinWidth="100"/>
        
     </Grid>
 </UserControl>

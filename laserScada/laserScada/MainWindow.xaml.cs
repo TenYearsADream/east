@@ -116,20 +116,20 @@ namespace laserScada
             dat_po2.Data = m_plc.tags.get_ga_po2().ToString();
             dat_po3.Data = m_plc.tags.get_ga_po3().ToString();
             dat_ph2.Data = m_plc.tags.get_ga_ph2().ToString();
-            dat_T1.Data = m_plc.tags.get_ga_t1().ToString();
-            dat_T2.Data = m_plc.tags.get_ga_t2().ToString();
-            dat_T3.Data = m_plc.tags.get_ga_t3().ToString();
-            dat_T4.Data = m_plc.tags.get_ga_t4().ToString();
+            //dat_T1.Data = m_plc.tags.get_ga_t1().ToString();
+            //dat_T2.Data = m_plc.tags.get_ga_t2().ToString();
+            //dat_T3.Data = m_plc.tags.get_ga_t3().ToString();
+            //dat_T4.Data = m_plc.tags.get_ga_t4().ToString();
             dat_davl9.Data = m_plc.tags.get_davl9().ToString();
             dat_davl10.Data = m_plc.tags.get_davl10().ToString();
             dat_davl11.Data = m_plc.tags.get_davl11().ToString();
 
             dat_sk_pot.IsActive = m_plc.tags.get_prot_skanator();
-            //dat_sk_tmp.IsActive = m_plc.tags.get_te
+            dat_sk_tmp.IsActive = m_plc.tags.get_vys_temp_skanator();
             dat_kl_pot.IsActive = m_plc.tags.get_prot_gol_laz_i_kalimator();
-            //dat_kl_tmp.IsActive
+            dat_kl_tmp.IsActive = m_plc.tags.get_vys_temp_gol_laz_i_kalimator();
             dat_ls_pot.IsActive = m_plc.tags.get_prot_lazer();
-            //dat_ls_temp.IsActive
+            dat_ls_temp.IsActive = m_plc.tags.get_vys_temp_lazer();
 
             //autoFire
             laerFinish = (lastLaerFinish == true && !m_plc.tags.get_sloj_rab());               
@@ -167,6 +167,7 @@ namespace laserScada
             layer_pusk_num.Data = m_plc.tags.get_ust_kol_slojov().ToString();
             layer_pusk_rem.Data = m_plc.tags.get_ost_slojov().ToString();
             layer_pusk_gotov.Data = m_plc.tags.get_schjot_slojov().ToString();
+            layer_scriptFile.Content = SpIceController.getScripFileName();
         }
 
         private void tbDeviceIP_TextChanged(object sender, TextChangedEventArgs e)
@@ -501,6 +502,12 @@ namespace laserScada
             {
                 m_plc.tags.set_ust_tolshh_sloya(short.Parse(dialog.ResponseText));
             }
+        }
+
+        private void main_Sherif_Click(object sender, RoutedEventArgs e)
+        {
+            // m_plc.tags.set_kom_s
+            Log.Write(LogLevel.Info, "___________Unimplemented!!!!____________");
         }
     }
 }

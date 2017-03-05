@@ -7,9 +7,7 @@
         <res:NotifyAppender x:Key="Log" />
     </UserControl.Resources>
     <Grid DataContext="{StaticResource Log}" >
-        <TextBox 
-            Text="{Binding Appender.Notification, Mode=Default}"
-            />
+        <TextBox   Text="{Binding Appender.Notification, Mode=Default}"  />
 
     </Grid>
 </UserControl>

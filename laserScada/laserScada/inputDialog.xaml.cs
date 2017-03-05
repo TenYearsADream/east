@@ -26,6 +26,11 @@ namespace laserScada
             lb_name_var.Text = nameVar;
             ResponseTextBox.Text = initVal;
             ResponseTextBox.SelectAll();
+
+            var point = Mouse.GetPosition(Application.Current.MainWindow);
+         
+        //   HorizontalOffset = point.X;
+        //    VerticalOffset = point.Y;
         }
 
         public string ResponseText

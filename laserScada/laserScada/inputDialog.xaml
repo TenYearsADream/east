@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:laserScada"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
+                      WindowStartupLocation="CenterScreen"
         Title="inputDialog" Height="101.786" Width="300">
     <StackPanel FocusManager.FocusedElement="{Binding ElementName=ResponseTextBox}">
         <TextBlock Text="Enter some text" x:Name="lb_name_var"/>
