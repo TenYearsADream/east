@@ -28,6 +28,9 @@ namespace laserScada
         bool laerFinish = false;
         bool lastLaerFinish = false;
 
+        bool laerFinish1 = false;
+        bool lastLaerFinish1 = false;
+
         bool pauseFinish = false;
         bool lastPauseFinish = false;
         bool m_pause = false;
@@ -139,15 +142,26 @@ namespace laserScada
             dat_ls_pot.IsActive = m_plc.tags.get_prot_lazer();
             dat_ls_temp.IsActive = m_plc.tags.get_vys_temp_lazer();
             dat_cooller.IsActive = m_plc.tags.get_ohl_skan()==1;
+
+            m_plc.tags.set_prozhig_rab(SpIceController.isBusy());
             //autoFire
             laerFinish = (lastLaerFinish == true && !m_plc.tags.get_sloj_rab());              
             lastLaerFinish = m_plc.tags.get_sloj_rab();
 
+
+            if (laerFinish)
+            {
+                int stop = 1;
+            }
+
+            //laerFinish1 = (lastLaerFinish1 == true && !m_plc.tags.get_sloj_rab());
+            //lastLaerFinish1 = m_plc.tags.get_sloj_rab();
+
             pauseFinish = (lastPauseFinish == true && !m_plc.tags.get_kom_pauza());
             lastPauseFinish = m_plc.tags.get_kom_pauza();
-
+           // pauseFinish = !m_plc.tags.get_kom_pauza();
             bool s1 = m_plc.tags.get_ust_kol_slojov() >0 && laerFinish && !m_plc.tags.get_kom_pauza() && !m_plc.tags.get_kom_prer();
-            bool s2 = m_plc.tags.get_sloi_nepr_rab() && pauseFinish && m_plc.tags.get_kom_rab_do_pauzy() &&  !m_plc.tags.get_kom_prer();
+            bool s2 = !m_plc.tags.get_sloj_rab() && pauseFinish && m_plc.tags.get_kom_rab_do_pauzy() &&  !m_plc.tags.get_kom_prer();
 
             if (s1 || s2)
             {

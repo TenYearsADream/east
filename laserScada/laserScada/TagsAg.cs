@@ -1750,7 +1750,8 @@ partial class Tags {
 
     public void set_prozhig_rab (bool val)
     { m_mem.setMBit(511, 7, (bool) val); 
-      Log.Write(LogLevel.Info, "set prozhig_rab to " + val.ToString());}
+    //Log.Write(LogLevel.Info, "set prozhig_rab to " + val.ToString());
+    }
 
 // слои непр раб,   Bool, %M512.0   reg = M  width = Bit
     public bool get_sloi_nepr_rab ()
