@@ -14,7 +14,7 @@
             </Grid.ColumnDefinitions>
 
         <Label x:Name="lb_text" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"  Content="Labelklkllklklkoioiooioioioioioi"/>
-            <TextBox x:Name="tb_data" Grid.Column="1" MinWidth="100"/>
+            <TextBox x:Name="tb_data" Grid.Column="1" MinWidth="80"/>
        
     </Grid>
 </UserControl>

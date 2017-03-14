@@ -28,9 +28,6 @@ namespace laserScada
         bool laerFinish = false;
         bool lastLaerFinish = false;
 
-        bool laerFinish1 = false;
-        bool lastLaerFinish1 = false;
-
         bool pauseFinish = false;
         bool lastPauseFinish = false;
         bool m_pause = false;
@@ -90,14 +87,13 @@ namespace laserScada
         private void updateSignals(object sender, EventArgs e)
         {
             // Log.Write(LogLevel.Debug, "tst");
+
+
             if (m_pause)
-            {
-                main_bt_pause.Content = "Пауза вкл";
-            }
+                main_bt_pause.Background = Brushes.Aqua;
             else
-            {
-                main_bt_pause.Content = "Пауза выкл";
-            }
+                main_bt_pause.ClearValue(Button.BackgroundProperty);
+
             //connect
             tbCounter.Text = m_plc.tags.get_dint().ToString();
             //karetka
@@ -111,6 +107,10 @@ namespace laserScada
             kar_led_lk.IsActive = m_plc.tags.get_karetka_sleva();
             kar_led_pk.IsActive = m_plc.tags.get_karetka_sprava();
 
+            if (m_plc.tags.get_vyhd_kar_dom())
+                kar_bt_find_orign.Background = Brushes.Aqua;
+            else
+                kar_bt_find_orign.ClearValue(Button.BackgroundProperty);
 
             // kar_cb_error.IsChecked ??? 
 
@@ -121,7 +121,7 @@ namespace laserScada
             stol_tb_step_value.Text = m_plc.tags.get_ust_stol_otn_rasst().ToString();
             stol_tb_speed.Text = m_plc.tags.get_ust_stol_skor_vverh().ToString();
             stol_tb_line.Text = m_plc.tags.get_linejka().ToString();
-
+            main_linejka_dublicate.Data = m_plc.tags.get_linejka().ToString();
             //dat
             dat_po1.Data = m_plc.tags.get_ga_po1().ToString();
             dat_po2.Data = m_plc.tags.get_ga_po2().ToString();
@@ -143,11 +143,15 @@ namespace laserScada
             dat_ls_temp.IsActive = m_plc.tags.get_vys_temp_lazer();
             dat_cooller.IsActive = m_plc.tags.get_ohl_skan()==1;
 
+            dat_ls_active.IsActive = SpIceController.isBusy();
+            dat_ls_wait.IsActive = SpIceController.isWait();
+
             m_plc.tags.set_prozhig_rab(SpIceController.isBusy());
             //autoFire
             laerFinish = (lastLaerFinish == true && !m_plc.tags.get_sloj_rab());              
             lastLaerFinish = m_plc.tags.get_sloj_rab();
 
+            
 
             if (laerFinish)
             {
@@ -190,6 +194,13 @@ namespace laserScada
             layer_pusk_rem.Data = m_plc.tags.get_ost_slojov().ToString();
             layer_pusk_gotov.Data = m_plc.tags.get_schjot_slojov().ToString();
             layer_scriptFile.Content = SpIceController.getScripFileName();
+            if (m_plc.tags.get_proc_obshh_rab())
+                main_bt_process.Background = Brushes.Aqua;
+            else
+                main_bt_process.ClearValue(Button.BackgroundProperty);
+
+            //modul postroenia
+           // build_led1.IsActive = m_plc.tags.get_
         }
 
         private void tbDeviceIP_TextChanged(object sender, TextChangedEventArgs e)
@@ -532,6 +543,31 @@ namespace laserScada
         {
             // m_plc.tags.set_kom_s
             Log.Write(LogLevel.Info, "___________Unimplemented!!!!____________");
+        }
+
+        private void build_nul_acc_Click(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_nul_toch(true);
+        }
+
+        private void build_set_up_Click(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_s1_pod_jom(true);
+        }
+
+        private void build_set_down_Click(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_s2_opuskanie(true);
+        }
+
+        private void build_zakat_Click(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_s3_zakat(true);
+        }
+
+        private void build_vikat_Click(object sender, RoutedEventArgs e)
+        {
+            m_plc.tags.set_kom_s4_vykat(true);
         }
     }
 }

@@ -52,6 +52,7 @@
                         <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Visibility="Hidden"/>
                         <uc:Led x:Name="dat_ldat_ready" IsActive="{Binding LedStatus, Mode=OneWay}" Flashing="{Binding Flash}" HorizontalAlignment="Left" ColorNull="Gray"  Text=" Деталь готова" ColorOn="Green" ColorOff="Gray"/>
                         <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Visibility="Hidden" />
+                        <local:dataField x:Name="main_linejka_dublicate" Text=" Линейка" Grid.Column="1" Grid.Row="0" MouseDoubleClick="snek_s1_tb_MouseDoubleClick"/>
 
                     </StackPanel>
                     <Separator Visibility="Hidden"/>
@@ -120,15 +121,14 @@
                                     <Label Content="Ip адрес"  VerticalAlignment="Center"/>
                                     <TextBox x:Name="tbDeviceIP" Text="192.168.100.2" Width="100"  TextChanged="tbDeviceIP_TextChanged" VerticalAlignment="Center"/>
                                     <Label x:Name="lbConectedStatus" Content="Label" VerticalAlignment="Center" />
-                                    <CheckBox x:Name="cb_cnt_autoconnect" Content="Автоматическое соединение" VerticalAlignment="Center"/>
                                     <Label Content="  Счетчик исправности  "/>
-                                    <TextBox x:Name="tbCounter" Text="TextBox" Width="200" HorizontalAlignment="Left"  />
+                                    <TextBox x:Name="tbCounter" Text="TextBox" Width="100" HorizontalAlignment="Left"  />
                                 </StackPanel >
                             </GroupBox>
                             <GroupBox x:Name="groupBox_power" Header="Дополнительно" Grid.Column="2" Margin="5.2,5,5.2,4.8" >
                                 <StackPanel Orientation="Horizontal">
                                     <Button x:Name="main_liht" Content="Свет" Width="120"  Click="main_bt_light"/>
-                                    <Button x:Name="button2" Content="Питание лазера"  Width="120" Click="main_laser_power"/>
+                                    <Button x:Name="button2" Content="Готовность лазера"  Width="120" Click="main_laser_power"/>
                                     <Button x:Name="main_power_scanator" Content="Питание сканатора"  Width="120" Click="main_power_scanator_Click"/>
 
                                     <Button x:Name="main_bt_startLayer" Content="Принудительный прожиг слоя"  Click="main_bt_startLayer_Click"/>
@@ -160,9 +160,9 @@
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="100"/>
-                                            <ColumnDefinition Width="100"/>
-                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="80"/>
+                                            <ColumnDefinition Width="80"/>
+                                            <ColumnDefinition Width="80"/>
                                             <ColumnDefinition Width="Auto"/>
 
 
@@ -190,9 +190,9 @@
                                         <Button Content="Вправо" x:Name="kar_bt_vpravo" Grid.Row="2" Grid.Column="3" Click="kar_bt_vpravo_Click"/>
 
                                         <Label Content="скорость влево" Grid.Row="3" Grid.Column="0"/>
-                                        <TextBox Width="100" x:Name="kar_tb_left_speed" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" MouseDoubleClick="kar_tb_left_speed_MouseDoubleClick"/>
+                                        <TextBox Width="80" x:Name="kar_tb_left_speed" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" MouseDoubleClick="kar_tb_left_speed_MouseDoubleClick"/>
                                         <Label Content="скорость вправо"  Grid.Row="4" Grid.Column="0"/>
-                                        <TextBox Width="100" x:Name="kar_tb_right_speed" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" MouseDoubleClick="kar_tb_right_speed_MouseDoubleClick"/>
+                                        <TextBox Width="80" x:Name="kar_tb_right_speed" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" MouseDoubleClick="kar_tb_right_speed_MouseDoubleClick"/>
 
                                     </Grid>
                                 </StackPanel >
@@ -212,8 +212,8 @@
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="100"/>
-                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
 
                                         </Grid.ColumnDefinitions>
 
@@ -265,7 +265,7 @@
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="80"/>
                                             <ColumnDefinition Width="*" />
 
 
@@ -303,11 +303,11 @@
                             <GroupBox x:Name="groupBox_module_build" Header="Модуль построения" Grid.Column="0" >
                                 <StackPanel Orientation="Vertical">
                                     <StackPanel Orientation="Horizontal">
-                                        <Button x:Name="build_nul_acc" Content="Нул. точ."  Width="90" HorizontalAlignment="Left" />
-                                        <Button x:Name="build_set_up" Content="Поднять"  Width="90" HorizontalAlignment="Left" />
-                                        <Button x:Name="build_set_down" Content="Опустить"  Width="90" HorizontalAlignment="Left" />
-                                        <Button x:Name="build_zakat" Content="Закатить"  Width="90" HorizontalAlignment="Left" />
-                                        <Button x:Name="build_vikat" Content="Выкатить"  Width="90" HorizontalAlignment="Left" />
+                                        <Button x:Name="build_nul_acc" Content="Нул. точ."  Width="90" HorizontalAlignment="Left" Click="build_nul_acc_Click" />
+                                        <Button x:Name="build_set_up" Content="Поднять"  Width="90" HorizontalAlignment="Left" Click="build_set_up_Click" />
+                                        <Button x:Name="build_set_down" Content="Опустить"  Width="90" HorizontalAlignment="Left" Click="build_set_down_Click" />
+                                        <Button x:Name="build_zakat" Content="Закатить"  Width="90" HorizontalAlignment="Left" Click="build_zakat_Click" />
+                                        <Button x:Name="build_vikat" Content="Выкатить"  Width="90" HorizontalAlignment="Left" Click="build_vikat_Click" />
                                     </StackPanel >
 
                                     <StackPanel Orientation="Horizontal">
@@ -480,7 +480,7 @@
 
 
             </Grid>
-
+           
 
         </Grid>
     </ScrollViewer>
