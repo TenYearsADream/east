@@ -30,7 +30,7 @@ namespace laserScada
 
         bool pauseFinish = false;
         bool lastPauseFinish = false;
-
+        bool m_pause = false;
         bool pr_main_connect
         {
            
@@ -86,8 +86,15 @@ namespace laserScada
 
         private void updateSignals(object sender, EventArgs e)
         {
-           // Log.Write(LogLevel.Debug, "tst");
-
+            // Log.Write(LogLevel.Debug, "tst");
+            if (m_pause)
+            {
+                main_bt_pause.Content = "Пауза вкл";
+            }
+            else
+            {
+                main_bt_pause.Content = "Пауза выкл";
+            }
             //connect
             tbCounter.Text = m_plc.tags.get_dint().ToString();
             //karetka
@@ -99,7 +106,8 @@ namespace laserScada
             //kar_cb_lk.IsChecked = m_plc.tags.get_karetka_sleva();
             //kar_cb_pk.IsChecked = m_plc.tags.get_karetka_sprava();
             kar_led_lk.IsActive = m_plc.tags.get_karetka_sleva();
-            kar_led_pk.IsActive = m_plc.tags.get_karetka_sleva();
+            kar_led_pk.IsActive = m_plc.tags.get_karetka_sprava();
+
 
             // kar_cb_error.IsChecked ??? 
 
@@ -130,9 +138,9 @@ namespace laserScada
             dat_kl_tmp.IsActive = m_plc.tags.get_vys_temp_gol_laz_i_kalimator();
             dat_ls_pot.IsActive = m_plc.tags.get_prot_lazer();
             dat_ls_temp.IsActive = m_plc.tags.get_vys_temp_lazer();
-
+            dat_cooller.IsActive = m_plc.tags.get_ohl_skan()==1;
             //autoFire
-            laerFinish = (lastLaerFinish == true && !m_plc.tags.get_sloj_rab());               
+            laerFinish = (lastLaerFinish == true && !m_plc.tags.get_sloj_rab());              
             lastLaerFinish = m_plc.tags.get_sloj_rab();
 
             pauseFinish = (lastPauseFinish == true && !m_plc.tags.get_kom_pauza());
@@ -143,7 +151,7 @@ namespace laserScada
 
             if (s1 || s2)
             {
-                Log.Write(LogLevel.Info, "start laer ");
+                Log.Write(LogLevel.Info, "start layer ");
                 SpIceController.StartLayer_(true);
             }
 
@@ -369,12 +377,14 @@ namespace laserScada
 
         private void main_bt_pause_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_pauza(true);
+            m_pause = !m_pause;
+            m_plc.tags.set_kom_pauza(m_pause);
         }
 
         private void main_bt_interupt_Click(object sender, RoutedEventArgs e)
         {
             //  m_plc.tags.set_kom_p
+            m_plc.tags.set_kom_prer(true);
             Log.Write(LogLevel.Info, "Unimplemented!!!!");
         }
 
