@@ -38,8 +38,8 @@ namespace SpIceControllerLib
         public UInt16 power;
         public string corrFilePatch;
         public float scale;
-        public float korrX;
-        public float korrY;
+        public double gainX;
+        public double gainY;
         public UInt16 t1;
         public UInt16 t2;
         public UInt16 t3;

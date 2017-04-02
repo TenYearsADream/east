@@ -122,10 +122,10 @@
     <Setting Name="workSpace" Type="System.String" Scope="User">
       <Value Profile="(Default)">F:\spiCtrl</Value>
     </Setting>
-    <Setting Name="korrX" Type="System.Single" Scope="User">
+    <Setting Name="gainX" Type="System.Double" Scope="User">
       <Value Profile="(Default)">1</Value>
     </Setting>
-    <Setting Name="korrY" Type="System.Single" Scope="User">
+    <Setting Name="gainY" Type="System.Double" Scope="User">
       <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="debugOutput" Type="System.String" Scope="User">

@@ -506,24 +506,24 @@ namespace SpIceControllerLib.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float korrX {
+        public double gainX {
             get {
-                return ((float)(this["korrX"]));
+                return ((double)(this["gainX"]));
             }
             set {
-                this["korrX"] = value;
+                this["gainX"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float korrY {
+        public double gainY {
             get {
-                return ((float)(this["korrY"]));
+                return ((double)(this["gainY"]));
             }
             set {
-                this["korrY"] = value;
+                this["gainY"] = value;
             }
         }
         

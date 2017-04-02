@@ -91,6 +91,7 @@ namespace SpIceControllerLib
             bool rSetMode = NativeMethods.PCI_Set_Mode(e.cs.mode);
             NativeMethods.PCI_Stop_Execution();
             bool rOsc = NativeMethods.PCI_Write_Port_List(0xC, 0x00);
+            bool setGain = NativeMethods.PCI_Set_Gain_N(e.cs.gainX, e.cs.gainY, 0, 0, (UInt16)e.cs.num);
             dbg = e.cs.debug;
             
 
@@ -100,13 +101,13 @@ namespace SpIceControllerLib
             m_state = IntState.Wait ;
             m_isIntiialize = rInit  && rSetAct && rSetMode && rOsc && openScript;
 
-            MessageBox.Show(string.Format(" {0, -25} -- {1, -10} \n {2,-25} -- {4, -10}   ({3}) \n {5,-25} -- {6, -10} \n {7, -25} -- {8, -10} \n {9,-25} -- {10, -10}  \n {11,-25} -- {12, -10} ({13})",
+            MessageBox.Show(string.Format(" {0, -25} -- {1, -10} \n {2,-25} -- {4, -10}   ({3}) \n {5,-25} -- {6, -10} \n {7, -25} -- {8, -10} \n {9,-25} -- {10, -10}  \n {11,-25} -- {12, -10} ({13}) \n  {14, -25} -- {15, -10}",
                  "Init", rInit.ToString(),
                  "Load correction", e.cs.corrFilePatch, rLoad.ToString(),
                  "Set mode", rSetMode.ToString(),
                  "Set active card", rSetAct.ToString(),
                  "Oscillator on", rOsc.ToString(),
-                 "Open script", openScript.ToString(), e.cs.scriptPath),
+                 "Open script", openScript.ToString(), e.cs.scriptPath, "Set gain", setGain.ToString()),
                   (m_isIntiialize ? "Инициализация прошла успешно!" : "Ошибка при инициализации"),
                  MessageBoxButtons.OK,
                  m_isIntiialize ? MessageBoxIcon.Information : MessageBoxIcon.Error,

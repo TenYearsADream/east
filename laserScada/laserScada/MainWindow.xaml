@@ -255,7 +255,7 @@
                                 </StackPanel >
                             </GroupBox>
 
-                            <GroupBox x:Name="groupBox_sneck" Header="Шнек" Grid.Column="2">
+                            <GroupBox x:Name="groupBox_sneck" Header="Подача порошка" Grid.Column="2">
                                 <StackPanel Orientation="Horizontal">
                                     <Grid >
                                         <Grid.RowDefinitions>
@@ -276,15 +276,15 @@
 
 
                                         </Grid.ColumnDefinitions>
-                                        <Label Content="М1 (шнек)" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center"/>
+                                        <Label Content="Шнек" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Height="27" Margin="22,0" VerticalAlignment="Top"/>
                                         <local:dataField x:Name="snek_s1_tb" Text="Время" Grid.Column="1" Grid.Row="0" MouseDoubleClick="snek_s1_tb_MouseDoubleClick"/>
                                         <Button x:Name="snek_s1_bt_start"  Content="Пуск" Grid.Column="2" Grid.Row="0" Click="snek_s1_bt_start_Click"/>
 
-                                        <Label Content="М2 (дозатор)" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center"/>
+                                        <Label Content="Наполн. каретки" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center"/>
                                         <local:dataField x:Name="snek_s2_tb" Text="Время" Grid.Column="1" Grid.Row="1" PreviewMouseDoubleClick="snek_s2_tb_PreviewMouseDoubleClick"/>
                                         <Button x:Name="snek_s2_bt"  Content="Пуск" Grid.Column="2" Grid.Row="1" Click="snek_s2_bt_Click"/>
 
-                                        <Label Content="М3 (каретка)" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        <Label Content="Дозатор порошка" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                         <local:dataField x:Name="snek_s3_tb" Text="Время" Grid.Column="1" Grid.Row="2"  PreviewMouseDoubleClick="snek_s3_tb_PreviewMouseDoubleClick"/>
                                         <local:dataField x:Name="snek_s3_tb_nagr" Text="Нагрузка" Grid.Column="1" Grid.Row="3" Loaded="snek_s3_tb_nagr_Loaded" PreviewMouseDoubleClick="snek_s3_tb_nagr_PreviewMouseDoubleClick"/>
                                         <Button x:Name="snek_s3_bt"  Content="Пуск" Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Center" Click="snek_s3_bt_Click"/>
@@ -360,7 +360,7 @@
                                 </StackPanel>
                             </GroupBox>
 
-                            <GroupBox x:Name="groupBox_noname" Header="Дозатор порошка"   Grid.Column="3">
+                            <GroupBox x:Name="groupBox_noname" Header="Клапаны газовой системы"   Grid.Column="3">
                                 <StackPanel Orientation="Horizontal">
                                     <StackPanel Orientation="Vertical">
                                         <Label Content="Вход"/>
@@ -442,7 +442,7 @@
                                 <ColumnDefinition Width="100"/>
                                 <ColumnDefinition Width="100"/>
                             </Grid.ColumnDefinitions>
-                            <Button x:Name="layer_avtomat_d"  Content="Автомат дозатора" Grid.Column="0" Grid.Row="0" Click="layer_avtomat_d_Click" />
+                            <Button x:Name="layer_avtomat_d"  Content="Автодозатор" Grid.Column="0" Grid.Row="0" Click="layer_avtomat_d_Click" />
                             <local:dataField x:Name="layer_doz_num" Text="Слоев" Grid.Column="1" Grid.Row="0" MouseDoubleClick="layer_doz_num_MouseDoubleClick" />
                             <local:dataField x:Name="layer_doz_rem" Text="Остаток" Grid.Column="2" Grid.Row="0" />
 
