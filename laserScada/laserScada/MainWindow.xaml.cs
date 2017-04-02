@@ -91,12 +91,18 @@ namespace laserScada
 
             if (m_pause)
             {
-                //main_bt_pause.Background = Brushes.Aqua;
+                main_bt_pause.Background = Brushes.Aqua;
+              //  main_bt_pause.BorderThickness = new Thickness(1,1,1,3);
+              //  main_bt_pause.BorderBrush = Brushes.Red;
                 // main_bt_pause.s
-                main_bt_pause.Style = (Style)Application.Current.Resources["activeButton"];
+                // main_bt_pause.Style = (Style)Application.Current.Resources["activeButton"];
             }
             else
-                main_bt_pause.ClearValue(Button.StyleProperty);
+            {
+                main_bt_pause.ClearValue(Button.BackgroundProperty);
+                main_bt_pause.ClearValue(Button.BorderThicknessProperty);
+                main_bt_pause.ClearValue(Button.BorderBrushProperty);
+            }
 
             //connect
             tbCounter.Text = m_plc.tags.get_dint().ToString();
@@ -116,6 +122,20 @@ namespace laserScada
             else
                 kar_bt_find_orign.ClearValue(Button.BackgroundProperty);
 
+            if (m_plc.tags.get_vyhd_kar_abs())
+                kar_bt_start.Background = Brushes.Aqua;
+            else
+                kar_bt_start.ClearValue(Button.BackgroundProperty);
+
+            if (m_plc.tags.get_vyhd_kar_otn_vlevo())
+                kar_bt_vlevo.Background = Brushes.Aqua;
+            else
+                kar_bt_vlevo.ClearValue(Button.BackgroundProperty);
+
+            if (m_plc.tags.get_vyhd_kar_otn_vpravo())
+                kar_bt_vpravo.Background = Brushes.Aqua;
+            else
+                kar_bt_vpravo.ClearValue(Button.BackgroundProperty);
             // kar_cb_error.IsChecked ??? 
 
             //stol
@@ -126,6 +146,20 @@ namespace laserScada
             stol_tb_speed.Text = m_plc.tags.get_ust_stol_skor_vverh().ToString();
             stol_tb_line.Text = m_plc.tags.get_linejka().ToString();
             main_linejka_dublicate.Data = m_plc.tags.get_linejka().ToString();
+
+            if (m_plc.tags.get_vyhd_pereschjot())
+                stol_bt_line_control.Background = Brushes.Aqua;
+            else
+                stol_bt_line_control.ClearValue(Button.BackgroundProperty);
+
+
+            if (m_plc.tags.get_vyhd_stol_poisk_nulya())
+                stol_bt_find_zero.Background = Brushes.Aqua;
+            else
+                stol_bt_find_zero.ClearValue(Button.BackgroundProperty);
+
+
+
             //dat
             dat_po1.Data = m_plc.tags.get_ga_po1().ToString();
             dat_po2.Data = m_plc.tags.get_ga_po2().ToString();
@@ -146,6 +180,13 @@ namespace laserScada
             dat_ls_pot.IsActive = m_plc.tags.get_prot_lazer();
             dat_ls_temp.IsActive = m_plc.tags.get_vys_temp_lazer();
             dat_cooller.IsActive = m_plc.tags.get_ohl_skan()==1;
+
+            if (m_plc.tags.get_ohl_skan() == 1)
+                dat_cooller.Text = "Охлаждение в норме";
+            else if (m_plc.tags.get_ohl_skan() == 0)
+                dat_cooller.Text = "Охлаждение недостаточно";
+            else dat_cooller.Text = "Охлаждение превышено";
+
 
             dat_ls_active.IsActive = SpIceController.isBusy();
             dat_ls_wait.IsActive = SpIceController.isWait();
@@ -204,7 +245,37 @@ namespace laserScada
                 main_bt_process.ClearValue(Button.BackgroundProperty);
 
             //modul postroenia
-           // build_led1.IsActive = m_plc.tags.get_
+            // build_led1.IsActive = m_plc.tags.get_
+         
+
+            bool errVal = !m_plc.tags.get_prot_skanator() || m_plc.tags.get_vys_temp_skanator() ||
+                 !m_plc.tags.get_prot_gol_laz_i_kalimator() || m_plc.tags.get_vys_temp_gol_laz_i_kalimator() ||
+                 !m_plc.tags.get_prot_lazer() || m_plc.tags.get_vys_temp_lazer() || m_plc.tags.get_ohl_skan() != 1;
+           
+                main_bt_startLayer.IsEnabled = !errVal;
+            layer_avtomat_pusk.IsEnabled = !errVal;
+
+            if (m_plc.tags.get_proc_obshh_rab() && (m_plc.tags.get_avar_doz() || m_plc.tags.get_avar_m3()))
+            {
+                m_pause = !m_pause;
+                m_plc.tags.set_kom_pauza(m_pause);
+
+                string reason = "";
+                if (m_plc.tags.get_avar_doz())
+                {
+                    m_plc.tags.set_avar_doz(false);
+                    reason += "[avar_doz]";
+                }
+                if (m_plc.tags.get_avar_m3())
+                {
+                    m_plc.tags.set_avar_m3(false);
+                    reason += "[avar_m3]";
+                }
+
+                System.Windows.MessageBox.Show("Принудительная приостановка процесса прожига " + reason);
+            }
+
+
         }
 
         private void tbDeviceIP_TextChanged(object sender, TextChangedEventArgs e)
