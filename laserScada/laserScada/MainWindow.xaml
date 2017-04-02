@@ -28,6 +28,12 @@
            
             <Setter Property="FontWeight" Value="Normal"/>
         </Style>
+
+        <Style x:Key="activeButton" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Background" Value="Lavender" />
+            <Setter Property="Foreground" Value="OrangeRed" />
+        </Style>
     </Window.Resources>
 
 
@@ -64,9 +70,9 @@
                         <local:dataField  x:Name="dat_ph2" Text="Водород" Data="0" />
                         <Separator />
                         <Label  Content=" Давление" FontWeight="Bold" />
-                        <local:dataField  x:Name="dat_davl9" Text="Камера П" Data="0" />
-                        <local:dataField  x:Name="dat_davl10" Text="Камера Л" Data="0" />
-                        <local:dataField  x:Name="dat_davl11" Text="Тройник" Data="0" />
+                        <local:dataField  x:Name="dat_davl9" Text="Камера" Data="0" />
+                        <local:dataField  x:Name="dat_davl10" Text="Напуск" Data="0" />
+                        <local:dataField  x:Name="dat_davl11" Text="Входное" Data="0" />
 
                     </StackPanel>
                     <Separator Visibility="Hidden"/>

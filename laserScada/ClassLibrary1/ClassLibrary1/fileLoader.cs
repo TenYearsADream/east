@@ -178,6 +178,8 @@ namespace SpIceControllerLib
                                         {
                                             string str1 = matches[i].Value;
                                             float f1 = float.Parse(matches[i].Value, System.Globalization.NumberStyles.Float, CultureInfo.InvariantCulture) * m_cs.scale;
+                                            if (i == 0 || i == 2) f1 *= m_cs.korrX;
+                                            else f1 *= m_cs.korrY;
                                             actualArgs[i] = (Int16)(f1);
                                         }
                                         Int16 x0 = actualArgs[0];
@@ -276,13 +278,17 @@ namespace SpIceControllerLib
 
                                     correctLastPol(0, 0, true);
                                     int endPol = (int)(pol3D.Count / 3);
-
+                                    if (endPol >900)
+                                    {
+                                        isValidFile = 0;
+                                        MessageBox.Show("polyline3D имеет слишком много аргументов :" + endPol.ToString());
+                                    }
                                     for (int i = 0; i < endPol; i++)
                                     {
                                         int itX = i * 3;
                                         int itY = i * 3 + 1;
-                                        Int16 x = (Int16)(float.Parse(pol3D[itX].Value, System.Globalization.NumberStyles.Float, CultureInfo.InvariantCulture) * m_cs.scale);
-                                        Int16 y = (Int16)(float.Parse(pol3D[itY].Value, System.Globalization.NumberStyles.Float, CultureInfo.InvariantCulture) * m_cs.scale);
+                                        Int16 x = (Int16)(float.Parse(pol3D[itX].Value, System.Globalization.NumberStyles.Float, CultureInfo.InvariantCulture) * m_cs.scale * m_cs.korrX);
+                                        Int16 y = (Int16)(float.Parse(pol3D[itY].Value, System.Globalization.NumberStyles.Float, CultureInfo.InvariantCulture) * m_cs.scale * m_cs.korrY);
 
                                         if (i == 0)
                                         {

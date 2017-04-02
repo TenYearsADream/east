@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ClassLibrary1.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SpIceControllerLib.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="correctionFile" Type="System.String" Scope="User">
@@ -121,6 +121,15 @@
     </Setting>
     <Setting Name="workSpace" Type="System.String" Scope="User">
       <Value Profile="(Default)">F:\spiCtrl</Value>
+    </Setting>
+    <Setting Name="korrX" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="korrY" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="debugOutput" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\debug</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -90,9 +90,13 @@ namespace laserScada
 
 
             if (m_pause)
-                main_bt_pause.Background = Brushes.Aqua;
+            {
+                //main_bt_pause.Background = Brushes.Aqua;
+                // main_bt_pause.s
+                main_bt_pause.Style = (Style)Application.Current.Resources["activeButton"];
+            }
             else
-                main_bt_pause.ClearValue(Button.BackgroundProperty);
+                main_bt_pause.ClearValue(Button.StyleProperty);
 
             //connect
             tbCounter.Text = m_plc.tags.get_dint().ToString();
@@ -207,13 +211,20 @@ namespace laserScada
         {
            
         }
+        private bool parseFloat(string s)
+        {
+            float f;
+            return float.TryParse(s, out f);
+        }
 
         private void kar_tb_position_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var dialog = new inputDialog("Позиция перехода", ((TextBox)sender).Text);
             if (dialog.ShowDialog() == true)
             {
-                m_plc.tags.set_ust_karetka_poziciya(float.Parse(dialog.ResponseText));
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val)) { System.Windows.MessageBox.Show("Неправильное значение");  return; }
+                m_plc.tags.set_ust_karetka_poziciya(val);
             }
         }
 
@@ -222,6 +233,10 @@ namespace laserScada
             var dialog = new inputDialog("Шаг", ((TextBox)sender).Text);
             if (dialog.ShowDialog() == true)
             {
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val)) {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return; }
                 m_plc.tags.set_ust_karetka_rasst(float.Parse(dialog.ResponseText));
             }
         }
@@ -231,6 +246,12 @@ namespace laserScada
             var dialog = new inputDialog("Скорость влево", ((TextBox)sender).Text);
             if (dialog.ShowDialog() == true)
             {
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_ust_karetka_skor_vlevo(float.Parse(dialog.ResponseText));
             }
         }
@@ -240,6 +261,12 @@ namespace laserScada
             var dialog = new inputDialog("Скорость вправо", ((TextBox)sender).Text);
             if (dialog.ShowDialog() == true)
             {
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_ust_karetka_skor_vpravo(float.Parse(dialog.ResponseText));
             }
         }
@@ -274,6 +301,12 @@ namespace laserScada
             var dialog = new inputDialog("толщина плиты", ((TextBox)sender).Text);
             if (dialog.ShowDialog() == true)
             {
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_ust_stol_tolshh_plity(float.Parse(dialog.ResponseText));
             }
         }
@@ -283,6 +316,12 @@ namespace laserScada
             var dialog = new inputDialog("Позиция", ((TextBox)sender).Text);
             if (dialog.ShowDialog() == true)
             {
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_ust_stol_poziciya(float.Parse(dialog.ResponseText));
             }
         }
@@ -292,6 +331,12 @@ namespace laserScada
             var dialog = new inputDialog("Шаг", ((TextBox)sender).Text);
             if (dialog.ShowDialog() == true)
             {
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_ust_stol_otn_rasst(float.Parse(dialog.ResponseText));
             }
         }
@@ -301,6 +346,12 @@ namespace laserScada
             var dialog = new inputDialog("Скорость", ((TextBox)sender).Text);
             if (dialog.ShowDialog() == true)
             {
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_ust_stol_skor_vverh(float.Parse(dialog.ResponseText));
             }
         }
@@ -310,6 +361,12 @@ namespace laserScada
             var dialog = new inputDialog("Линейка", ((TextBox)sender).Text);
             if (dialog.ShowDialog() == true)
             {
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_linejka(float.Parse(dialog.ResponseText));
             }
         }
@@ -385,6 +442,12 @@ namespace laserScada
             var dialog = new inputDialog("Количество слоев", ((TextBox)sender).Text);
             if (dialog.ShowDialog() == true)
             {
+                short val;
+                if (!short.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_ust_kol_slojov(short.Parse(dialog.ResponseText));
             }
         }
@@ -410,7 +473,7 @@ namespace laserScada
         {
             //  m_plc.tags.set_kom_p
             m_plc.tags.set_kom_prer(true);
-            Log.Write(LogLevel.Info, "Unimplemented!!!!");
+          //  Log.Write(LogLevel.Info, "Unimplemented!!!!");
         }
 
         private void snek_s1_bt_start_Click(object sender, RoutedEventArgs e)
@@ -423,6 +486,12 @@ namespace laserScada
             var dialog = new inputDialog("Время работы", ((dataField)sender).Data);
             if (dialog.ShowDialog() == true)
             {
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_ust_vrem_rab_sh1(float.Parse(dialog.ResponseText));
             }
         }
@@ -432,6 +501,12 @@ namespace laserScada
             var dialog = new inputDialog("Время работы", ((dataField)sender).Data);
             if (dialog.ShowDialog() == true)
             {
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_ust_vrem_rab_sh2(float.Parse(dialog.ResponseText));
             }
         }
@@ -441,6 +516,12 @@ namespace laserScada
             var dialog = new inputDialog("Время работы", ((dataField)sender).Data);
             if (dialog.ShowDialog() == true)
             {
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_ust_vrem_rab_sh3(float.Parse(dialog.ResponseText));
             }
         }
@@ -455,6 +536,12 @@ namespace laserScada
             var dialog = new inputDialog("Нагрузка", ((dataField)sender).Data);
             if (dialog.ShowDialog() == true)
             {
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_tok_sh3(float.Parse(dialog.ResponseText));
             }
         }
@@ -494,6 +581,12 @@ namespace laserScada
             var dialog = new inputDialog("Время вращения М3 на месте", ((dataField)sender).Data);
             if (dialog.ShowDialog() == true)
             {
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_ust_vrem_vrashh_na_meste(float.Parse(dialog.ResponseText));
             }
         }
@@ -503,6 +596,12 @@ namespace laserScada
             var dialog = new inputDialog("Позиция отключения М3", ((dataField)sender).Data);
             if (dialog.ShowDialog() == true)
             {
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_ust_kar_poz_otkl_sh3(float.Parse(dialog.ResponseText));
             }
         }
@@ -512,6 +611,12 @@ namespace laserScada
             var dialog = new inputDialog("Дозатор -количество слоёв", ((dataField)sender).Data);
             if (dialog.ShowDialog() == true)
             {
+                short val;
+                if (!short.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_ust_kol_slojov_dlya_dozatora(short.Parse(dialog.ResponseText));
             }
         }
@@ -521,6 +626,12 @@ namespace laserScada
             var dialog = new inputDialog("Количество слоёв", ((dataField)sender).Data);
             if (dialog.ShowDialog() == true)
             {
+                short val;
+                if (!short.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_ust_kol_slojov(short.Parse(dialog.ResponseText));
             }
         }
@@ -535,6 +646,12 @@ namespace laserScada
             var dialog = new inputDialog("Толщина слоя", ((dataField)sender).Data);
             if (dialog.ShowDialog() == true)
             {
+                short val;
+                if (!short.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
                 m_plc.tags.set_ust_tolshh_sloya(short.Parse(dialog.ResponseText));
             }
         }

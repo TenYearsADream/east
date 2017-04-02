@@ -106,8 +106,12 @@ namespace SpIceControllerLib
 
             dg.Rows[(int)prm.lScript].Cells[1].Value = Properties.Settings.Default.scriptFile;
             dg.Rows[(int)prm.lCorrect].Cells[1].Value = Properties.Settings.Default.correctionFile;
+            dg.Rows[(int)prm.lWorkSpace].Cells[1].Value = Properties.Settings.Default.debugOutput;
+
 
             readCorrectionTextFile(dg.Rows[(int)prm.lCorrect].Cells[1].Value.ToString());
+            tb_korr_x.Text = Properties.Settings.Default.korrX.ToString();
+            tb_korr_y.Text = Properties.Settings.Default.korrY.ToString();
 
             dg.EditingControlShowing +=
 new DataGridViewEditingControlShowingEventHandler(
@@ -302,6 +306,25 @@ dg_EditingControlShowing);
 
         private void bt_initialise_Click(object sender, System.EventArgs e)
         {
+            //check values
+            tb_korr_x.Text = tb_korr_x.Text.Replace('.', ',');
+            tb_korr_y.Text = tb_korr_y.Text.Replace('.', ',');
+            float korr_x, korr_y;
+            if (!float.TryParse(tb_korr_x.Text, out korr_x))
+            {
+                MessageBox.Show("Некорректное значение для поля Корр по X","",
+                 MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
+                return;
+            }
+            if (!float.TryParse(tb_korr_y.Text, out korr_y))
+            {
+                MessageBox.Show("Некорректное значение для поля Корр по Y", "",
+                 MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, (MessageBoxOptions)0x40000);
+                return;
+            }
+            /// check value
+            /// 
+
             solveMode();
             UInt16 usmode = solveMode();
             cardSetting cs = new cardSetting();
@@ -314,6 +337,8 @@ dg_EditingControlShowing);
             cs.debug = cb_printDebug.Checked;
             cs.ignoreLocalSetting = cb_ignoreListSetting.Checked;
             cs.startLayer = UInt64.Parse(tb_startLayer.Text);
+            cs.korrX = korr_x;
+            cs.korrY = korr_y;
 
             dg.Rows[(int)prm.lJampSize].Cells[1].Value = dg.Rows[(int)prm.lJampSize].Cells[1].Value.ToString().Replace('.', ',');
             dg.Rows[(int)prm.lMarkSize].Cells[1].Value = dg.Rows[(int)prm.lMarkSize].Cells[1].Value.ToString().Replace('.', ',');
@@ -358,7 +383,9 @@ dg_EditingControlShowing);
                 Properties.Settings.Default.s1JampSize = float.Parse(dg.Rows[(int)prm.lJampSize].Cells[i].Value.ToString(), System.Globalization.NumberStyles.Float);
                 Properties.Settings.Default.s1MarkSize =float.Parse(dg.Rows[(int)prm.lMarkSize].Cells[i].Value.ToString(), System.Globalization.NumberStyles.Float);
                 Properties.Settings.Default.s1Power = long.Parse(dg.Rows[(int)prm.lPower].Cells[i].Value.ToString());
-
+                Properties.Settings.Default.korrX = korr_x;
+                Properties.Settings.Default.korrY = korr_y;
+                Properties.Settings.Default.debugOutput = dg.Rows[(int)prm.lWorkSpace].Cells[i].Value.ToString();
                 Properties.Settings.Default.Save();
             }
         }
@@ -616,6 +643,11 @@ dg_EditingControlShowing);
         }
 
         private void cb_ignoreListSetting_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

@@ -15,13 +15,18 @@ using MahApps.Metro.Controls;
 
 namespace laserScada
 {
+    public delegate bool MyParse(string x);
+
+  
     /// <summary>
     /// Interaction logic for inputDialog.xaml
     /// </summary>
     public partial class inputDialog :  MetroWindow
     {
-        public inputDialog(string nameVar, string initVal)
+  
+        public inputDialog(string nameVar, string initVal )
         {
+           
             InitializeComponent();
             lb_name_var.Text = nameVar;
             ResponseTextBox.Text = initVal;
@@ -46,6 +51,7 @@ namespace laserScada
 
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {
+         
             DialogResult = true;
 
         }
@@ -60,5 +66,7 @@ namespace laserScada
             if (e.Key == Key.Return)
                 DialogResult = true;
         }
+
+
     }
 }
