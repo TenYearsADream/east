@@ -88,10 +88,11 @@ namespace SpIceControllerLib
             bool rInit = NativeMethods.PCI_Init_Scan_Card_Ex((UInt16)e.cs.num);
             bool rLoad = NativeMethods.PCI_Load_Corr_N(e.cs.corrFilePatch, e.cs.num);
             bool rSetAct = NativeMethods.PCI_Set_Active_Card((UInt16)e.cs.num);
+            bool setGain = NativeMethods.PCI_Set_Gain(e.cs.gainX, e.cs.gainY, 0, 0, (UInt16)e.cs.num);
             bool rSetMode = NativeMethods.PCI_Set_Mode(e.cs.mode);
             NativeMethods.PCI_Stop_Execution();
             bool rOsc = NativeMethods.PCI_Write_Port_List(0xC, 0x00);
-            bool setGain = NativeMethods.PCI_Set_Gain_N(e.cs.gainX, e.cs.gainY, 0, 0, (UInt16)e.cs.num);
+          
             dbg = e.cs.debug;
             
 

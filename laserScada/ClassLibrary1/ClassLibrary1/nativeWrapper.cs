@@ -14,7 +14,7 @@ namespace SpIceControllerLib
         static StreamWriter m_dbgOutFile;
 
         [DllImport("SP-ICE.dll")]
-        private static extern bool  Set_Gain_N(double dGainX, double dGainY, Int16 ssOffsetX, Int16 ssOffsetY, int NHead);
+        private static extern bool  Set_Gain(double dGainX, double dGainY, Int16 ssOffsetX, Int16 ssOffsetY);
         [DllImport("SP-ICE.dll")]
         private static extern UInt16 Init_Scan_Card_Ex(UInt16 N);
         [DllImport("SP-ICE.dll")]
@@ -91,11 +91,11 @@ namespace SpIceControllerLib
         [DllImport("SP-ICE.dll")]
         private static extern bool Set_Jump_Parameters_List(UInt16 usStepPeriod, UInt16 usJumpSize);
 
-        internal static bool PCI_Set_Gain_N(double dGainX, double dGainY, Int16 ssOffsetX, Int16 ssOffsetY, int NHead)
+        internal static bool PCI_Set_Gain(double dGainX, double dGainY, Int16 ssOffsetX, Int16 ssOffsetY, int NHead)
         {
-            NativeMethods.Set_Gain_N(dGainX, dGainY, ssOffsetX,ssOffsetY,NHead);
+            NativeMethods.Set_Gain(dGainX, dGainY, ssOffsetX,ssOffsetY);
             if (dbg)
-                printDebugWithError("Set_Gain_N gainX: " + dGainX.ToString() + ", gainY: " + dGainY.ToString() + 
+                printDebugWithError("Set_Gain gainX: " + dGainX.ToString() + ", gainY: " + dGainY.ToString() + 
                     ", offsetX: " + ssOffsetX + ", offsetY: " + ssOffsetY);
             return NativeMethods.Get_Last_Error_Code() == 0;
         }
