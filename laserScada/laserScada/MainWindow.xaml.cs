@@ -255,7 +255,7 @@ namespace laserScada
                 main_bt_startLayer.IsEnabled = !errVal;
             layer_avtomat_pusk.IsEnabled = !errVal;
 
-            if (m_plc.tags.get_proc_obshh_rab() && (m_plc.tags.get_avar_doz() || m_plc.tags.get_avar_m3()))
+            if (false && m_plc.tags.get_proc_obshh_rab() && (m_plc.tags.get_avar_doz() || m_plc.tags.get_avar_m3()))
             {
                 m_pause = !m_pause;
                 m_plc.tags.set_kom_pauza(m_pause);
