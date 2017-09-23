@@ -8,3 +8,7 @@ laserScada/ClassLibrary1/ClassLibrary1/bin/
 laserScada/ClassLibrary1/ClassLibrary1/obj/
 laserScada/Led Wpf/WpfLed/obj/
 laserScada/Led Wpf/WpfLed/bin/
+laserScada/Led Wpf/WpfLed/bin
+laserScada/Led Wpf/WpfLed/bin/Release/LedControl.dll
+laserScada/Led\ Wpf/WpfLed/bin/Release/LedControl.dll
+.out
