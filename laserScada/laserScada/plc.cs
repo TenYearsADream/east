@@ -38,7 +38,11 @@ namespace laserScada
             isConnect = connectResult == 0;
             return isConnect;
         }
-
+        public void disconnect()
+        {
+             client.Disconnect();
+            
+        }
 
 
         private void plcStep()
@@ -53,11 +57,18 @@ namespace laserScada
                 {
 
                     res = client.ReadArea(S7Consts.S7AreaMK, 0, 0, 800, S7Consts.S7WLByte, m_mem.m_mRegion);
-
-                    if (m_mem.getStoreElement(ref el))
+                    isConnect = res == 0;
+                    if (isConnect && m_mem.getStoreElement(ref el))
                     {
                         client.WriteArea(el.type, el.DBnum, el.offset, el.len, S7Consts.S7WLByte, el.data);
                     }
+                }
+                else
+                {
+                    disconnect();
+                    Thread.Sleep(300);
+                    connect();
+                    
                 }
 
                 Thread.Sleep(100);

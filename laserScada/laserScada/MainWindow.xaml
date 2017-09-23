@@ -141,7 +141,9 @@
                                     <TextBox x:Name="tbDeviceIP" Text="192.168.100.2" Width="100"  TextChanged="tbDeviceIP_TextChanged" VerticalAlignment="Center"/>
                                     <Label x:Name="lbConectedStatus" Content="Label" VerticalAlignment="Center" />
                                     <Label Content="  Счетчик исправности  "/>
+                                    <Button Content="Ручное соединение" x:Name="kar_bt_connect"  Click="manualConnect"  Grid.RowSpan="2" VerticalAlignment="Top" />
                                     <TextBox x:Name="tbCounter" Text="TextBox" Width="100" HorizontalAlignment="Left"  />
+                                    
                                 </StackPanel >
                             </GroupBox>
                             <GroupBox x:Name="groupBox_power" Header="Дополнительно" Grid.Column="2" Margin="5.2,5,5.2,4.8" >

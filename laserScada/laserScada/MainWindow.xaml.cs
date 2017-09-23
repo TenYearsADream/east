@@ -66,6 +66,8 @@ namespace laserScada
 
         }
 
+
+
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             SpIceController.deinitialize();
@@ -82,6 +84,13 @@ namespace laserScada
             timer.Tick += new EventHandler(updateSignals);
 
             timer.Start();
+        }
+
+
+        private void manualConnect(object sender, EventArgs e)
+        {
+            m_plc.disconnect();
+            pr_main_connect = m_plc.connect();
         }
 
         private void updateSignals(object sender, EventArgs e)
