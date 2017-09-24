@@ -8,32 +8,39 @@ using System.IO;
 namespace SpIceControllerLib
 {
     public enum ListStateFill{ prolog = 0x01, epilog = 0x02, body = 0x04, free = 0x10, ready = 0x20 };
+    public struct exeTask
+    {
+        public ListNumber exeListNumber;
+        public int cardNumber;
 
+    }
     public struct listState
     {
         public ListStateFill filling;
-        public readonly ListNumber number;
-        public Int64 exListNumber;
+        public ListNumber number;
+        public int cardNumber;
+        public long exeListNumber;
         public Int64 size;
-        public bool finishid;
+        public bool finished;
         public UInt64 layerNumber;
 
-        public listState(ListNumber num)
+        public listState(ListNumber num, int cardNum)
         {
             filling = ListStateFill.free;
             number = num;
-            exListNumber = 0;
+            exeListNumber = 0;
             size = 0;
-            finishid = false;
+            finished = false;
             layerNumber = 0;
+            cardNumber = cardNum;
         }
 
         public void reset()
         {
             filling = ListStateFill.free;
-            exListNumber = 0;
+            exeListNumber = 0;
             size = 0;
-            finishid = false;
+            finished = false;
             layerNumber = 0;
         }
     }
@@ -42,24 +49,22 @@ namespace SpIceControllerLib
     {
         const long LIST_SIZE = 1000000;
         //const long LIST_SIZE = 10000;
-        static public listState[] m_l;
+        static listState m_curListState;
         static StreamWriter m_logFile;
         static ListNumber m_currentList;
+        static int m_currentCardNumber;
+        static int m_nextCardNumber;
         static Int64 m_layerNumber;
         static public  bool m_lastListReady = false;
-        static Queue<ListNumber> m_listQueue = new Queue<ListNumber>();
-
+        static Queue<listState> m_sheldule = new Queue<listState>();
+        static int maxCardNumber = SpIceController.laserCount;
        static styles  m_lastedStyle;
        static bool m_isNeedRestoreStyleOnProlog = false;
         
 
         static PrefetchList()
         {
-            m_l = new listState[2]
-            {
-                new listState(ListNumber.list1),
-                new listState(ListNumber.list2)
-            };
+ 
 
 
 
@@ -73,7 +78,9 @@ namespace SpIceControllerLib
 
             m_lastedStyle.lPower = long.MaxValue;
             m_lastedStyle.lMarkSize = long.MaxValue;
-
+            m_sheldule.Clear();
+            m_currentCardNumber = 1;
+            m_nextCardNumber = 1;
         }
 
         static internal void terminate() //(object sender, EventArgs e)
@@ -83,13 +90,14 @@ namespace SpIceControllerLib
 
         static public void resetList()
         {
-            m_l[0].reset();
-            m_l[1].reset();
             m_layerNumber = 0;
             m_currentList = ListNumber.Undefine;
             m_lastListReady = false;
             m_lastedStyle.lPower = long.MaxValue;
             m_lastedStyle.lMarkSize = long.MaxValue;
+            m_sheldule.Clear();
+            m_currentCardNumber = 1;
+            m_nextCardNumber = 1;
         }
 
         public static void stepExecution()
@@ -98,19 +106,19 @@ namespace SpIceControllerLib
 
             if (m_lastListReady)
             {
-                m_l[(Int32)m_currentList].filling = ListStateFill.free;
+                m_curListState.filling = ListStateFill.free;
                 return;
             }
 
             if (m_currentList == ListNumber.Undefine)
             {
-                m_currentList = getNextFreeList();
-
+                //                m_currentList = getNextFreeList();
+                m_currentList = findFreeExeList(m_currentCardNumber);
                 if (m_currentList == ListNumber.Undefine) return;
             }
 
 
-            switch (m_l[(Int32)m_currentList].filling)
+            switch (m_curListState.filling)
             {
                 case ListStateFill.free:
                     openList();
@@ -125,7 +133,7 @@ namespace SpIceControllerLib
                     fillEpilog();
                     break;
                 case ListStateFill.ready:
-                   // m_listQueue.Enqueue(m_currentList);
+                    m_sheldule.Enqueue(m_curListState);
                     m_currentList = ListNumber.Undefine;
                     break;
                 default:
@@ -136,8 +144,11 @@ namespace SpIceControllerLib
 
         private static void openList()
         {
-            if (!fileLoader.m_isPreambuleFinish) return;
+            m_curListState.cardNumber = m_currentCardNumber;
+            m_curListState.number = m_currentList;
 
+            if (!fileLoader.m_isPreambuleFinish) return;
+            NativeMethods.PCI_Set_Active_Card((ushort)m_currentCardNumber);
             if (m_currentList == ListNumber.list1)
                 NativeMethods.PCI_Set_Start_List_1();
             else
@@ -162,16 +173,16 @@ namespace SpIceControllerLib
 
             m_layerNumber++;
 
-            m_l[(Int32)m_currentList].exListNumber = m_layerNumber;
-            m_l[(Int32)m_currentList].filling = ListStateFill.prolog;
+            m_curListState.exeListNumber = m_layerNumber;
+            m_curListState.filling = ListStateFill.prolog;
             
-            m_l[(Int32)m_currentList].size = 0;
-            m_l[(Int32)m_currentList].finishid = false;
+            m_curListState.size = 0;
+            m_curListState.finished = false;
         }
 
         private static void fillProlog()
         {
-            m_l[(Int32)m_currentList].filling = ListStateFill.body;
+            m_curListState.filling = ListStateFill.body;
         }
 
         private static void bobyStartList()
@@ -180,14 +191,14 @@ namespace SpIceControllerLib
             bool isEnd = false;
             while( fileLoader.isAviableNExt()){
 
-                isEnd = decodeCommand(m_l[(Int32)m_currentList].size > LIST_SIZE);
+                isEnd = decodeCommand(m_curListState.size > LIST_SIZE);
                 if (isEnd) break;
                 
             }
 
             if (isEnd)
             {
-                m_l[(Int32)m_currentList].filling = ListStateFill.epilog;
+                m_curListState.filling = ListStateFill.epilog;
 
             }
         }
@@ -198,51 +209,59 @@ namespace SpIceControllerLib
             bool result = false;
             bool skipIncrement = false;
             Int64 iterator = fileLoader.getStartPos();
+            NativeMethods.PCI_Set_Active_Card((ushort)m_currentCardNumber);
             switch (fileLoader.m_listJob[iterator].cmd)
             {
                 case Command.EndF:
                     result = true;
                     break;
                 case Command.StarLayer:
-                    m_l[(Int32)m_currentList].layerNumber = (UInt64)(fileLoader.m_listJob[iterator].x);
+                    m_curListState.layerNumber = (UInt64)(fileLoader.m_listJob[iterator].x);
                     break;
                 case Command.EndLayer:
-                    m_l[(Int32)m_currentList].finishid = true;
+                    m_curListState.finished = true;
                     result = true;
                     break;
                 case Command.Jamp:
                     NativeMethods.PCI_Jump_Abs(fileLoader.m_listJob[iterator].x, fileLoader.m_listJob[iterator].y);
-                    m_l[(Int32)m_currentList].size++;
+                    m_curListState.size++;
                     skipIncrement = finishOnNearest;
                     result = finishOnNearest;
                     break;
                 case Command.Mark:
                     NativeMethods.PCI_Mark_Abs(fileLoader.m_listJob[iterator].x, fileLoader.m_listJob[iterator].y);
-                    m_l[(Int32)m_currentList].size++;
+                    m_curListState.size++;
                     break;
                 case Command.PolA_Abs:
                     NativeMethods.PCI_PolA_Abs(fileLoader.m_listJob[iterator].x, fileLoader.m_listJob[iterator].y);
-                    m_l[(Int32)m_currentList].size++;
+                    m_curListState.size++;
                     break;
                 case Command.PolB_Abs:
                     NativeMethods.PCI_PolB_Abs(fileLoader.m_listJob[iterator].x, fileLoader.m_listJob[iterator].y);
-                    m_l[(Int32)m_currentList].size++;
+                    m_curListState.size++;
                     break;
                 case Command.PolC_Abs:
                     NativeMethods.PCI_PolC_Abs(fileLoader.m_listJob[iterator].x, fileLoader.m_listJob[iterator].y);
-                    m_l[(Int32)m_currentList].size++;
+                    m_curListState.size++;
                     result = finishOnNearest;
                     break;
                 case Command.Power:
                     NativeMethods.PCI_Write_DA_List((UInt16)fileLoader.m_listJob[iterator].x);
-                    m_l[(Int32)m_currentList].size++;
+                    m_curListState.size++;
                     m_lastedStyle.lPower = (UInt16)fileLoader.m_listJob[iterator].x;
                     break;
                 case Command.MarkSize:
                     NativeMethods.PCI_Set_Mark_Parameters_List((UInt16)fileLoader.m_listJob[iterator].x, (UInt16)fileLoader.m_listJob[iterator].y);
-                    m_l[(Int32)m_currentList].size++;
+                    m_curListState.size++;
                     m_lastedStyle.lStep= (UInt16)fileLoader.m_listJob[iterator].x;
                     m_lastedStyle.lMarkSize = (UInt16)fileLoader.m_listJob[iterator].y;
+                    break;
+                case Command.LaserActive:
+                    if (fileLoader.m_listJob[iterator].x != m_currentCardNumber)
+                    {
+                        m_nextCardNumber = fileLoader.m_listJob[iterator].x;
+                        result = true;
+                    }
                     break;
 
             }
@@ -256,63 +275,57 @@ namespace SpIceControllerLib
 
         private static void fillEpilog()
         {
+            NativeMethods.PCI_Set_Active_Card((ushort)m_currentCardNumber);
             NativeMethods.PCI_Write_Port_List(0xC, 0x000);
             NativeMethods.PCI_Set_End_Of_List();
-            if(m_l[(Int32)m_currentList].size>0)
-            m_l[(Int32)m_currentList].filling = ListStateFill.ready;
+            if(m_curListState.size>0)
+            m_curListState.filling = ListStateFill.ready;
             else
-                m_l[(Int32)m_currentList].filling = ListStateFill.free;
+                m_curListState.filling = ListStateFill.free;
 
-            m_isNeedRestoreStyleOnProlog = !m_l[(Int32)m_currentList].finishid;
+            m_isNeedRestoreStyleOnProlog = !m_curListState.finished;
+            m_currentCardNumber = m_nextCardNumber;
         }
 
-        private static ListNumber getNextFreeList()
+
+
+        private static ListNumber findFreeExeList(int cardNumber)
         {
-            if (m_l[0].filling == ListStateFill.free) return ListNumber.list1;
-            if (m_l[1].filling == ListStateFill.free) return ListNumber.list2;
-
-            return ListNumber.Undefine;
-        }
-
-        public static ListNumber getNextReadyList()
-        {
-           // return m_listQueue.Count > 0 ? m_listQueue.First() : ListNumber.Undefine;
-
-            Int64 l1 = m_l[0].filling == ListStateFill.ready ? m_l[0].exListNumber : -1;
-            Int64 l2 = m_l[1].filling == ListStateFill.ready ? m_l[1].exListNumber : -1;
-
-            if(l1 != -1  || l2 != -1)
+            bool list1IsFree = true;
+            bool list2IsFree = true;
+            foreach (var i in m_sheldule.ToList())
             {
-                if (l1 == -1) return ListNumber.list2;
-                if (l2 == -1) return ListNumber.list1;
-                return l1 < l2 ? ListNumber.list1 : ListNumber.list2; 
+                if (i.cardNumber == cardNumber)
+                {
+                    if (i.number == ListNumber.list1) list1IsFree = false;
+                    else if (i.number == ListNumber.list2) list2IsFree = false;
+                }
             }
+            return list1IsFree ? ListNumber.list1 : list2IsFree ? ListNumber.list2 : ListNumber.Undefine;
+        }
 
-            return ListNumber.Undefine;
+        public static ListNumber getTopListNumber()
+        {
+            return m_sheldule.Count > 0 ? m_sheldule.First().number : ListNumber.Undefine;
+        }
+        public static int getTopCardNumber()
+        {
+            return m_sheldule.Count > 0 ? m_sheldule.First().cardNumber : 0;
         }
 
         public static void setFree(ListNumber list)
         {
-            if (list == ListNumber.Undefine) return;
-            m_l[(Int32)list].filling = ListStateFill.free;
+            m_sheldule.Dequeue();
         }
 
-        internal static bool isOneListOnLayer(ListNumber list)
+        internal static bool getTopFinished(ListNumber list)
         {
-            if (list == ListNumber.Undefine) return true;
-            return m_l[(Int32)list].finishid;
+            return m_sheldule.Count > 0 ? m_sheldule.First().finished : true;
         }
 
-        private static Int64 getCurrentSize()
+        public static UInt64 getTopLayerNumber(ListNumber list)
         {
-            if (m_currentList == ListNumber.Undefine) return -1;
-            return m_l[(Int32)m_currentList].size;
-        }
-
-        public static UInt64 getLayerNumber(ListNumber list)
-        {
-            if (list == ListNumber.Undefine) return 0;
-            return m_l[(Int32)list].layerNumber;
+            return m_sheldule.Count > 0 ? m_sheldule.First().layerNumber : 0;
         }
 
         public static string getListState(ListNumber list)
@@ -322,10 +335,10 @@ namespace SpIceControllerLib
 
             res = string.Format("{0, 6} ({5, 6}): {1, -7} size: {2, 6} fin [{3}], layer: {4, -5}", 
                 list.ToString(), 
-                m_l[(Int32)list].filling.ToString(), 
-                m_l[(Int32)list].size.ToString("D6"), 
-                m_l[(Int32)list].finishid.toX(),
-                m_l[(Int32)list].layerNumber, m_l[(Int32)list].exListNumber.ToString("D6"));//
+                m_curListState.filling.ToString(), 
+                m_curListState.size.ToString("D6"), 
+                m_curListState.finished.toX(),
+                m_curListState.layerNumber, m_curListState.exeListNumber.ToString("D6"));//
             return res;
         }
 
@@ -336,7 +349,7 @@ namespace SpIceControllerLib
 
             return res;
             //res = string.Format(", eXList: {0, -6}",
-            //    m_l[(Int32)list].exListNumber.ToString("D6"));//
+            //    m_l[(Int32)list].exeListNumber.ToString("D6"));//
             //return res;
         }
 

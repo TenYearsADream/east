@@ -71,6 +71,7 @@
                         <uc:Led x:Name="dat_ldat_ready" IsActive="{Binding LedStatus, Mode=OneWay}" Flashing="{Binding Flash}" HorizontalAlignment="Left" ColorNull="Gray"  Text=" Деталь готова" ColorOn="Green" ColorOff="Gray"/>
                         <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Visibility="Hidden" />
                         <local:dataField x:Name="main_linejka_dublicate" Text=" Линейка" Grid.Column="1" Grid.Row="0" MouseDoubleClick="snek_s1_tb_MouseDoubleClick"/>
+                        <local:dataField x:Name="main_laserCount" Text=" Кол-во лазеров" Grid.Column="1" Grid.Row="0" MouseDoubleClick="main_laserCount_MouseDoubleClick" />
 
                     </StackPanel>
                     <Separator Visibility="Hidden"/>
@@ -168,7 +169,7 @@
 
 
 
-                            <GroupBox x:Name="gb_keretka" Header="Каретка" Grid.Column="0">
+                            <GroupBox x:Name="gb_keretka" Header="Каретка" Grid.Column="0" >
                                 <StackPanel Orientation="Horizontal">
                                     <Grid>
                                         <Grid.RowDefinitions>

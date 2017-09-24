@@ -8,7 +8,7 @@ using System.IO;
 namespace SpIceControllerLib
 {
 
-    public enum Command { StarLayer = 0x1, EndLayer = 0x2, PolA_Abs = 0x4, PolB_Abs = 0x8, PolC_Abs = 0x10, Jamp = 0x20, Mark = 0x40, Nop = 0x80, EndF = 0x100, Style = 0x200, Power = 0x400, MarkSize = 800 };
+    public enum Command { StarLayer = 0x1, EndLayer = 0x2, PolA_Abs = 0x4, PolB_Abs = 0x8, PolC_Abs = 0x10, Jamp = 0x20, Mark = 0x40, Nop = 0x80, EndF = 0x100, Style = 0x200, Power = 0x400, MarkSize = 0x800, LaserActive = 0x1000 };
     public enum ListNumber { list1 = 0, list2 = 1, Undefine };
 
     public enum IntState { Wait = 0x01, Stop = 0x02, Work = 0x04, WaitListReady = 0x08 };
@@ -76,10 +76,11 @@ namespace SpIceControllerLib
         public bool scanComlete;
         public bool b9;
         public bool b10;
+        public int cardNumber;
 
         public string toString()
         {
-            return string.Format(" Card : L1 load [{0}] ready[{1}] busy[{2}] L2 load[{3}] ready[{4}] busy[{5}] | busy[{6}] laserOn[{7}] complete[{8}]",
+            return "#"  +cardNumber.ToString() + string.Format(" : L1 [{0}] R1[{1}] B1[{2}] L2 [{3}] R2[{4}] B2 [{5}] | B[{6}] On[{7}] Comp[{8}]",
                 l1load.toX(), l1redy.toX(), l1busy.toX(), l2load.toX(), l2redy.toX(), l2busy.toX(), busy.toX(), laserOn.toX(), scanComlete.toX());
         }
 

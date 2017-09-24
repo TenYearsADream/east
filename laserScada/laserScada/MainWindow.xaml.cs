@@ -155,7 +155,7 @@ namespace laserScada
             stol_tb_speed.Text = m_plc.tags.get_ust_stol_skor_vverh().ToString();
             stol_tb_line.Text = m_plc.tags.get_linejka().ToString();
             main_linejka_dublicate.Data = m_plc.tags.get_linejka().ToString();
-
+            main_laserCount.Data = SpIceControllerLib.SpIceController.laserCount.ToString();
             if (m_plc.tags.get_vyhd_pereschjot())
                 stol_bt_line_control.Background = Brushes.Aqua;
             else
@@ -765,6 +765,28 @@ namespace laserScada
         private void build_vikat_Click(object sender, RoutedEventArgs e)
         {
             m_plc.tags.set_kom_s4_vykat(true);
+        }
+
+
+        private void main_laserCount_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var dialog = new inputDialog("Кол-во лазеров", ((dataField)sender).Data);
+            if (dialog.ShowDialog() == true)
+            {
+                short val;
+                if (!short.TryParse(dialog.ResponseText, out val))
+                {
+                    System.Windows.MessageBox.Show("Неправильное значение");
+                    return;
+                }
+
+                if ((short.Parse(dialog.ResponseText)) > 4)
+                {
+                    System.Windows.MessageBox.Show("Кол-во лазеров больше 4 не поддерживается");
+                    return;
+                }
+                SpIceControllerLib.SpIceController.laserCount = (short.Parse(dialog.ResponseText));
+            }
         }
     }
 }

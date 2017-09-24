@@ -21,6 +21,7 @@ namespace SpIceControllerLib
             m_mainThreadPermission = true;
             m_mainThread = new Thread(mainThreadHandler);
             m_mainThread.Start();
+            laserCount = 1;
         }
 
         public static void mainThreadHandler()
@@ -45,6 +46,9 @@ namespace SpIceControllerLib
         static Thread m_controllFormThread;
         static bool dbg = false;
 
+        static public int laserCount
+        { get; set; }
+
         static ListNumber m_runningLIst = ListNumber.Undefine;
         internal static Mutex m_mut = new Mutex();
 
@@ -66,10 +70,10 @@ namespace SpIceControllerLib
             get { return (m_isIntiialize); }
         }
 
-        static private cardStatus m_cardStatus;
-        static public cardStatus cardStatus
+        static private cardStatus[]  m_cardStatus = new cardStatus[4];
+        static public cardStatus getCardStatus(int number)
         {
-            get { return (m_cardStatus); }
+             return (m_cardStatus[number]); 
         }
 
         static private Int32 m_currenlList = 0;
@@ -85,14 +89,33 @@ namespace SpIceControllerLib
             NativeMethods.debugInit();
             fileLoader.debugInit();
 
-            bool rInit = NativeMethods.PCI_Init_Scan_Card_Ex((UInt16)e.cs.num);
-            bool rLoad = NativeMethods.PCI_Load_Corr_N(e.cs.corrFilePatch, e.cs.num);
-            bool rSetAct = NativeMethods.PCI_Set_Active_Card((UInt16)e.cs.num);
-            bool setGain = NativeMethods.PCI_Set_Gain(e.cs.gainX, e.cs.gainY, 0, 0, (UInt16)e.cs.num);
-            bool rSetMode = NativeMethods.PCI_Set_Mode(e.cs.mode);
-            NativeMethods.PCI_Stop_Execution();
-            bool rOsc = NativeMethods.PCI_Write_Port_List(0xC, 0x00);
-          
+            bool rLoad = false  , rInit = false, rSetAct =false, setGain  = false, rSetMode = false, rOsc = false;
+
+            string result = "";
+            //start with number 1
+            for (ushort cardNumber = 1; cardNumber < laserCount + 1; cardNumber++)
+            {
+
+                rInit = NativeMethods.PCI_Init_Scan_Card_Ex(cardNumber);
+                rLoad = NativeMethods.PCI_Load_Corr_N(e.cs.corrFilePatch, (short)cardNumber);
+                rSetAct = NativeMethods.PCI_Set_Active_Card((UInt16)cardNumber);
+                setGain = NativeMethods.PCI_Set_Gain(e.cs.gainX, e.cs.gainY, 0, 0, (UInt16)e.cs.num);
+                rSetMode = NativeMethods.PCI_Set_Mode(e.cs.mode);
+                NativeMethods.PCI_Stop_Execution();
+                rOsc = NativeMethods.PCI_Write_Port_List(0xC, 0x00);
+                result += string.Format("\n {0} ... {1, -15}\n {2} ... {3, -15}\n {4} ... {5, -15}\n {6} ... {7, -15}\n {8} ... {9, -15}  \n {10} ... {11, -15} \n",
+                 
+                 "Initializing card ", cardNumber,   
+                 "Init ", rInit ? "Ok" : "Fail",
+                 "Set mode ", rSetMode ? "Ok" : "Fail",
+                 "Set active card ", rSetAct ? "Ok":"Fail" ,
+                 "Oscillator on ", rOsc ? "Ok" : "Fail",
+                 "Set gain ", setGain ? "Ok" : "Fail");
+
+                m_isIntiialize =  m_isIntiialize && rInit && rSetAct && rSetMode && rOsc;
+
+            }
+
             dbg = e.cs.debug;
             
 
@@ -100,16 +123,17 @@ namespace SpIceControllerLib
             bool openScript = fileLoader.openJobfile(e.cs.scriptPath);
             PrefetchList.resetList();
             m_state = IntState.Wait ;
-            m_isIntiialize = rInit  && rSetAct && rSetMode && rOsc && openScript;
 
-            MessageBox.Show(string.Format(" {0, -25} -- {1, -10} \n {2,-25} -- {4, -10}   ({3}) \n {5,-25} -- {6, -10} \n {7, -25} -- {8, -10} \n {9,-25} -- {10, -10}  \n {11,-25} -- {12, -10} ({13}) \n  {14, -25} -- {15, -10}",
-                 "Init", rInit.ToString(),
-                 "Load correction", e.cs.corrFilePatch, rLoad.ToString(),
-                 "Set mode", rSetMode.ToString(),
-                 "Set active card", rSetAct.ToString(),
-                 "Oscillator on", rOsc.ToString(),
-                 "Open script", openScript.ToString(), e.cs.scriptPath, "Set gain", setGain.ToString()),
-                  (m_isIntiialize ? "Инициализация прошла успешно!" : "Ошибка при инициализации"),
+            result += string.Format("\n\n{0} ... {1, -10} \n", "Open script ", openScript.ToString(), e.cs.scriptPath);
+            result += string.Format("{0} ... {2, -10}   ({1}) \n   ",
+                 "Load correction ", e.cs.corrFilePatch, rLoad.ToString());
+
+            m_isIntiialize  = m_isIntiialize &&   openScript;
+
+
+
+            MessageBox.Show(result,
+                 (m_isIntiialize ? "Инициализация прошла успешно!" : "Ошибка при инициализации"),
                  MessageBoxButtons.OK,
                  m_isIntiialize ? MessageBoxIcon.Information : MessageBoxIcon.Error,
                  MessageBoxDefaultButton.Button1,
@@ -146,7 +170,8 @@ namespace SpIceControllerLib
 
         public static void processSignals()
         {
-           NativeMethods.readStatus(ref m_cardStatus);
+            for(int i =0; i < laserCount; i++)
+           NativeMethods.readStatus(ref m_cardStatus[i], i+1);
 
             if (m_isIntiialize)
                 PrefetchList.stepExecution();
@@ -199,7 +224,8 @@ namespace SpIceControllerLib
         private static void fillList()
         {
             //wait list ready
-            m_runningLIst = PrefetchList.getNextReadyList();
+            m_runningLIst = PrefetchList.getTopListNumber();
+          
             if (m_runningLIst == ListNumber.Undefine)
             {
                 m_layersFinishid = PrefetchList.m_lastListReady;
@@ -211,28 +237,29 @@ namespace SpIceControllerLib
 
             m_stopWatch.Restart();
 
+            NativeMethods.PCI_Set_Active_Card((ushort)PrefetchList.getTopCardNumber());
             if (m_runningLIst == ListNumber.list1)
                 NativeMethods.PCI_Execute_List_1();
             else
                 NativeMethods.PCI_Execute_List_2();
 
-            m_currenlList = (Int32) PrefetchList.getLayerNumber(m_runningLIst);
+            m_currenlList = (Int32) PrefetchList.getTopLayerNumber(m_runningLIst);
                 ;
             m_state = IntState.Work;
         }
 
         private static void WorkState()
         {
-            if (m_cardStatus.scanComlete) //wait until escan comlete
+            if (m_cardStatus[PrefetchList.getTopCardNumber()].scanComlete) //wait until escan comlete
             {
-                bool finish = PrefetchList.isOneListOnLayer(m_runningLIst);
+                bool finish = PrefetchList.getTopFinished(m_runningLIst);
                 PrefetchList.setFree(m_runningLIst);
                 m_state = finish ? IntState.Wait : IntState.WaitListReady;
                 m_stopWatch.Stop();
                 m_timeExecutinLayer = m_stopWatch.Elapsed;
             }
 
-            if (PrefetchList.getNextReadyList() == ListNumber.Undefine)
+            if (PrefetchList.getTopListNumber() == ListNumber.Undefine)
             {
                 m_layersFinishid = PrefetchList.m_lastListReady;
             }

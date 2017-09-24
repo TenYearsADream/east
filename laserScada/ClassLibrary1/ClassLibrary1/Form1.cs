@@ -392,7 +392,9 @@ dg_EditingControlShowing);
 
         private void updateSignals(object sender, EventArgs e)
         {
-            tb_buff_state.Text = SpIceController.cardStatus.toString();
+            tb_buff_state.Text = "";
+            for (int i = 0; i < SpIceController.laserCount; i++)
+              tb_buff_state.Text += SpIceController.getCardStatus(i).toString();
             tb_l1_state.Text = PrefetchList.getListState(ListNumber.list1) +  (cb_printDebug.Checked ? PrefetchList.getListStateDebug(ListNumber.list1) : "");
             tb_l2_state.Text = PrefetchList.getListState(ListNumber.list2) + (cb_printDebug.Checked ? PrefetchList.getListStateDebug(ListNumber.list2) : "");
             tb_cl1_state.Text = SpIceController.getStateString() + (cb_printDebug.Checked ? ", " + SpIceController.getStateStringDebug() : "");

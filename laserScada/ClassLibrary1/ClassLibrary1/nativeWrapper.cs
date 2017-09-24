@@ -309,8 +309,9 @@ namespace SpIceControllerLib
             return System.Text.Encoding.UTF8.GetString(array);
         }
 
-        public static void readStatus(ref cardStatus m_cardStatus)
+        public static void readStatus(ref cardStatus m_cardStatus, int cardNumber)
         {
+            NativeMethods.PCI_Set_Active_Card((ushort)cardNumber);
             UInt16 status = NativeMethods.Read_Status();
             m_cardStatus.l1load = (status & 0x01) != 0;
             m_cardStatus.l2load = (status & 0x02) != 0;
@@ -321,6 +322,7 @@ namespace SpIceControllerLib
             m_cardStatus.busy = (status & 0x040) != 0;
             m_cardStatus.laserOn = (status & 0x080) != 0;
             m_cardStatus.scanComlete = (status & 0x0100) != 0;
+            m_cardStatus.cardNumber = cardNumber;
         }
 
         private static void printDebugWithError(string str)

@@ -272,6 +272,25 @@ namespace SpIceControllerLib
                                         addCommandAtEnd(Command.MarkSize, (Int16)m_cs.style1.lStep, (Int16)markSize, 0, 0, str);
 
                                     break;
+                                case "LaserActive":
+                                   
+                                    correctLastPol(Int16.MaxValue, Int16.MaxValue, true);
+
+                                    UInt32 cardNumber = 0;
+                                    MatchCollection cn = regexOperand.Matches(str);
+                                    if (cn.Count == 1)
+                                    {
+                                        string strPower = cn[0].Value;
+                                        cardNumber = UInt32.Parse(strPower);
+                                        addCommandAtEnd(Command.LaserActive, (Int16)cardNumber, 0, 0, 0, str);
+
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Invalid command:  str = " + str + ", requre 1 arg for Laser.MarkSpeed");
+                                        isValidFile = 0;
+                                    }
+                                    break;
                                 case "Image.Polyline3D":
 
                                     MatchCollection pol3D = regexOperand.Matches(str.Substring(16));

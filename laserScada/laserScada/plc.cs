@@ -12,7 +12,6 @@ namespace laserScada
     class plc
     {
         public plc() {
-
             client = new S7Client();
             m_mem = new Memory();
             tags = new Tags(m_mem);
@@ -20,6 +19,7 @@ namespace laserScada
             m_Thread = new Thread(plcStep);
             m_Thread.IsBackground = true;
             m_Thread.Start();
+            
         
         }
 
@@ -83,6 +83,6 @@ namespace laserScada
 
         bool isConnect = false;
         int isThereadActive = 0;
-        
+
     }
 }
