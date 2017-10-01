@@ -476,6 +476,8 @@
 
                     </StackPanel>
                 </TabItem>
+                <TabItem Header="Отладочный режим" Name="debugPanel">
+                </TabItem>
             </TabControl>
 
             <Grid HorizontalAlignment="Stretch" Grid.Row="2">

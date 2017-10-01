@@ -23,6 +23,8 @@ namespace LedControl
     /// </summary>
     public partial class Led : UserControl
     {
+
+
         #region Dependency properties
 
         /// <summary>Dependency property to Get/Set the current IsActive (True/False)</summary>

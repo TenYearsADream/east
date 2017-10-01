@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata">
+<PLC Tags><Name>уст&#160;каретка&#160;скор&#160;вправо</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD112</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;каретка&#160;позиция</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD124</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;каретка&#160;расст</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD128</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;стол&#160;позиция</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD136</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;стол&#160;скор&#160;вверх</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD108</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;каретка&#160;скор&#160;влево</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD116</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;стол&#160;отн&#160;расст</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD148</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;врем&#160;вращ&#160;на&#160;месте</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD152</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;кар&#160;поз&#160;откл&#160;ш3</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD208</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;слой&#160;кар&#160;поз&#160;слева</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD132</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;слой&#160;кар&#160;поз&#160;справа</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD144</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;стол&#160;отн&#160;внут</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD176</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;толщ&#160;слоя</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD180</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;стол&#160;отн&#160;расст&#160;авто</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD204</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;ТЭН1&#160;мощн</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD276</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;ТЭН2&#160;мощн</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD280</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;ТЭН3&#160;мощн</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD284</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;кол&#160;слоёв</Name><Path>УстА</Path><Data_Type>Int</Data_Type><Logical_Address>%MW292</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;кол&#160;слоёв&#160;для&#160;дозатора</Name><Path>УстА</Path><Data_Type>Int</Data_Type><Logical_Address>%MW294</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;ТЭН1&#160;темп</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD288</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;ТЭН2&#160;темп</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD296</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>уст&#160;ТЭН3&#160;темп</Name><Path>УстА</Path><Data_Type>Real</Data_Type><Logical_Address>%MD300</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags></PLC Tags>
+</dataroot>
