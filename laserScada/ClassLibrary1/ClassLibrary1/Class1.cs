@@ -21,7 +21,7 @@ namespace SpIceControllerLib
             m_mainThreadPermission = true;
             m_mainThread = new Thread(mainThreadHandler);
             m_mainThread.Start();
-            laserCount = 1;
+            laserCount = 2;
         }
 
         public static void mainThreadHandler()
@@ -92,6 +92,7 @@ namespace SpIceControllerLib
             bool rLoad = false  , rInit = false, rSetAct =false, setGain  = false, rSetMode = false, rOsc = false;
 
             string result = "";
+            m_isIntiialize = true;
             //start with number 1
             for (ushort cardNumber = 1; cardNumber < laserCount + 1; cardNumber++)
             {
