@@ -17,6 +17,9 @@ using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using SpIceControllerLib;
 using log4netSample.Logging;
+using System.Reflection;
+using System.Diagnostics;
+
 namespace laserScada
 {
     /// <summary>
@@ -27,8 +30,8 @@ namespace laserScada
     {
         public delegate void checkState();
         List<checkState> m_checks = new List<checkState>();
-         
 
+    
 
         bool laerFinish = false;
         bool lastLaerFinish = false;
@@ -69,9 +72,15 @@ namespace laserScada
             this.Loaded += MainWindow_Loaded;
             this.Closing += MainWindow_Closing;
 
+
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
+            string version = fileVersionInfo.ProductVersion;
+
+            this.Title = "Лазерный принтер (v" + version + ")";
             //System.Windows.Controls.Button newBtn = new Button();
             //newBtn.Content = "wwwww";
-           // newBtn.Name = "Button" + "www";
+            // newBtn.Name = "Button" + "www";
             System.Windows.Controls.StackPanel panel = new StackPanel();
             panel.Orientation = Orientation.Vertical;
             debugPanel.Content = panel;

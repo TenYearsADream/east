@@ -1494,6 +1494,358 @@ prot6,
     public string debug_name_kom_pit_mps () { 
     return "ком†пит†ћѕ—";}
 
+// ком†ш1†вперЄд,   Bool, %M529.2   reg = M  width = Bit
+    public bool get_kom_sh1_vperjod ()
+    { return (bool) m_mem.getMBit(529, 2); }
+
+    public void set_kom_sh1_vperjod (bool val)
+    { m_mem.setMBit(529, 2, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh1_vperjod to " + val.ToString());}
+
+    public bool sets_kom_sh1_vperjod ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh1_vperjod (val);
+    return true;}
+
+    public string gets_kom_sh1_vperjod () { 
+    return get_kom_sh1_vperjod().ToString();}
+
+    public string debug_name_kom_sh1_vperjod () { 
+    return "ком†ш1†вперЄд";}
+
+// ком†ш1†назад,   Bool, %M529.3   reg = M  width = Bit
+    public bool get_kom_sh1_nazad ()
+    { return (bool) m_mem.getMBit(529, 3); }
+
+    public void set_kom_sh1_nazad (bool val)
+    { m_mem.setMBit(529, 3, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh1_nazad to " + val.ToString());}
+
+    public bool sets_kom_sh1_nazad ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh1_nazad (val);
+    return true;}
+
+    public string gets_kom_sh1_nazad () { 
+    return get_kom_sh1_nazad().ToString();}
+
+    public string debug_name_kom_sh1_nazad () { 
+    return "ком†ш1†назад";}
+
+// ком†ш1†абс,   Bool, %M529.4   reg = M  width = Bit
+    public bool get_kom_sh1_abs ()
+    { return (bool) m_mem.getMBit(529, 4); }
+
+    public void set_kom_sh1_abs (bool val)
+    { m_mem.setMBit(529, 4, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh1_abs to " + val.ToString());}
+
+    public bool sets_kom_sh1_abs ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh1_abs (val);
+    return true;}
+
+    public string gets_kom_sh1_abs () { 
+    return get_kom_sh1_abs().ToString();}
+
+    public string debug_name_kom_sh1_abs () { 
+    return "ком†ш1†абс";}
+
+// ком†ш1†стоп,   Bool, %M529.5   reg = M  width = Bit
+    public bool get_kom_sh1_stop ()
+    { return (bool) m_mem.getMBit(529, 5); }
+
+    public void set_kom_sh1_stop (bool val)
+    { m_mem.setMBit(529, 5, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh1_stop to " + val.ToString());}
+
+    public bool sets_kom_sh1_stop ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh1_stop (val);
+    return true;}
+
+    public string gets_kom_sh1_stop () { 
+    return get_kom_sh1_stop().ToString();}
+
+    public string debug_name_kom_sh1_stop () { 
+    return "ком†ш1†стоп";}
+
+// ком†ш2†вперЄд,   Bool, %M529.6   reg = M  width = Bit
+    public bool get_kom_sh2_vperjod ()
+    { return (bool) m_mem.getMBit(529, 6); }
+
+    public void set_kom_sh2_vperjod (bool val)
+    { m_mem.setMBit(529, 6, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh2_vperjod to " + val.ToString());}
+
+    public bool sets_kom_sh2_vperjod ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh2_vperjod (val);
+    return true;}
+
+    public string gets_kom_sh2_vperjod () { 
+    return get_kom_sh2_vperjod().ToString();}
+
+    public string debug_name_kom_sh2_vperjod () { 
+    return "ком†ш2†вперЄд";}
+
+// ком†ш2†назад,   Bool, %M529.7   reg = M  width = Bit
+    public bool get_kom_sh2_nazad ()
+    { return (bool) m_mem.getMBit(529, 7); }
+
+    public void set_kom_sh2_nazad (bool val)
+    { m_mem.setMBit(529, 7, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh2_nazad to " + val.ToString());}
+
+    public bool sets_kom_sh2_nazad ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh2_nazad (val);
+    return true;}
+
+    public string gets_kom_sh2_nazad () { 
+    return get_kom_sh2_nazad().ToString();}
+
+    public string debug_name_kom_sh2_nazad () { 
+    return "ком†ш2†назад";}
+
+// ком†ш2†абс,   Bool, %M530.1   reg = M  width = Bit
+    public bool get_kom_sh2_abs ()
+    { return (bool) m_mem.getMBit(530, 1); }
+
+    public void set_kom_sh2_abs (bool val)
+    { m_mem.setMBit(530, 1, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh2_abs to " + val.ToString());}
+
+    public bool sets_kom_sh2_abs ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh2_abs (val);
+    return true;}
+
+    public string gets_kom_sh2_abs () { 
+    return get_kom_sh2_abs().ToString();}
+
+    public string debug_name_kom_sh2_abs () { 
+    return "ком†ш2†абс";}
+
+// ком†ш2†стоп,   Bool, %M531.3   reg = M  width = Bit
+    public bool get_kom_sh2_stop ()
+    { return (bool) m_mem.getMBit(531, 3); }
+
+    public void set_kom_sh2_stop (bool val)
+    { m_mem.setMBit(531, 3, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh2_stop to " + val.ToString());}
+
+    public bool sets_kom_sh2_stop ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh2_stop (val);
+    return true;}
+
+    public string gets_kom_sh2_stop () { 
+    return get_kom_sh2_stop().ToString();}
+
+    public string debug_name_kom_sh2_stop () { 
+    return "ком†ш2†стоп";}
+
+// ком†ш3†вперЄд,   Bool, %M531.4   reg = M  width = Bit
+    public bool get_kom_sh3_vperjod ()
+    { return (bool) m_mem.getMBit(531, 4); }
+
+    public void set_kom_sh3_vperjod (bool val)
+    { m_mem.setMBit(531, 4, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh3_vperjod to " + val.ToString());}
+
+    public bool sets_kom_sh3_vperjod ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh3_vperjod (val);
+    return true;}
+
+    public string gets_kom_sh3_vperjod () { 
+    return get_kom_sh3_vperjod().ToString();}
+
+    public string debug_name_kom_sh3_vperjod () { 
+    return "ком†ш3†вперЄд";}
+
+// ком†ш3†назад,   Bool, %M531.5   reg = M  width = Bit
+    public bool get_kom_sh3_nazad ()
+    { return (bool) m_mem.getMBit(531, 5); }
+
+    public void set_kom_sh3_nazad (bool val)
+    { m_mem.setMBit(531, 5, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh3_nazad to " + val.ToString());}
+
+    public bool sets_kom_sh3_nazad ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh3_nazad (val);
+    return true;}
+
+    public string gets_kom_sh3_nazad () { 
+    return get_kom_sh3_nazad().ToString();}
+
+    public string debug_name_kom_sh3_nazad () { 
+    return "ком†ш3†назад";}
+
+// ком†ш3†абс,   Bool, %M531.6   reg = M  width = Bit
+    public bool get_kom_sh3_abs ()
+    { return (bool) m_mem.getMBit(531, 6); }
+
+    public void set_kom_sh3_abs (bool val)
+    { m_mem.setMBit(531, 6, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh3_abs to " + val.ToString());}
+
+    public bool sets_kom_sh3_abs ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh3_abs (val);
+    return true;}
+
+    public string gets_kom_sh3_abs () { 
+    return get_kom_sh3_abs().ToString();}
+
+    public string debug_name_kom_sh3_abs () { 
+    return "ком†ш3†абс";}
+
+// ком†ш3†стоп,   Bool, %M531.7   reg = M  width = Bit
+    public bool get_kom_sh3_stop ()
+    { return (bool) m_mem.getMBit(531, 7); }
+
+    public void set_kom_sh3_stop (bool val)
+    { m_mem.setMBit(531, 7, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh3_stop to " + val.ToString());}
+
+    public bool sets_kom_sh3_stop ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh3_stop (val);
+    return true;}
+
+    public string gets_kom_sh3_stop () { 
+    return get_kom_sh3_stop().ToString();}
+
+    public string debug_name_kom_sh3_stop () { 
+    return "ком†ш3†стоп";}
+
+// ком†ш4†вперЄд,   Bool, %M532.0   reg = M  width = Bit
+    public bool get_kom_sh4_vperjod ()
+    { return (bool) m_mem.getMBit(532, 0); }
+
+    public void set_kom_sh4_vperjod (bool val)
+    { m_mem.setMBit(532, 0, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh4_vperjod to " + val.ToString());}
+
+    public bool sets_kom_sh4_vperjod ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh4_vperjod (val);
+    return true;}
+
+    public string gets_kom_sh4_vperjod () { 
+    return get_kom_sh4_vperjod().ToString();}
+
+    public string debug_name_kom_sh4_vperjod () { 
+    return "ком†ш4†вперЄд";}
+
+// ком†ш4†назад,   Bool, %M532.1   reg = M  width = Bit
+    public bool get_kom_sh4_nazad ()
+    { return (bool) m_mem.getMBit(532, 1); }
+
+    public void set_kom_sh4_nazad (bool val)
+    { m_mem.setMBit(532, 1, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh4_nazad to " + val.ToString());}
+
+    public bool sets_kom_sh4_nazad ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh4_nazad (val);
+    return true;}
+
+    public string gets_kom_sh4_nazad () { 
+    return get_kom_sh4_nazad().ToString();}
+
+    public string debug_name_kom_sh4_nazad () { 
+    return "ком†ш4†назад";}
+
+// ком†ш4†абс,   Bool, %M532.2   reg = M  width = Bit
+    public bool get_kom_sh4_abs ()
+    { return (bool) m_mem.getMBit(532, 2); }
+
+    public void set_kom_sh4_abs (bool val)
+    { m_mem.setMBit(532, 2, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh4_abs to " + val.ToString());}
+
+    public bool sets_kom_sh4_abs ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh4_abs (val);
+    return true;}
+
+    public string gets_kom_sh4_abs () { 
+    return get_kom_sh4_abs().ToString();}
+
+    public string debug_name_kom_sh4_abs () { 
+    return "ком†ш4†абс";}
+
+// ком†ш4†стоп,   Bool, %M532.3   reg = M  width = Bit
+    public bool get_kom_sh4_stop ()
+    { return (bool) m_mem.getMBit(532, 3); }
+
+    public void set_kom_sh4_stop (bool val)
+    { m_mem.setMBit(532, 3, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_sh4_stop to " + val.ToString());}
+
+    public bool sets_kom_sh4_stop ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_sh4_stop (val);
+    return true;}
+
+    public string gets_kom_sh4_stop () { 
+    return get_kom_sh4_stop().ToString();}
+
+    public string debug_name_kom_sh4_stop () { 
+    return "ком†ш4†стоп";}
+
 public enum local_com{
 kom_stol_abs,
 kom_tp_pusk,
@@ -1531,6 +1883,22 @@ kom_kl_chil1,
 kom_kl_chil2,
 kom_pit_rec,
 kom_pit_mps,
+kom_sh1_vperjod,
+kom_sh1_nazad,
+kom_sh1_abs,
+kom_sh1_stop,
+kom_sh2_vperjod,
+kom_sh2_nazad,
+kom_sh2_abs,
+kom_sh2_stop,
+kom_sh3_vperjod,
+kom_sh3_nazad,
+kom_sh3_abs,
+kom_sh3_stop,
+kom_sh4_vperjod,
+kom_sh4_nazad,
+kom_sh4_abs,
+kom_sh4_stop,
 };
 
 //-----------------------------------------------------------------------------
@@ -2440,6 +2808,270 @@ vyhd_pit_rec,
     public string debug_name_ust_tjen3_temp () { 
     return "уст†“ЁЌ3†темп";}
 
+// уст†ш1†скор,   Real, %MD304   reg = M  width = UInt32
+    public float get_ust_sh1_skor ()
+    { return (float) m_mem.getMFloat(304); }
+
+    public void set_ust_sh1_skor (float val)
+    { m_mem.setMFloat(304, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sh1_skor to " + val.ToString());}
+
+    public bool sets_ust_sh1_skor ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sh1_skor (val);
+    return true;}
+
+    public string gets_ust_sh1_skor () { 
+    return get_ust_sh1_skor().ToString();}
+
+    public string debug_name_ust_sh1_skor () { 
+    return "уст†ш1†скор";}
+
+// уст†ш1†раст,   Real, %MD308   reg = M  width = UInt32
+    public float get_ust_sh1_rast ()
+    { return (float) m_mem.getMFloat(308); }
+
+    public void set_ust_sh1_rast (float val)
+    { m_mem.setMFloat(308, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sh1_rast to " + val.ToString());}
+
+    public bool sets_ust_sh1_rast ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sh1_rast (val);
+    return true;}
+
+    public string gets_ust_sh1_rast () { 
+    return get_ust_sh1_rast().ToString();}
+
+    public string debug_name_ust_sh1_rast () { 
+    return "уст†ш1†раст";}
+
+// уст†ш1†поз,   Real, %MD312   reg = M  width = UInt32
+    public float get_ust_sh1_poz ()
+    { return (float) m_mem.getMFloat(312); }
+
+    public void set_ust_sh1_poz (float val)
+    { m_mem.setMFloat(312, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sh1_poz to " + val.ToString());}
+
+    public bool sets_ust_sh1_poz ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sh1_poz (val);
+    return true;}
+
+    public string gets_ust_sh1_poz () { 
+    return get_ust_sh1_poz().ToString();}
+
+    public string debug_name_ust_sh1_poz () { 
+    return "уст†ш1†поз";}
+
+// уст†ш2†скор,   Real, %MD316   reg = M  width = UInt32
+    public float get_ust_sh2_skor ()
+    { return (float) m_mem.getMFloat(316); }
+
+    public void set_ust_sh2_skor (float val)
+    { m_mem.setMFloat(316, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sh2_skor to " + val.ToString());}
+
+    public bool sets_ust_sh2_skor ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sh2_skor (val);
+    return true;}
+
+    public string gets_ust_sh2_skor () { 
+    return get_ust_sh2_skor().ToString();}
+
+    public string debug_name_ust_sh2_skor () { 
+    return "уст†ш2†скор";}
+
+// уст†ш2†раст,   Real, %MD320   reg = M  width = UInt32
+    public float get_ust_sh2_rast ()
+    { return (float) m_mem.getMFloat(320); }
+
+    public void set_ust_sh2_rast (float val)
+    { m_mem.setMFloat(320, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sh2_rast to " + val.ToString());}
+
+    public bool sets_ust_sh2_rast ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sh2_rast (val);
+    return true;}
+
+    public string gets_ust_sh2_rast () { 
+    return get_ust_sh2_rast().ToString();}
+
+    public string debug_name_ust_sh2_rast () { 
+    return "уст†ш2†раст";}
+
+// уст†ш2†поз,   Real, %MD324   reg = M  width = UInt32
+    public float get_ust_sh2_poz ()
+    { return (float) m_mem.getMFloat(324); }
+
+    public void set_ust_sh2_poz (float val)
+    { m_mem.setMFloat(324, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sh2_poz to " + val.ToString());}
+
+    public bool sets_ust_sh2_poz ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sh2_poz (val);
+    return true;}
+
+    public string gets_ust_sh2_poz () { 
+    return get_ust_sh2_poz().ToString();}
+
+    public string debug_name_ust_sh2_poz () { 
+    return "уст†ш2†поз";}
+
+// уст†ш3†скор,   Real, %MD328   reg = M  width = UInt32
+    public float get_ust_sh3_skor ()
+    { return (float) m_mem.getMFloat(328); }
+
+    public void set_ust_sh3_skor (float val)
+    { m_mem.setMFloat(328, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sh3_skor to " + val.ToString());}
+
+    public bool sets_ust_sh3_skor ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sh3_skor (val);
+    return true;}
+
+    public string gets_ust_sh3_skor () { 
+    return get_ust_sh3_skor().ToString();}
+
+    public string debug_name_ust_sh3_skor () { 
+    return "уст†ш3†скор";}
+
+// уст†ш3†раст,   Real, %MD332   reg = M  width = UInt32
+    public float get_ust_sh3_rast ()
+    { return (float) m_mem.getMFloat(332); }
+
+    public void set_ust_sh3_rast (float val)
+    { m_mem.setMFloat(332, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sh3_rast to " + val.ToString());}
+
+    public bool sets_ust_sh3_rast ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sh3_rast (val);
+    return true;}
+
+    public string gets_ust_sh3_rast () { 
+    return get_ust_sh3_rast().ToString();}
+
+    public string debug_name_ust_sh3_rast () { 
+    return "уст†ш3†раст";}
+
+// уст†ш3†поз,   Real, %MD336   reg = M  width = UInt32
+    public float get_ust_sh3_poz ()
+    { return (float) m_mem.getMFloat(336); }
+
+    public void set_ust_sh3_poz (float val)
+    { m_mem.setMFloat(336, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sh3_poz to " + val.ToString());}
+
+    public bool sets_ust_sh3_poz ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sh3_poz (val);
+    return true;}
+
+    public string gets_ust_sh3_poz () { 
+    return get_ust_sh3_poz().ToString();}
+
+    public string debug_name_ust_sh3_poz () { 
+    return "уст†ш3†поз";}
+
+// уст†ш4†скор,   Real, %MD340   reg = M  width = UInt32
+    public float get_ust_sh4_skor ()
+    { return (float) m_mem.getMFloat(340); }
+
+    public void set_ust_sh4_skor (float val)
+    { m_mem.setMFloat(340, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sh4_skor to " + val.ToString());}
+
+    public bool sets_ust_sh4_skor ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sh4_skor (val);
+    return true;}
+
+    public string gets_ust_sh4_skor () { 
+    return get_ust_sh4_skor().ToString();}
+
+    public string debug_name_ust_sh4_skor () { 
+    return "уст†ш4†скор";}
+
+// уст†ш4†раст,   Real, %MD344   reg = M  width = UInt32
+    public float get_ust_sh4_rast ()
+    { return (float) m_mem.getMFloat(344); }
+
+    public void set_ust_sh4_rast (float val)
+    { m_mem.setMFloat(344, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sh4_rast to " + val.ToString());}
+
+    public bool sets_ust_sh4_rast ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sh4_rast (val);
+    return true;}
+
+    public string gets_ust_sh4_rast () { 
+    return get_ust_sh4_rast().ToString();}
+
+    public string debug_name_ust_sh4_rast () { 
+    return "уст†ш4†раст";}
+
+// уст†ш4†поз,   Real, %MD348   reg = M  width = UInt32
+    public float get_ust_sh4_poz ()
+    { return (float) m_mem.getMFloat(348); }
+
+    public void set_ust_sh4_poz (float val)
+    { m_mem.setMFloat(348, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sh4_poz to " + val.ToString());}
+
+    public bool sets_ust_sh4_poz ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sh4_poz (val);
+    return true;}
+
+    public string gets_ust_sh4_poz () { 
+    return get_ust_sh4_poz().ToString();}
+
+    public string debug_name_ust_sh4_poz () { 
+    return "уст†ш4†поз";}
+
 public enum local_usta{
 ust_karetka_skor_vpravo,
 ust_karetka_poziciya,
@@ -2463,6 +3095,18 @@ ust_kol_slojov_dlya_dozatora,
 ust_tjen1_temp,
 ust_tjen2_temp,
 ust_tjen3_temp,
+ust_sh1_skor,
+ust_sh1_rast,
+ust_sh1_poz,
+ust_sh2_skor,
+ust_sh2_rast,
+ust_sh2_poz,
+ust_sh3_skor,
+ust_sh3_rast,
+ust_sh3_poz,
+ust_sh4_skor,
+ust_sh4_rast,
+ust_sh4_poz,
 };
 
 public enum gTags{
@@ -2532,6 +3176,22 @@ kom_kl_chil1,
 kom_kl_chil2,
 kom_pit_rec,
 kom_pit_mps,
+kom_sh1_vperjod,
+kom_sh1_nazad,
+kom_sh1_abs,
+kom_sh1_stop,
+kom_sh2_vperjod,
+kom_sh2_nazad,
+kom_sh2_abs,
+kom_sh2_stop,
+kom_sh3_vperjod,
+kom_sh3_nazad,
+kom_sh3_abs,
+kom_sh3_stop,
+kom_sh4_vperjod,
+kom_sh4_nazad,
+kom_sh4_abs,
+kom_sh4_stop,
 vyhd_kar_abs,
 vyhd_stol_abs,
 vyhd_pit_tjen1,
@@ -2572,6 +3232,18 @@ ust_kol_slojov_dlya_dozatora,
 ust_tjen1_temp,
 ust_tjen2_temp,
 ust_tjen3_temp,
+ust_sh1_skor,
+ust_sh1_rast,
+ust_sh1_poz,
+ust_sh2_skor,
+ust_sh2_rast,
+ust_sh2_poz,
+ust_sh3_skor,
+ust_sh3_rast,
+ust_sh3_poz,
+ust_sh4_skor,
+ust_sh4_rast,
+ust_sh4_poz,
 };
 
     public string get_by_name(string str) {
@@ -2707,6 +3379,38 @@ case "kom_pit_rec":
    return gets_kom_pit_rec();
 case "kom_pit_mps":
    return gets_kom_pit_mps();
+case "kom_sh1_vperjod":
+   return gets_kom_sh1_vperjod();
+case "kom_sh1_nazad":
+   return gets_kom_sh1_nazad();
+case "kom_sh1_abs":
+   return gets_kom_sh1_abs();
+case "kom_sh1_stop":
+   return gets_kom_sh1_stop();
+case "kom_sh2_vperjod":
+   return gets_kom_sh2_vperjod();
+case "kom_sh2_nazad":
+   return gets_kom_sh2_nazad();
+case "kom_sh2_abs":
+   return gets_kom_sh2_abs();
+case "kom_sh2_stop":
+   return gets_kom_sh2_stop();
+case "kom_sh3_vperjod":
+   return gets_kom_sh3_vperjod();
+case "kom_sh3_nazad":
+   return gets_kom_sh3_nazad();
+case "kom_sh3_abs":
+   return gets_kom_sh3_abs();
+case "kom_sh3_stop":
+   return gets_kom_sh3_stop();
+case "kom_sh4_vperjod":
+   return gets_kom_sh4_vperjod();
+case "kom_sh4_nazad":
+   return gets_kom_sh4_nazad();
+case "kom_sh4_abs":
+   return gets_kom_sh4_abs();
+case "kom_sh4_stop":
+   return gets_kom_sh4_stop();
 case "vyhd_kar_abs":
    return gets_vyhd_kar_abs();
 case "vyhd_stol_abs":
@@ -2787,6 +3491,30 @@ case "ust_tjen2_temp":
    return gets_ust_tjen2_temp();
 case "ust_tjen3_temp":
    return gets_ust_tjen3_temp();
+case "ust_sh1_skor":
+   return gets_ust_sh1_skor();
+case "ust_sh1_rast":
+   return gets_ust_sh1_rast();
+case "ust_sh1_poz":
+   return gets_ust_sh1_poz();
+case "ust_sh2_skor":
+   return gets_ust_sh2_skor();
+case "ust_sh2_rast":
+   return gets_ust_sh2_rast();
+case "ust_sh2_poz":
+   return gets_ust_sh2_poz();
+case "ust_sh3_skor":
+   return gets_ust_sh3_skor();
+case "ust_sh3_rast":
+   return gets_ust_sh3_rast();
+case "ust_sh3_poz":
+   return gets_ust_sh3_poz();
+case "ust_sh4_skor":
+   return gets_ust_sh4_skor();
+case "ust_sh4_rast":
+   return gets_ust_sh4_rast();
+case "ust_sh4_poz":
+   return gets_ust_sh4_poz();
 default: 
    return "NAN";
 } 
@@ -2924,6 +3652,38 @@ case "kom_pit_rec":
    return sets_kom_pit_rec(val);
 case "kom_pit_mps":
    return sets_kom_pit_mps(val);
+case "kom_sh1_vperjod":
+   return sets_kom_sh1_vperjod(val);
+case "kom_sh1_nazad":
+   return sets_kom_sh1_nazad(val);
+case "kom_sh1_abs":
+   return sets_kom_sh1_abs(val);
+case "kom_sh1_stop":
+   return sets_kom_sh1_stop(val);
+case "kom_sh2_vperjod":
+   return sets_kom_sh2_vperjod(val);
+case "kom_sh2_nazad":
+   return sets_kom_sh2_nazad(val);
+case "kom_sh2_abs":
+   return sets_kom_sh2_abs(val);
+case "kom_sh2_stop":
+   return sets_kom_sh2_stop(val);
+case "kom_sh3_vperjod":
+   return sets_kom_sh3_vperjod(val);
+case "kom_sh3_nazad":
+   return sets_kom_sh3_nazad(val);
+case "kom_sh3_abs":
+   return sets_kom_sh3_abs(val);
+case "kom_sh3_stop":
+   return sets_kom_sh3_stop(val);
+case "kom_sh4_vperjod":
+   return sets_kom_sh4_vperjod(val);
+case "kom_sh4_nazad":
+   return sets_kom_sh4_nazad(val);
+case "kom_sh4_abs":
+   return sets_kom_sh4_abs(val);
+case "kom_sh4_stop":
+   return sets_kom_sh4_stop(val);
 case "vyhd_kar_abs":
    return sets_vyhd_kar_abs(val);
 case "vyhd_stol_abs":
@@ -3004,6 +3764,30 @@ case "ust_tjen2_temp":
    return sets_ust_tjen2_temp(val);
 case "ust_tjen3_temp":
    return sets_ust_tjen3_temp(val);
+case "ust_sh1_skor":
+   return sets_ust_sh1_skor(val);
+case "ust_sh1_rast":
+   return sets_ust_sh1_rast(val);
+case "ust_sh1_poz":
+   return sets_ust_sh1_poz(val);
+case "ust_sh2_skor":
+   return sets_ust_sh2_skor(val);
+case "ust_sh2_rast":
+   return sets_ust_sh2_rast(val);
+case "ust_sh2_poz":
+   return sets_ust_sh2_poz(val);
+case "ust_sh3_skor":
+   return sets_ust_sh3_skor(val);
+case "ust_sh3_rast":
+   return sets_ust_sh3_rast(val);
+case "ust_sh3_poz":
+   return sets_ust_sh3_poz(val);
+case "ust_sh4_skor":
+   return sets_ust_sh4_skor(val);
+case "ust_sh4_rast":
+   return sets_ust_sh4_rast(val);
+case "ust_sh4_poz":
+   return sets_ust_sh4_poz(val);
 default: 
    return false;
 } 
@@ -3141,6 +3925,38 @@ case "kom_pit_rec":
    return debug_name_kom_pit_rec();
 case "kom_pit_mps":
    return debug_name_kom_pit_mps();
+case "kom_sh1_vperjod":
+   return debug_name_kom_sh1_vperjod();
+case "kom_sh1_nazad":
+   return debug_name_kom_sh1_nazad();
+case "kom_sh1_abs":
+   return debug_name_kom_sh1_abs();
+case "kom_sh1_stop":
+   return debug_name_kom_sh1_stop();
+case "kom_sh2_vperjod":
+   return debug_name_kom_sh2_vperjod();
+case "kom_sh2_nazad":
+   return debug_name_kom_sh2_nazad();
+case "kom_sh2_abs":
+   return debug_name_kom_sh2_abs();
+case "kom_sh2_stop":
+   return debug_name_kom_sh2_stop();
+case "kom_sh3_vperjod":
+   return debug_name_kom_sh3_vperjod();
+case "kom_sh3_nazad":
+   return debug_name_kom_sh3_nazad();
+case "kom_sh3_abs":
+   return debug_name_kom_sh3_abs();
+case "kom_sh3_stop":
+   return debug_name_kom_sh3_stop();
+case "kom_sh4_vperjod":
+   return debug_name_kom_sh4_vperjod();
+case "kom_sh4_nazad":
+   return debug_name_kom_sh4_nazad();
+case "kom_sh4_abs":
+   return debug_name_kom_sh4_abs();
+case "kom_sh4_stop":
+   return debug_name_kom_sh4_stop();
 case "vyhd_kar_abs":
    return debug_name_vyhd_kar_abs();
 case "vyhd_stol_abs":
@@ -3221,6 +4037,30 @@ case "ust_tjen2_temp":
    return debug_name_ust_tjen2_temp();
 case "ust_tjen3_temp":
    return debug_name_ust_tjen3_temp();
+case "ust_sh1_skor":
+   return debug_name_ust_sh1_skor();
+case "ust_sh1_rast":
+   return debug_name_ust_sh1_rast();
+case "ust_sh1_poz":
+   return debug_name_ust_sh1_poz();
+case "ust_sh2_skor":
+   return debug_name_ust_sh2_skor();
+case "ust_sh2_rast":
+   return debug_name_ust_sh2_rast();
+case "ust_sh2_poz":
+   return debug_name_ust_sh2_poz();
+case "ust_sh3_skor":
+   return debug_name_ust_sh3_skor();
+case "ust_sh3_rast":
+   return debug_name_ust_sh3_rast();
+case "ust_sh3_poz":
+   return debug_name_ust_sh3_poz();
+case "ust_sh4_skor":
+   return debug_name_ust_sh4_skor();
+case "ust_sh4_rast":
+   return debug_name_ust_sh4_rast();
+case "ust_sh4_poz":
+   return debug_name_ust_sh4_poz();
 default: 
    return "NAN";
 } 
@@ -3230,9 +4070,9 @@ default:
 //____________________________________________________________________________________________________
 //________++++++++++++____++++++++++++++++____++++++++++++____________________++++++++________________
 //____++++++++________________________________________________________________++++++++++++++++++++++++
-//++++________________________________________________________________________________________________
+//++++++++++++++++++++++++++++++++++++++++++++++++++++________________________________________________
 //____________________________________________________________________________________________________
-//+__+_+++__________+++++_+++++_______________________________________________________________________
+//+__+_+++__________+++++_+++++++++___________________________________________________________________
 //____++++++++++++++++++++++++______________++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //++________________________________++++++++______++++____++++++++++++++++++__________________________
 //____________________________________________________________________________________________________

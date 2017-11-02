@@ -21,7 +21,7 @@ namespace SpIceControllerLib
             m_mainThreadPermission = true;
             m_mainThread = new Thread(mainThreadHandler);
             m_mainThread.Start();
-            laserCount = 2;
+            laserCount = 1;
         }
 
         public static void mainThreadHandler()

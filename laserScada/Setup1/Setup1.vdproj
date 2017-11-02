@@ -500,7 +500,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SpIceControllerLib, Version=1.1.6512.28321, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:SpIceControllerLib, Version=1.1.6516.154, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_160C3C54786779D8BF4B04F7415E3D80"
@@ -602,7 +602,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SpIceControllerLib, Version=1.1.6512.28321, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:SpIceControllerLib, Version=1.1.6516.154, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_36503148D5C24C3492A58D57F9053829"
@@ -777,7 +777,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:laserScada, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:laserScada, Version=1.0.6516.519, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_80BB135153B84108B01CC04CC2DE4ACA"
@@ -1336,20 +1336,20 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:LaserScada"
-        "ProductCode" = "8:{B4942AA7-2D7D-48E8-BA12-751E204E7716}"
-        "PackageCode" = "8:{857C79AA-77E8-4EFB-A804-5B53A750BEA8}"
+        "ProductCode" = "8:{D2415850-E4C1-4B6E-B762-D49F8E5AA5BC}"
+        "PackageCode" = "8:{F116E1C9-3495-423E-A4D7-B1866334B742}"
         "UpgradeCode" = "8:{6565649E-BB37-4CC0-B582-2F262A905D02}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:TRUE"
+        "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.2.4"
+        "ProductVersion" = "8:1.2.8"
         "Manufacturer" = "8:TestSuit"
         "ARPHELPTELEPHONE" = "8:8(977)8971404"
         "ARPHELPLINK" = "8:"
         "Title" = "8:LaserScada"
-        "Subject" = "8:"
+        "Subject" = "8:1.2.7"
         "ARPCONTACT" = "8:TestSuit"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Установка черновой версии, программы упрвления двумя лазерам"
