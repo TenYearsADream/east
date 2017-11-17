@@ -171,8 +171,8 @@ namespace SpIceControllerLib
 
         public static void processSignals()
         {
-            for(int i =0; i < laserCount; i++)
-           NativeMethods.readStatus(ref m_cardStatus[i], i+1);
+            for(int i =0; i <= laserCount; i++)
+           NativeMethods.readStatus(ref m_cardStatus[i], i);
 
             if (m_isIntiialize)
                 PrefetchList.stepExecution();
@@ -251,6 +251,9 @@ namespace SpIceControllerLib
 
         private static void WorkState()
         {
+            int num = PrefetchList.getTopCardNumber();
+
+
             if (m_cardStatus[PrefetchList.getTopCardNumber()].scanComlete) //wait until escan comlete
             {
                 bool finish = PrefetchList.getTopFinished(m_runningLIst);

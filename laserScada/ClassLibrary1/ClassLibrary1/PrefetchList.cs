@@ -81,6 +81,7 @@ namespace SpIceControllerLib
             m_sheldule.Clear();
             m_currentCardNumber = 1;
             m_nextCardNumber = 1;
+           
         }
 
         static internal void terminate() //(object sender, EventArgs e)
@@ -114,6 +115,7 @@ namespace SpIceControllerLib
             {
                 //                m_currentList = getNextFreeList();
                 m_currentList = findFreeExeList(m_currentCardNumber);
+                m_curListState.filling = ListStateFill.free;
                 if (m_currentList == ListNumber.Undefine) return;
             }
 
