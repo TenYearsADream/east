@@ -726,13 +726,13 @@ namespace laserScada
             var dialog = new inputDialog("Толщина слоя", ((dataField)sender).Data);
             if (dialog.ShowDialog() == true)
             {
-                short val;
-                if (!short.TryParse(dialog.ResponseText, out val))
+                float val;
+                if (!float.TryParse(dialog.ResponseText, out val))
                 {
                     System.Windows.MessageBox.Show("Неправильное значение");
                     return;
                 }
-                m_plc.tags.set_ust_tolshh_sloya(short.Parse(dialog.ResponseText));
+                m_plc.tags.set_ust_tolshh_sloya(float.Parse(dialog.ResponseText));
             }
         }
 
@@ -765,6 +765,11 @@ namespace laserScada
         private void build_vikat_Click(object sender, RoutedEventArgs e)
         {
             m_plc.tags.set_kom_s4_vykat(true);
+        }
+
+        private void layer_widh_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

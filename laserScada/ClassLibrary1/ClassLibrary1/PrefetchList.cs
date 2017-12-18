@@ -256,7 +256,7 @@ namespace SpIceControllerLib
 
         private static void fillEpilog()
         {
-            NativeMethods.PCI_Write_Port_List(0xC, 0x000);
+           // NativeMethods.PCI_Write_Port_List(0xC, 0x000);
             NativeMethods.PCI_Set_End_Of_List();
             if(m_l[(Int32)m_currentList].size>0)
             m_l[(Int32)m_currentList].filling = ListStateFill.ready;

@@ -91,8 +91,8 @@ namespace SpIceControllerLib
             bool setGain = NativeMethods.PCI_Set_Gain(e.cs.gainX, e.cs.gainY, 0, 0, (UInt16)e.cs.num);
             bool rSetMode = NativeMethods.PCI_Set_Mode(e.cs.mode);
             NativeMethods.PCI_Stop_Execution();
-            bool rOsc = NativeMethods.PCI_Write_Port_List(0xC, 0x00);
-          
+            bool rOsc = NativeMethods.PCI_Write_Port(0xC, 0x010);// NativeMethods.PCI_Write_Port_List(0xC, 0x00);
+            //NativeMethods.PCI_Write_DA_List((UInt16)10);
             dbg = e.cs.debug;
             
 
@@ -117,6 +117,8 @@ namespace SpIceControllerLib
 
             m_layersFinishid = false;
 
+            if(!m_isIntiialize)
+                NativeMethods.PCI_Write_Port(0xC, 0x000);
             fileLoader.m_mut.ReleaseMutex();
             m_mut.ReleaseMutex();
         }
@@ -161,6 +163,8 @@ namespace SpIceControllerLib
                         m_inputSignals &= ~IntSignals.Run;
                         m_state = IntState.WaitListReady;
                     }
+                    if ((s & (IntSignals.Reset)) != 0)
+                        processStopRequest();
                     break;
 
                 case IntState.WaitListReady:
@@ -187,6 +191,7 @@ namespace SpIceControllerLib
         {
             NativeMethods.PCI_Stop_Execution();
             NativeMethods.PCI_Write_Port(0xC, 0x000);
+            NativeMethods.PCI_Write_DA_List((UInt16)0);
             fileLoader.m_mut.WaitOne();    //lock file loader thread
             fileLoader.resetFile();
             PrefetchList.resetList();
@@ -284,7 +289,7 @@ namespace SpIceControllerLib
         }
         public static void ResetSignal(bool val)
         {
-            if (m_state != IntState.Wait)
+            //if (m_state != IntState.Wait)
             {
                 if (val && !m_dirtyResetSignal)
                 {
