@@ -1,15 +1,11 @@
 <?xml version="1.0" standalone="yes"?>
 <dataroot xmlns:od="urn:schemas-microsoft-com:officedata">
-<PLC Tags><Name>выхд&#160;кар&#160;абс</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M500.1</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>выхд&#160;стол&#160;абс</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M500.4</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>выхд&#160;пит&#160;ТЭН1</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M503.2</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>выхд&#160;пит&#160;ТЭН2</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M503.3</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>выхд&#160;пит&#160;ТЭН3</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M503.4</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;ТЭН1</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M503.2</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;ТЭН2</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M503.3</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;ТЭН3</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M503.4</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>выхд&#160;стол&#160;отн&#160;вниз</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M505.7</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>выхд&#160;стол&#160;отн&#160;вверх</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M506.0</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>выхд&#160;кар&#160;отн&#160;влево</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M506.1</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>выхд&#160;кар&#160;отн&#160;вправо</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M506.2</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>выхд&#160;кар&#160;дом</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M506.3</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>выхд&#160;стол&#160;поиск&#160;нуля</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M506.4</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>выхд&#160;пит&#160;лазеров</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M506.5</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>выхд&#160;пит&#160;чил1</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M506.6</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
@@ -18,5 +14,28 @@
 <PLC Tags><Name>выхд&#160;кл&#160;чил2</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M507.1</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>выхд&#160;пит&#160;МПС</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M507.2</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>выхд&#160;пит&#160;рец</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M507.3</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;КВ1</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M507.4</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;КВ2</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M507.5</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;КЭ9</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M507.6</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;КЭ10</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M507.7</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;кар&#160;прав&#160;абс</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M508.0</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;кар&#160;лев&#160;абс</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M508.1</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;доз&#160;прав&#160;впер</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M508.2</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;доз&#160;лев&#160;впер</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M508.3</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;доз&#160;прав&#160;назад</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M508.4</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;доз&#160;лев&#160;назад</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M508.5</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;пересчёт</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M2.3</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;бар&#160;лев&#160;впер</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M508.6</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;бар&#160;прав&#160;впер</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M508.7</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;бар&#160;лев&#160;назад</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M509.0</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;бар&#160;прав&#160;назад</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M509.1</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;толк&#160;лев&#160;впер</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M509.2</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;толк&#160;прав&#160;впер</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M509.3</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;толк&#160;лев&#160;назад</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M509.4</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;толк&#160;прав&#160;назад</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M509.5</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;кар&#160;прав&#160;отн&#160;впер</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M509.6</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;кар&#160;прав&#160;отн&#160;наз</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M509.7</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;кар&#160;лев&#160;отн&#160;впер</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M510.0</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;кар&#160;лев&#160;отн&#160;наз</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M510.1</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags></PLC Tags>
 </dataroot>
