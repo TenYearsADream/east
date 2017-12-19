@@ -988,71 +988,71 @@ prot6,
     public string debug_name_kom_prer () { 
     return "ком†прер";}
 
-// ком†кар†отн†влево,   Bool, %M522.2   reg = M  width = Bit
-    public bool get_kom_kar_otn_vlevo ()
+// ком†резерв,   Bool, %M522.2   reg = M  width = Bit
+    public bool get_kom_rezerv ()
     { return (bool) m_mem.getMBit(522, 2); }
 
-    public void set_kom_kar_otn_vlevo (bool val)
+    public void set_kom_rezerv (bool val)
     { m_mem.setMBit(522, 2, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_kar_otn_vlevo to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_rezerv to " + val.ToString());}
 
-    public bool sets_kom_kar_otn_vlevo ( string str) {
+    public bool sets_kom_rezerv ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_kar_otn_vlevo (val);
+    set_kom_rezerv (val);
     return true;}
 
-    public string gets_kom_kar_otn_vlevo () { 
-    return get_kom_kar_otn_vlevo().ToString();}
+    public string gets_kom_rezerv () { 
+    return get_kom_rezerv().ToString();}
 
-    public string debug_name_kom_kar_otn_vlevo () { 
-    return "ком†кар†отн†влево";}
+    public string debug_name_kom_rezerv () { 
+    return "ком†резерв";}
 
-// ком†кар†отн†вправо,   Bool, %M522.3   reg = M  width = Bit
-    public bool get_kom_kar_otn_vpravo ()
+// ком†резерв(1),   Bool, %M522.3   reg = M  width = Bit
+    public bool get_kom_rezerv_1 ()
     { return (bool) m_mem.getMBit(522, 3); }
 
-    public void set_kom_kar_otn_vpravo (bool val)
+    public void set_kom_rezerv_1 (bool val)
     { m_mem.setMBit(522, 3, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_kar_otn_vpravo to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_rezerv_1 to " + val.ToString());}
 
-    public bool sets_kom_kar_otn_vpravo ( string str) {
+    public bool sets_kom_rezerv_1 ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_kar_otn_vpravo (val);
+    set_kom_rezerv_1 (val);
     return true;}
 
-    public string gets_kom_kar_otn_vpravo () { 
-    return get_kom_kar_otn_vpravo().ToString();}
+    public string gets_kom_rezerv_1 () { 
+    return get_kom_rezerv_1().ToString();}
 
-    public string debug_name_kom_kar_otn_vpravo () { 
-    return "ком†кар†отн†вправо";}
+    public string debug_name_kom_rezerv_1 () { 
+    return "ком†резерв(1)";}
 
-// ком†кар†поиск†нул€,   Bool, %M522.4   reg = M  width = Bit
-    public bool get_kom_kar_poisk_nulya ()
+// ком†резерв(2),   Bool, %M522.4   reg = M  width = Bit
+    public bool get_kom_rezerv_2 ()
     { return (bool) m_mem.getMBit(522, 4); }
 
-    public void set_kom_kar_poisk_nulya (bool val)
+    public void set_kom_rezerv_2 (bool val)
     { m_mem.setMBit(522, 4, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_kar_poisk_nulya to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_rezerv_2 to " + val.ToString());}
 
-    public bool sets_kom_kar_poisk_nulya ( string str) {
+    public bool sets_kom_rezerv_2 ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_kar_poisk_nulya (val);
+    set_kom_rezerv_2 (val);
     return true;}
 
-    public string gets_kom_kar_poisk_nulya () { 
-    return get_kom_kar_poisk_nulya().ToString();}
+    public string gets_kom_rezerv_2 () { 
+    return get_kom_rezerv_2().ToString();}
 
-    public string debug_name_kom_kar_poisk_nulya () { 
-    return "ком†кар†поиск†нул€";}
+    public string debug_name_kom_rezerv_2 () { 
+    return "ком†резерв(2)";}
 
 // ком†обнулить†линейку,   Bool, %M522.7   reg = M  width = Bit
     public bool get_kom_obnulit_linejku ()
@@ -1494,357 +1494,621 @@ prot6,
     public string debug_name_kom_pit_mps () { 
     return "ком†пит†ћѕ—";}
 
-// ком†ш1†вперЄд,   Bool, %M529.2   reg = M  width = Bit
-    public bool get_kom_sh1_vperjod ()
+// ком†кар†лев†ш1†вперЄд,   Bool, %M529.2   reg = M  width = Bit
+    public bool get_kom_kar_lev_sh1_vperjod ()
     { return (bool) m_mem.getMBit(529, 2); }
 
-    public void set_kom_sh1_vperjod (bool val)
+    public void set_kom_kar_lev_sh1_vperjod (bool val)
     { m_mem.setMBit(529, 2, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh1_vperjod to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_kar_lev_sh1_vperjod to " + val.ToString());}
 
-    public bool sets_kom_sh1_vperjod ( string str) {
+    public bool sets_kom_kar_lev_sh1_vperjod ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh1_vperjod (val);
+    set_kom_kar_lev_sh1_vperjod (val);
     return true;}
 
-    public string gets_kom_sh1_vperjod () { 
-    return get_kom_sh1_vperjod().ToString();}
+    public string gets_kom_kar_lev_sh1_vperjod () { 
+    return get_kom_kar_lev_sh1_vperjod().ToString();}
 
-    public string debug_name_kom_sh1_vperjod () { 
-    return "ком†ш1†вперЄд";}
+    public string debug_name_kom_kar_lev_sh1_vperjod () { 
+    return "ком†кар†лев†ш1†вперЄд";}
 
-// ком†ш1†назад,   Bool, %M529.3   reg = M  width = Bit
-    public bool get_kom_sh1_nazad ()
+// ком†кар†лев†ш1†назад,   Bool, %M529.3   reg = M  width = Bit
+    public bool get_kom_kar_lev_sh1_nazad ()
     { return (bool) m_mem.getMBit(529, 3); }
 
-    public void set_kom_sh1_nazad (bool val)
+    public void set_kom_kar_lev_sh1_nazad (bool val)
     { m_mem.setMBit(529, 3, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh1_nazad to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_kar_lev_sh1_nazad to " + val.ToString());}
 
-    public bool sets_kom_sh1_nazad ( string str) {
+    public bool sets_kom_kar_lev_sh1_nazad ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh1_nazad (val);
+    set_kom_kar_lev_sh1_nazad (val);
     return true;}
 
-    public string gets_kom_sh1_nazad () { 
-    return get_kom_sh1_nazad().ToString();}
+    public string gets_kom_kar_lev_sh1_nazad () { 
+    return get_kom_kar_lev_sh1_nazad().ToString();}
 
-    public string debug_name_kom_sh1_nazad () { 
-    return "ком†ш1†назад";}
+    public string debug_name_kom_kar_lev_sh1_nazad () { 
+    return "ком†кар†лев†ш1†назад";}
 
-// ком†ш1†абс,   Bool, %M529.4   reg = M  width = Bit
-    public bool get_kom_sh1_abs ()
+// ком†кар†лев†ш1†абс,   Bool, %M529.4   reg = M  width = Bit
+    public bool get_kom_kar_lev_sh1_abs ()
     { return (bool) m_mem.getMBit(529, 4); }
 
-    public void set_kom_sh1_abs (bool val)
+    public void set_kom_kar_lev_sh1_abs (bool val)
     { m_mem.setMBit(529, 4, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh1_abs to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_kar_lev_sh1_abs to " + val.ToString());}
 
-    public bool sets_kom_sh1_abs ( string str) {
+    public bool sets_kom_kar_lev_sh1_abs ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh1_abs (val);
+    set_kom_kar_lev_sh1_abs (val);
     return true;}
 
-    public string gets_kom_sh1_abs () { 
-    return get_kom_sh1_abs().ToString();}
+    public string gets_kom_kar_lev_sh1_abs () { 
+    return get_kom_kar_lev_sh1_abs().ToString();}
 
-    public string debug_name_kom_sh1_abs () { 
-    return "ком†ш1†абс";}
+    public string debug_name_kom_kar_lev_sh1_abs () { 
+    return "ком†кар†лев†ш1†абс";}
 
-// ком†ш1†стоп,   Bool, %M529.5   reg = M  width = Bit
-    public bool get_kom_sh1_stop ()
+// ком†кар†лев†ш1†стоп,   Bool, %M529.5   reg = M  width = Bit
+    public bool get_kom_kar_lev_sh1_stop ()
     { return (bool) m_mem.getMBit(529, 5); }
 
-    public void set_kom_sh1_stop (bool val)
+    public void set_kom_kar_lev_sh1_stop (bool val)
     { m_mem.setMBit(529, 5, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh1_stop to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_kar_lev_sh1_stop to " + val.ToString());}
 
-    public bool sets_kom_sh1_stop ( string str) {
+    public bool sets_kom_kar_lev_sh1_stop ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh1_stop (val);
+    set_kom_kar_lev_sh1_stop (val);
     return true;}
 
-    public string gets_kom_sh1_stop () { 
-    return get_kom_sh1_stop().ToString();}
+    public string gets_kom_kar_lev_sh1_stop () { 
+    return get_kom_kar_lev_sh1_stop().ToString();}
 
-    public string debug_name_kom_sh1_stop () { 
-    return "ком†ш1†стоп";}
+    public string debug_name_kom_kar_lev_sh1_stop () { 
+    return "ком†кар†лев†ш1†стоп";}
 
-// ком†ш2†вперЄд,   Bool, %M529.6   reg = M  width = Bit
-    public bool get_kom_sh2_vperjod ()
+// ком†кар†прав†ш2†вперЄд,   Bool, %M529.6   reg = M  width = Bit
+    public bool get_kom_kar_prav_sh2_vperjod ()
     { return (bool) m_mem.getMBit(529, 6); }
 
-    public void set_kom_sh2_vperjod (bool val)
+    public void set_kom_kar_prav_sh2_vperjod (bool val)
     { m_mem.setMBit(529, 6, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh2_vperjod to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_kar_prav_sh2_vperjod to " + val.ToString());}
 
-    public bool sets_kom_sh2_vperjod ( string str) {
+    public bool sets_kom_kar_prav_sh2_vperjod ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh2_vperjod (val);
+    set_kom_kar_prav_sh2_vperjod (val);
     return true;}
 
-    public string gets_kom_sh2_vperjod () { 
-    return get_kom_sh2_vperjod().ToString();}
+    public string gets_kom_kar_prav_sh2_vperjod () { 
+    return get_kom_kar_prav_sh2_vperjod().ToString();}
 
-    public string debug_name_kom_sh2_vperjod () { 
-    return "ком†ш2†вперЄд";}
+    public string debug_name_kom_kar_prav_sh2_vperjod () { 
+    return "ком†кар†прав†ш2†вперЄд";}
 
-// ком†ш2†назад,   Bool, %M529.7   reg = M  width = Bit
-    public bool get_kom_sh2_nazad ()
+// ком†кар†прав†ш2†назад,   Bool, %M529.7   reg = M  width = Bit
+    public bool get_kom_kar_prav_sh2_nazad ()
     { return (bool) m_mem.getMBit(529, 7); }
 
-    public void set_kom_sh2_nazad (bool val)
+    public void set_kom_kar_prav_sh2_nazad (bool val)
     { m_mem.setMBit(529, 7, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh2_nazad to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_kar_prav_sh2_nazad to " + val.ToString());}
 
-    public bool sets_kom_sh2_nazad ( string str) {
+    public bool sets_kom_kar_prav_sh2_nazad ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh2_nazad (val);
+    set_kom_kar_prav_sh2_nazad (val);
     return true;}
 
-    public string gets_kom_sh2_nazad () { 
-    return get_kom_sh2_nazad().ToString();}
+    public string gets_kom_kar_prav_sh2_nazad () { 
+    return get_kom_kar_prav_sh2_nazad().ToString();}
 
-    public string debug_name_kom_sh2_nazad () { 
-    return "ком†ш2†назад";}
+    public string debug_name_kom_kar_prav_sh2_nazad () { 
+    return "ком†кар†прав†ш2†назад";}
 
-// ком†ш2†абс,   Bool, %M530.1   reg = M  width = Bit
-    public bool get_kom_sh2_abs ()
+// ком†кар†прав†ш2†абс,   Bool, %M530.1   reg = M  width = Bit
+    public bool get_kom_kar_prav_sh2_abs ()
     { return (bool) m_mem.getMBit(530, 1); }
 
-    public void set_kom_sh2_abs (bool val)
+    public void set_kom_kar_prav_sh2_abs (bool val)
     { m_mem.setMBit(530, 1, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh2_abs to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_kar_prav_sh2_abs to " + val.ToString());}
 
-    public bool sets_kom_sh2_abs ( string str) {
+    public bool sets_kom_kar_prav_sh2_abs ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh2_abs (val);
+    set_kom_kar_prav_sh2_abs (val);
     return true;}
 
-    public string gets_kom_sh2_abs () { 
-    return get_kom_sh2_abs().ToString();}
+    public string gets_kom_kar_prav_sh2_abs () { 
+    return get_kom_kar_prav_sh2_abs().ToString();}
 
-    public string debug_name_kom_sh2_abs () { 
-    return "ком†ш2†абс";}
+    public string debug_name_kom_kar_prav_sh2_abs () { 
+    return "ком†кар†прав†ш2†абс";}
 
-// ком†ш2†стоп,   Bool, %M531.3   reg = M  width = Bit
-    public bool get_kom_sh2_stop ()
+// ком†кар†прав†ш2†стоп,   Bool, %M531.3   reg = M  width = Bit
+    public bool get_kom_kar_prav_sh2_stop ()
     { return (bool) m_mem.getMBit(531, 3); }
 
-    public void set_kom_sh2_stop (bool val)
+    public void set_kom_kar_prav_sh2_stop (bool val)
     { m_mem.setMBit(531, 3, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh2_stop to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_kar_prav_sh2_stop to " + val.ToString());}
 
-    public bool sets_kom_sh2_stop ( string str) {
+    public bool sets_kom_kar_prav_sh2_stop ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh2_stop (val);
+    set_kom_kar_prav_sh2_stop (val);
     return true;}
 
-    public string gets_kom_sh2_stop () { 
-    return get_kom_sh2_stop().ToString();}
+    public string gets_kom_kar_prav_sh2_stop () { 
+    return get_kom_kar_prav_sh2_stop().ToString();}
 
-    public string debug_name_kom_sh2_stop () { 
-    return "ком†ш2†стоп";}
+    public string debug_name_kom_kar_prav_sh2_stop () { 
+    return "ком†кар†прав†ш2†стоп";}
 
-// ком†ш3†вперЄд,   Bool, %M531.4   reg = M  width = Bit
-    public bool get_kom_sh3_vperjod ()
+// ком†бар†прав†ш3†вперЄд,   Bool, %M531.4   reg = M  width = Bit
+    public bool get_kom_bar_prav_sh3_vperjod ()
     { return (bool) m_mem.getMBit(531, 4); }
 
-    public void set_kom_sh3_vperjod (bool val)
+    public void set_kom_bar_prav_sh3_vperjod (bool val)
     { m_mem.setMBit(531, 4, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh3_vperjod to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_bar_prav_sh3_vperjod to " + val.ToString());}
 
-    public bool sets_kom_sh3_vperjod ( string str) {
+    public bool sets_kom_bar_prav_sh3_vperjod ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh3_vperjod (val);
+    set_kom_bar_prav_sh3_vperjod (val);
     return true;}
 
-    public string gets_kom_sh3_vperjod () { 
-    return get_kom_sh3_vperjod().ToString();}
+    public string gets_kom_bar_prav_sh3_vperjod () { 
+    return get_kom_bar_prav_sh3_vperjod().ToString();}
 
-    public string debug_name_kom_sh3_vperjod () { 
-    return "ком†ш3†вперЄд";}
+    public string debug_name_kom_bar_prav_sh3_vperjod () { 
+    return "ком†бар†прав†ш3†вперЄд";}
 
-// ком†ш3†назад,   Bool, %M531.5   reg = M  width = Bit
-    public bool get_kom_sh3_nazad ()
+// ком†бар†прав†ш3†назад,   Bool, %M531.5   reg = M  width = Bit
+    public bool get_kom_bar_prav_sh3_nazad ()
     { return (bool) m_mem.getMBit(531, 5); }
 
-    public void set_kom_sh3_nazad (bool val)
+    public void set_kom_bar_prav_sh3_nazad (bool val)
     { m_mem.setMBit(531, 5, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh3_nazad to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_bar_prav_sh3_nazad to " + val.ToString());}
 
-    public bool sets_kom_sh3_nazad ( string str) {
+    public bool sets_kom_bar_prav_sh3_nazad ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh3_nazad (val);
+    set_kom_bar_prav_sh3_nazad (val);
     return true;}
 
-    public string gets_kom_sh3_nazad () { 
-    return get_kom_sh3_nazad().ToString();}
+    public string gets_kom_bar_prav_sh3_nazad () { 
+    return get_kom_bar_prav_sh3_nazad().ToString();}
 
-    public string debug_name_kom_sh3_nazad () { 
-    return "ком†ш3†назад";}
+    public string debug_name_kom_bar_prav_sh3_nazad () { 
+    return "ком†бар†прав†ш3†назад";}
 
-// ком†ш3†абс,   Bool, %M531.6   reg = M  width = Bit
-    public bool get_kom_sh3_abs ()
+// ком†бар†прав†ш3†абс,   Bool, %M531.6   reg = M  width = Bit
+    public bool get_kom_bar_prav_sh3_abs ()
     { return (bool) m_mem.getMBit(531, 6); }
 
-    public void set_kom_sh3_abs (bool val)
+    public void set_kom_bar_prav_sh3_abs (bool val)
     { m_mem.setMBit(531, 6, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh3_abs to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_bar_prav_sh3_abs to " + val.ToString());}
 
-    public bool sets_kom_sh3_abs ( string str) {
+    public bool sets_kom_bar_prav_sh3_abs ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh3_abs (val);
+    set_kom_bar_prav_sh3_abs (val);
     return true;}
 
-    public string gets_kom_sh3_abs () { 
-    return get_kom_sh3_abs().ToString();}
+    public string gets_kom_bar_prav_sh3_abs () { 
+    return get_kom_bar_prav_sh3_abs().ToString();}
 
-    public string debug_name_kom_sh3_abs () { 
-    return "ком†ш3†абс";}
+    public string debug_name_kom_bar_prav_sh3_abs () { 
+    return "ком†бар†прав†ш3†абс";}
 
-// ком†ш3†стоп,   Bool, %M531.7   reg = M  width = Bit
-    public bool get_kom_sh3_stop ()
+// ком†бар†прав†ш3†стоп,   Bool, %M531.7   reg = M  width = Bit
+    public bool get_kom_bar_prav_sh3_stop ()
     { return (bool) m_mem.getMBit(531, 7); }
 
-    public void set_kom_sh3_stop (bool val)
+    public void set_kom_bar_prav_sh3_stop (bool val)
     { m_mem.setMBit(531, 7, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh3_stop to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_bar_prav_sh3_stop to " + val.ToString());}
 
-    public bool sets_kom_sh3_stop ( string str) {
+    public bool sets_kom_bar_prav_sh3_stop ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh3_stop (val);
+    set_kom_bar_prav_sh3_stop (val);
     return true;}
 
-    public string gets_kom_sh3_stop () { 
-    return get_kom_sh3_stop().ToString();}
+    public string gets_kom_bar_prav_sh3_stop () { 
+    return get_kom_bar_prav_sh3_stop().ToString();}
 
-    public string debug_name_kom_sh3_stop () { 
-    return "ком†ш3†стоп";}
+    public string debug_name_kom_bar_prav_sh3_stop () { 
+    return "ком†бар†прав†ш3†стоп";}
 
-// ком†ш4†вперЄд,   Bool, %M532.0   reg = M  width = Bit
-    public bool get_kom_sh4_vperjod ()
+// ком†бар†лев†ш4†вперЄд,   Bool, %M532.0   reg = M  width = Bit
+    public bool get_kom_bar_lev_sh4_vperjod ()
     { return (bool) m_mem.getMBit(532, 0); }
 
-    public void set_kom_sh4_vperjod (bool val)
+    public void set_kom_bar_lev_sh4_vperjod (bool val)
     { m_mem.setMBit(532, 0, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh4_vperjod to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_bar_lev_sh4_vperjod to " + val.ToString());}
 
-    public bool sets_kom_sh4_vperjod ( string str) {
+    public bool sets_kom_bar_lev_sh4_vperjod ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh4_vperjod (val);
+    set_kom_bar_lev_sh4_vperjod (val);
     return true;}
 
-    public string gets_kom_sh4_vperjod () { 
-    return get_kom_sh4_vperjod().ToString();}
+    public string gets_kom_bar_lev_sh4_vperjod () { 
+    return get_kom_bar_lev_sh4_vperjod().ToString();}
 
-    public string debug_name_kom_sh4_vperjod () { 
-    return "ком†ш4†вперЄд";}
+    public string debug_name_kom_bar_lev_sh4_vperjod () { 
+    return "ком†бар†лев†ш4†вперЄд";}
 
-// ком†ш4†назад,   Bool, %M532.1   reg = M  width = Bit
-    public bool get_kom_sh4_nazad ()
+// ком†бар†лев†ш4†назад,   Bool, %M532.1   reg = M  width = Bit
+    public bool get_kom_bar_lev_sh4_nazad ()
     { return (bool) m_mem.getMBit(532, 1); }
 
-    public void set_kom_sh4_nazad (bool val)
+    public void set_kom_bar_lev_sh4_nazad (bool val)
     { m_mem.setMBit(532, 1, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh4_nazad to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_bar_lev_sh4_nazad to " + val.ToString());}
 
-    public bool sets_kom_sh4_nazad ( string str) {
+    public bool sets_kom_bar_lev_sh4_nazad ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh4_nazad (val);
+    set_kom_bar_lev_sh4_nazad (val);
     return true;}
 
-    public string gets_kom_sh4_nazad () { 
-    return get_kom_sh4_nazad().ToString();}
+    public string gets_kom_bar_lev_sh4_nazad () { 
+    return get_kom_bar_lev_sh4_nazad().ToString();}
 
-    public string debug_name_kom_sh4_nazad () { 
-    return "ком†ш4†назад";}
+    public string debug_name_kom_bar_lev_sh4_nazad () { 
+    return "ком†бар†лев†ш4†назад";}
 
-// ком†ш4†абс,   Bool, %M532.2   reg = M  width = Bit
-    public bool get_kom_sh4_abs ()
+// ком†бар†лев†ш4†абс,   Bool, %M532.2   reg = M  width = Bit
+    public bool get_kom_bar_lev_sh4_abs ()
     { return (bool) m_mem.getMBit(532, 2); }
 
-    public void set_kom_sh4_abs (bool val)
+    public void set_kom_bar_lev_sh4_abs (bool val)
     { m_mem.setMBit(532, 2, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh4_abs to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_bar_lev_sh4_abs to " + val.ToString());}
 
-    public bool sets_kom_sh4_abs ( string str) {
+    public bool sets_kom_bar_lev_sh4_abs ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh4_abs (val);
+    set_kom_bar_lev_sh4_abs (val);
     return true;}
 
-    public string gets_kom_sh4_abs () { 
-    return get_kom_sh4_abs().ToString();}
+    public string gets_kom_bar_lev_sh4_abs () { 
+    return get_kom_bar_lev_sh4_abs().ToString();}
 
-    public string debug_name_kom_sh4_abs () { 
-    return "ком†ш4†абс";}
+    public string debug_name_kom_bar_lev_sh4_abs () { 
+    return "ком†бар†лев†ш4†абс";}
 
-// ком†ш4†стоп,   Bool, %M532.3   reg = M  width = Bit
-    public bool get_kom_sh4_stop ()
+// ком†бар†лев†ш4†стоп,   Bool, %M532.3   reg = M  width = Bit
+    public bool get_kom_bar_lev_sh4_stop ()
     { return (bool) m_mem.getMBit(532, 3); }
 
-    public void set_kom_sh4_stop (bool val)
+    public void set_kom_bar_lev_sh4_stop (bool val)
     { m_mem.setMBit(532, 3, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_sh4_stop to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_bar_lev_sh4_stop to " + val.ToString());}
 
-    public bool sets_kom_sh4_stop ( string str) {
+    public bool sets_kom_bar_lev_sh4_stop ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_sh4_stop (val);
+    set_kom_bar_lev_sh4_stop (val);
     return true;}
 
-    public string gets_kom_sh4_stop () { 
-    return get_kom_sh4_stop().ToString();}
+    public string gets_kom_bar_lev_sh4_stop () { 
+    return get_kom_bar_lev_sh4_stop().ToString();}
 
-    public string debug_name_kom_sh4_stop () { 
-    return "ком†ш4†стоп";}
+    public string debug_name_kom_bar_lev_sh4_stop () { 
+    return "ком†бар†лев†ш4†стоп";}
+
+// ком†дозатор†лев†впер,   Bool, %M532.4   reg = M  width = Bit
+    public bool get_kom_dozator_lev_vper ()
+    { return (bool) m_mem.getMBit(532, 4); }
+
+    public void set_kom_dozator_lev_vper (bool val)
+    { m_mem.setMBit(532, 4, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_dozator_lev_vper to " + val.ToString());}
+
+    public bool sets_kom_dozator_lev_vper ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_dozator_lev_vper (val);
+    return true;}
+
+    public string gets_kom_dozator_lev_vper () { 
+    return get_kom_dozator_lev_vper().ToString();}
+
+    public string debug_name_kom_dozator_lev_vper () { 
+    return "ком†дозатор†лев†впер";}
+
+// ком†дозатор†прав†впер,   Bool, %M532.7   reg = M  width = Bit
+    public bool get_kom_dozator_prav_vper ()
+    { return (bool) m_mem.getMBit(532, 7); }
+
+    public void set_kom_dozator_prav_vper (bool val)
+    { m_mem.setMBit(532, 7, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_dozator_prav_vper to " + val.ToString());}
+
+    public bool sets_kom_dozator_prav_vper ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_dozator_prav_vper (val);
+    return true;}
+
+    public string gets_kom_dozator_prav_vper () { 
+    return get_kom_dozator_prav_vper().ToString();}
+
+    public string debug_name_kom_dozator_prav_vper () { 
+    return "ком†дозатор†прав†впер";}
+
+// ком†толкатель†лев†вперЄд,   Bool, %M533.2   reg = M  width = Bit
+    public bool get_kom_tolkatel_lev_vperjod ()
+    { return (bool) m_mem.getMBit(533, 2); }
+
+    public void set_kom_tolkatel_lev_vperjod (bool val)
+    { m_mem.setMBit(533, 2, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_tolkatel_lev_vperjod to " + val.ToString());}
+
+    public bool sets_kom_tolkatel_lev_vperjod ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_tolkatel_lev_vperjod (val);
+    return true;}
+
+    public string gets_kom_tolkatel_lev_vperjod () { 
+    return get_kom_tolkatel_lev_vperjod().ToString();}
+
+    public string debug_name_kom_tolkatel_lev_vperjod () { 
+    return "ком†толкатель†лев†вперЄд";}
+
+// ком†толкатель†лев†назад,   Bool, %M533.3   reg = M  width = Bit
+    public bool get_kom_tolkatel_lev_nazad ()
+    { return (bool) m_mem.getMBit(533, 3); }
+
+    public void set_kom_tolkatel_lev_nazad (bool val)
+    { m_mem.setMBit(533, 3, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_tolkatel_lev_nazad to " + val.ToString());}
+
+    public bool sets_kom_tolkatel_lev_nazad ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_tolkatel_lev_nazad (val);
+    return true;}
+
+    public string gets_kom_tolkatel_lev_nazad () { 
+    return get_kom_tolkatel_lev_nazad().ToString();}
+
+    public string debug_name_kom_tolkatel_lev_nazad () { 
+    return "ком†толкатель†лев†назад";}
+
+// ком†толкатель†прав†вперЄд,   Bool, %M533.5   reg = M  width = Bit
+    public bool get_kom_tolkatel_prav_vperjod ()
+    { return (bool) m_mem.getMBit(533, 5); }
+
+    public void set_kom_tolkatel_prav_vperjod (bool val)
+    { m_mem.setMBit(533, 5, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_tolkatel_prav_vperjod to " + val.ToString());}
+
+    public bool sets_kom_tolkatel_prav_vperjod ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_tolkatel_prav_vperjod (val);
+    return true;}
+
+    public string gets_kom_tolkatel_prav_vperjod () { 
+    return get_kom_tolkatel_prav_vperjod().ToString();}
+
+    public string debug_name_kom_tolkatel_prav_vperjod () { 
+    return "ком†толкатель†прав†вперЄд";}
+
+// ком†толкатель†прав†назад,   Bool, %M533.6   reg = M  width = Bit
+    public bool get_kom_tolkatel_prav_nazad ()
+    { return (bool) m_mem.getMBit(533, 6); }
+
+    public void set_kom_tolkatel_prav_nazad (bool val)
+    { m_mem.setMBit(533, 6, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_tolkatel_prav_nazad to " + val.ToString());}
+
+    public bool sets_kom_tolkatel_prav_nazad ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_tolkatel_prav_nazad (val);
+    return true;}
+
+    public string gets_kom_tolkatel_prav_nazad () { 
+    return get_kom_tolkatel_prav_nazad().ToString();}
+
+    public string debug_name_kom_tolkatel_prav_nazad () { 
+    return "ком†толкатель†прав†назад";}
+
+// ком†дозатор†лев†назад,   Bool, %M533.0   reg = M  width = Bit
+    public bool get_kom_dozator_lev_nazad ()
+    { return (bool) m_mem.getMBit(533, 0); }
+
+    public void set_kom_dozator_lev_nazad (bool val)
+    { m_mem.setMBit(533, 0, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_dozator_lev_nazad to " + val.ToString());}
+
+    public bool sets_kom_dozator_lev_nazad ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_dozator_lev_nazad (val);
+    return true;}
+
+    public string gets_kom_dozator_lev_nazad () { 
+    return get_kom_dozator_lev_nazad().ToString();}
+
+    public string debug_name_kom_dozator_lev_nazad () { 
+    return "ком†дозатор†лев†назад";}
+
+// ком†дозатор†прав†назад,   Bool, %M533.1   reg = M  width = Bit
+    public bool get_kom_dozator_prav_nazad ()
+    { return (bool) m_mem.getMBit(533, 1); }
+
+    public void set_kom_dozator_prav_nazad (bool val)
+    { m_mem.setMBit(533, 1, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_dozator_prav_nazad to " + val.ToString());}
+
+    public bool sets_kom_dozator_prav_nazad ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_dozator_prav_nazad (val);
+    return true;}
+
+    public string gets_kom_dozator_prav_nazad () { 
+    return get_kom_dozator_prav_nazad().ToString();}
+
+    public string debug_name_kom_dozator_prav_nazad () { 
+    return "ком†дозатор†прав†назад";}
+
+// ком† Ё9,   Bool, %M533.4   reg = M  width = Bit
+    public bool get_kom_kje9 ()
+    { return (bool) m_mem.getMBit(533, 4); }
+
+    public void set_kom_kje9 (bool val)
+    { m_mem.setMBit(533, 4, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_kje9 to " + val.ToString());}
+
+    public bool sets_kom_kje9 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_kje9 (val);
+    return true;}
+
+    public string gets_kom_kje9 () { 
+    return get_kom_kje9().ToString();}
+
+    public string debug_name_kom_kje9 () { 
+    return "ком† Ё9";}
+
+// ком† Ё10,   Bool, %M533.7   reg = M  width = Bit
+    public bool get_kom_kje10 ()
+    { return (bool) m_mem.getMBit(533, 7); }
+
+    public void set_kom_kje10 (bool val)
+    { m_mem.setMBit(533, 7, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_kje10 to " + val.ToString());}
+
+    public bool sets_kom_kje10 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_kje10 (val);
+    return true;}
+
+    public string gets_kom_kje10 () { 
+    return get_kom_kje10().ToString();}
+
+    public string debug_name_kom_kje10 () { 
+    return "ком† Ё10";}
+
+// ком† ¬1,   Bool, %M534.0   reg = M  width = Bit
+    public bool get_kom_kv1 ()
+    { return (bool) m_mem.getMBit(534, 0); }
+
+    public void set_kom_kv1 (bool val)
+    { m_mem.setMBit(534, 0, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_kv1 to " + val.ToString());}
+
+    public bool sets_kom_kv1 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_kv1 (val);
+    return true;}
+
+    public string gets_kom_kv1 () { 
+    return get_kom_kv1().ToString();}
+
+    public string debug_name_kom_kv1 () { 
+    return "ком† ¬1";}
+
+// ком† ¬2,   Bool, %M534.1   reg = M  width = Bit
+    public bool get_kom_kv2 ()
+    { return (bool) m_mem.getMBit(534, 1); }
+
+    public void set_kom_kv2 (bool val)
+    { m_mem.setMBit(534, 1, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_kv2 to " + val.ToString());}
+
+    public bool sets_kom_kv2 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_kv2 (val);
+    return true;}
+
+    public string gets_kom_kv2 () { 
+    return get_kom_kv2().ToString();}
+
+    public string debug_name_kom_kv2 () { 
+    return "ком† ¬2";}
 
 public enum local_com{
 kom_stol_abs,
@@ -1860,9 +2124,9 @@ kom_stol_otn_pusk_vniz,
 kom_stol_otn_pusk_vverh,
 kom_sloj,
 kom_prer,
-kom_kar_otn_vlevo,
-kom_kar_otn_vpravo,
-kom_kar_poisk_nulya,
+kom_rezerv,
+kom_rezerv_1,
+kom_rezerv_2,
 kom_obnulit_linejku,
 kom_pit_tjen3,
 kom_pit_tjen1,
@@ -1883,49 +2147,804 @@ kom_kl_chil1,
 kom_kl_chil2,
 kom_pit_rec,
 kom_pit_mps,
-kom_sh1_vperjod,
-kom_sh1_nazad,
-kom_sh1_abs,
-kom_sh1_stop,
-kom_sh2_vperjod,
-kom_sh2_nazad,
-kom_sh2_abs,
-kom_sh2_stop,
-kom_sh3_vperjod,
-kom_sh3_nazad,
-kom_sh3_abs,
-kom_sh3_stop,
-kom_sh4_vperjod,
-kom_sh4_nazad,
-kom_sh4_abs,
-kom_sh4_stop,
+kom_kar_lev_sh1_vperjod,
+kom_kar_lev_sh1_nazad,
+kom_kar_lev_sh1_abs,
+kom_kar_lev_sh1_stop,
+kom_kar_prav_sh2_vperjod,
+kom_kar_prav_sh2_nazad,
+kom_kar_prav_sh2_abs,
+kom_kar_prav_sh2_stop,
+kom_bar_prav_sh3_vperjod,
+kom_bar_prav_sh3_nazad,
+kom_bar_prav_sh3_abs,
+kom_bar_prav_sh3_stop,
+kom_bar_lev_sh4_vperjod,
+kom_bar_lev_sh4_nazad,
+kom_bar_lev_sh4_abs,
+kom_bar_lev_sh4_stop,
+kom_dozator_lev_vper,
+kom_dozator_prav_vper,
+kom_tolkatel_lev_vperjod,
+kom_tolkatel_lev_nazad,
+kom_tolkatel_prav_vperjod,
+kom_tolkatel_prav_nazad,
+kom_dozator_lev_nazad,
+kom_dozator_prav_nazad,
+kom_kje9,
+kom_kje10,
+kom_kv1,
+kom_kv2,
+};
+
+//-----------------------------------------------------------------------------
+//tags/usta.xml
+//-----------------------------------------------------------------------------
+// уст†стол†позици€,   Real, %MD136   reg = M  width = UInt32
+    public float get_ust_stol_poziciya ()
+    { return (float) m_mem.getMFloat(136); }
+
+    public void set_ust_stol_poziciya (float val)
+    { m_mem.setMFloat(136, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_stol_poziciya to " + val.ToString());}
+
+    public bool sets_ust_stol_poziciya ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_stol_poziciya (val);
+    return true;}
+
+    public string gets_ust_stol_poziciya () { 
+    return get_ust_stol_poziciya().ToString();}
+
+    public string debug_name_ust_stol_poziciya () { 
+    return "уст†стол†позици€";}
+
+// уст†стол†скор†вверх,   Real, %MD108   reg = M  width = UInt32
+    public float get_ust_stol_skor_vverh ()
+    { return (float) m_mem.getMFloat(108); }
+
+    public void set_ust_stol_skor_vverh (float val)
+    { m_mem.setMFloat(108, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_stol_skor_vverh to " + val.ToString());}
+
+    public bool sets_ust_stol_skor_vverh ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_stol_skor_vverh (val);
+    return true;}
+
+    public string gets_ust_stol_skor_vverh () { 
+    return get_ust_stol_skor_vverh().ToString();}
+
+    public string debug_name_ust_stol_skor_vverh () { 
+    return "уст†стол†скор†вверх";}
+
+// уст†стол†отн†расст,   Real, %MD148   reg = M  width = UInt32
+    public float get_ust_stol_otn_rasst ()
+    { return (float) m_mem.getMFloat(148); }
+
+    public void set_ust_stol_otn_rasst (float val)
+    { m_mem.setMFloat(148, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_stol_otn_rasst to " + val.ToString());}
+
+    public bool sets_ust_stol_otn_rasst ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_stol_otn_rasst (val);
+    return true;}
+
+    public string gets_ust_stol_otn_rasst () { 
+    return get_ust_stol_otn_rasst().ToString();}
+
+    public string debug_name_ust_stol_otn_rasst () { 
+    return "уст†стол†отн†расст";}
+
+// уст†слой†кар†лев†начало,   Real, %MD132   reg = M  width = UInt32
+    public float get_ust_sloj_kar_lev_nachalo ()
+    { return (float) m_mem.getMFloat(132); }
+
+    public void set_ust_sloj_kar_lev_nachalo (float val)
+    { m_mem.setMFloat(132, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sloj_kar_lev_nachalo to " + val.ToString());}
+
+    public bool sets_ust_sloj_kar_lev_nachalo ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sloj_kar_lev_nachalo (val);
+    return true;}
+
+    public string gets_ust_sloj_kar_lev_nachalo () { 
+    return get_ust_sloj_kar_lev_nachalo().ToString();}
+
+    public string debug_name_ust_sloj_kar_lev_nachalo () { 
+    return "уст†слой†кар†лев†начало";}
+
+// уст†слой†кар†лев†конец,   Real, %MD144   reg = M  width = UInt32
+    public float get_ust_sloj_kar_lev_konec ()
+    { return (float) m_mem.getMFloat(144); }
+
+    public void set_ust_sloj_kar_lev_konec (float val)
+    { m_mem.setMFloat(144, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sloj_kar_lev_konec to " + val.ToString());}
+
+    public bool sets_ust_sloj_kar_lev_konec ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sloj_kar_lev_konec (val);
+    return true;}
+
+    public string gets_ust_sloj_kar_lev_konec () { 
+    return get_ust_sloj_kar_lev_konec().ToString();}
+
+    public string debug_name_ust_sloj_kar_lev_konec () { 
+    return "уст†слой†кар†лев†конец";}
+
+// уст†толщ†сло€,   Real, %MD180   reg = M  width = UInt32
+    public float get_ust_tolshh_sloya ()
+    { return (float) m_mem.getMFloat(180); }
+
+    public void set_ust_tolshh_sloya (float val)
+    { m_mem.setMFloat(180, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_tolshh_sloya to " + val.ToString());}
+
+    public bool sets_ust_tolshh_sloya ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_tolshh_sloya (val);
+    return true;}
+
+    public string gets_ust_tolshh_sloya () { 
+    return get_ust_tolshh_sloya().ToString();}
+
+    public string debug_name_ust_tolshh_sloya () { 
+    return "уст†толщ†сло€";}
+
+// уст†стол†отн†расст†авто,   Real, %MD204   reg = M  width = UInt32
+    public float get_ust_stol_otn_rasst_avto ()
+    { return (float) m_mem.getMFloat(204); }
+
+    public void set_ust_stol_otn_rasst_avto (float val)
+    { m_mem.setMFloat(204, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_stol_otn_rasst_avto to " + val.ToString());}
+
+    public bool sets_ust_stol_otn_rasst_avto ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_stol_otn_rasst_avto (val);
+    return true;}
+
+    public string gets_ust_stol_otn_rasst_avto () { 
+    return get_ust_stol_otn_rasst_avto().ToString();}
+
+    public string debug_name_ust_stol_otn_rasst_avto () { 
+    return "уст†стол†отн†расст†авто";}
+
+// уст†“ЁЌ1†мощн,   Real, %MD276   reg = M  width = UInt32
+    public float get_ust_tjen1_moshhn ()
+    { return (float) m_mem.getMFloat(276); }
+
+    public void set_ust_tjen1_moshhn (float val)
+    { m_mem.setMFloat(276, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_tjen1_moshhn to " + val.ToString());}
+
+    public bool sets_ust_tjen1_moshhn ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_tjen1_moshhn (val);
+    return true;}
+
+    public string gets_ust_tjen1_moshhn () { 
+    return get_ust_tjen1_moshhn().ToString();}
+
+    public string debug_name_ust_tjen1_moshhn () { 
+    return "уст†“ЁЌ1†мощн";}
+
+// уст†“ЁЌ2†мощн,   Real, %MD280   reg = M  width = UInt32
+    public float get_ust_tjen2_moshhn ()
+    { return (float) m_mem.getMFloat(280); }
+
+    public void set_ust_tjen2_moshhn (float val)
+    { m_mem.setMFloat(280, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_tjen2_moshhn to " + val.ToString());}
+
+    public bool sets_ust_tjen2_moshhn ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_tjen2_moshhn (val);
+    return true;}
+
+    public string gets_ust_tjen2_moshhn () { 
+    return get_ust_tjen2_moshhn().ToString();}
+
+    public string debug_name_ust_tjen2_moshhn () { 
+    return "уст†“ЁЌ2†мощн";}
+
+// уст†“ЁЌ3†мощн,   Real, %MD284   reg = M  width = UInt32
+    public float get_ust_tjen3_moshhn ()
+    { return (float) m_mem.getMFloat(284); }
+
+    public void set_ust_tjen3_moshhn (float val)
+    { m_mem.setMFloat(284, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_tjen3_moshhn to " + val.ToString());}
+
+    public bool sets_ust_tjen3_moshhn ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_tjen3_moshhn (val);
+    return true;}
+
+    public string gets_ust_tjen3_moshhn () { 
+    return get_ust_tjen3_moshhn().ToString();}
+
+    public string debug_name_ust_tjen3_moshhn () { 
+    return "уст†“ЁЌ3†мощн";}
+
+// уст†кол†слоЄв†дл€†доз†прав,   Int, %MW292   reg = M  width = UInt16
+    public Int16 get_ust_kol_slojov_dlya_doz_prav ()
+    { return (Int16) m_mem.getMUInt16(292); }
+
+    public void set_ust_kol_slojov_dlya_doz_prav (Int16 val)
+    { m_mem.setMUInt16(292, (UInt16) val); 
+      Log.Write(LogLevel.Info, "set ust_kol_slojov_dlya_doz_prav to " + val.ToString());}
+
+    public bool sets_ust_kol_slojov_dlya_doz_prav ( string str) {
+    Int16 val;
+    if (!Int16.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as Int16 ");
+        return false; }
+    set_ust_kol_slojov_dlya_doz_prav (val);
+    return true;}
+
+    public string gets_ust_kol_slojov_dlya_doz_prav () { 
+    return get_ust_kol_slojov_dlya_doz_prav().ToString();}
+
+    public string debug_name_ust_kol_slojov_dlya_doz_prav () { 
+    return "уст†кол†слоЄв†дл€†доз†прав";}
+
+// уст†кол†слоЄв†дл€†доз†лев,   Int, %MW294   reg = M  width = UInt16
+    public Int16 get_ust_kol_slojov_dlya_doz_lev ()
+    { return (Int16) m_mem.getMUInt16(294); }
+
+    public void set_ust_kol_slojov_dlya_doz_lev (Int16 val)
+    { m_mem.setMUInt16(294, (UInt16) val); 
+      Log.Write(LogLevel.Info, "set ust_kol_slojov_dlya_doz_lev to " + val.ToString());}
+
+    public bool sets_ust_kol_slojov_dlya_doz_lev ( string str) {
+    Int16 val;
+    if (!Int16.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as Int16 ");
+        return false; }
+    set_ust_kol_slojov_dlya_doz_lev (val);
+    return true;}
+
+    public string gets_ust_kol_slojov_dlya_doz_lev () { 
+    return get_ust_kol_slojov_dlya_doz_lev().ToString();}
+
+    public string debug_name_ust_kol_slojov_dlya_doz_lev () { 
+    return "уст†кол†слоЄв†дл€†доз†лев";}
+
+// уст†“ЁЌ1†темп,   Real, %MD288   reg = M  width = UInt32
+    public float get_ust_tjen1_temp ()
+    { return (float) m_mem.getMFloat(288); }
+
+    public void set_ust_tjen1_temp (float val)
+    { m_mem.setMFloat(288, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_tjen1_temp to " + val.ToString());}
+
+    public bool sets_ust_tjen1_temp ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_tjen1_temp (val);
+    return true;}
+
+    public string gets_ust_tjen1_temp () { 
+    return get_ust_tjen1_temp().ToString();}
+
+    public string debug_name_ust_tjen1_temp () { 
+    return "уст†“ЁЌ1†темп";}
+
+// уст†“ЁЌ2†темп,   Real, %MD296   reg = M  width = UInt32
+    public float get_ust_tjen2_temp ()
+    { return (float) m_mem.getMFloat(296); }
+
+    public void set_ust_tjen2_temp (float val)
+    { m_mem.setMFloat(296, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_tjen2_temp to " + val.ToString());}
+
+    public bool sets_ust_tjen2_temp ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_tjen2_temp (val);
+    return true;}
+
+    public string gets_ust_tjen2_temp () { 
+    return get_ust_tjen2_temp().ToString();}
+
+    public string debug_name_ust_tjen2_temp () { 
+    return "уст†“ЁЌ2†темп";}
+
+// уст†“ЁЌ3†темп,   Real, %MD300   reg = M  width = UInt32
+    public float get_ust_tjen3_temp ()
+    { return (float) m_mem.getMFloat(300); }
+
+    public void set_ust_tjen3_temp (float val)
+    { m_mem.setMFloat(300, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_tjen3_temp to " + val.ToString());}
+
+    public bool sets_ust_tjen3_temp ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_tjen3_temp (val);
+    return true;}
+
+    public string gets_ust_tjen3_temp () { 
+    return get_ust_tjen3_temp().ToString();}
+
+    public string debug_name_ust_tjen3_temp () { 
+    return "уст†“ЁЌ3†темп";}
+
+// уст†кар†лев†скор,   Real, %MD304   reg = M  width = UInt32
+    public float get_ust_kar_lev_skor ()
+    { return (float) m_mem.getMFloat(304); }
+
+    public void set_ust_kar_lev_skor (float val)
+    { m_mem.setMFloat(304, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_kar_lev_skor to " + val.ToString());}
+
+    public bool sets_ust_kar_lev_skor ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_kar_lev_skor (val);
+    return true;}
+
+    public string gets_ust_kar_lev_skor () { 
+    return get_ust_kar_lev_skor().ToString();}
+
+    public string debug_name_ust_kar_lev_skor () { 
+    return "уст†кар†лев†скор";}
+
+// уст†кар†лев†раст,   Real, %MD308   reg = M  width = UInt32
+    public float get_ust_kar_lev_rast ()
+    { return (float) m_mem.getMFloat(308); }
+
+    public void set_ust_kar_lev_rast (float val)
+    { m_mem.setMFloat(308, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_kar_lev_rast to " + val.ToString());}
+
+    public bool sets_ust_kar_lev_rast ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_kar_lev_rast (val);
+    return true;}
+
+    public string gets_ust_kar_lev_rast () { 
+    return get_ust_kar_lev_rast().ToString();}
+
+    public string debug_name_ust_kar_lev_rast () { 
+    return "уст†кар†лев†раст";}
+
+// уст†кар†лев†поз,   Real, %MD312   reg = M  width = UInt32
+    public float get_ust_kar_lev_poz ()
+    { return (float) m_mem.getMFloat(312); }
+
+    public void set_ust_kar_lev_poz (float val)
+    { m_mem.setMFloat(312, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_kar_lev_poz to " + val.ToString());}
+
+    public bool sets_ust_kar_lev_poz ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_kar_lev_poz (val);
+    return true;}
+
+    public string gets_ust_kar_lev_poz () { 
+    return get_ust_kar_lev_poz().ToString();}
+
+    public string debug_name_ust_kar_lev_poz () { 
+    return "уст†кар†лев†поз";}
+
+// уст†кар†прав†скор,   Real, %MD316   reg = M  width = UInt32
+    public float get_ust_kar_prav_skor ()
+    { return (float) m_mem.getMFloat(316); }
+
+    public void set_ust_kar_prav_skor (float val)
+    { m_mem.setMFloat(316, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_kar_prav_skor to " + val.ToString());}
+
+    public bool sets_ust_kar_prav_skor ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_kar_prav_skor (val);
+    return true;}
+
+    public string gets_ust_kar_prav_skor () { 
+    return get_ust_kar_prav_skor().ToString();}
+
+    public string debug_name_ust_kar_prav_skor () { 
+    return "уст†кар†прав†скор";}
+
+// уст†кар†прав†раст,   Real, %MD320   reg = M  width = UInt32
+    public float get_ust_kar_prav_rast ()
+    { return (float) m_mem.getMFloat(320); }
+
+    public void set_ust_kar_prav_rast (float val)
+    { m_mem.setMFloat(320, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_kar_prav_rast to " + val.ToString());}
+
+    public bool sets_ust_kar_prav_rast ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_kar_prav_rast (val);
+    return true;}
+
+    public string gets_ust_kar_prav_rast () { 
+    return get_ust_kar_prav_rast().ToString();}
+
+    public string debug_name_ust_kar_prav_rast () { 
+    return "уст†кар†прав†раст";}
+
+// уст†кар†прав†поз,   Real, %MD324   reg = M  width = UInt32
+    public float get_ust_kar_prav_poz ()
+    { return (float) m_mem.getMFloat(324); }
+
+    public void set_ust_kar_prav_poz (float val)
+    { m_mem.setMFloat(324, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_kar_prav_poz to " + val.ToString());}
+
+    public bool sets_ust_kar_prav_poz ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_kar_prav_poz (val);
+    return true;}
+
+    public string gets_ust_kar_prav_poz () { 
+    return get_ust_kar_prav_poz().ToString();}
+
+    public string debug_name_ust_kar_prav_poz () { 
+    return "уст†кар†прав†поз";}
+
+// уст†бар†прав†скор,   Real, %MD328   reg = M  width = UInt32
+    public float get_ust_bar_prav_skor ()
+    { return (float) m_mem.getMFloat(328); }
+
+    public void set_ust_bar_prav_skor (float val)
+    { m_mem.setMFloat(328, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_bar_prav_skor to " + val.ToString());}
+
+    public bool sets_ust_bar_prav_skor ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_bar_prav_skor (val);
+    return true;}
+
+    public string gets_ust_bar_prav_skor () { 
+    return get_ust_bar_prav_skor().ToString();}
+
+    public string debug_name_ust_bar_prav_skor () { 
+    return "уст†бар†прав†скор";}
+
+// уст†бар†лев†скор,   Real, %MD340   reg = M  width = UInt32
+    public float get_ust_bar_lev_skor ()
+    { return (float) m_mem.getMFloat(340); }
+
+    public void set_ust_bar_lev_skor (float val)
+    { m_mem.setMFloat(340, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_bar_lev_skor to " + val.ToString());}
+
+    public bool sets_ust_bar_lev_skor ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_bar_lev_skor (val);
+    return true;}
+
+    public string gets_ust_bar_lev_skor () { 
+    return get_ust_bar_lev_skor().ToString();}
+
+    public string debug_name_ust_bar_lev_skor () { 
+    return "уст†бар†лев†скор";}
+
+// уст†доз†лев†врем€,   Real, %MD352   reg = M  width = UInt32
+    public float get_ust_doz_lev_vremya ()
+    { return (float) m_mem.getMFloat(352); }
+
+    public void set_ust_doz_lev_vremya (float val)
+    { m_mem.setMFloat(352, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_doz_lev_vremya to " + val.ToString());}
+
+    public bool sets_ust_doz_lev_vremya ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_doz_lev_vremya (val);
+    return true;}
+
+    public string gets_ust_doz_lev_vremya () { 
+    return get_ust_doz_lev_vremya().ToString();}
+
+    public string debug_name_ust_doz_lev_vremya () { 
+    return "уст†доз†лев†врем€";}
+
+// уст†доз†прав†врем€,   Real, %MD356   reg = M  width = UInt32
+    public float get_ust_doz_prav_vremya ()
+    { return (float) m_mem.getMFloat(356); }
+
+    public void set_ust_doz_prav_vremya (float val)
+    { m_mem.setMFloat(356, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_doz_prav_vremya to " + val.ToString());}
+
+    public bool sets_ust_doz_prav_vremya ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_doz_prav_vremya (val);
+    return true;}
+
+    public string gets_ust_doz_prav_vremya () { 
+    return get_ust_doz_prav_vremya().ToString();}
+
+    public string debug_name_ust_doz_prav_vremya () { 
+    return "уст†доз†прав†врем€";}
+
+// уст†толк†лев†расст,   Real, %MD360   reg = M  width = UInt32
+    public float get_ust_tolk_lev_rasst ()
+    { return (float) m_mem.getMFloat(360); }
+
+    public void set_ust_tolk_lev_rasst (float val)
+    { m_mem.setMFloat(360, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_tolk_lev_rasst to " + val.ToString());}
+
+    public bool sets_ust_tolk_lev_rasst ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_tolk_lev_rasst (val);
+    return true;}
+
+    public string gets_ust_tolk_lev_rasst () { 
+    return get_ust_tolk_lev_rasst().ToString();}
+
+    public string debug_name_ust_tolk_lev_rasst () { 
+    return "уст†толк†лев†расст";}
+
+// уст†толк†прав†расст,   Real, %MD364   reg = M  width = UInt32
+    public float get_ust_tolk_prav_rasst ()
+    { return (float) m_mem.getMFloat(364); }
+
+    public void set_ust_tolk_prav_rasst (float val)
+    { m_mem.setMFloat(364, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_tolk_prav_rasst to " + val.ToString());}
+
+    public bool sets_ust_tolk_prav_rasst ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_tolk_prav_rasst (val);
+    return true;}
+
+    public string gets_ust_tolk_prav_rasst () { 
+    return get_ust_tolk_prav_rasst().ToString();}
+
+    public string debug_name_ust_tolk_prav_rasst () { 
+    return "уст†толк†прав†расст";}
+
+// уст†доз†прав†скор,   Real, %MD368   reg = M  width = UInt32
+    public float get_ust_doz_prav_skor ()
+    { return (float) m_mem.getMFloat(368); }
+
+    public void set_ust_doz_prav_skor (float val)
+    { m_mem.setMFloat(368, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_doz_prav_skor to " + val.ToString());}
+
+    public bool sets_ust_doz_prav_skor ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_doz_prav_skor (val);
+    return true;}
+
+    public string gets_ust_doz_prav_skor () { 
+    return get_ust_doz_prav_skor().ToString();}
+
+    public string debug_name_ust_doz_prav_skor () { 
+    return "уст†доз†прав†скор";}
+
+// уст†доз†лев†скор,   Real, %MD372   reg = M  width = UInt32
+    public float get_ust_doz_lev_skor ()
+    { return (float) m_mem.getMFloat(372); }
+
+    public void set_ust_doz_lev_skor (float val)
+    { m_mem.setMFloat(372, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_doz_lev_skor to " + val.ToString());}
+
+    public bool sets_ust_doz_lev_skor ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_doz_lev_skor (val);
+    return true;}
+
+    public string gets_ust_doz_lev_skor () { 
+    return get_ust_doz_lev_skor().ToString();}
+
+    public string debug_name_ust_doz_lev_skor () { 
+    return "уст†доз†лев†скор";}
+
+// уст†толк†лев†скор,   Real, %MD376   reg = M  width = UInt32
+    public float get_ust_tolk_lev_skor ()
+    { return (float) m_mem.getMFloat(376); }
+
+    public void set_ust_tolk_lev_skor (float val)
+    { m_mem.setMFloat(376, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_tolk_lev_skor to " + val.ToString());}
+
+    public bool sets_ust_tolk_lev_skor ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_tolk_lev_skor (val);
+    return true;}
+
+    public string gets_ust_tolk_lev_skor () { 
+    return get_ust_tolk_lev_skor().ToString();}
+
+    public string debug_name_ust_tolk_lev_skor () { 
+    return "уст†толк†лев†скор";}
+
+// уст†толк†прав†скор,   Real, %MD380   reg = M  width = UInt32
+    public float get_ust_tolk_prav_skor ()
+    { return (float) m_mem.getMFloat(380); }
+
+    public void set_ust_tolk_prav_skor (float val)
+    { m_mem.setMFloat(380, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_tolk_prav_skor to " + val.ToString());}
+
+    public bool sets_ust_tolk_prav_skor ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_tolk_prav_skor (val);
+    return true;}
+
+    public string gets_ust_tolk_prav_skor () { 
+    return get_ust_tolk_prav_skor().ToString();}
+
+    public string debug_name_ust_tolk_prav_skor () { 
+    return "уст†толк†прав†скор";}
+
+// уст†слой†кар†прав†начало,   Real, %MD152   reg = M  width = UInt32
+    public float get_ust_sloj_kar_prav_nachalo ()
+    { return (float) m_mem.getMFloat(152); }
+
+    public void set_ust_sloj_kar_prav_nachalo (float val)
+    { m_mem.setMFloat(152, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sloj_kar_prav_nachalo to " + val.ToString());}
+
+    public bool sets_ust_sloj_kar_prav_nachalo ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sloj_kar_prav_nachalo (val);
+    return true;}
+
+    public string gets_ust_sloj_kar_prav_nachalo () { 
+    return get_ust_sloj_kar_prav_nachalo().ToString();}
+
+    public string debug_name_ust_sloj_kar_prav_nachalo () { 
+    return "уст†слой†кар†прав†начало";}
+
+// уст†слой†кар†прав†конец,   Real, %MD156   reg = M  width = UInt32
+    public float get_ust_sloj_kar_prav_konec ()
+    { return (float) m_mem.getMFloat(156); }
+
+    public void set_ust_sloj_kar_prav_konec (float val)
+    { m_mem.setMFloat(156, (float) val); 
+      Log.Write(LogLevel.Info, "set ust_sloj_kar_prav_konec to " + val.ToString());}
+
+    public bool sets_ust_sloj_kar_prav_konec ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_ust_sloj_kar_prav_konec (val);
+    return true;}
+
+    public string gets_ust_sloj_kar_prav_konec () { 
+    return get_ust_sloj_kar_prav_konec().ToString();}
+
+    public string debug_name_ust_sloj_kar_prav_konec () { 
+    return "уст†слой†кар†прав†конец";}
+
+public enum local_usta{
+ust_stol_poziciya,
+ust_stol_skor_vverh,
+ust_stol_otn_rasst,
+ust_sloj_kar_lev_nachalo,
+ust_sloj_kar_lev_konec,
+ust_tolshh_sloya,
+ust_stol_otn_rasst_avto,
+ust_tjen1_moshhn,
+ust_tjen2_moshhn,
+ust_tjen3_moshhn,
+ust_kol_slojov_dlya_doz_prav,
+ust_kol_slojov_dlya_doz_lev,
+ust_tjen1_temp,
+ust_tjen2_temp,
+ust_tjen3_temp,
+ust_kar_lev_skor,
+ust_kar_lev_rast,
+ust_kar_lev_poz,
+ust_kar_prav_skor,
+ust_kar_prav_rast,
+ust_kar_prav_poz,
+ust_bar_prav_skor,
+ust_bar_lev_skor,
+ust_doz_lev_vremya,
+ust_doz_prav_vremya,
+ust_tolk_lev_rasst,
+ust_tolk_prav_rasst,
+ust_doz_prav_skor,
+ust_doz_lev_skor,
+ust_tolk_lev_skor,
+ust_tolk_prav_skor,
+ust_sloj_kar_prav_nachalo,
+ust_sloj_kar_prav_konec,
 };
 
 //-----------------------------------------------------------------------------
 //tags/outd.xml
 //-----------------------------------------------------------------------------
-// выхд†кар†абс,   Bool, %M500.1   reg = M  width = Bit
-    public bool get_vyhd_kar_abs ()
-    { return (bool) m_mem.getMBit(500, 1); }
-
-    public void set_vyhd_kar_abs (bool val)
-    { m_mem.setMBit(500, 1, (bool) val); 
-      Log.Write(LogLevel.Info, "set vyhd_kar_abs to " + val.ToString());}
-
-    public bool sets_vyhd_kar_abs ( string str) {
-    bool val;
-    if (!bool.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
-        return false; }
-    set_vyhd_kar_abs (val);
-    return true;}
-
-    public string gets_vyhd_kar_abs () { 
-    return get_vyhd_kar_abs().ToString();}
-
-    public string debug_name_vyhd_kar_abs () { 
-    return "выхд†кар†абс";}
-
 // выхд†стол†абс,   Bool, %M500.4   reg = M  width = Bit
     public bool get_vyhd_stol_abs ()
     { return (bool) m_mem.getMBit(500, 4); }
@@ -1948,71 +2967,71 @@ kom_sh4_stop,
     public string debug_name_vyhd_stol_abs () { 
     return "выхд†стол†абс";}
 
-// выхд†пит†“ЁЌ1,   Bool, %M503.2   reg = M  width = Bit
-    public bool get_vyhd_pit_tjen1 ()
+// выхд†“ЁЌ1,   Bool, %M503.2   reg = M  width = Bit
+    public bool get_vyhd_tjen1 ()
     { return (bool) m_mem.getMBit(503, 2); }
 
-    public void set_vyhd_pit_tjen1 (bool val)
+    public void set_vyhd_tjen1 (bool val)
     { m_mem.setMBit(503, 2, (bool) val); 
-      Log.Write(LogLevel.Info, "set vyhd_pit_tjen1 to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set vyhd_tjen1 to " + val.ToString());}
 
-    public bool sets_vyhd_pit_tjen1 ( string str) {
+    public bool sets_vyhd_tjen1 ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_vyhd_pit_tjen1 (val);
+    set_vyhd_tjen1 (val);
     return true;}
 
-    public string gets_vyhd_pit_tjen1 () { 
-    return get_vyhd_pit_tjen1().ToString();}
+    public string gets_vyhd_tjen1 () { 
+    return get_vyhd_tjen1().ToString();}
 
-    public string debug_name_vyhd_pit_tjen1 () { 
-    return "выхд†пит†“ЁЌ1";}
+    public string debug_name_vyhd_tjen1 () { 
+    return "выхд†“ЁЌ1";}
 
-// выхд†пит†“ЁЌ2,   Bool, %M503.3   reg = M  width = Bit
-    public bool get_vyhd_pit_tjen2 ()
+// выхд†“ЁЌ2,   Bool, %M503.3   reg = M  width = Bit
+    public bool get_vyhd_tjen2 ()
     { return (bool) m_mem.getMBit(503, 3); }
 
-    public void set_vyhd_pit_tjen2 (bool val)
+    public void set_vyhd_tjen2 (bool val)
     { m_mem.setMBit(503, 3, (bool) val); 
-      Log.Write(LogLevel.Info, "set vyhd_pit_tjen2 to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set vyhd_tjen2 to " + val.ToString());}
 
-    public bool sets_vyhd_pit_tjen2 ( string str) {
+    public bool sets_vyhd_tjen2 ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_vyhd_pit_tjen2 (val);
+    set_vyhd_tjen2 (val);
     return true;}
 
-    public string gets_vyhd_pit_tjen2 () { 
-    return get_vyhd_pit_tjen2().ToString();}
+    public string gets_vyhd_tjen2 () { 
+    return get_vyhd_tjen2().ToString();}
 
-    public string debug_name_vyhd_pit_tjen2 () { 
-    return "выхд†пит†“ЁЌ2";}
+    public string debug_name_vyhd_tjen2 () { 
+    return "выхд†“ЁЌ2";}
 
-// выхд†пит†“ЁЌ3,   Bool, %M503.4   reg = M  width = Bit
-    public bool get_vyhd_pit_tjen3 ()
+// выхд†“ЁЌ3,   Bool, %M503.4   reg = M  width = Bit
+    public bool get_vyhd_tjen3 ()
     { return (bool) m_mem.getMBit(503, 4); }
 
-    public void set_vyhd_pit_tjen3 (bool val)
+    public void set_vyhd_tjen3 (bool val)
     { m_mem.setMBit(503, 4, (bool) val); 
-      Log.Write(LogLevel.Info, "set vyhd_pit_tjen3 to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set vyhd_tjen3 to " + val.ToString());}
 
-    public bool sets_vyhd_pit_tjen3 ( string str) {
+    public bool sets_vyhd_tjen3 ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_vyhd_pit_tjen3 (val);
+    set_vyhd_tjen3 (val);
     return true;}
 
-    public string gets_vyhd_pit_tjen3 () { 
-    return get_vyhd_pit_tjen3().ToString();}
+    public string gets_vyhd_tjen3 () { 
+    return get_vyhd_tjen3().ToString();}
 
-    public string debug_name_vyhd_pit_tjen3 () { 
-    return "выхд†пит†“ЁЌ3";}
+    public string debug_name_vyhd_tjen3 () { 
+    return "выхд†“ЁЌ3";}
 
 // выхд†стол†отн†вниз,   Bool, %M505.7   reg = M  width = Bit
     public bool get_vyhd_stol_otn_vniz ()
@@ -2057,72 +3076,6 @@ kom_sh4_stop,
 
     public string debug_name_vyhd_stol_otn_vverh () { 
     return "выхд†стол†отн†вверх";}
-
-// выхд†кар†отн†влево,   Bool, %M506.1   reg = M  width = Bit
-    public bool get_vyhd_kar_otn_vlevo ()
-    { return (bool) m_mem.getMBit(506, 1); }
-
-    public void set_vyhd_kar_otn_vlevo (bool val)
-    { m_mem.setMBit(506, 1, (bool) val); 
-      Log.Write(LogLevel.Info, "set vyhd_kar_otn_vlevo to " + val.ToString());}
-
-    public bool sets_vyhd_kar_otn_vlevo ( string str) {
-    bool val;
-    if (!bool.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
-        return false; }
-    set_vyhd_kar_otn_vlevo (val);
-    return true;}
-
-    public string gets_vyhd_kar_otn_vlevo () { 
-    return get_vyhd_kar_otn_vlevo().ToString();}
-
-    public string debug_name_vyhd_kar_otn_vlevo () { 
-    return "выхд†кар†отн†влево";}
-
-// выхд†кар†отн†вправо,   Bool, %M506.2   reg = M  width = Bit
-    public bool get_vyhd_kar_otn_vpravo ()
-    { return (bool) m_mem.getMBit(506, 2); }
-
-    public void set_vyhd_kar_otn_vpravo (bool val)
-    { m_mem.setMBit(506, 2, (bool) val); 
-      Log.Write(LogLevel.Info, "set vyhd_kar_otn_vpravo to " + val.ToString());}
-
-    public bool sets_vyhd_kar_otn_vpravo ( string str) {
-    bool val;
-    if (!bool.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
-        return false; }
-    set_vyhd_kar_otn_vpravo (val);
-    return true;}
-
-    public string gets_vyhd_kar_otn_vpravo () { 
-    return get_vyhd_kar_otn_vpravo().ToString();}
-
-    public string debug_name_vyhd_kar_otn_vpravo () { 
-    return "выхд†кар†отн†вправо";}
-
-// выхд†кар†дом,   Bool, %M506.3   reg = M  width = Bit
-    public bool get_vyhd_kar_dom ()
-    { return (bool) m_mem.getMBit(506, 3); }
-
-    public void set_vyhd_kar_dom (bool val)
-    { m_mem.setMBit(506, 3, (bool) val); 
-      Log.Write(LogLevel.Info, "set vyhd_kar_dom to " + val.ToString());}
-
-    public bool sets_vyhd_kar_dom ( string str) {
-    bool val;
-    if (!bool.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
-        return false; }
-    set_vyhd_kar_dom (val);
-    return true;}
-
-    public string gets_vyhd_kar_dom () { 
-    return get_vyhd_kar_dom().ToString();}
-
-    public string debug_name_vyhd_kar_dom () { 
-    return "выхд†кар†дом";}
 
 // выхд†стол†поиск†нул€,   Bool, %M506.4   reg = M  width = Bit
     public bool get_vyhd_stol_poisk_nulya ()
@@ -2300,17 +3253,519 @@ kom_sh4_stop,
     public string debug_name_vyhd_pit_rec () { 
     return "выхд†пит†рец";}
 
+// выхд† ¬1,   Bool, %M507.4   reg = M  width = Bit
+    public bool get_vyhd_kv1 ()
+    { return (bool) m_mem.getMBit(507, 4); }
+
+    public void set_vyhd_kv1 (bool val)
+    { m_mem.setMBit(507, 4, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_kv1 to " + val.ToString());}
+
+    public bool sets_vyhd_kv1 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_kv1 (val);
+    return true;}
+
+    public string gets_vyhd_kv1 () { 
+    return get_vyhd_kv1().ToString();}
+
+    public string debug_name_vyhd_kv1 () { 
+    return "выхд† ¬1";}
+
+// выхд† ¬2,   Bool, %M507.5   reg = M  width = Bit
+    public bool get_vyhd_kv2 ()
+    { return (bool) m_mem.getMBit(507, 5); }
+
+    public void set_vyhd_kv2 (bool val)
+    { m_mem.setMBit(507, 5, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_kv2 to " + val.ToString());}
+
+    public bool sets_vyhd_kv2 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_kv2 (val);
+    return true;}
+
+    public string gets_vyhd_kv2 () { 
+    return get_vyhd_kv2().ToString();}
+
+    public string debug_name_vyhd_kv2 () { 
+    return "выхд† ¬2";}
+
+// выхд† Ё9,   Bool, %M507.6   reg = M  width = Bit
+    public bool get_vyhd_kje9 ()
+    { return (bool) m_mem.getMBit(507, 6); }
+
+    public void set_vyhd_kje9 (bool val)
+    { m_mem.setMBit(507, 6, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_kje9 to " + val.ToString());}
+
+    public bool sets_vyhd_kje9 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_kje9 (val);
+    return true;}
+
+    public string gets_vyhd_kje9 () { 
+    return get_vyhd_kje9().ToString();}
+
+    public string debug_name_vyhd_kje9 () { 
+    return "выхд† Ё9";}
+
+// выхд† Ё10,   Bool, %M507.7   reg = M  width = Bit
+    public bool get_vyhd_kje10 ()
+    { return (bool) m_mem.getMBit(507, 7); }
+
+    public void set_vyhd_kje10 (bool val)
+    { m_mem.setMBit(507, 7, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_kje10 to " + val.ToString());}
+
+    public bool sets_vyhd_kje10 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_kje10 (val);
+    return true;}
+
+    public string gets_vyhd_kje10 () { 
+    return get_vyhd_kje10().ToString();}
+
+    public string debug_name_vyhd_kje10 () { 
+    return "выхд† Ё10";}
+
+// выхд†кар†прав†абс,   Bool, %M508.0   reg = M  width = Bit
+    public bool get_vyhd_kar_prav_abs ()
+    { return (bool) m_mem.getMBit(508, 0); }
+
+    public void set_vyhd_kar_prav_abs (bool val)
+    { m_mem.setMBit(508, 0, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_kar_prav_abs to " + val.ToString());}
+
+    public bool sets_vyhd_kar_prav_abs ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_kar_prav_abs (val);
+    return true;}
+
+    public string gets_vyhd_kar_prav_abs () { 
+    return get_vyhd_kar_prav_abs().ToString();}
+
+    public string debug_name_vyhd_kar_prav_abs () { 
+    return "выхд†кар†прав†абс";}
+
+// выхд†кар†лев†абс,   Bool, %M508.1   reg = M  width = Bit
+    public bool get_vyhd_kar_lev_abs ()
+    { return (bool) m_mem.getMBit(508, 1); }
+
+    public void set_vyhd_kar_lev_abs (bool val)
+    { m_mem.setMBit(508, 1, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_kar_lev_abs to " + val.ToString());}
+
+    public bool sets_vyhd_kar_lev_abs ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_kar_lev_abs (val);
+    return true;}
+
+    public string gets_vyhd_kar_lev_abs () { 
+    return get_vyhd_kar_lev_abs().ToString();}
+
+    public string debug_name_vyhd_kar_lev_abs () { 
+    return "выхд†кар†лев†абс";}
+
+// выхд†доз†прав†впер,   Bool, %M508.2   reg = M  width = Bit
+    public bool get_vyhd_doz_prav_vper ()
+    { return (bool) m_mem.getMBit(508, 2); }
+
+    public void set_vyhd_doz_prav_vper (bool val)
+    { m_mem.setMBit(508, 2, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_doz_prav_vper to " + val.ToString());}
+
+    public bool sets_vyhd_doz_prav_vper ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_doz_prav_vper (val);
+    return true;}
+
+    public string gets_vyhd_doz_prav_vper () { 
+    return get_vyhd_doz_prav_vper().ToString();}
+
+    public string debug_name_vyhd_doz_prav_vper () { 
+    return "выхд†доз†прав†впер";}
+
+// выхд†доз†лев†впер,   Bool, %M508.3   reg = M  width = Bit
+    public bool get_vyhd_doz_lev_vper ()
+    { return (bool) m_mem.getMBit(508, 3); }
+
+    public void set_vyhd_doz_lev_vper (bool val)
+    { m_mem.setMBit(508, 3, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_doz_lev_vper to " + val.ToString());}
+
+    public bool sets_vyhd_doz_lev_vper ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_doz_lev_vper (val);
+    return true;}
+
+    public string gets_vyhd_doz_lev_vper () { 
+    return get_vyhd_doz_lev_vper().ToString();}
+
+    public string debug_name_vyhd_doz_lev_vper () { 
+    return "выхд†доз†лев†впер";}
+
+// выхд†доз†прав†назад,   Bool, %M508.4   reg = M  width = Bit
+    public bool get_vyhd_doz_prav_nazad ()
+    { return (bool) m_mem.getMBit(508, 4); }
+
+    public void set_vyhd_doz_prav_nazad (bool val)
+    { m_mem.setMBit(508, 4, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_doz_prav_nazad to " + val.ToString());}
+
+    public bool sets_vyhd_doz_prav_nazad ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_doz_prav_nazad (val);
+    return true;}
+
+    public string gets_vyhd_doz_prav_nazad () { 
+    return get_vyhd_doz_prav_nazad().ToString();}
+
+    public string debug_name_vyhd_doz_prav_nazad () { 
+    return "выхд†доз†прав†назад";}
+
+// выхд†доз†лев†назад,   Bool, %M508.5   reg = M  width = Bit
+    public bool get_vyhd_doz_lev_nazad ()
+    { return (bool) m_mem.getMBit(508, 5); }
+
+    public void set_vyhd_doz_lev_nazad (bool val)
+    { m_mem.setMBit(508, 5, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_doz_lev_nazad to " + val.ToString());}
+
+    public bool sets_vyhd_doz_lev_nazad ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_doz_lev_nazad (val);
+    return true;}
+
+    public string gets_vyhd_doz_lev_nazad () { 
+    return get_vyhd_doz_lev_nazad().ToString();}
+
+    public string debug_name_vyhd_doz_lev_nazad () { 
+    return "выхд†доз†лев†назад";}
+
+// выхд†пересчЄт,   Bool, %M2.3   reg = M  width = Bit
+    public bool get_vyhd_pereschjot ()
+    { return (bool) m_mem.getMBit(2, 3); }
+
+    public void set_vyhd_pereschjot (bool val)
+    { m_mem.setMBit(2, 3, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_pereschjot to " + val.ToString());}
+
+    public bool sets_vyhd_pereschjot ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_pereschjot (val);
+    return true;}
+
+    public string gets_vyhd_pereschjot () { 
+    return get_vyhd_pereschjot().ToString();}
+
+    public string debug_name_vyhd_pereschjot () { 
+    return "выхд†пересчЄт";}
+
+// выхд†бар†лев†впер,   Bool, %M508.6   reg = M  width = Bit
+    public bool get_vyhd_bar_lev_vper ()
+    { return (bool) m_mem.getMBit(508, 6); }
+
+    public void set_vyhd_bar_lev_vper (bool val)
+    { m_mem.setMBit(508, 6, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_bar_lev_vper to " + val.ToString());}
+
+    public bool sets_vyhd_bar_lev_vper ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_bar_lev_vper (val);
+    return true;}
+
+    public string gets_vyhd_bar_lev_vper () { 
+    return get_vyhd_bar_lev_vper().ToString();}
+
+    public string debug_name_vyhd_bar_lev_vper () { 
+    return "выхд†бар†лев†впер";}
+
+// выхд†бар†прав†впер,   Bool, %M508.7   reg = M  width = Bit
+    public bool get_vyhd_bar_prav_vper ()
+    { return (bool) m_mem.getMBit(508, 7); }
+
+    public void set_vyhd_bar_prav_vper (bool val)
+    { m_mem.setMBit(508, 7, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_bar_prav_vper to " + val.ToString());}
+
+    public bool sets_vyhd_bar_prav_vper ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_bar_prav_vper (val);
+    return true;}
+
+    public string gets_vyhd_bar_prav_vper () { 
+    return get_vyhd_bar_prav_vper().ToString();}
+
+    public string debug_name_vyhd_bar_prav_vper () { 
+    return "выхд†бар†прав†впер";}
+
+// выхд†бар†лев†назад,   Bool, %M509.0   reg = M  width = Bit
+    public bool get_vyhd_bar_lev_nazad ()
+    { return (bool) m_mem.getMBit(509, 0); }
+
+    public void set_vyhd_bar_lev_nazad (bool val)
+    { m_mem.setMBit(509, 0, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_bar_lev_nazad to " + val.ToString());}
+
+    public bool sets_vyhd_bar_lev_nazad ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_bar_lev_nazad (val);
+    return true;}
+
+    public string gets_vyhd_bar_lev_nazad () { 
+    return get_vyhd_bar_lev_nazad().ToString();}
+
+    public string debug_name_vyhd_bar_lev_nazad () { 
+    return "выхд†бар†лев†назад";}
+
+// выхд†бар†прав†назад,   Bool, %M509.1   reg = M  width = Bit
+    public bool get_vyhd_bar_prav_nazad ()
+    { return (bool) m_mem.getMBit(509, 1); }
+
+    public void set_vyhd_bar_prav_nazad (bool val)
+    { m_mem.setMBit(509, 1, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_bar_prav_nazad to " + val.ToString());}
+
+    public bool sets_vyhd_bar_prav_nazad ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_bar_prav_nazad (val);
+    return true;}
+
+    public string gets_vyhd_bar_prav_nazad () { 
+    return get_vyhd_bar_prav_nazad().ToString();}
+
+    public string debug_name_vyhd_bar_prav_nazad () { 
+    return "выхд†бар†прав†назад";}
+
+// выхд†толк†лев†впер,   Bool, %M509.2   reg = M  width = Bit
+    public bool get_vyhd_tolk_lev_vper ()
+    { return (bool) m_mem.getMBit(509, 2); }
+
+    public void set_vyhd_tolk_lev_vper (bool val)
+    { m_mem.setMBit(509, 2, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_tolk_lev_vper to " + val.ToString());}
+
+    public bool sets_vyhd_tolk_lev_vper ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_tolk_lev_vper (val);
+    return true;}
+
+    public string gets_vyhd_tolk_lev_vper () { 
+    return get_vyhd_tolk_lev_vper().ToString();}
+
+    public string debug_name_vyhd_tolk_lev_vper () { 
+    return "выхд†толк†лев†впер";}
+
+// выхд†толк†прав†впер,   Bool, %M509.3   reg = M  width = Bit
+    public bool get_vyhd_tolk_prav_vper ()
+    { return (bool) m_mem.getMBit(509, 3); }
+
+    public void set_vyhd_tolk_prav_vper (bool val)
+    { m_mem.setMBit(509, 3, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_tolk_prav_vper to " + val.ToString());}
+
+    public bool sets_vyhd_tolk_prav_vper ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_tolk_prav_vper (val);
+    return true;}
+
+    public string gets_vyhd_tolk_prav_vper () { 
+    return get_vyhd_tolk_prav_vper().ToString();}
+
+    public string debug_name_vyhd_tolk_prav_vper () { 
+    return "выхд†толк†прав†впер";}
+
+// выхд†толк†лев†назад,   Bool, %M509.4   reg = M  width = Bit
+    public bool get_vyhd_tolk_lev_nazad ()
+    { return (bool) m_mem.getMBit(509, 4); }
+
+    public void set_vyhd_tolk_lev_nazad (bool val)
+    { m_mem.setMBit(509, 4, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_tolk_lev_nazad to " + val.ToString());}
+
+    public bool sets_vyhd_tolk_lev_nazad ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_tolk_lev_nazad (val);
+    return true;}
+
+    public string gets_vyhd_tolk_lev_nazad () { 
+    return get_vyhd_tolk_lev_nazad().ToString();}
+
+    public string debug_name_vyhd_tolk_lev_nazad () { 
+    return "выхд†толк†лев†назад";}
+
+// выхд†толк†прав†назад,   Bool, %M509.5   reg = M  width = Bit
+    public bool get_vyhd_tolk_prav_nazad ()
+    { return (bool) m_mem.getMBit(509, 5); }
+
+    public void set_vyhd_tolk_prav_nazad (bool val)
+    { m_mem.setMBit(509, 5, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_tolk_prav_nazad to " + val.ToString());}
+
+    public bool sets_vyhd_tolk_prav_nazad ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_tolk_prav_nazad (val);
+    return true;}
+
+    public string gets_vyhd_tolk_prav_nazad () { 
+    return get_vyhd_tolk_prav_nazad().ToString();}
+
+    public string debug_name_vyhd_tolk_prav_nazad () { 
+    return "выхд†толк†прав†назад";}
+
+// выхд†кар†прав†отн†впер,   Bool, %M509.6   reg = M  width = Bit
+    public bool get_vyhd_kar_prav_otn_vper ()
+    { return (bool) m_mem.getMBit(509, 6); }
+
+    public void set_vyhd_kar_prav_otn_vper (bool val)
+    { m_mem.setMBit(509, 6, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_kar_prav_otn_vper to " + val.ToString());}
+
+    public bool sets_vyhd_kar_prav_otn_vper ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_kar_prav_otn_vper (val);
+    return true;}
+
+    public string gets_vyhd_kar_prav_otn_vper () { 
+    return get_vyhd_kar_prav_otn_vper().ToString();}
+
+    public string debug_name_vyhd_kar_prav_otn_vper () { 
+    return "выхд†кар†прав†отн†впер";}
+
+// выхд†кар†прав†отн†наз,   Bool, %M509.7   reg = M  width = Bit
+    public bool get_vyhd_kar_prav_otn_naz ()
+    { return (bool) m_mem.getMBit(509, 7); }
+
+    public void set_vyhd_kar_prav_otn_naz (bool val)
+    { m_mem.setMBit(509, 7, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_kar_prav_otn_naz to " + val.ToString());}
+
+    public bool sets_vyhd_kar_prav_otn_naz ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_kar_prav_otn_naz (val);
+    return true;}
+
+    public string gets_vyhd_kar_prav_otn_naz () { 
+    return get_vyhd_kar_prav_otn_naz().ToString();}
+
+    public string debug_name_vyhd_kar_prav_otn_naz () { 
+    return "выхд†кар†прав†отн†наз";}
+
+// выхд†кар†лев†отн†впер,   Bool, %M510.0   reg = M  width = Bit
+    public bool get_vyhd_kar_lev_otn_vper ()
+    { return (bool) m_mem.getMBit(510, 0); }
+
+    public void set_vyhd_kar_lev_otn_vper (bool val)
+    { m_mem.setMBit(510, 0, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_kar_lev_otn_vper to " + val.ToString());}
+
+    public bool sets_vyhd_kar_lev_otn_vper ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_kar_lev_otn_vper (val);
+    return true;}
+
+    public string gets_vyhd_kar_lev_otn_vper () { 
+    return get_vyhd_kar_lev_otn_vper().ToString();}
+
+    public string debug_name_vyhd_kar_lev_otn_vper () { 
+    return "выхд†кар†лев†отн†впер";}
+
+// выхд†кар†лев†отн†наз,   Bool, %M510.1   reg = M  width = Bit
+    public bool get_vyhd_kar_lev_otn_naz ()
+    { return (bool) m_mem.getMBit(510, 1); }
+
+    public void set_vyhd_kar_lev_otn_naz (bool val)
+    { m_mem.setMBit(510, 1, (bool) val); 
+      Log.Write(LogLevel.Info, "set vyhd_kar_lev_otn_naz to " + val.ToString());}
+
+    public bool sets_vyhd_kar_lev_otn_naz ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_vyhd_kar_lev_otn_naz (val);
+    return true;}
+
+    public string gets_vyhd_kar_lev_otn_naz () { 
+    return get_vyhd_kar_lev_otn_naz().ToString();}
+
+    public string debug_name_vyhd_kar_lev_otn_naz () { 
+    return "выхд†кар†лев†отн†наз";}
+
 public enum local_outd{
-vyhd_kar_abs,
 vyhd_stol_abs,
-vyhd_pit_tjen1,
-vyhd_pit_tjen2,
-vyhd_pit_tjen3,
+vyhd_tjen1,
+vyhd_tjen2,
+vyhd_tjen3,
 vyhd_stol_otn_vniz,
 vyhd_stol_otn_vverh,
-vyhd_kar_otn_vlevo,
-vyhd_kar_otn_vpravo,
-vyhd_kar_dom,
 vyhd_stol_poisk_nulya,
 vyhd_pit_lazerov,
 vyhd_pit_chil1,
@@ -2319,794 +3774,29 @@ vyhd_kl_chil1,
 vyhd_kl_chil2,
 vyhd_pit_mps,
 vyhd_pit_rec,
-};
-
-//-----------------------------------------------------------------------------
-//tags/usta.xml
-//-----------------------------------------------------------------------------
-// уст†каретка†скор†вправо,   Real, %MD112   reg = M  width = UInt32
-    public float get_ust_karetka_skor_vpravo ()
-    { return (float) m_mem.getMFloat(112); }
-
-    public void set_ust_karetka_skor_vpravo (float val)
-    { m_mem.setMFloat(112, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_karetka_skor_vpravo to " + val.ToString());}
-
-    public bool sets_ust_karetka_skor_vpravo ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_karetka_skor_vpravo (val);
-    return true;}
-
-    public string gets_ust_karetka_skor_vpravo () { 
-    return get_ust_karetka_skor_vpravo().ToString();}
-
-    public string debug_name_ust_karetka_skor_vpravo () { 
-    return "уст†каретка†скор†вправо";}
-
-// уст†каретка†позици€,   Real, %MD124   reg = M  width = UInt32
-    public float get_ust_karetka_poziciya ()
-    { return (float) m_mem.getMFloat(124); }
-
-    public void set_ust_karetka_poziciya (float val)
-    { m_mem.setMFloat(124, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_karetka_poziciya to " + val.ToString());}
-
-    public bool sets_ust_karetka_poziciya ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_karetka_poziciya (val);
-    return true;}
-
-    public string gets_ust_karetka_poziciya () { 
-    return get_ust_karetka_poziciya().ToString();}
-
-    public string debug_name_ust_karetka_poziciya () { 
-    return "уст†каретка†позици€";}
-
-// уст†каретка†расст,   Real, %MD128   reg = M  width = UInt32
-    public float get_ust_karetka_rasst ()
-    { return (float) m_mem.getMFloat(128); }
-
-    public void set_ust_karetka_rasst (float val)
-    { m_mem.setMFloat(128, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_karetka_rasst to " + val.ToString());}
-
-    public bool sets_ust_karetka_rasst ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_karetka_rasst (val);
-    return true;}
-
-    public string gets_ust_karetka_rasst () { 
-    return get_ust_karetka_rasst().ToString();}
-
-    public string debug_name_ust_karetka_rasst () { 
-    return "уст†каретка†расст";}
-
-// уст†стол†позици€,   Real, %MD136   reg = M  width = UInt32
-    public float get_ust_stol_poziciya ()
-    { return (float) m_mem.getMFloat(136); }
-
-    public void set_ust_stol_poziciya (float val)
-    { m_mem.setMFloat(136, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_stol_poziciya to " + val.ToString());}
-
-    public bool sets_ust_stol_poziciya ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_stol_poziciya (val);
-    return true;}
-
-    public string gets_ust_stol_poziciya () { 
-    return get_ust_stol_poziciya().ToString();}
-
-    public string debug_name_ust_stol_poziciya () { 
-    return "уст†стол†позици€";}
-
-// уст†стол†скор†вверх,   Real, %MD108   reg = M  width = UInt32
-    public float get_ust_stol_skor_vverh ()
-    { return (float) m_mem.getMFloat(108); }
-
-    public void set_ust_stol_skor_vverh (float val)
-    { m_mem.setMFloat(108, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_stol_skor_vverh to " + val.ToString());}
-
-    public bool sets_ust_stol_skor_vverh ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_stol_skor_vverh (val);
-    return true;}
-
-    public string gets_ust_stol_skor_vverh () { 
-    return get_ust_stol_skor_vverh().ToString();}
-
-    public string debug_name_ust_stol_skor_vverh () { 
-    return "уст†стол†скор†вверх";}
-
-// уст†каретка†скор†влево,   Real, %MD116   reg = M  width = UInt32
-    public float get_ust_karetka_skor_vlevo ()
-    { return (float) m_mem.getMFloat(116); }
-
-    public void set_ust_karetka_skor_vlevo (float val)
-    { m_mem.setMFloat(116, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_karetka_skor_vlevo to " + val.ToString());}
-
-    public bool sets_ust_karetka_skor_vlevo ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_karetka_skor_vlevo (val);
-    return true;}
-
-    public string gets_ust_karetka_skor_vlevo () { 
-    return get_ust_karetka_skor_vlevo().ToString();}
-
-    public string debug_name_ust_karetka_skor_vlevo () { 
-    return "уст†каретка†скор†влево";}
-
-// уст†стол†отн†расст,   Real, %MD148   reg = M  width = UInt32
-    public float get_ust_stol_otn_rasst ()
-    { return (float) m_mem.getMFloat(148); }
-
-    public void set_ust_stol_otn_rasst (float val)
-    { m_mem.setMFloat(148, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_stol_otn_rasst to " + val.ToString());}
-
-    public bool sets_ust_stol_otn_rasst ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_stol_otn_rasst (val);
-    return true;}
-
-    public string gets_ust_stol_otn_rasst () { 
-    return get_ust_stol_otn_rasst().ToString();}
-
-    public string debug_name_ust_stol_otn_rasst () { 
-    return "уст†стол†отн†расст";}
-
-// уст†врем†вращ†на†месте,   Real, %MD152   reg = M  width = UInt32
-    public float get_ust_vrem_vrashh_na_meste ()
-    { return (float) m_mem.getMFloat(152); }
-
-    public void set_ust_vrem_vrashh_na_meste (float val)
-    { m_mem.setMFloat(152, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_vrem_vrashh_na_meste to " + val.ToString());}
-
-    public bool sets_ust_vrem_vrashh_na_meste ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_vrem_vrashh_na_meste (val);
-    return true;}
-
-    public string gets_ust_vrem_vrashh_na_meste () { 
-    return get_ust_vrem_vrashh_na_meste().ToString();}
-
-    public string debug_name_ust_vrem_vrashh_na_meste () { 
-    return "уст†врем†вращ†на†месте";}
-
-// уст†кар†поз†откл†ш3,   Real, %MD208   reg = M  width = UInt32
-    public float get_ust_kar_poz_otkl_sh3 ()
-    { return (float) m_mem.getMFloat(208); }
-
-    public void set_ust_kar_poz_otkl_sh3 (float val)
-    { m_mem.setMFloat(208, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_kar_poz_otkl_sh3 to " + val.ToString());}
-
-    public bool sets_ust_kar_poz_otkl_sh3 ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_kar_poz_otkl_sh3 (val);
-    return true;}
-
-    public string gets_ust_kar_poz_otkl_sh3 () { 
-    return get_ust_kar_poz_otkl_sh3().ToString();}
-
-    public string debug_name_ust_kar_poz_otkl_sh3 () { 
-    return "уст†кар†поз†откл†ш3";}
-
-// уст†слой†кар†поз†слева,   Real, %MD132   reg = M  width = UInt32
-    public float get_ust_sloj_kar_poz_sleva ()
-    { return (float) m_mem.getMFloat(132); }
-
-    public void set_ust_sloj_kar_poz_sleva (float val)
-    { m_mem.setMFloat(132, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_sloj_kar_poz_sleva to " + val.ToString());}
-
-    public bool sets_ust_sloj_kar_poz_sleva ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_sloj_kar_poz_sleva (val);
-    return true;}
-
-    public string gets_ust_sloj_kar_poz_sleva () { 
-    return get_ust_sloj_kar_poz_sleva().ToString();}
-
-    public string debug_name_ust_sloj_kar_poz_sleva () { 
-    return "уст†слой†кар†поз†слева";}
-
-// уст†слой†кар†поз†справа,   Real, %MD144   reg = M  width = UInt32
-    public float get_ust_sloj_kar_poz_sprava ()
-    { return (float) m_mem.getMFloat(144); }
-
-    public void set_ust_sloj_kar_poz_sprava (float val)
-    { m_mem.setMFloat(144, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_sloj_kar_poz_sprava to " + val.ToString());}
-
-    public bool sets_ust_sloj_kar_poz_sprava ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_sloj_kar_poz_sprava (val);
-    return true;}
-
-    public string gets_ust_sloj_kar_poz_sprava () { 
-    return get_ust_sloj_kar_poz_sprava().ToString();}
-
-    public string debug_name_ust_sloj_kar_poz_sprava () { 
-    return "уст†слой†кар†поз†справа";}
-
-// уст†стол†отн†внут,   Real, %MD176   reg = M  width = UInt32
-    public float get_ust_stol_otn_vnut ()
-    { return (float) m_mem.getMFloat(176); }
-
-    public void set_ust_stol_otn_vnut (float val)
-    { m_mem.setMFloat(176, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_stol_otn_vnut to " + val.ToString());}
-
-    public bool sets_ust_stol_otn_vnut ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_stol_otn_vnut (val);
-    return true;}
-
-    public string gets_ust_stol_otn_vnut () { 
-    return get_ust_stol_otn_vnut().ToString();}
-
-    public string debug_name_ust_stol_otn_vnut () { 
-    return "уст†стол†отн†внут";}
-
-// уст†толщ†сло€,   Real, %MD180   reg = M  width = UInt32
-    public float get_ust_tolshh_sloya ()
-    { return (float) m_mem.getMFloat(180); }
-
-    public void set_ust_tolshh_sloya (float val)
-    { m_mem.setMFloat(180, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_tolshh_sloya to " + val.ToString());}
-
-    public bool sets_ust_tolshh_sloya ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_tolshh_sloya (val);
-    return true;}
-
-    public string gets_ust_tolshh_sloya () { 
-    return get_ust_tolshh_sloya().ToString();}
-
-    public string debug_name_ust_tolshh_sloya () { 
-    return "уст†толщ†сло€";}
-
-// уст†стол†отн†расст†авто,   Real, %MD204   reg = M  width = UInt32
-    public float get_ust_stol_otn_rasst_avto ()
-    { return (float) m_mem.getMFloat(204); }
-
-    public void set_ust_stol_otn_rasst_avto (float val)
-    { m_mem.setMFloat(204, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_stol_otn_rasst_avto to " + val.ToString());}
-
-    public bool sets_ust_stol_otn_rasst_avto ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_stol_otn_rasst_avto (val);
-    return true;}
-
-    public string gets_ust_stol_otn_rasst_avto () { 
-    return get_ust_stol_otn_rasst_avto().ToString();}
-
-    public string debug_name_ust_stol_otn_rasst_avto () { 
-    return "уст†стол†отн†расст†авто";}
-
-// уст†“ЁЌ1†мощн,   Real, %MD276   reg = M  width = UInt32
-    public float get_ust_tjen1_moshhn ()
-    { return (float) m_mem.getMFloat(276); }
-
-    public void set_ust_tjen1_moshhn (float val)
-    { m_mem.setMFloat(276, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_tjen1_moshhn to " + val.ToString());}
-
-    public bool sets_ust_tjen1_moshhn ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_tjen1_moshhn (val);
-    return true;}
-
-    public string gets_ust_tjen1_moshhn () { 
-    return get_ust_tjen1_moshhn().ToString();}
-
-    public string debug_name_ust_tjen1_moshhn () { 
-    return "уст†“ЁЌ1†мощн";}
-
-// уст†“ЁЌ2†мощн,   Real, %MD280   reg = M  width = UInt32
-    public float get_ust_tjen2_moshhn ()
-    { return (float) m_mem.getMFloat(280); }
-
-    public void set_ust_tjen2_moshhn (float val)
-    { m_mem.setMFloat(280, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_tjen2_moshhn to " + val.ToString());}
-
-    public bool sets_ust_tjen2_moshhn ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_tjen2_moshhn (val);
-    return true;}
-
-    public string gets_ust_tjen2_moshhn () { 
-    return get_ust_tjen2_moshhn().ToString();}
-
-    public string debug_name_ust_tjen2_moshhn () { 
-    return "уст†“ЁЌ2†мощн";}
-
-// уст†“ЁЌ3†мощн,   Real, %MD284   reg = M  width = UInt32
-    public float get_ust_tjen3_moshhn ()
-    { return (float) m_mem.getMFloat(284); }
-
-    public void set_ust_tjen3_moshhn (float val)
-    { m_mem.setMFloat(284, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_tjen3_moshhn to " + val.ToString());}
-
-    public bool sets_ust_tjen3_moshhn ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_tjen3_moshhn (val);
-    return true;}
-
-    public string gets_ust_tjen3_moshhn () { 
-    return get_ust_tjen3_moshhn().ToString();}
-
-    public string debug_name_ust_tjen3_moshhn () { 
-    return "уст†“ЁЌ3†мощн";}
-
-// уст†кол†слоЄв,   Int, %MW292   reg = M  width = UInt16
-    public Int16 get_ust_kol_slojov ()
-    { return (Int16) m_mem.getMUInt16(292); }
-
-    public void set_ust_kol_slojov (Int16 val)
-    { m_mem.setMUInt16(292, (UInt16) val); 
-      Log.Write(LogLevel.Info, "set ust_kol_slojov to " + val.ToString());}
-
-    public bool sets_ust_kol_slojov ( string str) {
-    Int16 val;
-    if (!Int16.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as Int16 ");
-        return false; }
-    set_ust_kol_slojov (val);
-    return true;}
-
-    public string gets_ust_kol_slojov () { 
-    return get_ust_kol_slojov().ToString();}
-
-    public string debug_name_ust_kol_slojov () { 
-    return "уст†кол†слоЄв";}
-
-// уст†кол†слоЄв†дл€†дозатора,   Int, %MW294   reg = M  width = UInt16
-    public Int16 get_ust_kol_slojov_dlya_dozatora ()
-    { return (Int16) m_mem.getMUInt16(294); }
-
-    public void set_ust_kol_slojov_dlya_dozatora (Int16 val)
-    { m_mem.setMUInt16(294, (UInt16) val); 
-      Log.Write(LogLevel.Info, "set ust_kol_slojov_dlya_dozatora to " + val.ToString());}
-
-    public bool sets_ust_kol_slojov_dlya_dozatora ( string str) {
-    Int16 val;
-    if (!Int16.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as Int16 ");
-        return false; }
-    set_ust_kol_slojov_dlya_dozatora (val);
-    return true;}
-
-    public string gets_ust_kol_slojov_dlya_dozatora () { 
-    return get_ust_kol_slojov_dlya_dozatora().ToString();}
-
-    public string debug_name_ust_kol_slojov_dlya_dozatora () { 
-    return "уст†кол†слоЄв†дл€†дозатора";}
-
-// уст†“ЁЌ1†темп,   Real, %MD288   reg = M  width = UInt32
-    public float get_ust_tjen1_temp ()
-    { return (float) m_mem.getMFloat(288); }
-
-    public void set_ust_tjen1_temp (float val)
-    { m_mem.setMFloat(288, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_tjen1_temp to " + val.ToString());}
-
-    public bool sets_ust_tjen1_temp ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_tjen1_temp (val);
-    return true;}
-
-    public string gets_ust_tjen1_temp () { 
-    return get_ust_tjen1_temp().ToString();}
-
-    public string debug_name_ust_tjen1_temp () { 
-    return "уст†“ЁЌ1†темп";}
-
-// уст†“ЁЌ2†темп,   Real, %MD296   reg = M  width = UInt32
-    public float get_ust_tjen2_temp ()
-    { return (float) m_mem.getMFloat(296); }
-
-    public void set_ust_tjen2_temp (float val)
-    { m_mem.setMFloat(296, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_tjen2_temp to " + val.ToString());}
-
-    public bool sets_ust_tjen2_temp ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_tjen2_temp (val);
-    return true;}
-
-    public string gets_ust_tjen2_temp () { 
-    return get_ust_tjen2_temp().ToString();}
-
-    public string debug_name_ust_tjen2_temp () { 
-    return "уст†“ЁЌ2†темп";}
-
-// уст†“ЁЌ3†темп,   Real, %MD300   reg = M  width = UInt32
-    public float get_ust_tjen3_temp ()
-    { return (float) m_mem.getMFloat(300); }
-
-    public void set_ust_tjen3_temp (float val)
-    { m_mem.setMFloat(300, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_tjen3_temp to " + val.ToString());}
-
-    public bool sets_ust_tjen3_temp ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_tjen3_temp (val);
-    return true;}
-
-    public string gets_ust_tjen3_temp () { 
-    return get_ust_tjen3_temp().ToString();}
-
-    public string debug_name_ust_tjen3_temp () { 
-    return "уст†“ЁЌ3†темп";}
-
-// уст†ш1†скор,   Real, %MD304   reg = M  width = UInt32
-    public float get_ust_sh1_skor ()
-    { return (float) m_mem.getMFloat(304); }
-
-    public void set_ust_sh1_skor (float val)
-    { m_mem.setMFloat(304, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_sh1_skor to " + val.ToString());}
-
-    public bool sets_ust_sh1_skor ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_sh1_skor (val);
-    return true;}
-
-    public string gets_ust_sh1_skor () { 
-    return get_ust_sh1_skor().ToString();}
-
-    public string debug_name_ust_sh1_skor () { 
-    return "уст†ш1†скор";}
-
-// уст†ш1†раст,   Real, %MD308   reg = M  width = UInt32
-    public float get_ust_sh1_rast ()
-    { return (float) m_mem.getMFloat(308); }
-
-    public void set_ust_sh1_rast (float val)
-    { m_mem.setMFloat(308, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_sh1_rast to " + val.ToString());}
-
-    public bool sets_ust_sh1_rast ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_sh1_rast (val);
-    return true;}
-
-    public string gets_ust_sh1_rast () { 
-    return get_ust_sh1_rast().ToString();}
-
-    public string debug_name_ust_sh1_rast () { 
-    return "уст†ш1†раст";}
-
-// уст†ш1†поз,   Real, %MD312   reg = M  width = UInt32
-    public float get_ust_sh1_poz ()
-    { return (float) m_mem.getMFloat(312); }
-
-    public void set_ust_sh1_poz (float val)
-    { m_mem.setMFloat(312, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_sh1_poz to " + val.ToString());}
-
-    public bool sets_ust_sh1_poz ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_sh1_poz (val);
-    return true;}
-
-    public string gets_ust_sh1_poz () { 
-    return get_ust_sh1_poz().ToString();}
-
-    public string debug_name_ust_sh1_poz () { 
-    return "уст†ш1†поз";}
-
-// уст†ш2†скор,   Real, %MD316   reg = M  width = UInt32
-    public float get_ust_sh2_skor ()
-    { return (float) m_mem.getMFloat(316); }
-
-    public void set_ust_sh2_skor (float val)
-    { m_mem.setMFloat(316, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_sh2_skor to " + val.ToString());}
-
-    public bool sets_ust_sh2_skor ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_sh2_skor (val);
-    return true;}
-
-    public string gets_ust_sh2_skor () { 
-    return get_ust_sh2_skor().ToString();}
-
-    public string debug_name_ust_sh2_skor () { 
-    return "уст†ш2†скор";}
-
-// уст†ш2†раст,   Real, %MD320   reg = M  width = UInt32
-    public float get_ust_sh2_rast ()
-    { return (float) m_mem.getMFloat(320); }
-
-    public void set_ust_sh2_rast (float val)
-    { m_mem.setMFloat(320, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_sh2_rast to " + val.ToString());}
-
-    public bool sets_ust_sh2_rast ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_sh2_rast (val);
-    return true;}
-
-    public string gets_ust_sh2_rast () { 
-    return get_ust_sh2_rast().ToString();}
-
-    public string debug_name_ust_sh2_rast () { 
-    return "уст†ш2†раст";}
-
-// уст†ш2†поз,   Real, %MD324   reg = M  width = UInt32
-    public float get_ust_sh2_poz ()
-    { return (float) m_mem.getMFloat(324); }
-
-    public void set_ust_sh2_poz (float val)
-    { m_mem.setMFloat(324, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_sh2_poz to " + val.ToString());}
-
-    public bool sets_ust_sh2_poz ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_sh2_poz (val);
-    return true;}
-
-    public string gets_ust_sh2_poz () { 
-    return get_ust_sh2_poz().ToString();}
-
-    public string debug_name_ust_sh2_poz () { 
-    return "уст†ш2†поз";}
-
-// уст†ш3†скор,   Real, %MD328   reg = M  width = UInt32
-    public float get_ust_sh3_skor ()
-    { return (float) m_mem.getMFloat(328); }
-
-    public void set_ust_sh3_skor (float val)
-    { m_mem.setMFloat(328, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_sh3_skor to " + val.ToString());}
-
-    public bool sets_ust_sh3_skor ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_sh3_skor (val);
-    return true;}
-
-    public string gets_ust_sh3_skor () { 
-    return get_ust_sh3_skor().ToString();}
-
-    public string debug_name_ust_sh3_skor () { 
-    return "уст†ш3†скор";}
-
-// уст†ш3†раст,   Real, %MD332   reg = M  width = UInt32
-    public float get_ust_sh3_rast ()
-    { return (float) m_mem.getMFloat(332); }
-
-    public void set_ust_sh3_rast (float val)
-    { m_mem.setMFloat(332, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_sh3_rast to " + val.ToString());}
-
-    public bool sets_ust_sh3_rast ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_sh3_rast (val);
-    return true;}
-
-    public string gets_ust_sh3_rast () { 
-    return get_ust_sh3_rast().ToString();}
-
-    public string debug_name_ust_sh3_rast () { 
-    return "уст†ш3†раст";}
-
-// уст†ш3†поз,   Real, %MD336   reg = M  width = UInt32
-    public float get_ust_sh3_poz ()
-    { return (float) m_mem.getMFloat(336); }
-
-    public void set_ust_sh3_poz (float val)
-    { m_mem.setMFloat(336, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_sh3_poz to " + val.ToString());}
-
-    public bool sets_ust_sh3_poz ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_sh3_poz (val);
-    return true;}
-
-    public string gets_ust_sh3_poz () { 
-    return get_ust_sh3_poz().ToString();}
-
-    public string debug_name_ust_sh3_poz () { 
-    return "уст†ш3†поз";}
-
-// уст†ш4†скор,   Real, %MD340   reg = M  width = UInt32
-    public float get_ust_sh4_skor ()
-    { return (float) m_mem.getMFloat(340); }
-
-    public void set_ust_sh4_skor (float val)
-    { m_mem.setMFloat(340, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_sh4_skor to " + val.ToString());}
-
-    public bool sets_ust_sh4_skor ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_sh4_skor (val);
-    return true;}
-
-    public string gets_ust_sh4_skor () { 
-    return get_ust_sh4_skor().ToString();}
-
-    public string debug_name_ust_sh4_skor () { 
-    return "уст†ш4†скор";}
-
-// уст†ш4†раст,   Real, %MD344   reg = M  width = UInt32
-    public float get_ust_sh4_rast ()
-    { return (float) m_mem.getMFloat(344); }
-
-    public void set_ust_sh4_rast (float val)
-    { m_mem.setMFloat(344, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_sh4_rast to " + val.ToString());}
-
-    public bool sets_ust_sh4_rast ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_sh4_rast (val);
-    return true;}
-
-    public string gets_ust_sh4_rast () { 
-    return get_ust_sh4_rast().ToString();}
-
-    public string debug_name_ust_sh4_rast () { 
-    return "уст†ш4†раст";}
-
-// уст†ш4†поз,   Real, %MD348   reg = M  width = UInt32
-    public float get_ust_sh4_poz ()
-    { return (float) m_mem.getMFloat(348); }
-
-    public void set_ust_sh4_poz (float val)
-    { m_mem.setMFloat(348, (float) val); 
-      Log.Write(LogLevel.Info, "set ust_sh4_poz to " + val.ToString());}
-
-    public bool sets_ust_sh4_poz ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_ust_sh4_poz (val);
-    return true;}
-
-    public string gets_ust_sh4_poz () { 
-    return get_ust_sh4_poz().ToString();}
-
-    public string debug_name_ust_sh4_poz () { 
-    return "уст†ш4†поз";}
-
-public enum local_usta{
-ust_karetka_skor_vpravo,
-ust_karetka_poziciya,
-ust_karetka_rasst,
-ust_stol_poziciya,
-ust_stol_skor_vverh,
-ust_karetka_skor_vlevo,
-ust_stol_otn_rasst,
-ust_vrem_vrashh_na_meste,
-ust_kar_poz_otkl_sh3,
-ust_sloj_kar_poz_sleva,
-ust_sloj_kar_poz_sprava,
-ust_stol_otn_vnut,
-ust_tolshh_sloya,
-ust_stol_otn_rasst_avto,
-ust_tjen1_moshhn,
-ust_tjen2_moshhn,
-ust_tjen3_moshhn,
-ust_kol_slojov,
-ust_kol_slojov_dlya_dozatora,
-ust_tjen1_temp,
-ust_tjen2_temp,
-ust_tjen3_temp,
-ust_sh1_skor,
-ust_sh1_rast,
-ust_sh1_poz,
-ust_sh2_skor,
-ust_sh2_rast,
-ust_sh2_poz,
-ust_sh3_skor,
-ust_sh3_rast,
-ust_sh3_poz,
-ust_sh4_skor,
-ust_sh4_rast,
-ust_sh4_poz,
+vyhd_kv1,
+vyhd_kv2,
+vyhd_kje9,
+vyhd_kje10,
+vyhd_kar_prav_abs,
+vyhd_kar_lev_abs,
+vyhd_doz_prav_vper,
+vyhd_doz_lev_vper,
+vyhd_doz_prav_nazad,
+vyhd_doz_lev_nazad,
+vyhd_pereschjot,
+vyhd_bar_lev_vper,
+vyhd_bar_prav_vper,
+vyhd_bar_lev_nazad,
+vyhd_bar_prav_nazad,
+vyhd_tolk_lev_vper,
+vyhd_tolk_prav_vper,
+vyhd_tolk_lev_nazad,
+vyhd_tolk_prav_nazad,
+vyhd_kar_prav_otn_vper,
+vyhd_kar_prav_otn_naz,
+vyhd_kar_lev_otn_vper,
+vyhd_kar_lev_otn_naz,
 };
 
 public enum gTags{
@@ -3153,9 +3843,9 @@ kom_stol_otn_pusk_vniz,
 kom_stol_otn_pusk_vverh,
 kom_sloj,
 kom_prer,
-kom_kar_otn_vlevo,
-kom_kar_otn_vpravo,
-kom_kar_poisk_nulya,
+kom_rezerv,
+kom_rezerv_1,
+kom_rezerv_2,
 kom_obnulit_linejku,
 kom_pit_tjen3,
 kom_pit_tjen1,
@@ -3176,32 +3866,73 @@ kom_kl_chil1,
 kom_kl_chil2,
 kom_pit_rec,
 kom_pit_mps,
-kom_sh1_vperjod,
-kom_sh1_nazad,
-kom_sh1_abs,
-kom_sh1_stop,
-kom_sh2_vperjod,
-kom_sh2_nazad,
-kom_sh2_abs,
-kom_sh2_stop,
-kom_sh3_vperjod,
-kom_sh3_nazad,
-kom_sh3_abs,
-kom_sh3_stop,
-kom_sh4_vperjod,
-kom_sh4_nazad,
-kom_sh4_abs,
-kom_sh4_stop,
-vyhd_kar_abs,
+kom_kar_lev_sh1_vperjod,
+kom_kar_lev_sh1_nazad,
+kom_kar_lev_sh1_abs,
+kom_kar_lev_sh1_stop,
+kom_kar_prav_sh2_vperjod,
+kom_kar_prav_sh2_nazad,
+kom_kar_prav_sh2_abs,
+kom_kar_prav_sh2_stop,
+kom_bar_prav_sh3_vperjod,
+kom_bar_prav_sh3_nazad,
+kom_bar_prav_sh3_abs,
+kom_bar_prav_sh3_stop,
+kom_bar_lev_sh4_vperjod,
+kom_bar_lev_sh4_nazad,
+kom_bar_lev_sh4_abs,
+kom_bar_lev_sh4_stop,
+kom_dozator_lev_vper,
+kom_dozator_prav_vper,
+kom_tolkatel_lev_vperjod,
+kom_tolkatel_lev_nazad,
+kom_tolkatel_prav_vperjod,
+kom_tolkatel_prav_nazad,
+kom_dozator_lev_nazad,
+kom_dozator_prav_nazad,
+kom_kje9,
+kom_kje10,
+kom_kv1,
+kom_kv2,
+ust_stol_poziciya,
+ust_stol_skor_vverh,
+ust_stol_otn_rasst,
+ust_sloj_kar_lev_nachalo,
+ust_sloj_kar_lev_konec,
+ust_tolshh_sloya,
+ust_stol_otn_rasst_avto,
+ust_tjen1_moshhn,
+ust_tjen2_moshhn,
+ust_tjen3_moshhn,
+ust_kol_slojov_dlya_doz_prav,
+ust_kol_slojov_dlya_doz_lev,
+ust_tjen1_temp,
+ust_tjen2_temp,
+ust_tjen3_temp,
+ust_kar_lev_skor,
+ust_kar_lev_rast,
+ust_kar_lev_poz,
+ust_kar_prav_skor,
+ust_kar_prav_rast,
+ust_kar_prav_poz,
+ust_bar_prav_skor,
+ust_bar_lev_skor,
+ust_doz_lev_vremya,
+ust_doz_prav_vremya,
+ust_tolk_lev_rasst,
+ust_tolk_prav_rasst,
+ust_doz_prav_skor,
+ust_doz_lev_skor,
+ust_tolk_lev_skor,
+ust_tolk_prav_skor,
+ust_sloj_kar_prav_nachalo,
+ust_sloj_kar_prav_konec,
 vyhd_stol_abs,
-vyhd_pit_tjen1,
-vyhd_pit_tjen2,
-vyhd_pit_tjen3,
+vyhd_tjen1,
+vyhd_tjen2,
+vyhd_tjen3,
 vyhd_stol_otn_vniz,
 vyhd_stol_otn_vverh,
-vyhd_kar_otn_vlevo,
-vyhd_kar_otn_vpravo,
-vyhd_kar_dom,
 vyhd_stol_poisk_nulya,
 vyhd_pit_lazerov,
 vyhd_pit_chil1,
@@ -3210,40 +3941,29 @@ vyhd_kl_chil1,
 vyhd_kl_chil2,
 vyhd_pit_mps,
 vyhd_pit_rec,
-ust_karetka_skor_vpravo,
-ust_karetka_poziciya,
-ust_karetka_rasst,
-ust_stol_poziciya,
-ust_stol_skor_vverh,
-ust_karetka_skor_vlevo,
-ust_stol_otn_rasst,
-ust_vrem_vrashh_na_meste,
-ust_kar_poz_otkl_sh3,
-ust_sloj_kar_poz_sleva,
-ust_sloj_kar_poz_sprava,
-ust_stol_otn_vnut,
-ust_tolshh_sloya,
-ust_stol_otn_rasst_avto,
-ust_tjen1_moshhn,
-ust_tjen2_moshhn,
-ust_tjen3_moshhn,
-ust_kol_slojov,
-ust_kol_slojov_dlya_dozatora,
-ust_tjen1_temp,
-ust_tjen2_temp,
-ust_tjen3_temp,
-ust_sh1_skor,
-ust_sh1_rast,
-ust_sh1_poz,
-ust_sh2_skor,
-ust_sh2_rast,
-ust_sh2_poz,
-ust_sh3_skor,
-ust_sh3_rast,
-ust_sh3_poz,
-ust_sh4_skor,
-ust_sh4_rast,
-ust_sh4_poz,
+vyhd_kv1,
+vyhd_kv2,
+vyhd_kje9,
+vyhd_kje10,
+vyhd_kar_prav_abs,
+vyhd_kar_lev_abs,
+vyhd_doz_prav_vper,
+vyhd_doz_lev_vper,
+vyhd_doz_prav_nazad,
+vyhd_doz_lev_nazad,
+vyhd_pereschjot,
+vyhd_bar_lev_vper,
+vyhd_bar_prav_vper,
+vyhd_bar_lev_nazad,
+vyhd_bar_prav_nazad,
+vyhd_tolk_lev_vper,
+vyhd_tolk_prav_vper,
+vyhd_tolk_lev_nazad,
+vyhd_tolk_prav_nazad,
+vyhd_kar_prav_otn_vper,
+vyhd_kar_prav_otn_naz,
+vyhd_kar_lev_otn_vper,
+vyhd_kar_lev_otn_naz,
 };
 
     public string get_by_name(string str) {
@@ -3333,12 +4053,12 @@ case "kom_sloj":
    return gets_kom_sloj();
 case "kom_prer":
    return gets_kom_prer();
-case "kom_kar_otn_vlevo":
-   return gets_kom_kar_otn_vlevo();
-case "kom_kar_otn_vpravo":
-   return gets_kom_kar_otn_vpravo();
-case "kom_kar_poisk_nulya":
-   return gets_kom_kar_poisk_nulya();
+case "kom_rezerv":
+   return gets_kom_rezerv();
+case "kom_rezerv_1":
+   return gets_kom_rezerv_1();
+case "kom_rezerv_2":
+   return gets_kom_rezerv_2();
 case "kom_obnulit_linejku":
    return gets_kom_obnulit_linejku();
 case "kom_pit_tjen3":
@@ -3379,58 +4099,140 @@ case "kom_pit_rec":
    return gets_kom_pit_rec();
 case "kom_pit_mps":
    return gets_kom_pit_mps();
-case "kom_sh1_vperjod":
-   return gets_kom_sh1_vperjod();
-case "kom_sh1_nazad":
-   return gets_kom_sh1_nazad();
-case "kom_sh1_abs":
-   return gets_kom_sh1_abs();
-case "kom_sh1_stop":
-   return gets_kom_sh1_stop();
-case "kom_sh2_vperjod":
-   return gets_kom_sh2_vperjod();
-case "kom_sh2_nazad":
-   return gets_kom_sh2_nazad();
-case "kom_sh2_abs":
-   return gets_kom_sh2_abs();
-case "kom_sh2_stop":
-   return gets_kom_sh2_stop();
-case "kom_sh3_vperjod":
-   return gets_kom_sh3_vperjod();
-case "kom_sh3_nazad":
-   return gets_kom_sh3_nazad();
-case "kom_sh3_abs":
-   return gets_kom_sh3_abs();
-case "kom_sh3_stop":
-   return gets_kom_sh3_stop();
-case "kom_sh4_vperjod":
-   return gets_kom_sh4_vperjod();
-case "kom_sh4_nazad":
-   return gets_kom_sh4_nazad();
-case "kom_sh4_abs":
-   return gets_kom_sh4_abs();
-case "kom_sh4_stop":
-   return gets_kom_sh4_stop();
-case "vyhd_kar_abs":
-   return gets_vyhd_kar_abs();
+case "kom_kar_lev_sh1_vperjod":
+   return gets_kom_kar_lev_sh1_vperjod();
+case "kom_kar_lev_sh1_nazad":
+   return gets_kom_kar_lev_sh1_nazad();
+case "kom_kar_lev_sh1_abs":
+   return gets_kom_kar_lev_sh1_abs();
+case "kom_kar_lev_sh1_stop":
+   return gets_kom_kar_lev_sh1_stop();
+case "kom_kar_prav_sh2_vperjod":
+   return gets_kom_kar_prav_sh2_vperjod();
+case "kom_kar_prav_sh2_nazad":
+   return gets_kom_kar_prav_sh2_nazad();
+case "kom_kar_prav_sh2_abs":
+   return gets_kom_kar_prav_sh2_abs();
+case "kom_kar_prav_sh2_stop":
+   return gets_kom_kar_prav_sh2_stop();
+case "kom_bar_prav_sh3_vperjod":
+   return gets_kom_bar_prav_sh3_vperjod();
+case "kom_bar_prav_sh3_nazad":
+   return gets_kom_bar_prav_sh3_nazad();
+case "kom_bar_prav_sh3_abs":
+   return gets_kom_bar_prav_sh3_abs();
+case "kom_bar_prav_sh3_stop":
+   return gets_kom_bar_prav_sh3_stop();
+case "kom_bar_lev_sh4_vperjod":
+   return gets_kom_bar_lev_sh4_vperjod();
+case "kom_bar_lev_sh4_nazad":
+   return gets_kom_bar_lev_sh4_nazad();
+case "kom_bar_lev_sh4_abs":
+   return gets_kom_bar_lev_sh4_abs();
+case "kom_bar_lev_sh4_stop":
+   return gets_kom_bar_lev_sh4_stop();
+case "kom_dozator_lev_vper":
+   return gets_kom_dozator_lev_vper();
+case "kom_dozator_prav_vper":
+   return gets_kom_dozator_prav_vper();
+case "kom_tolkatel_lev_vperjod":
+   return gets_kom_tolkatel_lev_vperjod();
+case "kom_tolkatel_lev_nazad":
+   return gets_kom_tolkatel_lev_nazad();
+case "kom_tolkatel_prav_vperjod":
+   return gets_kom_tolkatel_prav_vperjod();
+case "kom_tolkatel_prav_nazad":
+   return gets_kom_tolkatel_prav_nazad();
+case "kom_dozator_lev_nazad":
+   return gets_kom_dozator_lev_nazad();
+case "kom_dozator_prav_nazad":
+   return gets_kom_dozator_prav_nazad();
+case "kom_kje9":
+   return gets_kom_kje9();
+case "kom_kje10":
+   return gets_kom_kje10();
+case "kom_kv1":
+   return gets_kom_kv1();
+case "kom_kv2":
+   return gets_kom_kv2();
+case "ust_stol_poziciya":
+   return gets_ust_stol_poziciya();
+case "ust_stol_skor_vverh":
+   return gets_ust_stol_skor_vverh();
+case "ust_stol_otn_rasst":
+   return gets_ust_stol_otn_rasst();
+case "ust_sloj_kar_lev_nachalo":
+   return gets_ust_sloj_kar_lev_nachalo();
+case "ust_sloj_kar_lev_konec":
+   return gets_ust_sloj_kar_lev_konec();
+case "ust_tolshh_sloya":
+   return gets_ust_tolshh_sloya();
+case "ust_stol_otn_rasst_avto":
+   return gets_ust_stol_otn_rasst_avto();
+case "ust_tjen1_moshhn":
+   return gets_ust_tjen1_moshhn();
+case "ust_tjen2_moshhn":
+   return gets_ust_tjen2_moshhn();
+case "ust_tjen3_moshhn":
+   return gets_ust_tjen3_moshhn();
+case "ust_kol_slojov_dlya_doz_prav":
+   return gets_ust_kol_slojov_dlya_doz_prav();
+case "ust_kol_slojov_dlya_doz_lev":
+   return gets_ust_kol_slojov_dlya_doz_lev();
+case "ust_tjen1_temp":
+   return gets_ust_tjen1_temp();
+case "ust_tjen2_temp":
+   return gets_ust_tjen2_temp();
+case "ust_tjen3_temp":
+   return gets_ust_tjen3_temp();
+case "ust_kar_lev_skor":
+   return gets_ust_kar_lev_skor();
+case "ust_kar_lev_rast":
+   return gets_ust_kar_lev_rast();
+case "ust_kar_lev_poz":
+   return gets_ust_kar_lev_poz();
+case "ust_kar_prav_skor":
+   return gets_ust_kar_prav_skor();
+case "ust_kar_prav_rast":
+   return gets_ust_kar_prav_rast();
+case "ust_kar_prav_poz":
+   return gets_ust_kar_prav_poz();
+case "ust_bar_prav_skor":
+   return gets_ust_bar_prav_skor();
+case "ust_bar_lev_skor":
+   return gets_ust_bar_lev_skor();
+case "ust_doz_lev_vremya":
+   return gets_ust_doz_lev_vremya();
+case "ust_doz_prav_vremya":
+   return gets_ust_doz_prav_vremya();
+case "ust_tolk_lev_rasst":
+   return gets_ust_tolk_lev_rasst();
+case "ust_tolk_prav_rasst":
+   return gets_ust_tolk_prav_rasst();
+case "ust_doz_prav_skor":
+   return gets_ust_doz_prav_skor();
+case "ust_doz_lev_skor":
+   return gets_ust_doz_lev_skor();
+case "ust_tolk_lev_skor":
+   return gets_ust_tolk_lev_skor();
+case "ust_tolk_prav_skor":
+   return gets_ust_tolk_prav_skor();
+case "ust_sloj_kar_prav_nachalo":
+   return gets_ust_sloj_kar_prav_nachalo();
+case "ust_sloj_kar_prav_konec":
+   return gets_ust_sloj_kar_prav_konec();
 case "vyhd_stol_abs":
    return gets_vyhd_stol_abs();
-case "vyhd_pit_tjen1":
-   return gets_vyhd_pit_tjen1();
-case "vyhd_pit_tjen2":
-   return gets_vyhd_pit_tjen2();
-case "vyhd_pit_tjen3":
-   return gets_vyhd_pit_tjen3();
+case "vyhd_tjen1":
+   return gets_vyhd_tjen1();
+case "vyhd_tjen2":
+   return gets_vyhd_tjen2();
+case "vyhd_tjen3":
+   return gets_vyhd_tjen3();
 case "vyhd_stol_otn_vniz":
    return gets_vyhd_stol_otn_vniz();
 case "vyhd_stol_otn_vverh":
    return gets_vyhd_stol_otn_vverh();
-case "vyhd_kar_otn_vlevo":
-   return gets_vyhd_kar_otn_vlevo();
-case "vyhd_kar_otn_vpravo":
-   return gets_vyhd_kar_otn_vpravo();
-case "vyhd_kar_dom":
-   return gets_vyhd_kar_dom();
 case "vyhd_stol_poisk_nulya":
    return gets_vyhd_stol_poisk_nulya();
 case "vyhd_pit_lazerov":
@@ -3447,74 +4249,52 @@ case "vyhd_pit_mps":
    return gets_vyhd_pit_mps();
 case "vyhd_pit_rec":
    return gets_vyhd_pit_rec();
-case "ust_karetka_skor_vpravo":
-   return gets_ust_karetka_skor_vpravo();
-case "ust_karetka_poziciya":
-   return gets_ust_karetka_poziciya();
-case "ust_karetka_rasst":
-   return gets_ust_karetka_rasst();
-case "ust_stol_poziciya":
-   return gets_ust_stol_poziciya();
-case "ust_stol_skor_vverh":
-   return gets_ust_stol_skor_vverh();
-case "ust_karetka_skor_vlevo":
-   return gets_ust_karetka_skor_vlevo();
-case "ust_stol_otn_rasst":
-   return gets_ust_stol_otn_rasst();
-case "ust_vrem_vrashh_na_meste":
-   return gets_ust_vrem_vrashh_na_meste();
-case "ust_kar_poz_otkl_sh3":
-   return gets_ust_kar_poz_otkl_sh3();
-case "ust_sloj_kar_poz_sleva":
-   return gets_ust_sloj_kar_poz_sleva();
-case "ust_sloj_kar_poz_sprava":
-   return gets_ust_sloj_kar_poz_sprava();
-case "ust_stol_otn_vnut":
-   return gets_ust_stol_otn_vnut();
-case "ust_tolshh_sloya":
-   return gets_ust_tolshh_sloya();
-case "ust_stol_otn_rasst_avto":
-   return gets_ust_stol_otn_rasst_avto();
-case "ust_tjen1_moshhn":
-   return gets_ust_tjen1_moshhn();
-case "ust_tjen2_moshhn":
-   return gets_ust_tjen2_moshhn();
-case "ust_tjen3_moshhn":
-   return gets_ust_tjen3_moshhn();
-case "ust_kol_slojov":
-   return gets_ust_kol_slojov();
-case "ust_kol_slojov_dlya_dozatora":
-   return gets_ust_kol_slojov_dlya_dozatora();
-case "ust_tjen1_temp":
-   return gets_ust_tjen1_temp();
-case "ust_tjen2_temp":
-   return gets_ust_tjen2_temp();
-case "ust_tjen3_temp":
-   return gets_ust_tjen3_temp();
-case "ust_sh1_skor":
-   return gets_ust_sh1_skor();
-case "ust_sh1_rast":
-   return gets_ust_sh1_rast();
-case "ust_sh1_poz":
-   return gets_ust_sh1_poz();
-case "ust_sh2_skor":
-   return gets_ust_sh2_skor();
-case "ust_sh2_rast":
-   return gets_ust_sh2_rast();
-case "ust_sh2_poz":
-   return gets_ust_sh2_poz();
-case "ust_sh3_skor":
-   return gets_ust_sh3_skor();
-case "ust_sh3_rast":
-   return gets_ust_sh3_rast();
-case "ust_sh3_poz":
-   return gets_ust_sh3_poz();
-case "ust_sh4_skor":
-   return gets_ust_sh4_skor();
-case "ust_sh4_rast":
-   return gets_ust_sh4_rast();
-case "ust_sh4_poz":
-   return gets_ust_sh4_poz();
+case "vyhd_kv1":
+   return gets_vyhd_kv1();
+case "vyhd_kv2":
+   return gets_vyhd_kv2();
+case "vyhd_kje9":
+   return gets_vyhd_kje9();
+case "vyhd_kje10":
+   return gets_vyhd_kje10();
+case "vyhd_kar_prav_abs":
+   return gets_vyhd_kar_prav_abs();
+case "vyhd_kar_lev_abs":
+   return gets_vyhd_kar_lev_abs();
+case "vyhd_doz_prav_vper":
+   return gets_vyhd_doz_prav_vper();
+case "vyhd_doz_lev_vper":
+   return gets_vyhd_doz_lev_vper();
+case "vyhd_doz_prav_nazad":
+   return gets_vyhd_doz_prav_nazad();
+case "vyhd_doz_lev_nazad":
+   return gets_vyhd_doz_lev_nazad();
+case "vyhd_pereschjot":
+   return gets_vyhd_pereschjot();
+case "vyhd_bar_lev_vper":
+   return gets_vyhd_bar_lev_vper();
+case "vyhd_bar_prav_vper":
+   return gets_vyhd_bar_prav_vper();
+case "vyhd_bar_lev_nazad":
+   return gets_vyhd_bar_lev_nazad();
+case "vyhd_bar_prav_nazad":
+   return gets_vyhd_bar_prav_nazad();
+case "vyhd_tolk_lev_vper":
+   return gets_vyhd_tolk_lev_vper();
+case "vyhd_tolk_prav_vper":
+   return gets_vyhd_tolk_prav_vper();
+case "vyhd_tolk_lev_nazad":
+   return gets_vyhd_tolk_lev_nazad();
+case "vyhd_tolk_prav_nazad":
+   return gets_vyhd_tolk_prav_nazad();
+case "vyhd_kar_prav_otn_vper":
+   return gets_vyhd_kar_prav_otn_vper();
+case "vyhd_kar_prav_otn_naz":
+   return gets_vyhd_kar_prav_otn_naz();
+case "vyhd_kar_lev_otn_vper":
+   return gets_vyhd_kar_lev_otn_vper();
+case "vyhd_kar_lev_otn_naz":
+   return gets_vyhd_kar_lev_otn_naz();
 default: 
    return "NAN";
 } 
@@ -3606,12 +4386,12 @@ case "kom_sloj":
    return sets_kom_sloj(val);
 case "kom_prer":
    return sets_kom_prer(val);
-case "kom_kar_otn_vlevo":
-   return sets_kom_kar_otn_vlevo(val);
-case "kom_kar_otn_vpravo":
-   return sets_kom_kar_otn_vpravo(val);
-case "kom_kar_poisk_nulya":
-   return sets_kom_kar_poisk_nulya(val);
+case "kom_rezerv":
+   return sets_kom_rezerv(val);
+case "kom_rezerv_1":
+   return sets_kom_rezerv_1(val);
+case "kom_rezerv_2":
+   return sets_kom_rezerv_2(val);
 case "kom_obnulit_linejku":
    return sets_kom_obnulit_linejku(val);
 case "kom_pit_tjen3":
@@ -3652,58 +4432,140 @@ case "kom_pit_rec":
    return sets_kom_pit_rec(val);
 case "kom_pit_mps":
    return sets_kom_pit_mps(val);
-case "kom_sh1_vperjod":
-   return sets_kom_sh1_vperjod(val);
-case "kom_sh1_nazad":
-   return sets_kom_sh1_nazad(val);
-case "kom_sh1_abs":
-   return sets_kom_sh1_abs(val);
-case "kom_sh1_stop":
-   return sets_kom_sh1_stop(val);
-case "kom_sh2_vperjod":
-   return sets_kom_sh2_vperjod(val);
-case "kom_sh2_nazad":
-   return sets_kom_sh2_nazad(val);
-case "kom_sh2_abs":
-   return sets_kom_sh2_abs(val);
-case "kom_sh2_stop":
-   return sets_kom_sh2_stop(val);
-case "kom_sh3_vperjod":
-   return sets_kom_sh3_vperjod(val);
-case "kom_sh3_nazad":
-   return sets_kom_sh3_nazad(val);
-case "kom_sh3_abs":
-   return sets_kom_sh3_abs(val);
-case "kom_sh3_stop":
-   return sets_kom_sh3_stop(val);
-case "kom_sh4_vperjod":
-   return sets_kom_sh4_vperjod(val);
-case "kom_sh4_nazad":
-   return sets_kom_sh4_nazad(val);
-case "kom_sh4_abs":
-   return sets_kom_sh4_abs(val);
-case "kom_sh4_stop":
-   return sets_kom_sh4_stop(val);
-case "vyhd_kar_abs":
-   return sets_vyhd_kar_abs(val);
+case "kom_kar_lev_sh1_vperjod":
+   return sets_kom_kar_lev_sh1_vperjod(val);
+case "kom_kar_lev_sh1_nazad":
+   return sets_kom_kar_lev_sh1_nazad(val);
+case "kom_kar_lev_sh1_abs":
+   return sets_kom_kar_lev_sh1_abs(val);
+case "kom_kar_lev_sh1_stop":
+   return sets_kom_kar_lev_sh1_stop(val);
+case "kom_kar_prav_sh2_vperjod":
+   return sets_kom_kar_prav_sh2_vperjod(val);
+case "kom_kar_prav_sh2_nazad":
+   return sets_kom_kar_prav_sh2_nazad(val);
+case "kom_kar_prav_sh2_abs":
+   return sets_kom_kar_prav_sh2_abs(val);
+case "kom_kar_prav_sh2_stop":
+   return sets_kom_kar_prav_sh2_stop(val);
+case "kom_bar_prav_sh3_vperjod":
+   return sets_kom_bar_prav_sh3_vperjod(val);
+case "kom_bar_prav_sh3_nazad":
+   return sets_kom_bar_prav_sh3_nazad(val);
+case "kom_bar_prav_sh3_abs":
+   return sets_kom_bar_prav_sh3_abs(val);
+case "kom_bar_prav_sh3_stop":
+   return sets_kom_bar_prav_sh3_stop(val);
+case "kom_bar_lev_sh4_vperjod":
+   return sets_kom_bar_lev_sh4_vperjod(val);
+case "kom_bar_lev_sh4_nazad":
+   return sets_kom_bar_lev_sh4_nazad(val);
+case "kom_bar_lev_sh4_abs":
+   return sets_kom_bar_lev_sh4_abs(val);
+case "kom_bar_lev_sh4_stop":
+   return sets_kom_bar_lev_sh4_stop(val);
+case "kom_dozator_lev_vper":
+   return sets_kom_dozator_lev_vper(val);
+case "kom_dozator_prav_vper":
+   return sets_kom_dozator_prav_vper(val);
+case "kom_tolkatel_lev_vperjod":
+   return sets_kom_tolkatel_lev_vperjod(val);
+case "kom_tolkatel_lev_nazad":
+   return sets_kom_tolkatel_lev_nazad(val);
+case "kom_tolkatel_prav_vperjod":
+   return sets_kom_tolkatel_prav_vperjod(val);
+case "kom_tolkatel_prav_nazad":
+   return sets_kom_tolkatel_prav_nazad(val);
+case "kom_dozator_lev_nazad":
+   return sets_kom_dozator_lev_nazad(val);
+case "kom_dozator_prav_nazad":
+   return sets_kom_dozator_prav_nazad(val);
+case "kom_kje9":
+   return sets_kom_kje9(val);
+case "kom_kje10":
+   return sets_kom_kje10(val);
+case "kom_kv1":
+   return sets_kom_kv1(val);
+case "kom_kv2":
+   return sets_kom_kv2(val);
+case "ust_stol_poziciya":
+   return sets_ust_stol_poziciya(val);
+case "ust_stol_skor_vverh":
+   return sets_ust_stol_skor_vverh(val);
+case "ust_stol_otn_rasst":
+   return sets_ust_stol_otn_rasst(val);
+case "ust_sloj_kar_lev_nachalo":
+   return sets_ust_sloj_kar_lev_nachalo(val);
+case "ust_sloj_kar_lev_konec":
+   return sets_ust_sloj_kar_lev_konec(val);
+case "ust_tolshh_sloya":
+   return sets_ust_tolshh_sloya(val);
+case "ust_stol_otn_rasst_avto":
+   return sets_ust_stol_otn_rasst_avto(val);
+case "ust_tjen1_moshhn":
+   return sets_ust_tjen1_moshhn(val);
+case "ust_tjen2_moshhn":
+   return sets_ust_tjen2_moshhn(val);
+case "ust_tjen3_moshhn":
+   return sets_ust_tjen3_moshhn(val);
+case "ust_kol_slojov_dlya_doz_prav":
+   return sets_ust_kol_slojov_dlya_doz_prav(val);
+case "ust_kol_slojov_dlya_doz_lev":
+   return sets_ust_kol_slojov_dlya_doz_lev(val);
+case "ust_tjen1_temp":
+   return sets_ust_tjen1_temp(val);
+case "ust_tjen2_temp":
+   return sets_ust_tjen2_temp(val);
+case "ust_tjen3_temp":
+   return sets_ust_tjen3_temp(val);
+case "ust_kar_lev_skor":
+   return sets_ust_kar_lev_skor(val);
+case "ust_kar_lev_rast":
+   return sets_ust_kar_lev_rast(val);
+case "ust_kar_lev_poz":
+   return sets_ust_kar_lev_poz(val);
+case "ust_kar_prav_skor":
+   return sets_ust_kar_prav_skor(val);
+case "ust_kar_prav_rast":
+   return sets_ust_kar_prav_rast(val);
+case "ust_kar_prav_poz":
+   return sets_ust_kar_prav_poz(val);
+case "ust_bar_prav_skor":
+   return sets_ust_bar_prav_skor(val);
+case "ust_bar_lev_skor":
+   return sets_ust_bar_lev_skor(val);
+case "ust_doz_lev_vremya":
+   return sets_ust_doz_lev_vremya(val);
+case "ust_doz_prav_vremya":
+   return sets_ust_doz_prav_vremya(val);
+case "ust_tolk_lev_rasst":
+   return sets_ust_tolk_lev_rasst(val);
+case "ust_tolk_prav_rasst":
+   return sets_ust_tolk_prav_rasst(val);
+case "ust_doz_prav_skor":
+   return sets_ust_doz_prav_skor(val);
+case "ust_doz_lev_skor":
+   return sets_ust_doz_lev_skor(val);
+case "ust_tolk_lev_skor":
+   return sets_ust_tolk_lev_skor(val);
+case "ust_tolk_prav_skor":
+   return sets_ust_tolk_prav_skor(val);
+case "ust_sloj_kar_prav_nachalo":
+   return sets_ust_sloj_kar_prav_nachalo(val);
+case "ust_sloj_kar_prav_konec":
+   return sets_ust_sloj_kar_prav_konec(val);
 case "vyhd_stol_abs":
    return sets_vyhd_stol_abs(val);
-case "vyhd_pit_tjen1":
-   return sets_vyhd_pit_tjen1(val);
-case "vyhd_pit_tjen2":
-   return sets_vyhd_pit_tjen2(val);
-case "vyhd_pit_tjen3":
-   return sets_vyhd_pit_tjen3(val);
+case "vyhd_tjen1":
+   return sets_vyhd_tjen1(val);
+case "vyhd_tjen2":
+   return sets_vyhd_tjen2(val);
+case "vyhd_tjen3":
+   return sets_vyhd_tjen3(val);
 case "vyhd_stol_otn_vniz":
    return sets_vyhd_stol_otn_vniz(val);
 case "vyhd_stol_otn_vverh":
    return sets_vyhd_stol_otn_vverh(val);
-case "vyhd_kar_otn_vlevo":
-   return sets_vyhd_kar_otn_vlevo(val);
-case "vyhd_kar_otn_vpravo":
-   return sets_vyhd_kar_otn_vpravo(val);
-case "vyhd_kar_dom":
-   return sets_vyhd_kar_dom(val);
 case "vyhd_stol_poisk_nulya":
    return sets_vyhd_stol_poisk_nulya(val);
 case "vyhd_pit_lazerov":
@@ -3720,74 +4582,52 @@ case "vyhd_pit_mps":
    return sets_vyhd_pit_mps(val);
 case "vyhd_pit_rec":
    return sets_vyhd_pit_rec(val);
-case "ust_karetka_skor_vpravo":
-   return sets_ust_karetka_skor_vpravo(val);
-case "ust_karetka_poziciya":
-   return sets_ust_karetka_poziciya(val);
-case "ust_karetka_rasst":
-   return sets_ust_karetka_rasst(val);
-case "ust_stol_poziciya":
-   return sets_ust_stol_poziciya(val);
-case "ust_stol_skor_vverh":
-   return sets_ust_stol_skor_vverh(val);
-case "ust_karetka_skor_vlevo":
-   return sets_ust_karetka_skor_vlevo(val);
-case "ust_stol_otn_rasst":
-   return sets_ust_stol_otn_rasst(val);
-case "ust_vrem_vrashh_na_meste":
-   return sets_ust_vrem_vrashh_na_meste(val);
-case "ust_kar_poz_otkl_sh3":
-   return sets_ust_kar_poz_otkl_sh3(val);
-case "ust_sloj_kar_poz_sleva":
-   return sets_ust_sloj_kar_poz_sleva(val);
-case "ust_sloj_kar_poz_sprava":
-   return sets_ust_sloj_kar_poz_sprava(val);
-case "ust_stol_otn_vnut":
-   return sets_ust_stol_otn_vnut(val);
-case "ust_tolshh_sloya":
-   return sets_ust_tolshh_sloya(val);
-case "ust_stol_otn_rasst_avto":
-   return sets_ust_stol_otn_rasst_avto(val);
-case "ust_tjen1_moshhn":
-   return sets_ust_tjen1_moshhn(val);
-case "ust_tjen2_moshhn":
-   return sets_ust_tjen2_moshhn(val);
-case "ust_tjen3_moshhn":
-   return sets_ust_tjen3_moshhn(val);
-case "ust_kol_slojov":
-   return sets_ust_kol_slojov(val);
-case "ust_kol_slojov_dlya_dozatora":
-   return sets_ust_kol_slojov_dlya_dozatora(val);
-case "ust_tjen1_temp":
-   return sets_ust_tjen1_temp(val);
-case "ust_tjen2_temp":
-   return sets_ust_tjen2_temp(val);
-case "ust_tjen3_temp":
-   return sets_ust_tjen3_temp(val);
-case "ust_sh1_skor":
-   return sets_ust_sh1_skor(val);
-case "ust_sh1_rast":
-   return sets_ust_sh1_rast(val);
-case "ust_sh1_poz":
-   return sets_ust_sh1_poz(val);
-case "ust_sh2_skor":
-   return sets_ust_sh2_skor(val);
-case "ust_sh2_rast":
-   return sets_ust_sh2_rast(val);
-case "ust_sh2_poz":
-   return sets_ust_sh2_poz(val);
-case "ust_sh3_skor":
-   return sets_ust_sh3_skor(val);
-case "ust_sh3_rast":
-   return sets_ust_sh3_rast(val);
-case "ust_sh3_poz":
-   return sets_ust_sh3_poz(val);
-case "ust_sh4_skor":
-   return sets_ust_sh4_skor(val);
-case "ust_sh4_rast":
-   return sets_ust_sh4_rast(val);
-case "ust_sh4_poz":
-   return sets_ust_sh4_poz(val);
+case "vyhd_kv1":
+   return sets_vyhd_kv1(val);
+case "vyhd_kv2":
+   return sets_vyhd_kv2(val);
+case "vyhd_kje9":
+   return sets_vyhd_kje9(val);
+case "vyhd_kje10":
+   return sets_vyhd_kje10(val);
+case "vyhd_kar_prav_abs":
+   return sets_vyhd_kar_prav_abs(val);
+case "vyhd_kar_lev_abs":
+   return sets_vyhd_kar_lev_abs(val);
+case "vyhd_doz_prav_vper":
+   return sets_vyhd_doz_prav_vper(val);
+case "vyhd_doz_lev_vper":
+   return sets_vyhd_doz_lev_vper(val);
+case "vyhd_doz_prav_nazad":
+   return sets_vyhd_doz_prav_nazad(val);
+case "vyhd_doz_lev_nazad":
+   return sets_vyhd_doz_lev_nazad(val);
+case "vyhd_pereschjot":
+   return sets_vyhd_pereschjot(val);
+case "vyhd_bar_lev_vper":
+   return sets_vyhd_bar_lev_vper(val);
+case "vyhd_bar_prav_vper":
+   return sets_vyhd_bar_prav_vper(val);
+case "vyhd_bar_lev_nazad":
+   return sets_vyhd_bar_lev_nazad(val);
+case "vyhd_bar_prav_nazad":
+   return sets_vyhd_bar_prav_nazad(val);
+case "vyhd_tolk_lev_vper":
+   return sets_vyhd_tolk_lev_vper(val);
+case "vyhd_tolk_prav_vper":
+   return sets_vyhd_tolk_prav_vper(val);
+case "vyhd_tolk_lev_nazad":
+   return sets_vyhd_tolk_lev_nazad(val);
+case "vyhd_tolk_prav_nazad":
+   return sets_vyhd_tolk_prav_nazad(val);
+case "vyhd_kar_prav_otn_vper":
+   return sets_vyhd_kar_prav_otn_vper(val);
+case "vyhd_kar_prav_otn_naz":
+   return sets_vyhd_kar_prav_otn_naz(val);
+case "vyhd_kar_lev_otn_vper":
+   return sets_vyhd_kar_lev_otn_vper(val);
+case "vyhd_kar_lev_otn_naz":
+   return sets_vyhd_kar_lev_otn_naz(val);
 default: 
    return false;
 } 
@@ -3879,12 +4719,12 @@ case "kom_sloj":
    return debug_name_kom_sloj();
 case "kom_prer":
    return debug_name_kom_prer();
-case "kom_kar_otn_vlevo":
-   return debug_name_kom_kar_otn_vlevo();
-case "kom_kar_otn_vpravo":
-   return debug_name_kom_kar_otn_vpravo();
-case "kom_kar_poisk_nulya":
-   return debug_name_kom_kar_poisk_nulya();
+case "kom_rezerv":
+   return debug_name_kom_rezerv();
+case "kom_rezerv_1":
+   return debug_name_kom_rezerv_1();
+case "kom_rezerv_2":
+   return debug_name_kom_rezerv_2();
 case "kom_obnulit_linejku":
    return debug_name_kom_obnulit_linejku();
 case "kom_pit_tjen3":
@@ -3925,58 +4765,140 @@ case "kom_pit_rec":
    return debug_name_kom_pit_rec();
 case "kom_pit_mps":
    return debug_name_kom_pit_mps();
-case "kom_sh1_vperjod":
-   return debug_name_kom_sh1_vperjod();
-case "kom_sh1_nazad":
-   return debug_name_kom_sh1_nazad();
-case "kom_sh1_abs":
-   return debug_name_kom_sh1_abs();
-case "kom_sh1_stop":
-   return debug_name_kom_sh1_stop();
-case "kom_sh2_vperjod":
-   return debug_name_kom_sh2_vperjod();
-case "kom_sh2_nazad":
-   return debug_name_kom_sh2_nazad();
-case "kom_sh2_abs":
-   return debug_name_kom_sh2_abs();
-case "kom_sh2_stop":
-   return debug_name_kom_sh2_stop();
-case "kom_sh3_vperjod":
-   return debug_name_kom_sh3_vperjod();
-case "kom_sh3_nazad":
-   return debug_name_kom_sh3_nazad();
-case "kom_sh3_abs":
-   return debug_name_kom_sh3_abs();
-case "kom_sh3_stop":
-   return debug_name_kom_sh3_stop();
-case "kom_sh4_vperjod":
-   return debug_name_kom_sh4_vperjod();
-case "kom_sh4_nazad":
-   return debug_name_kom_sh4_nazad();
-case "kom_sh4_abs":
-   return debug_name_kom_sh4_abs();
-case "kom_sh4_stop":
-   return debug_name_kom_sh4_stop();
-case "vyhd_kar_abs":
-   return debug_name_vyhd_kar_abs();
+case "kom_kar_lev_sh1_vperjod":
+   return debug_name_kom_kar_lev_sh1_vperjod();
+case "kom_kar_lev_sh1_nazad":
+   return debug_name_kom_kar_lev_sh1_nazad();
+case "kom_kar_lev_sh1_abs":
+   return debug_name_kom_kar_lev_sh1_abs();
+case "kom_kar_lev_sh1_stop":
+   return debug_name_kom_kar_lev_sh1_stop();
+case "kom_kar_prav_sh2_vperjod":
+   return debug_name_kom_kar_prav_sh2_vperjod();
+case "kom_kar_prav_sh2_nazad":
+   return debug_name_kom_kar_prav_sh2_nazad();
+case "kom_kar_prav_sh2_abs":
+   return debug_name_kom_kar_prav_sh2_abs();
+case "kom_kar_prav_sh2_stop":
+   return debug_name_kom_kar_prav_sh2_stop();
+case "kom_bar_prav_sh3_vperjod":
+   return debug_name_kom_bar_prav_sh3_vperjod();
+case "kom_bar_prav_sh3_nazad":
+   return debug_name_kom_bar_prav_sh3_nazad();
+case "kom_bar_prav_sh3_abs":
+   return debug_name_kom_bar_prav_sh3_abs();
+case "kom_bar_prav_sh3_stop":
+   return debug_name_kom_bar_prav_sh3_stop();
+case "kom_bar_lev_sh4_vperjod":
+   return debug_name_kom_bar_lev_sh4_vperjod();
+case "kom_bar_lev_sh4_nazad":
+   return debug_name_kom_bar_lev_sh4_nazad();
+case "kom_bar_lev_sh4_abs":
+   return debug_name_kom_bar_lev_sh4_abs();
+case "kom_bar_lev_sh4_stop":
+   return debug_name_kom_bar_lev_sh4_stop();
+case "kom_dozator_lev_vper":
+   return debug_name_kom_dozator_lev_vper();
+case "kom_dozator_prav_vper":
+   return debug_name_kom_dozator_prav_vper();
+case "kom_tolkatel_lev_vperjod":
+   return debug_name_kom_tolkatel_lev_vperjod();
+case "kom_tolkatel_lev_nazad":
+   return debug_name_kom_tolkatel_lev_nazad();
+case "kom_tolkatel_prav_vperjod":
+   return debug_name_kom_tolkatel_prav_vperjod();
+case "kom_tolkatel_prav_nazad":
+   return debug_name_kom_tolkatel_prav_nazad();
+case "kom_dozator_lev_nazad":
+   return debug_name_kom_dozator_lev_nazad();
+case "kom_dozator_prav_nazad":
+   return debug_name_kom_dozator_prav_nazad();
+case "kom_kje9":
+   return debug_name_kom_kje9();
+case "kom_kje10":
+   return debug_name_kom_kje10();
+case "kom_kv1":
+   return debug_name_kom_kv1();
+case "kom_kv2":
+   return debug_name_kom_kv2();
+case "ust_stol_poziciya":
+   return debug_name_ust_stol_poziciya();
+case "ust_stol_skor_vverh":
+   return debug_name_ust_stol_skor_vverh();
+case "ust_stol_otn_rasst":
+   return debug_name_ust_stol_otn_rasst();
+case "ust_sloj_kar_lev_nachalo":
+   return debug_name_ust_sloj_kar_lev_nachalo();
+case "ust_sloj_kar_lev_konec":
+   return debug_name_ust_sloj_kar_lev_konec();
+case "ust_tolshh_sloya":
+   return debug_name_ust_tolshh_sloya();
+case "ust_stol_otn_rasst_avto":
+   return debug_name_ust_stol_otn_rasst_avto();
+case "ust_tjen1_moshhn":
+   return debug_name_ust_tjen1_moshhn();
+case "ust_tjen2_moshhn":
+   return debug_name_ust_tjen2_moshhn();
+case "ust_tjen3_moshhn":
+   return debug_name_ust_tjen3_moshhn();
+case "ust_kol_slojov_dlya_doz_prav":
+   return debug_name_ust_kol_slojov_dlya_doz_prav();
+case "ust_kol_slojov_dlya_doz_lev":
+   return debug_name_ust_kol_slojov_dlya_doz_lev();
+case "ust_tjen1_temp":
+   return debug_name_ust_tjen1_temp();
+case "ust_tjen2_temp":
+   return debug_name_ust_tjen2_temp();
+case "ust_tjen3_temp":
+   return debug_name_ust_tjen3_temp();
+case "ust_kar_lev_skor":
+   return debug_name_ust_kar_lev_skor();
+case "ust_kar_lev_rast":
+   return debug_name_ust_kar_lev_rast();
+case "ust_kar_lev_poz":
+   return debug_name_ust_kar_lev_poz();
+case "ust_kar_prav_skor":
+   return debug_name_ust_kar_prav_skor();
+case "ust_kar_prav_rast":
+   return debug_name_ust_kar_prav_rast();
+case "ust_kar_prav_poz":
+   return debug_name_ust_kar_prav_poz();
+case "ust_bar_prav_skor":
+   return debug_name_ust_bar_prav_skor();
+case "ust_bar_lev_skor":
+   return debug_name_ust_bar_lev_skor();
+case "ust_doz_lev_vremya":
+   return debug_name_ust_doz_lev_vremya();
+case "ust_doz_prav_vremya":
+   return debug_name_ust_doz_prav_vremya();
+case "ust_tolk_lev_rasst":
+   return debug_name_ust_tolk_lev_rasst();
+case "ust_tolk_prav_rasst":
+   return debug_name_ust_tolk_prav_rasst();
+case "ust_doz_prav_skor":
+   return debug_name_ust_doz_prav_skor();
+case "ust_doz_lev_skor":
+   return debug_name_ust_doz_lev_skor();
+case "ust_tolk_lev_skor":
+   return debug_name_ust_tolk_lev_skor();
+case "ust_tolk_prav_skor":
+   return debug_name_ust_tolk_prav_skor();
+case "ust_sloj_kar_prav_nachalo":
+   return debug_name_ust_sloj_kar_prav_nachalo();
+case "ust_sloj_kar_prav_konec":
+   return debug_name_ust_sloj_kar_prav_konec();
 case "vyhd_stol_abs":
    return debug_name_vyhd_stol_abs();
-case "vyhd_pit_tjen1":
-   return debug_name_vyhd_pit_tjen1();
-case "vyhd_pit_tjen2":
-   return debug_name_vyhd_pit_tjen2();
-case "vyhd_pit_tjen3":
-   return debug_name_vyhd_pit_tjen3();
+case "vyhd_tjen1":
+   return debug_name_vyhd_tjen1();
+case "vyhd_tjen2":
+   return debug_name_vyhd_tjen2();
+case "vyhd_tjen3":
+   return debug_name_vyhd_tjen3();
 case "vyhd_stol_otn_vniz":
    return debug_name_vyhd_stol_otn_vniz();
 case "vyhd_stol_otn_vverh":
    return debug_name_vyhd_stol_otn_vverh();
-case "vyhd_kar_otn_vlevo":
-   return debug_name_vyhd_kar_otn_vlevo();
-case "vyhd_kar_otn_vpravo":
-   return debug_name_vyhd_kar_otn_vpravo();
-case "vyhd_kar_dom":
-   return debug_name_vyhd_kar_dom();
 case "vyhd_stol_poisk_nulya":
    return debug_name_vyhd_stol_poisk_nulya();
 case "vyhd_pit_lazerov":
@@ -3993,86 +4915,64 @@ case "vyhd_pit_mps":
    return debug_name_vyhd_pit_mps();
 case "vyhd_pit_rec":
    return debug_name_vyhd_pit_rec();
-case "ust_karetka_skor_vpravo":
-   return debug_name_ust_karetka_skor_vpravo();
-case "ust_karetka_poziciya":
-   return debug_name_ust_karetka_poziciya();
-case "ust_karetka_rasst":
-   return debug_name_ust_karetka_rasst();
-case "ust_stol_poziciya":
-   return debug_name_ust_stol_poziciya();
-case "ust_stol_skor_vverh":
-   return debug_name_ust_stol_skor_vverh();
-case "ust_karetka_skor_vlevo":
-   return debug_name_ust_karetka_skor_vlevo();
-case "ust_stol_otn_rasst":
-   return debug_name_ust_stol_otn_rasst();
-case "ust_vrem_vrashh_na_meste":
-   return debug_name_ust_vrem_vrashh_na_meste();
-case "ust_kar_poz_otkl_sh3":
-   return debug_name_ust_kar_poz_otkl_sh3();
-case "ust_sloj_kar_poz_sleva":
-   return debug_name_ust_sloj_kar_poz_sleva();
-case "ust_sloj_kar_poz_sprava":
-   return debug_name_ust_sloj_kar_poz_sprava();
-case "ust_stol_otn_vnut":
-   return debug_name_ust_stol_otn_vnut();
-case "ust_tolshh_sloya":
-   return debug_name_ust_tolshh_sloya();
-case "ust_stol_otn_rasst_avto":
-   return debug_name_ust_stol_otn_rasst_avto();
-case "ust_tjen1_moshhn":
-   return debug_name_ust_tjen1_moshhn();
-case "ust_tjen2_moshhn":
-   return debug_name_ust_tjen2_moshhn();
-case "ust_tjen3_moshhn":
-   return debug_name_ust_tjen3_moshhn();
-case "ust_kol_slojov":
-   return debug_name_ust_kol_slojov();
-case "ust_kol_slojov_dlya_dozatora":
-   return debug_name_ust_kol_slojov_dlya_dozatora();
-case "ust_tjen1_temp":
-   return debug_name_ust_tjen1_temp();
-case "ust_tjen2_temp":
-   return debug_name_ust_tjen2_temp();
-case "ust_tjen3_temp":
-   return debug_name_ust_tjen3_temp();
-case "ust_sh1_skor":
-   return debug_name_ust_sh1_skor();
-case "ust_sh1_rast":
-   return debug_name_ust_sh1_rast();
-case "ust_sh1_poz":
-   return debug_name_ust_sh1_poz();
-case "ust_sh2_skor":
-   return debug_name_ust_sh2_skor();
-case "ust_sh2_rast":
-   return debug_name_ust_sh2_rast();
-case "ust_sh2_poz":
-   return debug_name_ust_sh2_poz();
-case "ust_sh3_skor":
-   return debug_name_ust_sh3_skor();
-case "ust_sh3_rast":
-   return debug_name_ust_sh3_rast();
-case "ust_sh3_poz":
-   return debug_name_ust_sh3_poz();
-case "ust_sh4_skor":
-   return debug_name_ust_sh4_skor();
-case "ust_sh4_rast":
-   return debug_name_ust_sh4_rast();
-case "ust_sh4_poz":
-   return debug_name_ust_sh4_poz();
+case "vyhd_kv1":
+   return debug_name_vyhd_kv1();
+case "vyhd_kv2":
+   return debug_name_vyhd_kv2();
+case "vyhd_kje9":
+   return debug_name_vyhd_kje9();
+case "vyhd_kje10":
+   return debug_name_vyhd_kje10();
+case "vyhd_kar_prav_abs":
+   return debug_name_vyhd_kar_prav_abs();
+case "vyhd_kar_lev_abs":
+   return debug_name_vyhd_kar_lev_abs();
+case "vyhd_doz_prav_vper":
+   return debug_name_vyhd_doz_prav_vper();
+case "vyhd_doz_lev_vper":
+   return debug_name_vyhd_doz_lev_vper();
+case "vyhd_doz_prav_nazad":
+   return debug_name_vyhd_doz_prav_nazad();
+case "vyhd_doz_lev_nazad":
+   return debug_name_vyhd_doz_lev_nazad();
+case "vyhd_pereschjot":
+   return debug_name_vyhd_pereschjot();
+case "vyhd_bar_lev_vper":
+   return debug_name_vyhd_bar_lev_vper();
+case "vyhd_bar_prav_vper":
+   return debug_name_vyhd_bar_prav_vper();
+case "vyhd_bar_lev_nazad":
+   return debug_name_vyhd_bar_lev_nazad();
+case "vyhd_bar_prav_nazad":
+   return debug_name_vyhd_bar_prav_nazad();
+case "vyhd_tolk_lev_vper":
+   return debug_name_vyhd_tolk_lev_vper();
+case "vyhd_tolk_prav_vper":
+   return debug_name_vyhd_tolk_prav_vper();
+case "vyhd_tolk_lev_nazad":
+   return debug_name_vyhd_tolk_lev_nazad();
+case "vyhd_tolk_prav_nazad":
+   return debug_name_vyhd_tolk_prav_nazad();
+case "vyhd_kar_prav_otn_vper":
+   return debug_name_vyhd_kar_prav_otn_vper();
+case "vyhd_kar_prav_otn_naz":
+   return debug_name_vyhd_kar_prav_otn_naz();
+case "vyhd_kar_lev_otn_vper":
+   return debug_name_vyhd_kar_lev_otn_vper();
+case "vyhd_kar_lev_otn_naz":
+   return debug_name_vyhd_kar_lev_otn_naz();
 default: 
    return "NAN";
 } 
  }
     }
  }
+//__+_________________________________________________________________________________________________
+//________++++____________________++++++++____++++++++++++++++____________________++++________________
+//____++++____________________________________________________________________++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++________++++________++++++++++++++++++++++++++++++++________________
 //____________________________________________________________________________________________________
-//________++++++++++++____++++++++++++++++____++++++++++++____________________++++++++________________
-//____++++++++________________________________________________________________++++++++++++++++++++++++
-//++++++++++++++++++++++++++++++++++++++++++++++++++++________________________________________________
-//____________________________________________________________________________________________________
-//+__+_+++__________+++++_+++++++++___________________________________________________________________
+//+__+_++++++_______+++++_+++++++++++_________________________________________________________________
 //____++++++++++++++++++++++++______________++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //++________________________________++++++++______++++____++++++++++++++++++__________________________
 //____________________________________________________________________________________________________

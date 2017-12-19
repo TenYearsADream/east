@@ -259,16 +259,16 @@ namespace laserScada
             //connect
         //    tbCounter.Text = m_plc.tags.get_dint().ToString();
             //karetka
-            kar_tb_position.Text = m_plc.tags.get_ust_karetka_poziciya().ToString(); //go to
-            kar_tb_current_pos.Text = m_plc.tags.get_kar_tek_poz().ToString();
-            kar_tb_step.Text = m_plc.tags.get_ust_karetka_rasst().ToString();
-            kar_tb_left_speed.Text = m_plc.tags.get_ust_karetka_skor_vlevo().ToString();
-            kar_tb_right_speed.Text = m_plc.tags.get_ust_karetka_skor_vpravo().ToString();
+         //   kar_tb_position.Text = m_plc.tags.get_ust_karetka_poziciya().ToString(); //go to
+         //   kar_tb_current_pos.Text = m_plc.tags.get_kar_tek_poz().ToString();
+         //   kar_tb_step.Text = m_plc.tags.get_ust_karetka_rasst().ToString();
+         //   kar_tb_left_speed.Text = m_plc.tags.get_ust_karetka_skor_vlevo().ToString();
+          //  kar_tb_right_speed.Text = m_plc.tags.get_ust_karetka_skor_vpravo().ToString();
             //kar_cb_lk.IsChecked = m_plc.tags.get_karetka_sleva();
             //kar_cb_pk.IsChecked = m_plc.tags.get_karetka_sprava();
           //  kar_led_lk.IsActive = m_plc.tags.get_karetka_sleva();
           //  kar_led_pk.IsActive = m_plc.tags.get_karetka_sprava();
-
+          /*
             if (m_plc.tags.get_vyhd_kar_dom())
                 kar_bt_find_orign.Background = Brushes.Aqua;
             else
@@ -289,7 +289,7 @@ namespace laserScada
             else
                 kar_bt_vpravo.ClearValue(Button.BackgroundProperty);
             // kar_cb_error.IsChecked ??? 
-
+            */
             //stol
          //   stol_tb_porsh_otn0.Text = m_plc.tags.get_ust_stol_poz_porsh_ot_nulya().ToString();
          //   stol_tb_plita_width.Text = m_plc.tags.get_ust_stol_tolshh_plity().ToString();
@@ -361,7 +361,7 @@ namespace laserScada
             pauseFinish = (lastPauseFinish == true && !m_plc.tags.get_kom_pauza());
             lastPauseFinish = m_plc.tags.get_kom_pauza();
            // pauseFinish = !m_plc.tags.get_kom_pauza();
-            bool s1 = m_plc.tags.get_ust_kol_slojov() >0 && laerFinish && !m_plc.tags.get_kom_pauza() && !m_plc.tags.get_kom_prer();
+          //  bool s1 = m_plc.tags.get_ust_kol_slojov() >0 && laerFinish && !m_plc.tags.get_kom_pauza() && !m_plc.tags.get_kom_prer();
           //  bool s2 = !m_plc.tags.get_sloj_rab() && pauseFinish && m_plc.tags.get_kom_rab_do_pauzy() &&  !m_plc.tags.get_kom_prer();
 
             //if (s1 || s2)
@@ -371,8 +371,8 @@ namespace laserScada
             //}
 
             //main
-            m_main_layerCount_finish.Text = m_plc.tags.get_schjot_slojov().ToString();
-            m_main_layerCount.Text = m_plc.tags.get_ust_kol_slojov().ToString();
+          //  m_main_layerCount_finish.Text = m_plc.tags.get_schjot_slojov().ToString();
+         //   m_main_layerCount.Text = m_plc.tags.get_ust_kol_slojov().ToString();
 
             //shnek
             //snek_s1_tb.Data = m_plc.tags.get_ust_vrem_rab_sh1().ToString();
@@ -383,11 +383,11 @@ namespace laserScada
             //snek_s3_up.IsActive = m_plc.tags.get_verhn_ur_poroshka();
             //sloi
             layer_widh.Data = m_plc.tags.get_ust_tolshh_sloya().ToString();
-            layer_time_rot_m3.Data = m_plc.tags.get_ust_vrem_vrashh_na_meste().ToString();
-            layer_stop_m3.Data = m_plc.tags.get_ust_kar_poz_otkl_sh3().ToString();
-            layer_doz_num.Data = m_plc.tags.get_ust_kol_slojov_dlya_dozatora().ToString();
-            layer_doz_rem.Data = m_plc.tags.get_ost_slojov_dlya_dozatora().ToString();
-            layer_pusk_num.Data = m_plc.tags.get_ust_kol_slojov().ToString();
+           // layer_time_rot_m3.Data = m_plc.tags.get_ust_vrem_vrashh_na_meste().ToString();
+           // layer_stop_m3.Data = m_plc.tags.get_ust_kar_poz_otkl_sh3().ToString();
+           // layer_doz_num.Data = m_plc.tags.get_ust_kol_slojov_dlya_dozatora().ToString();
+           // layer_doz_rem.Data = m_plc.tags.get_ost_slojov_dlya_dozatora().ToString();
+          //  layer_pusk_num.Data = m_plc.tags.get_ust_kol_slojov().ToString();
             layer_pusk_rem.Data = m_plc.tags.get_ost_slojov().ToString();
             layer_pusk_gotov.Data = m_plc.tags.get_schjot_slojov().ToString();
             layer_scriptFile.Content = SpIceController.getScripFileName();
@@ -447,7 +447,7 @@ namespace laserScada
             {
                 float val;
                 if (!float.TryParse(dialog.ResponseText, out val)) { System.Windows.MessageBox.Show("Неправильное значение");  return; }
-                m_plc.tags.set_ust_karetka_poziciya(val);
+             //   m_plc.tags.set_ust_karetka_poziciya(val);
             }
         }
 
@@ -460,7 +460,7 @@ namespace laserScada
                 if (!float.TryParse(dialog.ResponseText, out val)) {
                     System.Windows.MessageBox.Show("Неправильное значение");
                     return; }
-                m_plc.tags.set_ust_karetka_rasst(float.Parse(dialog.ResponseText));
+             //   m_plc.tags.set_ust_karetka_rasst(float.Parse(dialog.ResponseText));
             }
         }
 
@@ -475,7 +475,7 @@ namespace laserScada
                     System.Windows.MessageBox.Show("Неправильное значение");
                     return;
                 }
-                m_plc.tags.set_ust_karetka_skor_vlevo(float.Parse(dialog.ResponseText));
+               // m_plc.tags.set_ust_karetka_skor_vlevo(float.Parse(dialog.ResponseText));
             }
         }
 
@@ -490,7 +490,7 @@ namespace laserScada
                     System.Windows.MessageBox.Show("Неправильное значение");
                     return;
                 }
-                m_plc.tags.set_ust_karetka_skor_vpravo(float.Parse(dialog.ResponseText));
+               // m_plc.tags.set_ust_karetka_skor_vpravo(float.Parse(dialog.ResponseText));
             }
         }
 
@@ -506,17 +506,17 @@ namespace laserScada
 
         private void kar_bt_vlevo_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_kar_otn_vlevo(true);
+          //  m_plc.tags.set_kom_kar_otn_vlevo(true);
         }
 
         private void kar_bt_vpravo_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_kar_otn_vpravo(true);
+            //m_plc.tags.set_kom_kar_otn_vpravo(true);
         }
 
         private void kar_bt_find_orign_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_kar_poisk_nulya(true);
+           // m_plc.tags.set_kom_kar_poisk_nulya(true);
         }
         //stol
         private void stol_tb_plita_width_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -671,7 +671,7 @@ namespace laserScada
                     System.Windows.MessageBox.Show("Неправильное значение");
                     return;
                 }
-                m_plc.tags.set_ust_kol_slojov(short.Parse(dialog.ResponseText));
+              //  m_plc.tags.set_ust_kol_slojov(short.Parse(dialog.ResponseText));
             }
         }
 
@@ -810,7 +810,7 @@ namespace laserScada
                     System.Windows.MessageBox.Show("Неправильное значение");
                     return;
                 }
-                m_plc.tags.set_ust_vrem_vrashh_na_meste(float.Parse(dialog.ResponseText));
+               // m_plc.tags.set_ust_vrem_vrashh_na_meste(float.Parse(dialog.ResponseText));
             }
         }
 
@@ -825,7 +825,7 @@ namespace laserScada
                     System.Windows.MessageBox.Show("Неправильное значение");
                     return;
                 }
-                m_plc.tags.set_ust_kar_poz_otkl_sh3(float.Parse(dialog.ResponseText));
+              //  m_plc.tags.set_ust_kar_poz_otkl_sh3(float.Parse(dialog.ResponseText));
             }
         }
 
@@ -840,7 +840,7 @@ namespace laserScada
                     System.Windows.MessageBox.Show("Неправильное значение");
                     return;
                 }
-                m_plc.tags.set_ust_kol_slojov_dlya_dozatora(short.Parse(dialog.ResponseText));
+                //m_plc.tags.set_ust_kol_slojov_dlya_dozatora(short.Parse(dialog.ResponseText));
             }
         }
 
@@ -855,7 +855,7 @@ namespace laserScada
                     System.Windows.MessageBox.Show("Неправильное значение");
                     return;
                 }
-                m_plc.tags.set_ust_kol_slojov(short.Parse(dialog.ResponseText));
+               // m_plc.tags.set_ust_kol_slojov(short.Parse(dialog.ResponseText));
             }
         }
 
