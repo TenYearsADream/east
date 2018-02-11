@@ -64,5 +64,8 @@
 <PLC Tags><Name>ком&#160;КЭ10</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M533.7</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком&#160;КВ1</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M534.0</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком&#160;КВ2</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M534.1</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ком&#160;кл&#160;бар&#160;лев</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M534.2</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ком&#160;кл&#160;бар&#160;прав</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M534.3</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ком&#160;нас&#160;отк&#160;газа</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M519.1</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags></PLC Tags>
 </dataroot>

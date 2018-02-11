@@ -37,5 +37,8 @@
 <PLC Tags><Name>выхд&#160;кар&#160;прав&#160;отн&#160;наз</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M509.7</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>выхд&#160;кар&#160;лев&#160;отн&#160;впер</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M510.0</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>выхд&#160;кар&#160;лев&#160;отн&#160;наз</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M510.1</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;кл&#160;бар&#160;лев</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M510.2</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;кл&#160;бар&#160;прав</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M510.3</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд&#160;нас&#160;отк&#160;газа</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M510.4</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags></PLC Tags>
 </dataroot>

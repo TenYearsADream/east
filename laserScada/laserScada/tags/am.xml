@@ -3,9 +3,9 @@
 <PLC Tags><Name>термопара1</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD604</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>термопара2</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD608</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>термопара3</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD612</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>давл1</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD616</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>давл2</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD620</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>давл3</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD624</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>давл&#160;оч&#160;газа1</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD616</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>давл&#160;оч&#160;газа2</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD620</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>давл&#160;оч&#160;газа3</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD624</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>линейка</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD642</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>толщина</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD646</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ТЭН1&#160;тек&#160;мощн</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD650</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
@@ -15,7 +15,6 @@
 <PLC Tags><Name>ост&#160;слоёв</Name><Path>AM</Path><Data_Type>Int</Data_Type><Logical_Address>%MW756</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ост&#160;слоёв&#160;для&#160;дозатора</Name><Path>AM</Path><Data_Type>Int</Data_Type><Logical_Address>%MW758</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>инкремент</Name><Path>AM</Path><Data_Type>Int</Data_Type><Logical_Address>%MW760</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>давл4</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD762</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ТЭН2&#160;тек&#160;мощн</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD766</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ТЭН3&#160;тек&#160;мощн</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD770</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>темп1</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD654</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
@@ -24,11 +23,7 @@
 <PLC Tags><Name>темп4</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD666</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>темп5</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD670</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>темп6</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD674</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>прот1</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD678</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>прот2</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD682</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>прот3</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD686</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>прот4</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD690</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>прот5</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD694</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>прот6</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD698</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>датч&#160;кисл1</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD628</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>датч&#160;кисл2</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD632</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags></PLC Tags>
 </dataroot>

@@ -139,6 +139,38 @@ namespace laserScada
                 }
             }
 
+            //DM
+            panelH = new StackPanel();
+            panelH.Orientation = Orientation.Horizontal;
+            panel.Children.Add(panelH);
+            count = 0;
+            foreach (Tags.local_dm tag in Enum.GetValues(typeof(Tags.local_dm)))
+            {
+                // <uc:Led x:Name="dat_ls_active" IsActive="{Binding LedStatus, Mode=OneWay}" Flashing="{Binding Flash}"  ColorNull="Gray"   Text=" Работа" ColorOn="Green" ColorOff="Gray"/>
+                LedControl.Led newLed = new LedControl.Led();
+                newLed.ColorOn = Colors.Green;
+                newLed.ColorOff = Colors.Gray;
+                newLed.Width = 180;
+                newLed.Text = m_plc.tags.get_debug_by_name(tag.ToString("f"));
+                m_checks.Add(() => {
+                    bool val;
+                    string text = m_plc.tags.get_by_name(tag.ToString("f"));
+                    if (bool.TryParse(text, out val))
+                        newLed.IsActive = bool.Parse(text);
+                }
+                );
+
+                panelH.Children.Add(newLed);
+
+                if (count++ > 5)
+                {
+                    panelH = new StackPanel();
+                    panelH.Orientation = Orientation.Horizontal;
+                    panel.Children.Add(panelH);
+                    count = 0;
+                }
+            }
+
             panelH = new StackPanel();
             panelH.Orientation = Orientation.Horizontal;
             panel.Children.Add(panelH);
