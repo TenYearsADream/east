@@ -81,155 +81,47 @@ namespace laserScada
             //System.Windows.Controls.Button newBtn = new Button();
             //newBtn.Content = "wwwww";
             // newBtn.Name = "Button" + "www";
-            System.Windows.Controls.StackPanel panel = new StackPanel();
+            System.Windows.Controls.WrapPanel panel = new WrapPanel();
             panel.Orientation = Orientation.Vertical;
             debugPanel.Content = panel;
+            m_plc.tags.init_sSetters();
+            m_plc.tags.init_sGetters();
 
+            
+           
+            //panel.Children.Add(panelH1);
+            int count = 0;
+            foreach (KeyValuePair<string, Tags.gTags[]> dicItem in m_plc.tags.groupingDict)
+            {
+                System.Windows.Controls.GroupBox grBox = new GroupBox();
+                System.Windows.Controls.StackPanel panelH2 = new StackPanel();
+                grBox.Content = panelH2;
+               // grBox.Width = System.Windows.SystemParameters.PrimaryScreenWidth;
+                panel.Children.Add(grBox);
+                System.Windows.Controls.WrapPanel panelH1 = new WrapPanel();
+                panelH1.Orientation = Orientation.Horizontal;
+                panelH2.Children.Add(panelH1);
+                grBox.Header = dicItem.Key;
+                foreach (Tags.gTags tag in dicItem.Value)
+                {
+                    panelH1.Children.Add(getControll(tag));
+
+                    if (panelH1.Width > System.Windows.SystemParameters.PrimaryScreenWidth)
+                    {
+                   //     panelH1 = new WrapPanel();
+                   //     panelH1.Orientation = Orientation.Horizontal;
+                   //     panelH2.Children.Add(panelH1);
+                     
+                        count = 0;
+                    }
+                    //     Console.WriteLine("Current entry for list {0}: {1}", dicItem.Key, entry);
+                }
+            }
 
             System.Windows.Controls.StackPanel panelH = new StackPanel();
             panelH.Orientation = Orientation.Horizontal;
             panel.Children.Add(panelH);
-            int count = 0;
-            foreach (Tags.local_com tag in Enum.GetValues(typeof(Tags.local_com)))
-            {
-                System.Windows.Controls.Button newBtn = new Button();
-                newBtn.Content = m_plc.tags.get_debug_by_name(tag.ToString("f"));
-                newBtn.Width = 180;
-                newBtn.Click += (s, e) => { m_plc.tags.set_by_name(tag.ToString("f"), "true"); }; 
-                
-                panelH.Children.Add(newBtn);
 
-                if (count++ > 5)
-                {
-                    panelH = new StackPanel();
-                    panelH.Orientation = Orientation.Horizontal;
-                    panel.Children.Add(panelH);
-                    count = 0;
-                }
-            }
-
-
-            panelH = new StackPanel();
-            panelH.Orientation = Orientation.Horizontal;
-            panel.Children.Add(panelH);
-            count = 0;
-            foreach (Tags.local_outd tag in Enum.GetValues(typeof(Tags.local_outd)))
-            {
-                // <uc:Led x:Name="dat_ls_active" IsActive="{Binding LedStatus, Mode=OneWay}" Flashing="{Binding Flash}"  ColorNull="Gray"   Text=" Работа" ColorOn="Green" ColorOff="Gray"/>
-                LedControl.Led newLed = new LedControl.Led();
-                newLed.ColorOn = Colors.Green;
-                newLed.ColorOff = Colors.Gray;
-                newLed.Width = 180;
-                newLed.Text = m_plc.tags.get_debug_by_name(tag.ToString("f"));
-                m_checks.Add(() => {
-                    bool val;
-                    string text = m_plc.tags.get_by_name(tag.ToString("f"));
-                    if (bool.TryParse(text, out val))
-                        newLed.IsActive = bool.Parse(text); }
-                );
-
-                panelH.Children.Add(newLed);
-
-                if (count++ > 5)
-                {
-                    panelH = new StackPanel();
-                    panelH.Orientation = Orientation.Horizontal;
-                    panel.Children.Add(panelH);
-                    count = 0;
-                }
-            }
-
-            //DM
-            panelH = new StackPanel();
-            panelH.Orientation = Orientation.Horizontal;
-            panel.Children.Add(panelH);
-            count = 0;
-            foreach (Tags.local_dm tag in Enum.GetValues(typeof(Tags.local_dm)))
-            {
-                // <uc:Led x:Name="dat_ls_active" IsActive="{Binding LedStatus, Mode=OneWay}" Flashing="{Binding Flash}"  ColorNull="Gray"   Text=" Работа" ColorOn="Green" ColorOff="Gray"/>
-                LedControl.Led newLed = new LedControl.Led();
-                newLed.ColorOn = Colors.Green;
-                newLed.ColorOff = Colors.Gray;
-                newLed.Width = 180;
-                newLed.Text = m_plc.tags.get_debug_by_name(tag.ToString("f"));
-                m_checks.Add(() => {
-                    bool val;
-                    string text = m_plc.tags.get_by_name(tag.ToString("f"));
-                    if (bool.TryParse(text, out val))
-                        newLed.IsActive = bool.Parse(text);
-                }
-                );
-
-                panelH.Children.Add(newLed);
-
-                if (count++ > 5)
-                {
-                    panelH = new StackPanel();
-                    panelH.Orientation = Orientation.Horizontal;
-                    panel.Children.Add(panelH);
-                    count = 0;
-                }
-            }
-
-            panelH = new StackPanel();
-            panelH.Orientation = Orientation.Horizontal;
-            panel.Children.Add(panelH);
-            count = 0;
-            foreach (Tags.local_usta tag in Enum.GetValues(typeof(Tags.local_usta)))
-            {
-                dataField newFld = new dataField();
-                newFld.Text = m_plc.tags.get_debug_by_name(tag.ToString("f"));
-                newFld.Data = "0";
-                newFld.tb_data.Width = 100;
-                newFld.lb_text.Width = 150;
-                newFld.MouseDoubleClick += (s, e) => {
-                    var dialog = new inputDialog(m_plc.tags.get_debug_by_name(tag.ToString("f")), ((dataField)s).Data);
-                    if (dialog.ShowDialog() == true)
-                        m_plc.tags.set_by_name(tag.ToString("f"), dialog.ResponseText);
-                };
-                m_checks.Add(() => { newFld.Data = m_plc.tags.get_by_name(tag.ToString("f")); });
-
-                panelH.Children.Add(newFld);
-
-                if (count++ > 2)
-                {
-                    panelH = new StackPanel();
-                    panelH.Orientation = Orientation.Horizontal;
-                    panel.Children.Add(panelH);
-                    count = 0;
-                }
-            }
-
-            panelH = new StackPanel();
-            panelH.Orientation = Orientation.Horizontal;
-            panel.Children.Add(panelH);
-            count = 0;
-            foreach (Tags.local_am tag in Enum.GetValues(typeof(Tags.local_am)))
-            {
-                //< local:dataField x:Name = "main_laserCount" Text = " Кол-во лазеров" Grid.Column = "1" Grid.Row = "0" MouseDoubleClick = "main_laserCount_MouseDoubleClick" />
-
-                dataField newFld = new dataField();
-                newFld.Text = m_plc.tags.get_debug_by_name(tag.ToString("f"));
-                newFld.Data = "0";
-                newFld.tb_data.Width = 100;
-                newFld.lb_text.Width = 150;
-                newFld.MouseDoubleClick += (s, e) => {
-                    var dialog = new inputDialog(m_plc.tags.get_debug_by_name(tag.ToString("f")), ((dataField)s).Data);
-                    if (dialog.ShowDialog() == true)
-                        m_plc.tags.set_by_name(tag.ToString("f"), dialog.ResponseText);
-                };
-                m_checks.Add(() => { newFld.Data = m_plc.tags.get_by_name(tag.ToString("f")); });
-
-                panelH.Children.Add(newFld);
-
-                if (count++ > 2)
-                {
-                    panelH = new StackPanel();
-                    panelH.Orientation = Orientation.Horizontal;
-                    panel.Children.Add(panelH);
-                    count = 0;
-                }
-            }
             //panel.Children.Add(newBtn);
 
 
@@ -238,6 +130,58 @@ namespace laserScada
         }
 
 
+        UIElement getControll(Tags.gTags tag)
+        {
+            Tags.activeType type = m_plc.tags.getActiveType(tag);
+
+            if (type == Tags.activeType.command) {
+                System.Windows.Controls.Button newBtn = new Button();
+                newBtn.Content = m_plc.tags.getDebugName(tag);
+                //newBtn.Width = 180;
+                newBtn.Click += (s, e) => { m_plc.tags.setSValue(tag, "true"); };
+
+                return newBtn;
+            }
+
+            if (type == Tags.activeType.led)
+            {
+                LedControl.Led newLed = new LedControl.Led();
+                newLed.ColorOn = Colors.Green;
+                newLed.ColorOff = Colors.Gray;
+               // newLed.Width = 180;
+                newLed.Text = m_plc.tags.getDebugName(tag); 
+                m_checks.Add(() => {
+                    bool val;
+                    string text = m_plc.tags.getSValue(tag);
+                    if (bool.TryParse(text, out val))
+                        newLed.IsActive = bool.Parse(text);
+                }
+                );
+
+                return newLed;
+            }
+
+            if (type == Tags.activeType.dataField)
+            {
+                dataField newFld = new dataField();
+                newFld.Text = m_plc.tags.getDebugName(tag);
+                newFld.Data = "0";
+                //newFld.tb_data.Width = 100;
+                //newFld.lb_text.Width = 150;
+                newFld.MouseDoubleClick += (s, e) => {
+                    var dialog = new inputDialog(m_plc.tags.getDebugName(tag), ((dataField)s).Data);
+                    if (dialog.ShowDialog() == true)
+                        m_plc.tags.setSValue(tag, dialog.ResponseText);
+                };
+                m_checks.Add(() => { newFld.Data = m_plc.tags.getSValue(tag); });
+                return newFld;
+            }
+
+            System.Windows.Controls.Button newBtn1 = new Button();
+            newBtn1.Content = "-- fail --";
+            return newBtn1;
+
+        }
 
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {

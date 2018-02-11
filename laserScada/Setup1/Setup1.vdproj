@@ -232,79 +232,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B163D2BEA761FB5DE7C2AFD34952B33B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AF7976B73DCD4781999BE6EAFD9D4BEC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AE3050EC980D4423B5B718AEEEA225CB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2E1FAC3FE8CB8D52A6A40C63E728EF4B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6B33D8726AA1A5EF9A6E0A149A09FE7F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_69492318A04260079A28A9CAA501516F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5569C0897EF2031512D0FDB08948900C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6A160F757F0CFDB9CC42562564E82487"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5BCD24F52F814922A9BE9CB526BBF4E7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_51AAA2EBE0AB41AC80164FF0EF939652"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_36C0AE10CB42481D964D644D13DCA2EB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_36503148D5C24C3492A58D57F9053829"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0221A7A2F0AE4C489C17BAB4FF4977E8"
+        "OwnerKey" = "8:_99D949C4CA12705A309F2EC06D9E91C9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -316,7 +244,79 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_99D949C4CA12705A309F2EC06D9E91C9"
+        "OwnerKey" = "8:_0221A7A2F0AE4C489C17BAB4FF4977E8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_36503148D5C24C3492A58D57F9053829"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_36C0AE10CB42481D964D644D13DCA2EB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_51AAA2EBE0AB41AC80164FF0EF939652"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5BCD24F52F814922A9BE9CB526BBF4E7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_6A160F757F0CFDB9CC42562564E82487"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5569C0897EF2031512D0FDB08948900C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_69492318A04260079A28A9CAA501516F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_6B33D8726AA1A5EF9A6E0A149A09FE7F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2E1FAC3FE8CB8D52A6A40C63E728EF4B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_AE3050EC980D4423B5B718AEEEA225CB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_AF7976B73DCD4781999BE6EAFD9D4BEC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B163D2BEA761FB5DE7C2AFD34952B33B"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -523,11 +523,6 @@
             "AssemblyAsmDisplayName" = "8:SpIceControllerLib, Version=1.1.6562.19445, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_2E1FAC3FE8CB8D52A6A40C63E728EF4B"
-                    {
-                    "Name" = "8:SpIceControllerLib.DLL"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:SpIceControllerLib.DLL"
             "TargetName" = "8:"
@@ -667,11 +662,6 @@
             "AssemblyAsmDisplayName" = "8:log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_5569C0897EF2031512D0FDB08948900C"
-                    {
-                    "Name" = "8:log4net.DLL"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:log4net.DLL"
             "TargetName" = "8:"
@@ -729,11 +719,6 @@
             "AssemblyAsmDisplayName" = "8:MahApps.Metro, Version=1.4.3.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_69492318A04260079A28A9CAA501516F"
-                    {
-                    "Name" = "8:MahApps.Metro.DLL"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:MahApps.Metro.DLL"
             "TargetName" = "8:"
@@ -760,11 +745,6 @@
             "AssemblyAsmDisplayName" = "8:LedControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6A160F757F0CFDB9CC42562564E82487"
-                    {
-                    "Name" = "8:LedControl.DLL"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:LedControl.DLL"
             "TargetName" = "8:"
@@ -791,11 +771,6 @@
             "AssemblyAsmDisplayName" = "8:sharp7, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6B33D8726AA1A5EF9A6E0A149A09FE7F"
-                    {
-                    "Name" = "8:sharp7.DLL"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:sharp7.DLL"
             "TargetName" = "8:"
@@ -839,7 +814,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:laserScada, Version=1.0.6613.41316, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:laserScada, Version=1.0.6616.22937, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_80BB135153B84108B01CC04CC2DE4ACA"
@@ -913,11 +888,6 @@
             "AssemblyAsmDisplayName" = "8:System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_99D949C4CA12705A309F2EC06D9E91C9"
-                    {
-                    "Name" = "8:System.Windows.Interactivity.DLL"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Windows.Interactivity.DLL"
             "TargetName" = "8:"
@@ -1336,20 +1306,20 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:LaserScada"
-        "ProductCode" = "8:{42C32F2C-15B7-498F-9144-4AF6788694CA}"
-        "PackageCode" = "8:{79780C44-7D05-4CE7-B0BE-77EB14E72AFA}"
+        "ProductCode" = "8:{219CBC66-6ED8-44B1-B92A-36C7DAFFBA2B}"
+        "PackageCode" = "8:{5AF3CA3F-FB37-41B4-976F-FEFEF9DD6752}"
         "UpgradeCode" = "8:{6565649E-BB37-4CC0-B582-2F262A905D02}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.4.10"
+        "ProductVersion" = "8:1.4.11"
         "Manufacturer" = "8:TestSuit"
         "ARPHELPTELEPHONE" = "8:8(977)8971404"
         "ARPHELPLINK" = "8:"
         "Title" = "8:LaserScada"
-        "Subject" = "8:1.4.10"
+        "Subject" = "8:1.4.11"
         "ARPCONTACT" = "8:TestSuit"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Установка черновой версии, программы упрвления двумя лазерам"

@@ -1,5 +1,6 @@
 using System;
 using log4netSample.Logging;
+using System.Collections.Generic;
  namespace laserScada {
 
 partial class Tags {
@@ -582,6 +583,34 @@ temp5,
 temp6,
 datch_kisl1,
 datch_kisl2,
+};
+
+public gTags[] group_am = {
+gTags.termopara1,
+gTags.termopara2,
+gTags.termopara3,
+gTags.davl_och_gaza1,
+gTags.davl_och_gaza2,
+gTags.davl_och_gaza3,
+gTags.linejka,
+gTags.tolshhina,
+gTags.tjen1_tek_moshhn,
+gTags.kar_tek_poz,
+gTags.stol_tek_poz,
+gTags.schjot_slojov,
+gTags.ost_slojov,
+gTags.ost_slojov_dlya_dozatora,
+gTags.inkrement,
+gTags.tjen2_tek_moshhn,
+gTags.tjen3_tek_moshhn,
+gTags.temp1,
+gTags.temp2,
+gTags.temp3,
+gTags.temp4,
+gTags.temp5,
+gTags.temp6,
+gTags.datch_kisl1,
+gTags.datch_kisl2,
 };
 
 //-----------------------------------------------------------------------------
@@ -1508,6 +1537,49 @@ vyhd_kar_lev_otn_naz,
 vyhd_kl_bar_lev,
 vyhd_kl_bar_prav,
 vyhd_nas_otk_gaza,
+};
+
+public gTags[] group_outd = {
+gTags.vyhd_stol_abs,
+gTags.vyhd_tjen1,
+gTags.vyhd_tjen2,
+gTags.vyhd_tjen3,
+gTags.vyhd_stol_otn_vniz,
+gTags.vyhd_stol_otn_vverh,
+gTags.vyhd_stol_poisk_nulya,
+gTags.vyhd_pit_lazerov,
+gTags.vyhd_pit_chil1,
+gTags.vyhd_pit_chil2,
+gTags.vyhd_kl_chil1,
+gTags.vyhd_kl_chil2,
+gTags.vyhd_pit_mps,
+gTags.vyhd_pit_rec,
+gTags.vyhd_kv1,
+gTags.vyhd_kv2,
+gTags.vyhd_kje9,
+gTags.vyhd_kje10,
+gTags.vyhd_kar_prav_abs,
+gTags.vyhd_kar_lev_abs,
+gTags.vyhd_doz_prav_vper,
+gTags.vyhd_doz_lev_vper,
+gTags.vyhd_doz_prav_nazad,
+gTags.vyhd_doz_lev_nazad,
+gTags.vyhd_pereschjot,
+gTags.vyhd_bar_lev_vper,
+gTags.vyhd_bar_prav_vper,
+gTags.vyhd_bar_lev_nazad,
+gTags.vyhd_bar_prav_nazad,
+gTags.vyhd_tolk_lev_vper,
+gTags.vyhd_tolk_prav_vper,
+gTags.vyhd_tolk_lev_nazad,
+gTags.vyhd_tolk_prav_nazad,
+gTags.vyhd_kar_prav_otn_vper,
+gTags.vyhd_kar_prav_otn_naz,
+gTags.vyhd_kar_lev_otn_vper,
+gTags.vyhd_kar_lev_otn_naz,
+gTags.vyhd_kl_bar_lev,
+gTags.vyhd_kl_bar_prav,
+gTags.vyhd_nas_otk_gaza,
 };
 
 //-----------------------------------------------------------------------------
@@ -3057,6 +3129,76 @@ kom_kl_bar_prav,
 kom_nas_otk_gaza,
 };
 
+public gTags[] group_com = {
+gTags.kom_stol_abs,
+gTags.kom_tp_pusk,
+gTags.kom_tp_prer,
+gTags.kom_kar_abs,
+gTags.kom_stol_stop,
+gTags.kom_karetka_stop,
+gTags.kom_karetka_sbros,
+gTags.kom_stol_sbros,
+gTags.kom_stol_ust_nulya,
+gTags.kom_stol_otn_pusk_vniz,
+gTags.kom_stol_otn_pusk_vverh,
+gTags.kom_sloj,
+gTags.kom_prer,
+gTags.kom_rezerv,
+gTags.kom_rezerv_1,
+gTags.kom_rezerv_2,
+gTags.kom_obnulit_linejku,
+gTags.kom_pit_tjen3,
+gTags.kom_pit_tjen1,
+gTags.kom_pit_tjen2,
+gTags.kom_stol_poisk_nulya,
+gTags.kom_process,
+gTags.kom_proc_obshh,
+gTags.kom_pereschjot,
+gTags.kom_pit_laz,
+gTags.kom_got_laz,
+gTags.kom_sloj_sbros_schjotchika,
+gTags.kom_pauza,
+gTags.kom_rab_do_pauzy,
+gTags.kom_dozator_avtomat,
+gTags.kom_pit_chil1,
+gTags.kom_pit_chil2,
+gTags.kom_kl_chil1,
+gTags.kom_kl_chil2,
+gTags.kom_pit_rec,
+gTags.kom_pit_mps,
+gTags.kom_kar_lev_sh1_vperjod,
+gTags.kom_kar_lev_sh1_nazad,
+gTags.kom_kar_lev_sh1_abs,
+gTags.kom_kar_lev_sh1_stop,
+gTags.kom_kar_prav_sh2_vperjod,
+gTags.kom_kar_prav_sh2_nazad,
+gTags.kom_kar_prav_sh2_abs,
+gTags.kom_kar_prav_sh2_stop,
+gTags.kom_bar_prav_sh3_vperjod,
+gTags.kom_bar_prav_sh3_nazad,
+gTags.kom_bar_prav_sh3_abs,
+gTags.kom_bar_prav_sh3_stop,
+gTags.kom_bar_lev_sh4_vperjod,
+gTags.kom_bar_lev_sh4_nazad,
+gTags.kom_bar_lev_sh4_abs,
+gTags.kom_bar_lev_sh4_stop,
+gTags.kom_dozator_lev_vper,
+gTags.kom_dozator_prav_vper,
+gTags.kom_tolkatel_lev_vperjod,
+gTags.kom_tolkatel_lev_nazad,
+gTags.kom_tolkatel_prav_vperjod,
+gTags.kom_tolkatel_prav_nazad,
+gTags.kom_dozator_lev_nazad,
+gTags.kom_dozator_prav_nazad,
+gTags.kom_kje9,
+gTags.kom_kje10,
+gTags.kom_kv1,
+gTags.kom_kv2,
+gTags.kom_kl_bar_lev,
+gTags.kom_kl_bar_prav,
+gTags.kom_nas_otk_gaza,
+};
+
 //-----------------------------------------------------------------------------
 //tags/usta.xml
 //-----------------------------------------------------------------------------
@@ -3822,6 +3964,42 @@ ust_sloj_kar_prav_nachalo,
 ust_sloj_kar_prav_konec,
 };
 
+public gTags[] group_usta = {
+gTags.ust_stol_poziciya,
+gTags.ust_stol_skor_vverh,
+gTags.ust_stol_otn_rasst,
+gTags.ust_sloj_kar_lev_nachalo,
+gTags.ust_sloj_kar_lev_konec,
+gTags.ust_tolshh_sloya,
+gTags.ust_stol_otn_rasst_avto,
+gTags.ust_tjen1_moshhn,
+gTags.ust_tjen2_moshhn,
+gTags.ust_tjen3_moshhn,
+gTags.ust_kol_slojov_dlya_doz_prav,
+gTags.ust_kol_slojov_dlya_doz_lev,
+gTags.ust_tjen1_temp,
+gTags.ust_tjen2_temp,
+gTags.ust_tjen3_temp,
+gTags.ust_kar_lev_skor,
+gTags.ust_kar_lev_rast,
+gTags.ust_kar_lev_poz,
+gTags.ust_kar_prav_skor,
+gTags.ust_kar_prav_rast,
+gTags.ust_kar_prav_poz,
+gTags.ust_bar_prav_skor,
+gTags.ust_bar_lev_skor,
+gTags.ust_doz_lev_vremya,
+gTags.ust_doz_prav_vremya,
+gTags.ust_tolk_lev_rasst,
+gTags.ust_tolk_prav_rasst,
+gTags.ust_doz_prav_skor,
+gTags.ust_doz_lev_skor,
+gTags.ust_tolk_lev_skor,
+gTags.ust_tolk_prav_skor,
+gTags.ust_sloj_kar_prav_nachalo,
+gTags.ust_sloj_kar_prav_konec,
+};
+
 //-----------------------------------------------------------------------------
 //tags/dm.xml
 //-----------------------------------------------------------------------------
@@ -4449,6 +4627,36 @@ prot5,
 prot6,
 };
 
+public gTags[] group_dm = {
+gTags.stol_rab,
+gTags.tp_rab,
+gTags.tp_zav,
+gTags.stol_naverhu,
+gTags.stol_vnizu,
+gTags.stol_dom_zav,
+gTags.sloj_rab,
+gTags.kar_dom_got,
+gTags.kar_na_poz,
+gTags.process,
+gTags.stol_na_poz,
+gTags.stol_got,
+gTags.proc_obshh_rab,
+gTags.stol_otn_got,
+gTags.prozhig_rab,
+gTags.sloi_nepr_rab,
+gTags.stol_otn_rab,
+gTags.rashod1_1,
+gTags.rashod1_2,
+gTags.rashod2_1,
+gTags.rashod2_2,
+gTags.prot1,
+gTags.prot2,
+gTags.prot3,
+gTags.prot4,
+gTags.prot5,
+gTags.prot6,
+};
+
 public enum gTags{
 termopara1,
 termopara2,
@@ -4642,1175 +4850,770 @@ prot3,
 prot4,
 prot5,
 prot6,
+lastGTag,
 };
 
-    public string get_by_name(string str) {
-    switch (str){case "termopara1":
-   return gets_termopara1();
-case "termopara2":
-   return gets_termopara2();
-case "termopara3":
-   return gets_termopara3();
-case "davl_och_gaza1":
-   return gets_davl_och_gaza1();
-case "davl_och_gaza2":
-   return gets_davl_och_gaza2();
-case "davl_och_gaza3":
-   return gets_davl_och_gaza3();
-case "linejka":
-   return gets_linejka();
-case "tolshhina":
-   return gets_tolshhina();
-case "tjen1_tek_moshhn":
-   return gets_tjen1_tek_moshhn();
-case "kar_tek_poz":
-   return gets_kar_tek_poz();
-case "stol_tek_poz":
-   return gets_stol_tek_poz();
-case "schjot_slojov":
-   return gets_schjot_slojov();
-case "ost_slojov":
-   return gets_ost_slojov();
-case "ost_slojov_dlya_dozatora":
-   return gets_ost_slojov_dlya_dozatora();
-case "inkrement":
-   return gets_inkrement();
-case "tjen2_tek_moshhn":
-   return gets_tjen2_tek_moshhn();
-case "tjen3_tek_moshhn":
-   return gets_tjen3_tek_moshhn();
-case "temp1":
-   return gets_temp1();
-case "temp2":
-   return gets_temp2();
-case "temp3":
-   return gets_temp3();
-case "temp4":
-   return gets_temp4();
-case "temp5":
-   return gets_temp5();
-case "temp6":
-   return gets_temp6();
-case "datch_kisl1":
-   return gets_datch_kisl1();
-case "datch_kisl2":
-   return gets_datch_kisl2();
-case "vyhd_stol_abs":
-   return gets_vyhd_stol_abs();
-case "vyhd_tjen1":
-   return gets_vyhd_tjen1();
-case "vyhd_tjen2":
-   return gets_vyhd_tjen2();
-case "vyhd_tjen3":
-   return gets_vyhd_tjen3();
-case "vyhd_stol_otn_vniz":
-   return gets_vyhd_stol_otn_vniz();
-case "vyhd_stol_otn_vverh":
-   return gets_vyhd_stol_otn_vverh();
-case "vyhd_stol_poisk_nulya":
-   return gets_vyhd_stol_poisk_nulya();
-case "vyhd_pit_lazerov":
-   return gets_vyhd_pit_lazerov();
-case "vyhd_pit_chil1":
-   return gets_vyhd_pit_chil1();
-case "vyhd_pit_chil2":
-   return gets_vyhd_pit_chil2();
-case "vyhd_kl_chil1":
-   return gets_vyhd_kl_chil1();
-case "vyhd_kl_chil2":
-   return gets_vyhd_kl_chil2();
-case "vyhd_pit_mps":
-   return gets_vyhd_pit_mps();
-case "vyhd_pit_rec":
-   return gets_vyhd_pit_rec();
-case "vyhd_kv1":
-   return gets_vyhd_kv1();
-case "vyhd_kv2":
-   return gets_vyhd_kv2();
-case "vyhd_kje9":
-   return gets_vyhd_kje9();
-case "vyhd_kje10":
-   return gets_vyhd_kje10();
-case "vyhd_kar_prav_abs":
-   return gets_vyhd_kar_prav_abs();
-case "vyhd_kar_lev_abs":
-   return gets_vyhd_kar_lev_abs();
-case "vyhd_doz_prav_vper":
-   return gets_vyhd_doz_prav_vper();
-case "vyhd_doz_lev_vper":
-   return gets_vyhd_doz_lev_vper();
-case "vyhd_doz_prav_nazad":
-   return gets_vyhd_doz_prav_nazad();
-case "vyhd_doz_lev_nazad":
-   return gets_vyhd_doz_lev_nazad();
-case "vyhd_pereschjot":
-   return gets_vyhd_pereschjot();
-case "vyhd_bar_lev_vper":
-   return gets_vyhd_bar_lev_vper();
-case "vyhd_bar_prav_vper":
-   return gets_vyhd_bar_prav_vper();
-case "vyhd_bar_lev_nazad":
-   return gets_vyhd_bar_lev_nazad();
-case "vyhd_bar_prav_nazad":
-   return gets_vyhd_bar_prav_nazad();
-case "vyhd_tolk_lev_vper":
-   return gets_vyhd_tolk_lev_vper();
-case "vyhd_tolk_prav_vper":
-   return gets_vyhd_tolk_prav_vper();
-case "vyhd_tolk_lev_nazad":
-   return gets_vyhd_tolk_lev_nazad();
-case "vyhd_tolk_prav_nazad":
-   return gets_vyhd_tolk_prav_nazad();
-case "vyhd_kar_prav_otn_vper":
-   return gets_vyhd_kar_prav_otn_vper();
-case "vyhd_kar_prav_otn_naz":
-   return gets_vyhd_kar_prav_otn_naz();
-case "vyhd_kar_lev_otn_vper":
-   return gets_vyhd_kar_lev_otn_vper();
-case "vyhd_kar_lev_otn_naz":
-   return gets_vyhd_kar_lev_otn_naz();
-case "vyhd_kl_bar_lev":
-   return gets_vyhd_kl_bar_lev();
-case "vyhd_kl_bar_prav":
-   return gets_vyhd_kl_bar_prav();
-case "vyhd_nas_otk_gaza":
-   return gets_vyhd_nas_otk_gaza();
-case "kom_stol_abs":
-   return gets_kom_stol_abs();
-case "kom_tp_pusk":
-   return gets_kom_tp_pusk();
-case "kom_tp_prer":
-   return gets_kom_tp_prer();
-case "kom_kar_abs":
-   return gets_kom_kar_abs();
-case "kom_stol_stop":
-   return gets_kom_stol_stop();
-case "kom_karetka_stop":
-   return gets_kom_karetka_stop();
-case "kom_karetka_sbros":
-   return gets_kom_karetka_sbros();
-case "kom_stol_sbros":
-   return gets_kom_stol_sbros();
-case "kom_stol_ust_nulya":
-   return gets_kom_stol_ust_nulya();
-case "kom_stol_otn_pusk_vniz":
-   return gets_kom_stol_otn_pusk_vniz();
-case "kom_stol_otn_pusk_vverh":
-   return gets_kom_stol_otn_pusk_vverh();
-case "kom_sloj":
-   return gets_kom_sloj();
-case "kom_prer":
-   return gets_kom_prer();
-case "kom_rezerv":
-   return gets_kom_rezerv();
-case "kom_rezerv_1":
-   return gets_kom_rezerv_1();
-case "kom_rezerv_2":
-   return gets_kom_rezerv_2();
-case "kom_obnulit_linejku":
-   return gets_kom_obnulit_linejku();
-case "kom_pit_tjen3":
-   return gets_kom_pit_tjen3();
-case "kom_pit_tjen1":
-   return gets_kom_pit_tjen1();
-case "kom_pit_tjen2":
-   return gets_kom_pit_tjen2();
-case "kom_stol_poisk_nulya":
-   return gets_kom_stol_poisk_nulya();
-case "kom_process":
-   return gets_kom_process();
-case "kom_proc_obshh":
-   return gets_kom_proc_obshh();
-case "kom_pereschjot":
-   return gets_kom_pereschjot();
-case "kom_pit_laz":
-   return gets_kom_pit_laz();
-case "kom_got_laz":
-   return gets_kom_got_laz();
-case "kom_sloj_sbros_schjotchika":
-   return gets_kom_sloj_sbros_schjotchika();
-case "kom_pauza":
-   return gets_kom_pauza();
-case "kom_rab_do_pauzy":
-   return gets_kom_rab_do_pauzy();
-case "kom_dozator_avtomat":
-   return gets_kom_dozator_avtomat();
-case "kom_pit_chil1":
-   return gets_kom_pit_chil1();
-case "kom_pit_chil2":
-   return gets_kom_pit_chil2();
-case "kom_kl_chil1":
-   return gets_kom_kl_chil1();
-case "kom_kl_chil2":
-   return gets_kom_kl_chil2();
-case "kom_pit_rec":
-   return gets_kom_pit_rec();
-case "kom_pit_mps":
-   return gets_kom_pit_mps();
-case "kom_kar_lev_sh1_vperjod":
-   return gets_kom_kar_lev_sh1_vperjod();
-case "kom_kar_lev_sh1_nazad":
-   return gets_kom_kar_lev_sh1_nazad();
-case "kom_kar_lev_sh1_abs":
-   return gets_kom_kar_lev_sh1_abs();
-case "kom_kar_lev_sh1_stop":
-   return gets_kom_kar_lev_sh1_stop();
-case "kom_kar_prav_sh2_vperjod":
-   return gets_kom_kar_prav_sh2_vperjod();
-case "kom_kar_prav_sh2_nazad":
-   return gets_kom_kar_prav_sh2_nazad();
-case "kom_kar_prav_sh2_abs":
-   return gets_kom_kar_prav_sh2_abs();
-case "kom_kar_prav_sh2_stop":
-   return gets_kom_kar_prav_sh2_stop();
-case "kom_bar_prav_sh3_vperjod":
-   return gets_kom_bar_prav_sh3_vperjod();
-case "kom_bar_prav_sh3_nazad":
-   return gets_kom_bar_prav_sh3_nazad();
-case "kom_bar_prav_sh3_abs":
-   return gets_kom_bar_prav_sh3_abs();
-case "kom_bar_prav_sh3_stop":
-   return gets_kom_bar_prav_sh3_stop();
-case "kom_bar_lev_sh4_vperjod":
-   return gets_kom_bar_lev_sh4_vperjod();
-case "kom_bar_lev_sh4_nazad":
-   return gets_kom_bar_lev_sh4_nazad();
-case "kom_bar_lev_sh4_abs":
-   return gets_kom_bar_lev_sh4_abs();
-case "kom_bar_lev_sh4_stop":
-   return gets_kom_bar_lev_sh4_stop();
-case "kom_dozator_lev_vper":
-   return gets_kom_dozator_lev_vper();
-case "kom_dozator_prav_vper":
-   return gets_kom_dozator_prav_vper();
-case "kom_tolkatel_lev_vperjod":
-   return gets_kom_tolkatel_lev_vperjod();
-case "kom_tolkatel_lev_nazad":
-   return gets_kom_tolkatel_lev_nazad();
-case "kom_tolkatel_prav_vperjod":
-   return gets_kom_tolkatel_prav_vperjod();
-case "kom_tolkatel_prav_nazad":
-   return gets_kom_tolkatel_prav_nazad();
-case "kom_dozator_lev_nazad":
-   return gets_kom_dozator_lev_nazad();
-case "kom_dozator_prav_nazad":
-   return gets_kom_dozator_prav_nazad();
-case "kom_kje9":
-   return gets_kom_kje9();
-case "kom_kje10":
-   return gets_kom_kje10();
-case "kom_kv1":
-   return gets_kom_kv1();
-case "kom_kv2":
-   return gets_kom_kv2();
-case "kom_kl_bar_lev":
-   return gets_kom_kl_bar_lev();
-case "kom_kl_bar_prav":
-   return gets_kom_kl_bar_prav();
-case "kom_nas_otk_gaza":
-   return gets_kom_nas_otk_gaza();
-case "ust_stol_poziciya":
-   return gets_ust_stol_poziciya();
-case "ust_stol_skor_vverh":
-   return gets_ust_stol_skor_vverh();
-case "ust_stol_otn_rasst":
-   return gets_ust_stol_otn_rasst();
-case "ust_sloj_kar_lev_nachalo":
-   return gets_ust_sloj_kar_lev_nachalo();
-case "ust_sloj_kar_lev_konec":
-   return gets_ust_sloj_kar_lev_konec();
-case "ust_tolshh_sloya":
-   return gets_ust_tolshh_sloya();
-case "ust_stol_otn_rasst_avto":
-   return gets_ust_stol_otn_rasst_avto();
-case "ust_tjen1_moshhn":
-   return gets_ust_tjen1_moshhn();
-case "ust_tjen2_moshhn":
-   return gets_ust_tjen2_moshhn();
-case "ust_tjen3_moshhn":
-   return gets_ust_tjen3_moshhn();
-case "ust_kol_slojov_dlya_doz_prav":
-   return gets_ust_kol_slojov_dlya_doz_prav();
-case "ust_kol_slojov_dlya_doz_lev":
-   return gets_ust_kol_slojov_dlya_doz_lev();
-case "ust_tjen1_temp":
-   return gets_ust_tjen1_temp();
-case "ust_tjen2_temp":
-   return gets_ust_tjen2_temp();
-case "ust_tjen3_temp":
-   return gets_ust_tjen3_temp();
-case "ust_kar_lev_skor":
-   return gets_ust_kar_lev_skor();
-case "ust_kar_lev_rast":
-   return gets_ust_kar_lev_rast();
-case "ust_kar_lev_poz":
-   return gets_ust_kar_lev_poz();
-case "ust_kar_prav_skor":
-   return gets_ust_kar_prav_skor();
-case "ust_kar_prav_rast":
-   return gets_ust_kar_prav_rast();
-case "ust_kar_prav_poz":
-   return gets_ust_kar_prav_poz();
-case "ust_bar_prav_skor":
-   return gets_ust_bar_prav_skor();
-case "ust_bar_lev_skor":
-   return gets_ust_bar_lev_skor();
-case "ust_doz_lev_vremya":
-   return gets_ust_doz_lev_vremya();
-case "ust_doz_prav_vremya":
-   return gets_ust_doz_prav_vremya();
-case "ust_tolk_lev_rasst":
-   return gets_ust_tolk_lev_rasst();
-case "ust_tolk_prav_rasst":
-   return gets_ust_tolk_prav_rasst();
-case "ust_doz_prav_skor":
-   return gets_ust_doz_prav_skor();
-case "ust_doz_lev_skor":
-   return gets_ust_doz_lev_skor();
-case "ust_tolk_lev_skor":
-   return gets_ust_tolk_lev_skor();
-case "ust_tolk_prav_skor":
-   return gets_ust_tolk_prav_skor();
-case "ust_sloj_kar_prav_nachalo":
-   return gets_ust_sloj_kar_prav_nachalo();
-case "ust_sloj_kar_prav_konec":
-   return gets_ust_sloj_kar_prav_konec();
-case "stol_rab":
-   return gets_stol_rab();
-case "tp_rab":
-   return gets_tp_rab();
-case "tp_zav":
-   return gets_tp_zav();
-case "stol_naverhu":
-   return gets_stol_naverhu();
-case "stol_vnizu":
-   return gets_stol_vnizu();
-case "stol_dom_zav":
-   return gets_stol_dom_zav();
-case "sloj_rab":
-   return gets_sloj_rab();
-case "kar_dom_got":
-   return gets_kar_dom_got();
-case "kar_na_poz":
-   return gets_kar_na_poz();
-case "process":
-   return gets_process();
-case "stol_na_poz":
-   return gets_stol_na_poz();
-case "stol_got":
-   return gets_stol_got();
-case "proc_obshh_rab":
-   return gets_proc_obshh_rab();
-case "stol_otn_got":
-   return gets_stol_otn_got();
-case "prozhig_rab":
-   return gets_prozhig_rab();
-case "sloi_nepr_rab":
-   return gets_sloi_nepr_rab();
-case "stol_otn_rab":
-   return gets_stol_otn_rab();
-case "rashod1_1":
-   return gets_rashod1_1();
-case "rashod1_2":
-   return gets_rashod1_2();
-case "rashod2_1":
-   return gets_rashod2_1();
-case "rashod2_2":
-   return gets_rashod2_2();
-case "prot1":
-   return gets_prot1();
-case "prot2":
-   return gets_prot2();
-case "prot3":
-   return gets_prot3();
-case "prot4":
-   return gets_prot4();
-case "prot5":
-   return gets_prot5();
-case "prot6":
-   return gets_prot6();
-default: 
-   return "NAN";
-} 
- }
-    public bool set_by_name(string str, string val) {
-    switch (str){case "termopara1":
-   return sets_termopara1(val);
-case "termopara2":
-   return sets_termopara2(val);
-case "termopara3":
-   return sets_termopara3(val);
-case "davl_och_gaza1":
-   return sets_davl_och_gaza1(val);
-case "davl_och_gaza2":
-   return sets_davl_och_gaza2(val);
-case "davl_och_gaza3":
-   return sets_davl_och_gaza3(val);
-case "linejka":
-   return sets_linejka(val);
-case "tolshhina":
-   return sets_tolshhina(val);
-case "tjen1_tek_moshhn":
-   return sets_tjen1_tek_moshhn(val);
-case "kar_tek_poz":
-   return sets_kar_tek_poz(val);
-case "stol_tek_poz":
-   return sets_stol_tek_poz(val);
-case "schjot_slojov":
-   return sets_schjot_slojov(val);
-case "ost_slojov":
-   return sets_ost_slojov(val);
-case "ost_slojov_dlya_dozatora":
-   return sets_ost_slojov_dlya_dozatora(val);
-case "inkrement":
-   return sets_inkrement(val);
-case "tjen2_tek_moshhn":
-   return sets_tjen2_tek_moshhn(val);
-case "tjen3_tek_moshhn":
-   return sets_tjen3_tek_moshhn(val);
-case "temp1":
-   return sets_temp1(val);
-case "temp2":
-   return sets_temp2(val);
-case "temp3":
-   return sets_temp3(val);
-case "temp4":
-   return sets_temp4(val);
-case "temp5":
-   return sets_temp5(val);
-case "temp6":
-   return sets_temp6(val);
-case "datch_kisl1":
-   return sets_datch_kisl1(val);
-case "datch_kisl2":
-   return sets_datch_kisl2(val);
-case "vyhd_stol_abs":
-   return sets_vyhd_stol_abs(val);
-case "vyhd_tjen1":
-   return sets_vyhd_tjen1(val);
-case "vyhd_tjen2":
-   return sets_vyhd_tjen2(val);
-case "vyhd_tjen3":
-   return sets_vyhd_tjen3(val);
-case "vyhd_stol_otn_vniz":
-   return sets_vyhd_stol_otn_vniz(val);
-case "vyhd_stol_otn_vverh":
-   return sets_vyhd_stol_otn_vverh(val);
-case "vyhd_stol_poisk_nulya":
-   return sets_vyhd_stol_poisk_nulya(val);
-case "vyhd_pit_lazerov":
-   return sets_vyhd_pit_lazerov(val);
-case "vyhd_pit_chil1":
-   return sets_vyhd_pit_chil1(val);
-case "vyhd_pit_chil2":
-   return sets_vyhd_pit_chil2(val);
-case "vyhd_kl_chil1":
-   return sets_vyhd_kl_chil1(val);
-case "vyhd_kl_chil2":
-   return sets_vyhd_kl_chil2(val);
-case "vyhd_pit_mps":
-   return sets_vyhd_pit_mps(val);
-case "vyhd_pit_rec":
-   return sets_vyhd_pit_rec(val);
-case "vyhd_kv1":
-   return sets_vyhd_kv1(val);
-case "vyhd_kv2":
-   return sets_vyhd_kv2(val);
-case "vyhd_kje9":
-   return sets_vyhd_kje9(val);
-case "vyhd_kje10":
-   return sets_vyhd_kje10(val);
-case "vyhd_kar_prav_abs":
-   return sets_vyhd_kar_prav_abs(val);
-case "vyhd_kar_lev_abs":
-   return sets_vyhd_kar_lev_abs(val);
-case "vyhd_doz_prav_vper":
-   return sets_vyhd_doz_prav_vper(val);
-case "vyhd_doz_lev_vper":
-   return sets_vyhd_doz_lev_vper(val);
-case "vyhd_doz_prav_nazad":
-   return sets_vyhd_doz_prav_nazad(val);
-case "vyhd_doz_lev_nazad":
-   return sets_vyhd_doz_lev_nazad(val);
-case "vyhd_pereschjot":
-   return sets_vyhd_pereschjot(val);
-case "vyhd_bar_lev_vper":
-   return sets_vyhd_bar_lev_vper(val);
-case "vyhd_bar_prav_vper":
-   return sets_vyhd_bar_prav_vper(val);
-case "vyhd_bar_lev_nazad":
-   return sets_vyhd_bar_lev_nazad(val);
-case "vyhd_bar_prav_nazad":
-   return sets_vyhd_bar_prav_nazad(val);
-case "vyhd_tolk_lev_vper":
-   return sets_vyhd_tolk_lev_vper(val);
-case "vyhd_tolk_prav_vper":
-   return sets_vyhd_tolk_prav_vper(val);
-case "vyhd_tolk_lev_nazad":
-   return sets_vyhd_tolk_lev_nazad(val);
-case "vyhd_tolk_prav_nazad":
-   return sets_vyhd_tolk_prav_nazad(val);
-case "vyhd_kar_prav_otn_vper":
-   return sets_vyhd_kar_prav_otn_vper(val);
-case "vyhd_kar_prav_otn_naz":
-   return sets_vyhd_kar_prav_otn_naz(val);
-case "vyhd_kar_lev_otn_vper":
-   return sets_vyhd_kar_lev_otn_vper(val);
-case "vyhd_kar_lev_otn_naz":
-   return sets_vyhd_kar_lev_otn_naz(val);
-case "vyhd_kl_bar_lev":
-   return sets_vyhd_kl_bar_lev(val);
-case "vyhd_kl_bar_prav":
-   return sets_vyhd_kl_bar_prav(val);
-case "vyhd_nas_otk_gaza":
-   return sets_vyhd_nas_otk_gaza(val);
-case "kom_stol_abs":
-   return sets_kom_stol_abs(val);
-case "kom_tp_pusk":
-   return sets_kom_tp_pusk(val);
-case "kom_tp_prer":
-   return sets_kom_tp_prer(val);
-case "kom_kar_abs":
-   return sets_kom_kar_abs(val);
-case "kom_stol_stop":
-   return sets_kom_stol_stop(val);
-case "kom_karetka_stop":
-   return sets_kom_karetka_stop(val);
-case "kom_karetka_sbros":
-   return sets_kom_karetka_sbros(val);
-case "kom_stol_sbros":
-   return sets_kom_stol_sbros(val);
-case "kom_stol_ust_nulya":
-   return sets_kom_stol_ust_nulya(val);
-case "kom_stol_otn_pusk_vniz":
-   return sets_kom_stol_otn_pusk_vniz(val);
-case "kom_stol_otn_pusk_vverh":
-   return sets_kom_stol_otn_pusk_vverh(val);
-case "kom_sloj":
-   return sets_kom_sloj(val);
-case "kom_prer":
-   return sets_kom_prer(val);
-case "kom_rezerv":
-   return sets_kom_rezerv(val);
-case "kom_rezerv_1":
-   return sets_kom_rezerv_1(val);
-case "kom_rezerv_2":
-   return sets_kom_rezerv_2(val);
-case "kom_obnulit_linejku":
-   return sets_kom_obnulit_linejku(val);
-case "kom_pit_tjen3":
-   return sets_kom_pit_tjen3(val);
-case "kom_pit_tjen1":
-   return sets_kom_pit_tjen1(val);
-case "kom_pit_tjen2":
-   return sets_kom_pit_tjen2(val);
-case "kom_stol_poisk_nulya":
-   return sets_kom_stol_poisk_nulya(val);
-case "kom_process":
-   return sets_kom_process(val);
-case "kom_proc_obshh":
-   return sets_kom_proc_obshh(val);
-case "kom_pereschjot":
-   return sets_kom_pereschjot(val);
-case "kom_pit_laz":
-   return sets_kom_pit_laz(val);
-case "kom_got_laz":
-   return sets_kom_got_laz(val);
-case "kom_sloj_sbros_schjotchika":
-   return sets_kom_sloj_sbros_schjotchika(val);
-case "kom_pauza":
-   return sets_kom_pauza(val);
-case "kom_rab_do_pauzy":
-   return sets_kom_rab_do_pauzy(val);
-case "kom_dozator_avtomat":
-   return sets_kom_dozator_avtomat(val);
-case "kom_pit_chil1":
-   return sets_kom_pit_chil1(val);
-case "kom_pit_chil2":
-   return sets_kom_pit_chil2(val);
-case "kom_kl_chil1":
-   return sets_kom_kl_chil1(val);
-case "kom_kl_chil2":
-   return sets_kom_kl_chil2(val);
-case "kom_pit_rec":
-   return sets_kom_pit_rec(val);
-case "kom_pit_mps":
-   return sets_kom_pit_mps(val);
-case "kom_kar_lev_sh1_vperjod":
-   return sets_kom_kar_lev_sh1_vperjod(val);
-case "kom_kar_lev_sh1_nazad":
-   return sets_kom_kar_lev_sh1_nazad(val);
-case "kom_kar_lev_sh1_abs":
-   return sets_kom_kar_lev_sh1_abs(val);
-case "kom_kar_lev_sh1_stop":
-   return sets_kom_kar_lev_sh1_stop(val);
-case "kom_kar_prav_sh2_vperjod":
-   return sets_kom_kar_prav_sh2_vperjod(val);
-case "kom_kar_prav_sh2_nazad":
-   return sets_kom_kar_prav_sh2_nazad(val);
-case "kom_kar_prav_sh2_abs":
-   return sets_kom_kar_prav_sh2_abs(val);
-case "kom_kar_prav_sh2_stop":
-   return sets_kom_kar_prav_sh2_stop(val);
-case "kom_bar_prav_sh3_vperjod":
-   return sets_kom_bar_prav_sh3_vperjod(val);
-case "kom_bar_prav_sh3_nazad":
-   return sets_kom_bar_prav_sh3_nazad(val);
-case "kom_bar_prav_sh3_abs":
-   return sets_kom_bar_prav_sh3_abs(val);
-case "kom_bar_prav_sh3_stop":
-   return sets_kom_bar_prav_sh3_stop(val);
-case "kom_bar_lev_sh4_vperjod":
-   return sets_kom_bar_lev_sh4_vperjod(val);
-case "kom_bar_lev_sh4_nazad":
-   return sets_kom_bar_lev_sh4_nazad(val);
-case "kom_bar_lev_sh4_abs":
-   return sets_kom_bar_lev_sh4_abs(val);
-case "kom_bar_lev_sh4_stop":
-   return sets_kom_bar_lev_sh4_stop(val);
-case "kom_dozator_lev_vper":
-   return sets_kom_dozator_lev_vper(val);
-case "kom_dozator_prav_vper":
-   return sets_kom_dozator_prav_vper(val);
-case "kom_tolkatel_lev_vperjod":
-   return sets_kom_tolkatel_lev_vperjod(val);
-case "kom_tolkatel_lev_nazad":
-   return sets_kom_tolkatel_lev_nazad(val);
-case "kom_tolkatel_prav_vperjod":
-   return sets_kom_tolkatel_prav_vperjod(val);
-case "kom_tolkatel_prav_nazad":
-   return sets_kom_tolkatel_prav_nazad(val);
-case "kom_dozator_lev_nazad":
-   return sets_kom_dozator_lev_nazad(val);
-case "kom_dozator_prav_nazad":
-   return sets_kom_dozator_prav_nazad(val);
-case "kom_kje9":
-   return sets_kom_kje9(val);
-case "kom_kje10":
-   return sets_kom_kje10(val);
-case "kom_kv1":
-   return sets_kom_kv1(val);
-case "kom_kv2":
-   return sets_kom_kv2(val);
-case "kom_kl_bar_lev":
-   return sets_kom_kl_bar_lev(val);
-case "kom_kl_bar_prav":
-   return sets_kom_kl_bar_prav(val);
-case "kom_nas_otk_gaza":
-   return sets_kom_nas_otk_gaza(val);
-case "ust_stol_poziciya":
-   return sets_ust_stol_poziciya(val);
-case "ust_stol_skor_vverh":
-   return sets_ust_stol_skor_vverh(val);
-case "ust_stol_otn_rasst":
-   return sets_ust_stol_otn_rasst(val);
-case "ust_sloj_kar_lev_nachalo":
-   return sets_ust_sloj_kar_lev_nachalo(val);
-case "ust_sloj_kar_lev_konec":
-   return sets_ust_sloj_kar_lev_konec(val);
-case "ust_tolshh_sloya":
-   return sets_ust_tolshh_sloya(val);
-case "ust_stol_otn_rasst_avto":
-   return sets_ust_stol_otn_rasst_avto(val);
-case "ust_tjen1_moshhn":
-   return sets_ust_tjen1_moshhn(val);
-case "ust_tjen2_moshhn":
-   return sets_ust_tjen2_moshhn(val);
-case "ust_tjen3_moshhn":
-   return sets_ust_tjen3_moshhn(val);
-case "ust_kol_slojov_dlya_doz_prav":
-   return sets_ust_kol_slojov_dlya_doz_prav(val);
-case "ust_kol_slojov_dlya_doz_lev":
-   return sets_ust_kol_slojov_dlya_doz_lev(val);
-case "ust_tjen1_temp":
-   return sets_ust_tjen1_temp(val);
-case "ust_tjen2_temp":
-   return sets_ust_tjen2_temp(val);
-case "ust_tjen3_temp":
-   return sets_ust_tjen3_temp(val);
-case "ust_kar_lev_skor":
-   return sets_ust_kar_lev_skor(val);
-case "ust_kar_lev_rast":
-   return sets_ust_kar_lev_rast(val);
-case "ust_kar_lev_poz":
-   return sets_ust_kar_lev_poz(val);
-case "ust_kar_prav_skor":
-   return sets_ust_kar_prav_skor(val);
-case "ust_kar_prav_rast":
-   return sets_ust_kar_prav_rast(val);
-case "ust_kar_prav_poz":
-   return sets_ust_kar_prav_poz(val);
-case "ust_bar_prav_skor":
-   return sets_ust_bar_prav_skor(val);
-case "ust_bar_lev_skor":
-   return sets_ust_bar_lev_skor(val);
-case "ust_doz_lev_vremya":
-   return sets_ust_doz_lev_vremya(val);
-case "ust_doz_prav_vremya":
-   return sets_ust_doz_prav_vremya(val);
-case "ust_tolk_lev_rasst":
-   return sets_ust_tolk_lev_rasst(val);
-case "ust_tolk_prav_rasst":
-   return sets_ust_tolk_prav_rasst(val);
-case "ust_doz_prav_skor":
-   return sets_ust_doz_prav_skor(val);
-case "ust_doz_lev_skor":
-   return sets_ust_doz_lev_skor(val);
-case "ust_tolk_lev_skor":
-   return sets_ust_tolk_lev_skor(val);
-case "ust_tolk_prav_skor":
-   return sets_ust_tolk_prav_skor(val);
-case "ust_sloj_kar_prav_nachalo":
-   return sets_ust_sloj_kar_prav_nachalo(val);
-case "ust_sloj_kar_prav_konec":
-   return sets_ust_sloj_kar_prav_konec(val);
-case "stol_rab":
-   return sets_stol_rab(val);
-case "tp_rab":
-   return sets_tp_rab(val);
-case "tp_zav":
-   return sets_tp_zav(val);
-case "stol_naverhu":
-   return sets_stol_naverhu(val);
-case "stol_vnizu":
-   return sets_stol_vnizu(val);
-case "stol_dom_zav":
-   return sets_stol_dom_zav(val);
-case "sloj_rab":
-   return sets_sloj_rab(val);
-case "kar_dom_got":
-   return sets_kar_dom_got(val);
-case "kar_na_poz":
-   return sets_kar_na_poz(val);
-case "process":
-   return sets_process(val);
-case "stol_na_poz":
-   return sets_stol_na_poz(val);
-case "stol_got":
-   return sets_stol_got(val);
-case "proc_obshh_rab":
-   return sets_proc_obshh_rab(val);
-case "stol_otn_got":
-   return sets_stol_otn_got(val);
-case "prozhig_rab":
-   return sets_prozhig_rab(val);
-case "sloi_nepr_rab":
-   return sets_sloi_nepr_rab(val);
-case "stol_otn_rab":
-   return sets_stol_otn_rab(val);
-case "rashod1_1":
-   return sets_rashod1_1(val);
-case "rashod1_2":
-   return sets_rashod1_2(val);
-case "rashod2_1":
-   return sets_rashod2_1(val);
-case "rashod2_2":
-   return sets_rashod2_2(val);
-case "prot1":
-   return sets_prot1(val);
-case "prot2":
-   return sets_prot2(val);
-case "prot3":
-   return sets_prot3(val);
-case "prot4":
-   return sets_prot4(val);
-case "prot5":
-   return sets_prot5(val);
-case "prot6":
-   return sets_prot6(val);
-default: 
-   return false;
-} 
- }
-    public string get_debug_by_name(string str) {
-    switch (str){case "termopara1":
-   return debug_name_termopara1();
-case "termopara2":
-   return debug_name_termopara2();
-case "termopara3":
-   return debug_name_termopara3();
-case "davl_och_gaza1":
-   return debug_name_davl_och_gaza1();
-case "davl_och_gaza2":
-   return debug_name_davl_och_gaza2();
-case "davl_och_gaza3":
-   return debug_name_davl_och_gaza3();
-case "linejka":
-   return debug_name_linejka();
-case "tolshhina":
-   return debug_name_tolshhina();
-case "tjen1_tek_moshhn":
-   return debug_name_tjen1_tek_moshhn();
-case "kar_tek_poz":
-   return debug_name_kar_tek_poz();
-case "stol_tek_poz":
-   return debug_name_stol_tek_poz();
-case "schjot_slojov":
-   return debug_name_schjot_slojov();
-case "ost_slojov":
-   return debug_name_ost_slojov();
-case "ost_slojov_dlya_dozatora":
-   return debug_name_ost_slojov_dlya_dozatora();
-case "inkrement":
-   return debug_name_inkrement();
-case "tjen2_tek_moshhn":
-   return debug_name_tjen2_tek_moshhn();
-case "tjen3_tek_moshhn":
-   return debug_name_tjen3_tek_moshhn();
-case "temp1":
-   return debug_name_temp1();
-case "temp2":
-   return debug_name_temp2();
-case "temp3":
-   return debug_name_temp3();
-case "temp4":
-   return debug_name_temp4();
-case "temp5":
-   return debug_name_temp5();
-case "temp6":
-   return debug_name_temp6();
-case "datch_kisl1":
-   return debug_name_datch_kisl1();
-case "datch_kisl2":
-   return debug_name_datch_kisl2();
-case "vyhd_stol_abs":
-   return debug_name_vyhd_stol_abs();
-case "vyhd_tjen1":
-   return debug_name_vyhd_tjen1();
-case "vyhd_tjen2":
-   return debug_name_vyhd_tjen2();
-case "vyhd_tjen3":
-   return debug_name_vyhd_tjen3();
-case "vyhd_stol_otn_vniz":
-   return debug_name_vyhd_stol_otn_vniz();
-case "vyhd_stol_otn_vverh":
-   return debug_name_vyhd_stol_otn_vverh();
-case "vyhd_stol_poisk_nulya":
-   return debug_name_vyhd_stol_poisk_nulya();
-case "vyhd_pit_lazerov":
-   return debug_name_vyhd_pit_lazerov();
-case "vyhd_pit_chil1":
-   return debug_name_vyhd_pit_chil1();
-case "vyhd_pit_chil2":
-   return debug_name_vyhd_pit_chil2();
-case "vyhd_kl_chil1":
-   return debug_name_vyhd_kl_chil1();
-case "vyhd_kl_chil2":
-   return debug_name_vyhd_kl_chil2();
-case "vyhd_pit_mps":
-   return debug_name_vyhd_pit_mps();
-case "vyhd_pit_rec":
-   return debug_name_vyhd_pit_rec();
-case "vyhd_kv1":
-   return debug_name_vyhd_kv1();
-case "vyhd_kv2":
-   return debug_name_vyhd_kv2();
-case "vyhd_kje9":
-   return debug_name_vyhd_kje9();
-case "vyhd_kje10":
-   return debug_name_vyhd_kje10();
-case "vyhd_kar_prav_abs":
-   return debug_name_vyhd_kar_prav_abs();
-case "vyhd_kar_lev_abs":
-   return debug_name_vyhd_kar_lev_abs();
-case "vyhd_doz_prav_vper":
-   return debug_name_vyhd_doz_prav_vper();
-case "vyhd_doz_lev_vper":
-   return debug_name_vyhd_doz_lev_vper();
-case "vyhd_doz_prav_nazad":
-   return debug_name_vyhd_doz_prav_nazad();
-case "vyhd_doz_lev_nazad":
-   return debug_name_vyhd_doz_lev_nazad();
-case "vyhd_pereschjot":
-   return debug_name_vyhd_pereschjot();
-case "vyhd_bar_lev_vper":
-   return debug_name_vyhd_bar_lev_vper();
-case "vyhd_bar_prav_vper":
-   return debug_name_vyhd_bar_prav_vper();
-case "vyhd_bar_lev_nazad":
-   return debug_name_vyhd_bar_lev_nazad();
-case "vyhd_bar_prav_nazad":
-   return debug_name_vyhd_bar_prav_nazad();
-case "vyhd_tolk_lev_vper":
-   return debug_name_vyhd_tolk_lev_vper();
-case "vyhd_tolk_prav_vper":
-   return debug_name_vyhd_tolk_prav_vper();
-case "vyhd_tolk_lev_nazad":
-   return debug_name_vyhd_tolk_lev_nazad();
-case "vyhd_tolk_prav_nazad":
-   return debug_name_vyhd_tolk_prav_nazad();
-case "vyhd_kar_prav_otn_vper":
-   return debug_name_vyhd_kar_prav_otn_vper();
-case "vyhd_kar_prav_otn_naz":
-   return debug_name_vyhd_kar_prav_otn_naz();
-case "vyhd_kar_lev_otn_vper":
-   return debug_name_vyhd_kar_lev_otn_vper();
-case "vyhd_kar_lev_otn_naz":
-   return debug_name_vyhd_kar_lev_otn_naz();
-case "vyhd_kl_bar_lev":
-   return debug_name_vyhd_kl_bar_lev();
-case "vyhd_kl_bar_prav":
-   return debug_name_vyhd_kl_bar_prav();
-case "vyhd_nas_otk_gaza":
-   return debug_name_vyhd_nas_otk_gaza();
-case "kom_stol_abs":
-   return debug_name_kom_stol_abs();
-case "kom_tp_pusk":
-   return debug_name_kom_tp_pusk();
-case "kom_tp_prer":
-   return debug_name_kom_tp_prer();
-case "kom_kar_abs":
-   return debug_name_kom_kar_abs();
-case "kom_stol_stop":
-   return debug_name_kom_stol_stop();
-case "kom_karetka_stop":
-   return debug_name_kom_karetka_stop();
-case "kom_karetka_sbros":
-   return debug_name_kom_karetka_sbros();
-case "kom_stol_sbros":
-   return debug_name_kom_stol_sbros();
-case "kom_stol_ust_nulya":
-   return debug_name_kom_stol_ust_nulya();
-case "kom_stol_otn_pusk_vniz":
-   return debug_name_kom_stol_otn_pusk_vniz();
-case "kom_stol_otn_pusk_vverh":
-   return debug_name_kom_stol_otn_pusk_vverh();
-case "kom_sloj":
-   return debug_name_kom_sloj();
-case "kom_prer":
-   return debug_name_kom_prer();
-case "kom_rezerv":
-   return debug_name_kom_rezerv();
-case "kom_rezerv_1":
-   return debug_name_kom_rezerv_1();
-case "kom_rezerv_2":
-   return debug_name_kom_rezerv_2();
-case "kom_obnulit_linejku":
-   return debug_name_kom_obnulit_linejku();
-case "kom_pit_tjen3":
-   return debug_name_kom_pit_tjen3();
-case "kom_pit_tjen1":
-   return debug_name_kom_pit_tjen1();
-case "kom_pit_tjen2":
-   return debug_name_kom_pit_tjen2();
-case "kom_stol_poisk_nulya":
-   return debug_name_kom_stol_poisk_nulya();
-case "kom_process":
-   return debug_name_kom_process();
-case "kom_proc_obshh":
-   return debug_name_kom_proc_obshh();
-case "kom_pereschjot":
-   return debug_name_kom_pereschjot();
-case "kom_pit_laz":
-   return debug_name_kom_pit_laz();
-case "kom_got_laz":
-   return debug_name_kom_got_laz();
-case "kom_sloj_sbros_schjotchika":
-   return debug_name_kom_sloj_sbros_schjotchika();
-case "kom_pauza":
-   return debug_name_kom_pauza();
-case "kom_rab_do_pauzy":
-   return debug_name_kom_rab_do_pauzy();
-case "kom_dozator_avtomat":
-   return debug_name_kom_dozator_avtomat();
-case "kom_pit_chil1":
-   return debug_name_kom_pit_chil1();
-case "kom_pit_chil2":
-   return debug_name_kom_pit_chil2();
-case "kom_kl_chil1":
-   return debug_name_kom_kl_chil1();
-case "kom_kl_chil2":
-   return debug_name_kom_kl_chil2();
-case "kom_pit_rec":
-   return debug_name_kom_pit_rec();
-case "kom_pit_mps":
-   return debug_name_kom_pit_mps();
-case "kom_kar_lev_sh1_vperjod":
-   return debug_name_kom_kar_lev_sh1_vperjod();
-case "kom_kar_lev_sh1_nazad":
-   return debug_name_kom_kar_lev_sh1_nazad();
-case "kom_kar_lev_sh1_abs":
-   return debug_name_kom_kar_lev_sh1_abs();
-case "kom_kar_lev_sh1_stop":
-   return debug_name_kom_kar_lev_sh1_stop();
-case "kom_kar_prav_sh2_vperjod":
-   return debug_name_kom_kar_prav_sh2_vperjod();
-case "kom_kar_prav_sh2_nazad":
-   return debug_name_kom_kar_prav_sh2_nazad();
-case "kom_kar_prav_sh2_abs":
-   return debug_name_kom_kar_prav_sh2_abs();
-case "kom_kar_prav_sh2_stop":
-   return debug_name_kom_kar_prav_sh2_stop();
-case "kom_bar_prav_sh3_vperjod":
-   return debug_name_kom_bar_prav_sh3_vperjod();
-case "kom_bar_prav_sh3_nazad":
-   return debug_name_kom_bar_prav_sh3_nazad();
-case "kom_bar_prav_sh3_abs":
-   return debug_name_kom_bar_prav_sh3_abs();
-case "kom_bar_prav_sh3_stop":
-   return debug_name_kom_bar_prav_sh3_stop();
-case "kom_bar_lev_sh4_vperjod":
-   return debug_name_kom_bar_lev_sh4_vperjod();
-case "kom_bar_lev_sh4_nazad":
-   return debug_name_kom_bar_lev_sh4_nazad();
-case "kom_bar_lev_sh4_abs":
-   return debug_name_kom_bar_lev_sh4_abs();
-case "kom_bar_lev_sh4_stop":
-   return debug_name_kom_bar_lev_sh4_stop();
-case "kom_dozator_lev_vper":
-   return debug_name_kom_dozator_lev_vper();
-case "kom_dozator_prav_vper":
-   return debug_name_kom_dozator_prav_vper();
-case "kom_tolkatel_lev_vperjod":
-   return debug_name_kom_tolkatel_lev_vperjod();
-case "kom_tolkatel_lev_nazad":
-   return debug_name_kom_tolkatel_lev_nazad();
-case "kom_tolkatel_prav_vperjod":
-   return debug_name_kom_tolkatel_prav_vperjod();
-case "kom_tolkatel_prav_nazad":
-   return debug_name_kom_tolkatel_prav_nazad();
-case "kom_dozator_lev_nazad":
-   return debug_name_kom_dozator_lev_nazad();
-case "kom_dozator_prav_nazad":
-   return debug_name_kom_dozator_prav_nazad();
-case "kom_kje9":
-   return debug_name_kom_kje9();
-case "kom_kje10":
-   return debug_name_kom_kje10();
-case "kom_kv1":
-   return debug_name_kom_kv1();
-case "kom_kv2":
-   return debug_name_kom_kv2();
-case "kom_kl_bar_lev":
-   return debug_name_kom_kl_bar_lev();
-case "kom_kl_bar_prav":
-   return debug_name_kom_kl_bar_prav();
-case "kom_nas_otk_gaza":
-   return debug_name_kom_nas_otk_gaza();
-case "ust_stol_poziciya":
-   return debug_name_ust_stol_poziciya();
-case "ust_stol_skor_vverh":
-   return debug_name_ust_stol_skor_vverh();
-case "ust_stol_otn_rasst":
-   return debug_name_ust_stol_otn_rasst();
-case "ust_sloj_kar_lev_nachalo":
-   return debug_name_ust_sloj_kar_lev_nachalo();
-case "ust_sloj_kar_lev_konec":
-   return debug_name_ust_sloj_kar_lev_konec();
-case "ust_tolshh_sloya":
-   return debug_name_ust_tolshh_sloya();
-case "ust_stol_otn_rasst_avto":
-   return debug_name_ust_stol_otn_rasst_avto();
-case "ust_tjen1_moshhn":
-   return debug_name_ust_tjen1_moshhn();
-case "ust_tjen2_moshhn":
-   return debug_name_ust_tjen2_moshhn();
-case "ust_tjen3_moshhn":
-   return debug_name_ust_tjen3_moshhn();
-case "ust_kol_slojov_dlya_doz_prav":
-   return debug_name_ust_kol_slojov_dlya_doz_prav();
-case "ust_kol_slojov_dlya_doz_lev":
-   return debug_name_ust_kol_slojov_dlya_doz_lev();
-case "ust_tjen1_temp":
-   return debug_name_ust_tjen1_temp();
-case "ust_tjen2_temp":
-   return debug_name_ust_tjen2_temp();
-case "ust_tjen3_temp":
-   return debug_name_ust_tjen3_temp();
-case "ust_kar_lev_skor":
-   return debug_name_ust_kar_lev_skor();
-case "ust_kar_lev_rast":
-   return debug_name_ust_kar_lev_rast();
-case "ust_kar_lev_poz":
-   return debug_name_ust_kar_lev_poz();
-case "ust_kar_prav_skor":
-   return debug_name_ust_kar_prav_skor();
-case "ust_kar_prav_rast":
-   return debug_name_ust_kar_prav_rast();
-case "ust_kar_prav_poz":
-   return debug_name_ust_kar_prav_poz();
-case "ust_bar_prav_skor":
-   return debug_name_ust_bar_prav_skor();
-case "ust_bar_lev_skor":
-   return debug_name_ust_bar_lev_skor();
-case "ust_doz_lev_vremya":
-   return debug_name_ust_doz_lev_vremya();
-case "ust_doz_prav_vremya":
-   return debug_name_ust_doz_prav_vremya();
-case "ust_tolk_lev_rasst":
-   return debug_name_ust_tolk_lev_rasst();
-case "ust_tolk_prav_rasst":
-   return debug_name_ust_tolk_prav_rasst();
-case "ust_doz_prav_skor":
-   return debug_name_ust_doz_prav_skor();
-case "ust_doz_lev_skor":
-   return debug_name_ust_doz_lev_skor();
-case "ust_tolk_lev_skor":
-   return debug_name_ust_tolk_lev_skor();
-case "ust_tolk_prav_skor":
-   return debug_name_ust_tolk_prav_skor();
-case "ust_sloj_kar_prav_nachalo":
-   return debug_name_ust_sloj_kar_prav_nachalo();
-case "ust_sloj_kar_prav_konec":
-   return debug_name_ust_sloj_kar_prav_konec();
-case "stol_rab":
-   return debug_name_stol_rab();
-case "tp_rab":
-   return debug_name_tp_rab();
-case "tp_zav":
-   return debug_name_tp_zav();
-case "stol_naverhu":
-   return debug_name_stol_naverhu();
-case "stol_vnizu":
-   return debug_name_stol_vnizu();
-case "stol_dom_zav":
-   return debug_name_stol_dom_zav();
-case "sloj_rab":
-   return debug_name_sloj_rab();
-case "kar_dom_got":
-   return debug_name_kar_dom_got();
-case "kar_na_poz":
-   return debug_name_kar_na_poz();
-case "process":
-   return debug_name_process();
-case "stol_na_poz":
-   return debug_name_stol_na_poz();
-case "stol_got":
-   return debug_name_stol_got();
-case "proc_obshh_rab":
-   return debug_name_proc_obshh_rab();
-case "stol_otn_got":
-   return debug_name_stol_otn_got();
-case "prozhig_rab":
-   return debug_name_prozhig_rab();
-case "sloi_nepr_rab":
-   return debug_name_sloi_nepr_rab();
-case "stol_otn_rab":
-   return debug_name_stol_otn_rab();
-case "rashod1_1":
-   return debug_name_rashod1_1();
-case "rashod1_2":
-   return debug_name_rashod1_2();
-case "rashod2_1":
-   return debug_name_rashod2_1();
-case "rashod2_2":
-   return debug_name_rashod2_2();
-case "prot1":
-   return debug_name_prot1();
-case "prot2":
-   return debug_name_prot2();
-case "prot3":
-   return debug_name_prot3();
-case "prot4":
-   return debug_name_prot4();
-case "prot5":
-   return debug_name_prot5();
-case "prot6":
-   return debug_name_prot6();
-default: 
-   return "NAN";
-} 
- }
+public string [] debugNames = {
+"термопара1",
+"термопара2",
+"термопара3",
+"давл оч газа1",
+"давл оч газа2",
+"давл оч газа3",
+"линейка",
+"толщина",
+"ТЭН1 тек мощн",
+"кар тек поз",
+"стол тек поз",
+"счёт слоёв",
+"ост слоёв",
+"ост слоёв для дозатора",
+"инкремент",
+"ТЭН2 тек мощн",
+"ТЭН3 тек мощн",
+"темп1",
+"темп2",
+"темп3",
+"темп4",
+"темп5",
+"темп6",
+"датч кисл1",
+"датч кисл2",
+"выхд стол абс",
+"выхд ТЭН1",
+"выхд ТЭН2",
+"выхд ТЭН3",
+"выхд стол отн вниз",
+"выхд стол отн вверх",
+"выхд стол поиск нуля",
+"выхд пит лазеров",
+"выхд пит чил1",
+"выхд пит чил2",
+"выхд кл чил1",
+"выхд кл чил2",
+"выхд пит МПС",
+"выхд пит рец",
+"выхд КВ1",
+"выхд КВ2",
+"выхд КЭ9",
+"выхд КЭ10",
+"выхд кар прав абс",
+"выхд кар лев абс",
+"выхд доз прав впер",
+"выхд доз лев впер",
+"выхд доз прав назад",
+"выхд доз лев назад",
+"выхд пересчёт",
+"выхд бар лев впер",
+"выхд бар прав впер",
+"выхд бар лев назад",
+"выхд бар прав назад",
+"выхд толк лев впер",
+"выхд толк прав впер",
+"выхд толк лев назад",
+"выхд толк прав назад",
+"выхд кар прав отн впер",
+"выхд кар прав отн наз",
+"выхд кар лев отн впер",
+"выхд кар лев отн наз",
+"выхд кл бар лев",
+"выхд кл бар прав",
+"выхд нас отк газа",
+"ком стол абс",
+"ком ТП пуск",
+"ком ТП прер",
+"ком кар абс",
+"ком стол стоп",
+"ком каретка стоп",
+"ком каретка сброс",
+"ком стол сброс",
+"ком стол уст нуля",
+"ком стол отн пуск вниз",
+"ком стол отн пуск вверх",
+"ком слой",
+"ком прер",
+"ком резерв",
+"ком резерв(1)",
+"ком резерв(2)",
+"ком обнулить линейку",
+"ком пит ТЭН3",
+"ком пит ТЭН1",
+"ком пит ТЭН2",
+"ком стол поиск нуля",
+"ком процесс",
+"ком проц общ",
+"ком пересчёт",
+"ком пит лаз",
+"ком гот лаз",
+"ком слой сброс счётчика",
+"ком пауза",
+"ком раб до паузы",
+"ком дозатор автомат",
+"ком пит чил1",
+"ком пит чил2",
+"ком кл чил1",
+"ком кл чил2",
+"ком пит рец",
+"ком пит МПС",
+"ком кар лев ш1 вперёд",
+"ком кар лев ш1 назад",
+"ком кар лев ш1 абс",
+"ком кар лев ш1 стоп",
+"ком кар прав ш2 вперёд",
+"ком кар прав ш2 назад",
+"ком кар прав ш2 абс",
+"ком кар прав ш2 стоп",
+"ком бар прав ш3 вперёд",
+"ком бар прав ш3 назад",
+"ком бар прав ш3 абс",
+"ком бар прав ш3 стоп",
+"ком бар лев ш4 вперёд",
+"ком бар лев ш4 назад",
+"ком бар лев ш4 абс",
+"ком бар лев ш4 стоп",
+"ком дозатор лев впер",
+"ком дозатор прав впер",
+"ком толкатель лев вперёд",
+"ком толкатель лев назад",
+"ком толкатель прав вперёд",
+"ком толкатель прав назад",
+"ком дозатор лев назад",
+"ком дозатор прав назад",
+"ком КЭ9",
+"ком КЭ10",
+"ком КВ1",
+"ком КВ2",
+"ком кл бар лев",
+"ком кл бар прав",
+"ком нас отк газа",
+"уст стол позиция",
+"уст стол скор вверх",
+"уст стол отн расст",
+"уст слой кар лев начало",
+"уст слой кар лев конец",
+"уст толщ слоя",
+"уст стол отн расст авто",
+"уст ТЭН1 мощн",
+"уст ТЭН2 мощн",
+"уст ТЭН3 мощн",
+"уст кол слоёв для доз прав",
+"уст кол слоёв для доз лев",
+"уст ТЭН1 темп",
+"уст ТЭН2 темп",
+"уст ТЭН3 темп",
+"уст кар лев скор",
+"уст кар лев раст",
+"уст кар лев поз",
+"уст кар прав скор",
+"уст кар прав раст",
+"уст кар прав поз",
+"уст бар прав скор",
+"уст бар лев скор",
+"уст доз лев время",
+"уст доз прав время",
+"уст толк лев расст",
+"уст толк прав расст",
+"уст доз прав скор",
+"уст доз лев скор",
+"уст толк лев скор",
+"уст толк прав скор",
+"уст слой кар прав начало",
+"уст слой кар прав конец",
+"стол раб",
+"тп раб",
+"тп зав",
+"стол наверху",
+"стол внизу",
+"стол дом зав",
+"слой раб",
+"кар дом гот",
+"кар на поз",
+"процесс",
+"стол на поз",
+"стол гот",
+"проц общ раб",
+"стол отн гот",
+"прожиг раб",
+"слои непр раб",
+"стол отн раб",
+"Расход1-1",
+"Расход1-2",
+"Расход2-1",
+"Расход2-2",
+"прот1",
+"прот2",
+"прот3",
+"прот4",
+"прот5",
+"прот6",
+};
+
+public string getDebugName(gTags tag) {return debugNames[(int)tag];}
+
+ Func<string>[] sGetters  = new Func<string>[(int)gTags.lastGTag];
+public string getSValue(gTags tag) { return sGetters[(int)tag]();}
+public void init_sGetters () {
+sGetters[(int)gTags.termopara1] =  gets_termopara1;
+sGetters[(int)gTags.termopara2] =  gets_termopara2;
+sGetters[(int)gTags.termopara3] =  gets_termopara3;
+sGetters[(int)gTags.davl_och_gaza1] =  gets_davl_och_gaza1;
+sGetters[(int)gTags.davl_och_gaza2] =  gets_davl_och_gaza2;
+sGetters[(int)gTags.davl_och_gaza3] =  gets_davl_och_gaza3;
+sGetters[(int)gTags.linejka] =  gets_linejka;
+sGetters[(int)gTags.tolshhina] =  gets_tolshhina;
+sGetters[(int)gTags.tjen1_tek_moshhn] =  gets_tjen1_tek_moshhn;
+sGetters[(int)gTags.kar_tek_poz] =  gets_kar_tek_poz;
+sGetters[(int)gTags.stol_tek_poz] =  gets_stol_tek_poz;
+sGetters[(int)gTags.schjot_slojov] =  gets_schjot_slojov;
+sGetters[(int)gTags.ost_slojov] =  gets_ost_slojov;
+sGetters[(int)gTags.ost_slojov_dlya_dozatora] =  gets_ost_slojov_dlya_dozatora;
+sGetters[(int)gTags.inkrement] =  gets_inkrement;
+sGetters[(int)gTags.tjen2_tek_moshhn] =  gets_tjen2_tek_moshhn;
+sGetters[(int)gTags.tjen3_tek_moshhn] =  gets_tjen3_tek_moshhn;
+sGetters[(int)gTags.temp1] =  gets_temp1;
+sGetters[(int)gTags.temp2] =  gets_temp2;
+sGetters[(int)gTags.temp3] =  gets_temp3;
+sGetters[(int)gTags.temp4] =  gets_temp4;
+sGetters[(int)gTags.temp5] =  gets_temp5;
+sGetters[(int)gTags.temp6] =  gets_temp6;
+sGetters[(int)gTags.datch_kisl1] =  gets_datch_kisl1;
+sGetters[(int)gTags.datch_kisl2] =  gets_datch_kisl2;
+sGetters[(int)gTags.vyhd_stol_abs] =  gets_vyhd_stol_abs;
+sGetters[(int)gTags.vyhd_tjen1] =  gets_vyhd_tjen1;
+sGetters[(int)gTags.vyhd_tjen2] =  gets_vyhd_tjen2;
+sGetters[(int)gTags.vyhd_tjen3] =  gets_vyhd_tjen3;
+sGetters[(int)gTags.vyhd_stol_otn_vniz] =  gets_vyhd_stol_otn_vniz;
+sGetters[(int)gTags.vyhd_stol_otn_vverh] =  gets_vyhd_stol_otn_vverh;
+sGetters[(int)gTags.vyhd_stol_poisk_nulya] =  gets_vyhd_stol_poisk_nulya;
+sGetters[(int)gTags.vyhd_pit_lazerov] =  gets_vyhd_pit_lazerov;
+sGetters[(int)gTags.vyhd_pit_chil1] =  gets_vyhd_pit_chil1;
+sGetters[(int)gTags.vyhd_pit_chil2] =  gets_vyhd_pit_chil2;
+sGetters[(int)gTags.vyhd_kl_chil1] =  gets_vyhd_kl_chil1;
+sGetters[(int)gTags.vyhd_kl_chil2] =  gets_vyhd_kl_chil2;
+sGetters[(int)gTags.vyhd_pit_mps] =  gets_vyhd_pit_mps;
+sGetters[(int)gTags.vyhd_pit_rec] =  gets_vyhd_pit_rec;
+sGetters[(int)gTags.vyhd_kv1] =  gets_vyhd_kv1;
+sGetters[(int)gTags.vyhd_kv2] =  gets_vyhd_kv2;
+sGetters[(int)gTags.vyhd_kje9] =  gets_vyhd_kje9;
+sGetters[(int)gTags.vyhd_kje10] =  gets_vyhd_kje10;
+sGetters[(int)gTags.vyhd_kar_prav_abs] =  gets_vyhd_kar_prav_abs;
+sGetters[(int)gTags.vyhd_kar_lev_abs] =  gets_vyhd_kar_lev_abs;
+sGetters[(int)gTags.vyhd_doz_prav_vper] =  gets_vyhd_doz_prav_vper;
+sGetters[(int)gTags.vyhd_doz_lev_vper] =  gets_vyhd_doz_lev_vper;
+sGetters[(int)gTags.vyhd_doz_prav_nazad] =  gets_vyhd_doz_prav_nazad;
+sGetters[(int)gTags.vyhd_doz_lev_nazad] =  gets_vyhd_doz_lev_nazad;
+sGetters[(int)gTags.vyhd_pereschjot] =  gets_vyhd_pereschjot;
+sGetters[(int)gTags.vyhd_bar_lev_vper] =  gets_vyhd_bar_lev_vper;
+sGetters[(int)gTags.vyhd_bar_prav_vper] =  gets_vyhd_bar_prav_vper;
+sGetters[(int)gTags.vyhd_bar_lev_nazad] =  gets_vyhd_bar_lev_nazad;
+sGetters[(int)gTags.vyhd_bar_prav_nazad] =  gets_vyhd_bar_prav_nazad;
+sGetters[(int)gTags.vyhd_tolk_lev_vper] =  gets_vyhd_tolk_lev_vper;
+sGetters[(int)gTags.vyhd_tolk_prav_vper] =  gets_vyhd_tolk_prav_vper;
+sGetters[(int)gTags.vyhd_tolk_lev_nazad] =  gets_vyhd_tolk_lev_nazad;
+sGetters[(int)gTags.vyhd_tolk_prav_nazad] =  gets_vyhd_tolk_prav_nazad;
+sGetters[(int)gTags.vyhd_kar_prav_otn_vper] =  gets_vyhd_kar_prav_otn_vper;
+sGetters[(int)gTags.vyhd_kar_prav_otn_naz] =  gets_vyhd_kar_prav_otn_naz;
+sGetters[(int)gTags.vyhd_kar_lev_otn_vper] =  gets_vyhd_kar_lev_otn_vper;
+sGetters[(int)gTags.vyhd_kar_lev_otn_naz] =  gets_vyhd_kar_lev_otn_naz;
+sGetters[(int)gTags.vyhd_kl_bar_lev] =  gets_vyhd_kl_bar_lev;
+sGetters[(int)gTags.vyhd_kl_bar_prav] =  gets_vyhd_kl_bar_prav;
+sGetters[(int)gTags.vyhd_nas_otk_gaza] =  gets_vyhd_nas_otk_gaza;
+sGetters[(int)gTags.kom_stol_abs] =  gets_kom_stol_abs;
+sGetters[(int)gTags.kom_tp_pusk] =  gets_kom_tp_pusk;
+sGetters[(int)gTags.kom_tp_prer] =  gets_kom_tp_prer;
+sGetters[(int)gTags.kom_kar_abs] =  gets_kom_kar_abs;
+sGetters[(int)gTags.kom_stol_stop] =  gets_kom_stol_stop;
+sGetters[(int)gTags.kom_karetka_stop] =  gets_kom_karetka_stop;
+sGetters[(int)gTags.kom_karetka_sbros] =  gets_kom_karetka_sbros;
+sGetters[(int)gTags.kom_stol_sbros] =  gets_kom_stol_sbros;
+sGetters[(int)gTags.kom_stol_ust_nulya] =  gets_kom_stol_ust_nulya;
+sGetters[(int)gTags.kom_stol_otn_pusk_vniz] =  gets_kom_stol_otn_pusk_vniz;
+sGetters[(int)gTags.kom_stol_otn_pusk_vverh] =  gets_kom_stol_otn_pusk_vverh;
+sGetters[(int)gTags.kom_sloj] =  gets_kom_sloj;
+sGetters[(int)gTags.kom_prer] =  gets_kom_prer;
+sGetters[(int)gTags.kom_rezerv] =  gets_kom_rezerv;
+sGetters[(int)gTags.kom_rezerv_1] =  gets_kom_rezerv_1;
+sGetters[(int)gTags.kom_rezerv_2] =  gets_kom_rezerv_2;
+sGetters[(int)gTags.kom_obnulit_linejku] =  gets_kom_obnulit_linejku;
+sGetters[(int)gTags.kom_pit_tjen3] =  gets_kom_pit_tjen3;
+sGetters[(int)gTags.kom_pit_tjen1] =  gets_kom_pit_tjen1;
+sGetters[(int)gTags.kom_pit_tjen2] =  gets_kom_pit_tjen2;
+sGetters[(int)gTags.kom_stol_poisk_nulya] =  gets_kom_stol_poisk_nulya;
+sGetters[(int)gTags.kom_process] =  gets_kom_process;
+sGetters[(int)gTags.kom_proc_obshh] =  gets_kom_proc_obshh;
+sGetters[(int)gTags.kom_pereschjot] =  gets_kom_pereschjot;
+sGetters[(int)gTags.kom_pit_laz] =  gets_kom_pit_laz;
+sGetters[(int)gTags.kom_got_laz] =  gets_kom_got_laz;
+sGetters[(int)gTags.kom_sloj_sbros_schjotchika] =  gets_kom_sloj_sbros_schjotchika;
+sGetters[(int)gTags.kom_pauza] =  gets_kom_pauza;
+sGetters[(int)gTags.kom_rab_do_pauzy] =  gets_kom_rab_do_pauzy;
+sGetters[(int)gTags.kom_dozator_avtomat] =  gets_kom_dozator_avtomat;
+sGetters[(int)gTags.kom_pit_chil1] =  gets_kom_pit_chil1;
+sGetters[(int)gTags.kom_pit_chil2] =  gets_kom_pit_chil2;
+sGetters[(int)gTags.kom_kl_chil1] =  gets_kom_kl_chil1;
+sGetters[(int)gTags.kom_kl_chil2] =  gets_kom_kl_chil2;
+sGetters[(int)gTags.kom_pit_rec] =  gets_kom_pit_rec;
+sGetters[(int)gTags.kom_pit_mps] =  gets_kom_pit_mps;
+sGetters[(int)gTags.kom_kar_lev_sh1_vperjod] =  gets_kom_kar_lev_sh1_vperjod;
+sGetters[(int)gTags.kom_kar_lev_sh1_nazad] =  gets_kom_kar_lev_sh1_nazad;
+sGetters[(int)gTags.kom_kar_lev_sh1_abs] =  gets_kom_kar_lev_sh1_abs;
+sGetters[(int)gTags.kom_kar_lev_sh1_stop] =  gets_kom_kar_lev_sh1_stop;
+sGetters[(int)gTags.kom_kar_prav_sh2_vperjod] =  gets_kom_kar_prav_sh2_vperjod;
+sGetters[(int)gTags.kom_kar_prav_sh2_nazad] =  gets_kom_kar_prav_sh2_nazad;
+sGetters[(int)gTags.kom_kar_prav_sh2_abs] =  gets_kom_kar_prav_sh2_abs;
+sGetters[(int)gTags.kom_kar_prav_sh2_stop] =  gets_kom_kar_prav_sh2_stop;
+sGetters[(int)gTags.kom_bar_prav_sh3_vperjod] =  gets_kom_bar_prav_sh3_vperjod;
+sGetters[(int)gTags.kom_bar_prav_sh3_nazad] =  gets_kom_bar_prav_sh3_nazad;
+sGetters[(int)gTags.kom_bar_prav_sh3_abs] =  gets_kom_bar_prav_sh3_abs;
+sGetters[(int)gTags.kom_bar_prav_sh3_stop] =  gets_kom_bar_prav_sh3_stop;
+sGetters[(int)gTags.kom_bar_lev_sh4_vperjod] =  gets_kom_bar_lev_sh4_vperjod;
+sGetters[(int)gTags.kom_bar_lev_sh4_nazad] =  gets_kom_bar_lev_sh4_nazad;
+sGetters[(int)gTags.kom_bar_lev_sh4_abs] =  gets_kom_bar_lev_sh4_abs;
+sGetters[(int)gTags.kom_bar_lev_sh4_stop] =  gets_kom_bar_lev_sh4_stop;
+sGetters[(int)gTags.kom_dozator_lev_vper] =  gets_kom_dozator_lev_vper;
+sGetters[(int)gTags.kom_dozator_prav_vper] =  gets_kom_dozator_prav_vper;
+sGetters[(int)gTags.kom_tolkatel_lev_vperjod] =  gets_kom_tolkatel_lev_vperjod;
+sGetters[(int)gTags.kom_tolkatel_lev_nazad] =  gets_kom_tolkatel_lev_nazad;
+sGetters[(int)gTags.kom_tolkatel_prav_vperjod] =  gets_kom_tolkatel_prav_vperjod;
+sGetters[(int)gTags.kom_tolkatel_prav_nazad] =  gets_kom_tolkatel_prav_nazad;
+sGetters[(int)gTags.kom_dozator_lev_nazad] =  gets_kom_dozator_lev_nazad;
+sGetters[(int)gTags.kom_dozator_prav_nazad] =  gets_kom_dozator_prav_nazad;
+sGetters[(int)gTags.kom_kje9] =  gets_kom_kje9;
+sGetters[(int)gTags.kom_kje10] =  gets_kom_kje10;
+sGetters[(int)gTags.kom_kv1] =  gets_kom_kv1;
+sGetters[(int)gTags.kom_kv2] =  gets_kom_kv2;
+sGetters[(int)gTags.kom_kl_bar_lev] =  gets_kom_kl_bar_lev;
+sGetters[(int)gTags.kom_kl_bar_prav] =  gets_kom_kl_bar_prav;
+sGetters[(int)gTags.kom_nas_otk_gaza] =  gets_kom_nas_otk_gaza;
+sGetters[(int)gTags.ust_stol_poziciya] =  gets_ust_stol_poziciya;
+sGetters[(int)gTags.ust_stol_skor_vverh] =  gets_ust_stol_skor_vverh;
+sGetters[(int)gTags.ust_stol_otn_rasst] =  gets_ust_stol_otn_rasst;
+sGetters[(int)gTags.ust_sloj_kar_lev_nachalo] =  gets_ust_sloj_kar_lev_nachalo;
+sGetters[(int)gTags.ust_sloj_kar_lev_konec] =  gets_ust_sloj_kar_lev_konec;
+sGetters[(int)gTags.ust_tolshh_sloya] =  gets_ust_tolshh_sloya;
+sGetters[(int)gTags.ust_stol_otn_rasst_avto] =  gets_ust_stol_otn_rasst_avto;
+sGetters[(int)gTags.ust_tjen1_moshhn] =  gets_ust_tjen1_moshhn;
+sGetters[(int)gTags.ust_tjen2_moshhn] =  gets_ust_tjen2_moshhn;
+sGetters[(int)gTags.ust_tjen3_moshhn] =  gets_ust_tjen3_moshhn;
+sGetters[(int)gTags.ust_kol_slojov_dlya_doz_prav] =  gets_ust_kol_slojov_dlya_doz_prav;
+sGetters[(int)gTags.ust_kol_slojov_dlya_doz_lev] =  gets_ust_kol_slojov_dlya_doz_lev;
+sGetters[(int)gTags.ust_tjen1_temp] =  gets_ust_tjen1_temp;
+sGetters[(int)gTags.ust_tjen2_temp] =  gets_ust_tjen2_temp;
+sGetters[(int)gTags.ust_tjen3_temp] =  gets_ust_tjen3_temp;
+sGetters[(int)gTags.ust_kar_lev_skor] =  gets_ust_kar_lev_skor;
+sGetters[(int)gTags.ust_kar_lev_rast] =  gets_ust_kar_lev_rast;
+sGetters[(int)gTags.ust_kar_lev_poz] =  gets_ust_kar_lev_poz;
+sGetters[(int)gTags.ust_kar_prav_skor] =  gets_ust_kar_prav_skor;
+sGetters[(int)gTags.ust_kar_prav_rast] =  gets_ust_kar_prav_rast;
+sGetters[(int)gTags.ust_kar_prav_poz] =  gets_ust_kar_prav_poz;
+sGetters[(int)gTags.ust_bar_prav_skor] =  gets_ust_bar_prav_skor;
+sGetters[(int)gTags.ust_bar_lev_skor] =  gets_ust_bar_lev_skor;
+sGetters[(int)gTags.ust_doz_lev_vremya] =  gets_ust_doz_lev_vremya;
+sGetters[(int)gTags.ust_doz_prav_vremya] =  gets_ust_doz_prav_vremya;
+sGetters[(int)gTags.ust_tolk_lev_rasst] =  gets_ust_tolk_lev_rasst;
+sGetters[(int)gTags.ust_tolk_prav_rasst] =  gets_ust_tolk_prav_rasst;
+sGetters[(int)gTags.ust_doz_prav_skor] =  gets_ust_doz_prav_skor;
+sGetters[(int)gTags.ust_doz_lev_skor] =  gets_ust_doz_lev_skor;
+sGetters[(int)gTags.ust_tolk_lev_skor] =  gets_ust_tolk_lev_skor;
+sGetters[(int)gTags.ust_tolk_prav_skor] =  gets_ust_tolk_prav_skor;
+sGetters[(int)gTags.ust_sloj_kar_prav_nachalo] =  gets_ust_sloj_kar_prav_nachalo;
+sGetters[(int)gTags.ust_sloj_kar_prav_konec] =  gets_ust_sloj_kar_prav_konec;
+sGetters[(int)gTags.stol_rab] =  gets_stol_rab;
+sGetters[(int)gTags.tp_rab] =  gets_tp_rab;
+sGetters[(int)gTags.tp_zav] =  gets_tp_zav;
+sGetters[(int)gTags.stol_naverhu] =  gets_stol_naverhu;
+sGetters[(int)gTags.stol_vnizu] =  gets_stol_vnizu;
+sGetters[(int)gTags.stol_dom_zav] =  gets_stol_dom_zav;
+sGetters[(int)gTags.sloj_rab] =  gets_sloj_rab;
+sGetters[(int)gTags.kar_dom_got] =  gets_kar_dom_got;
+sGetters[(int)gTags.kar_na_poz] =  gets_kar_na_poz;
+sGetters[(int)gTags.process] =  gets_process;
+sGetters[(int)gTags.stol_na_poz] =  gets_stol_na_poz;
+sGetters[(int)gTags.stol_got] =  gets_stol_got;
+sGetters[(int)gTags.proc_obshh_rab] =  gets_proc_obshh_rab;
+sGetters[(int)gTags.stol_otn_got] =  gets_stol_otn_got;
+sGetters[(int)gTags.prozhig_rab] =  gets_prozhig_rab;
+sGetters[(int)gTags.sloi_nepr_rab] =  gets_sloi_nepr_rab;
+sGetters[(int)gTags.stol_otn_rab] =  gets_stol_otn_rab;
+sGetters[(int)gTags.rashod1_1] =  gets_rashod1_1;
+sGetters[(int)gTags.rashod1_2] =  gets_rashod1_2;
+sGetters[(int)gTags.rashod2_1] =  gets_rashod2_1;
+sGetters[(int)gTags.rashod2_2] =  gets_rashod2_2;
+sGetters[(int)gTags.prot1] =  gets_prot1;
+sGetters[(int)gTags.prot2] =  gets_prot2;
+sGetters[(int)gTags.prot3] =  gets_prot3;
+sGetters[(int)gTags.prot4] =  gets_prot4;
+sGetters[(int)gTags.prot5] =  gets_prot5;
+sGetters[(int)gTags.prot6] =  gets_prot6;
+}
+
+Func<string, bool>[] sSetters = new Func<string, bool>[(int)gTags.lastGTag];
+public bool setSValue(gTags tag, string val) { return sSetters[(int)tag](val); }
+public void init_sSetters () {
+sSetters[(int)gTags.termopara1] =  sets_termopara1;
+sSetters[(int)gTags.termopara2] =  sets_termopara2;
+sSetters[(int)gTags.termopara3] =  sets_termopara3;
+sSetters[(int)gTags.davl_och_gaza1] =  sets_davl_och_gaza1;
+sSetters[(int)gTags.davl_och_gaza2] =  sets_davl_och_gaza2;
+sSetters[(int)gTags.davl_och_gaza3] =  sets_davl_och_gaza3;
+sSetters[(int)gTags.linejka] =  sets_linejka;
+sSetters[(int)gTags.tolshhina] =  sets_tolshhina;
+sSetters[(int)gTags.tjen1_tek_moshhn] =  sets_tjen1_tek_moshhn;
+sSetters[(int)gTags.kar_tek_poz] =  sets_kar_tek_poz;
+sSetters[(int)gTags.stol_tek_poz] =  sets_stol_tek_poz;
+sSetters[(int)gTags.schjot_slojov] =  sets_schjot_slojov;
+sSetters[(int)gTags.ost_slojov] =  sets_ost_slojov;
+sSetters[(int)gTags.ost_slojov_dlya_dozatora] =  sets_ost_slojov_dlya_dozatora;
+sSetters[(int)gTags.inkrement] =  sets_inkrement;
+sSetters[(int)gTags.tjen2_tek_moshhn] =  sets_tjen2_tek_moshhn;
+sSetters[(int)gTags.tjen3_tek_moshhn] =  sets_tjen3_tek_moshhn;
+sSetters[(int)gTags.temp1] =  sets_temp1;
+sSetters[(int)gTags.temp2] =  sets_temp2;
+sSetters[(int)gTags.temp3] =  sets_temp3;
+sSetters[(int)gTags.temp4] =  sets_temp4;
+sSetters[(int)gTags.temp5] =  sets_temp5;
+sSetters[(int)gTags.temp6] =  sets_temp6;
+sSetters[(int)gTags.datch_kisl1] =  sets_datch_kisl1;
+sSetters[(int)gTags.datch_kisl2] =  sets_datch_kisl2;
+sSetters[(int)gTags.vyhd_stol_abs] =  sets_vyhd_stol_abs;
+sSetters[(int)gTags.vyhd_tjen1] =  sets_vyhd_tjen1;
+sSetters[(int)gTags.vyhd_tjen2] =  sets_vyhd_tjen2;
+sSetters[(int)gTags.vyhd_tjen3] =  sets_vyhd_tjen3;
+sSetters[(int)gTags.vyhd_stol_otn_vniz] =  sets_vyhd_stol_otn_vniz;
+sSetters[(int)gTags.vyhd_stol_otn_vverh] =  sets_vyhd_stol_otn_vverh;
+sSetters[(int)gTags.vyhd_stol_poisk_nulya] =  sets_vyhd_stol_poisk_nulya;
+sSetters[(int)gTags.vyhd_pit_lazerov] =  sets_vyhd_pit_lazerov;
+sSetters[(int)gTags.vyhd_pit_chil1] =  sets_vyhd_pit_chil1;
+sSetters[(int)gTags.vyhd_pit_chil2] =  sets_vyhd_pit_chil2;
+sSetters[(int)gTags.vyhd_kl_chil1] =  sets_vyhd_kl_chil1;
+sSetters[(int)gTags.vyhd_kl_chil2] =  sets_vyhd_kl_chil2;
+sSetters[(int)gTags.vyhd_pit_mps] =  sets_vyhd_pit_mps;
+sSetters[(int)gTags.vyhd_pit_rec] =  sets_vyhd_pit_rec;
+sSetters[(int)gTags.vyhd_kv1] =  sets_vyhd_kv1;
+sSetters[(int)gTags.vyhd_kv2] =  sets_vyhd_kv2;
+sSetters[(int)gTags.vyhd_kje9] =  sets_vyhd_kje9;
+sSetters[(int)gTags.vyhd_kje10] =  sets_vyhd_kje10;
+sSetters[(int)gTags.vyhd_kar_prav_abs] =  sets_vyhd_kar_prav_abs;
+sSetters[(int)gTags.vyhd_kar_lev_abs] =  sets_vyhd_kar_lev_abs;
+sSetters[(int)gTags.vyhd_doz_prav_vper] =  sets_vyhd_doz_prav_vper;
+sSetters[(int)gTags.vyhd_doz_lev_vper] =  sets_vyhd_doz_lev_vper;
+sSetters[(int)gTags.vyhd_doz_prav_nazad] =  sets_vyhd_doz_prav_nazad;
+sSetters[(int)gTags.vyhd_doz_lev_nazad] =  sets_vyhd_doz_lev_nazad;
+sSetters[(int)gTags.vyhd_pereschjot] =  sets_vyhd_pereschjot;
+sSetters[(int)gTags.vyhd_bar_lev_vper] =  sets_vyhd_bar_lev_vper;
+sSetters[(int)gTags.vyhd_bar_prav_vper] =  sets_vyhd_bar_prav_vper;
+sSetters[(int)gTags.vyhd_bar_lev_nazad] =  sets_vyhd_bar_lev_nazad;
+sSetters[(int)gTags.vyhd_bar_prav_nazad] =  sets_vyhd_bar_prav_nazad;
+sSetters[(int)gTags.vyhd_tolk_lev_vper] =  sets_vyhd_tolk_lev_vper;
+sSetters[(int)gTags.vyhd_tolk_prav_vper] =  sets_vyhd_tolk_prav_vper;
+sSetters[(int)gTags.vyhd_tolk_lev_nazad] =  sets_vyhd_tolk_lev_nazad;
+sSetters[(int)gTags.vyhd_tolk_prav_nazad] =  sets_vyhd_tolk_prav_nazad;
+sSetters[(int)gTags.vyhd_kar_prav_otn_vper] =  sets_vyhd_kar_prav_otn_vper;
+sSetters[(int)gTags.vyhd_kar_prav_otn_naz] =  sets_vyhd_kar_prav_otn_naz;
+sSetters[(int)gTags.vyhd_kar_lev_otn_vper] =  sets_vyhd_kar_lev_otn_vper;
+sSetters[(int)gTags.vyhd_kar_lev_otn_naz] =  sets_vyhd_kar_lev_otn_naz;
+sSetters[(int)gTags.vyhd_kl_bar_lev] =  sets_vyhd_kl_bar_lev;
+sSetters[(int)gTags.vyhd_kl_bar_prav] =  sets_vyhd_kl_bar_prav;
+sSetters[(int)gTags.vyhd_nas_otk_gaza] =  sets_vyhd_nas_otk_gaza;
+sSetters[(int)gTags.kom_stol_abs] =  sets_kom_stol_abs;
+sSetters[(int)gTags.kom_tp_pusk] =  sets_kom_tp_pusk;
+sSetters[(int)gTags.kom_tp_prer] =  sets_kom_tp_prer;
+sSetters[(int)gTags.kom_kar_abs] =  sets_kom_kar_abs;
+sSetters[(int)gTags.kom_stol_stop] =  sets_kom_stol_stop;
+sSetters[(int)gTags.kom_karetka_stop] =  sets_kom_karetka_stop;
+sSetters[(int)gTags.kom_karetka_sbros] =  sets_kom_karetka_sbros;
+sSetters[(int)gTags.kom_stol_sbros] =  sets_kom_stol_sbros;
+sSetters[(int)gTags.kom_stol_ust_nulya] =  sets_kom_stol_ust_nulya;
+sSetters[(int)gTags.kom_stol_otn_pusk_vniz] =  sets_kom_stol_otn_pusk_vniz;
+sSetters[(int)gTags.kom_stol_otn_pusk_vverh] =  sets_kom_stol_otn_pusk_vverh;
+sSetters[(int)gTags.kom_sloj] =  sets_kom_sloj;
+sSetters[(int)gTags.kom_prer] =  sets_kom_prer;
+sSetters[(int)gTags.kom_rezerv] =  sets_kom_rezerv;
+sSetters[(int)gTags.kom_rezerv_1] =  sets_kom_rezerv_1;
+sSetters[(int)gTags.kom_rezerv_2] =  sets_kom_rezerv_2;
+sSetters[(int)gTags.kom_obnulit_linejku] =  sets_kom_obnulit_linejku;
+sSetters[(int)gTags.kom_pit_tjen3] =  sets_kom_pit_tjen3;
+sSetters[(int)gTags.kom_pit_tjen1] =  sets_kom_pit_tjen1;
+sSetters[(int)gTags.kom_pit_tjen2] =  sets_kom_pit_tjen2;
+sSetters[(int)gTags.kom_stol_poisk_nulya] =  sets_kom_stol_poisk_nulya;
+sSetters[(int)gTags.kom_process] =  sets_kom_process;
+sSetters[(int)gTags.kom_proc_obshh] =  sets_kom_proc_obshh;
+sSetters[(int)gTags.kom_pereschjot] =  sets_kom_pereschjot;
+sSetters[(int)gTags.kom_pit_laz] =  sets_kom_pit_laz;
+sSetters[(int)gTags.kom_got_laz] =  sets_kom_got_laz;
+sSetters[(int)gTags.kom_sloj_sbros_schjotchika] =  sets_kom_sloj_sbros_schjotchika;
+sSetters[(int)gTags.kom_pauza] =  sets_kom_pauza;
+sSetters[(int)gTags.kom_rab_do_pauzy] =  sets_kom_rab_do_pauzy;
+sSetters[(int)gTags.kom_dozator_avtomat] =  sets_kom_dozator_avtomat;
+sSetters[(int)gTags.kom_pit_chil1] =  sets_kom_pit_chil1;
+sSetters[(int)gTags.kom_pit_chil2] =  sets_kom_pit_chil2;
+sSetters[(int)gTags.kom_kl_chil1] =  sets_kom_kl_chil1;
+sSetters[(int)gTags.kom_kl_chil2] =  sets_kom_kl_chil2;
+sSetters[(int)gTags.kom_pit_rec] =  sets_kom_pit_rec;
+sSetters[(int)gTags.kom_pit_mps] =  sets_kom_pit_mps;
+sSetters[(int)gTags.kom_kar_lev_sh1_vperjod] =  sets_kom_kar_lev_sh1_vperjod;
+sSetters[(int)gTags.kom_kar_lev_sh1_nazad] =  sets_kom_kar_lev_sh1_nazad;
+sSetters[(int)gTags.kom_kar_lev_sh1_abs] =  sets_kom_kar_lev_sh1_abs;
+sSetters[(int)gTags.kom_kar_lev_sh1_stop] =  sets_kom_kar_lev_sh1_stop;
+sSetters[(int)gTags.kom_kar_prav_sh2_vperjod] =  sets_kom_kar_prav_sh2_vperjod;
+sSetters[(int)gTags.kom_kar_prav_sh2_nazad] =  sets_kom_kar_prav_sh2_nazad;
+sSetters[(int)gTags.kom_kar_prav_sh2_abs] =  sets_kom_kar_prav_sh2_abs;
+sSetters[(int)gTags.kom_kar_prav_sh2_stop] =  sets_kom_kar_prav_sh2_stop;
+sSetters[(int)gTags.kom_bar_prav_sh3_vperjod] =  sets_kom_bar_prav_sh3_vperjod;
+sSetters[(int)gTags.kom_bar_prav_sh3_nazad] =  sets_kom_bar_prav_sh3_nazad;
+sSetters[(int)gTags.kom_bar_prav_sh3_abs] =  sets_kom_bar_prav_sh3_abs;
+sSetters[(int)gTags.kom_bar_prav_sh3_stop] =  sets_kom_bar_prav_sh3_stop;
+sSetters[(int)gTags.kom_bar_lev_sh4_vperjod] =  sets_kom_bar_lev_sh4_vperjod;
+sSetters[(int)gTags.kom_bar_lev_sh4_nazad] =  sets_kom_bar_lev_sh4_nazad;
+sSetters[(int)gTags.kom_bar_lev_sh4_abs] =  sets_kom_bar_lev_sh4_abs;
+sSetters[(int)gTags.kom_bar_lev_sh4_stop] =  sets_kom_bar_lev_sh4_stop;
+sSetters[(int)gTags.kom_dozator_lev_vper] =  sets_kom_dozator_lev_vper;
+sSetters[(int)gTags.kom_dozator_prav_vper] =  sets_kom_dozator_prav_vper;
+sSetters[(int)gTags.kom_tolkatel_lev_vperjod] =  sets_kom_tolkatel_lev_vperjod;
+sSetters[(int)gTags.kom_tolkatel_lev_nazad] =  sets_kom_tolkatel_lev_nazad;
+sSetters[(int)gTags.kom_tolkatel_prav_vperjod] =  sets_kom_tolkatel_prav_vperjod;
+sSetters[(int)gTags.kom_tolkatel_prav_nazad] =  sets_kom_tolkatel_prav_nazad;
+sSetters[(int)gTags.kom_dozator_lev_nazad] =  sets_kom_dozator_lev_nazad;
+sSetters[(int)gTags.kom_dozator_prav_nazad] =  sets_kom_dozator_prav_nazad;
+sSetters[(int)gTags.kom_kje9] =  sets_kom_kje9;
+sSetters[(int)gTags.kom_kje10] =  sets_kom_kje10;
+sSetters[(int)gTags.kom_kv1] =  sets_kom_kv1;
+sSetters[(int)gTags.kom_kv2] =  sets_kom_kv2;
+sSetters[(int)gTags.kom_kl_bar_lev] =  sets_kom_kl_bar_lev;
+sSetters[(int)gTags.kom_kl_bar_prav] =  sets_kom_kl_bar_prav;
+sSetters[(int)gTags.kom_nas_otk_gaza] =  sets_kom_nas_otk_gaza;
+sSetters[(int)gTags.ust_stol_poziciya] =  sets_ust_stol_poziciya;
+sSetters[(int)gTags.ust_stol_skor_vverh] =  sets_ust_stol_skor_vverh;
+sSetters[(int)gTags.ust_stol_otn_rasst] =  sets_ust_stol_otn_rasst;
+sSetters[(int)gTags.ust_sloj_kar_lev_nachalo] =  sets_ust_sloj_kar_lev_nachalo;
+sSetters[(int)gTags.ust_sloj_kar_lev_konec] =  sets_ust_sloj_kar_lev_konec;
+sSetters[(int)gTags.ust_tolshh_sloya] =  sets_ust_tolshh_sloya;
+sSetters[(int)gTags.ust_stol_otn_rasst_avto] =  sets_ust_stol_otn_rasst_avto;
+sSetters[(int)gTags.ust_tjen1_moshhn] =  sets_ust_tjen1_moshhn;
+sSetters[(int)gTags.ust_tjen2_moshhn] =  sets_ust_tjen2_moshhn;
+sSetters[(int)gTags.ust_tjen3_moshhn] =  sets_ust_tjen3_moshhn;
+sSetters[(int)gTags.ust_kol_slojov_dlya_doz_prav] =  sets_ust_kol_slojov_dlya_doz_prav;
+sSetters[(int)gTags.ust_kol_slojov_dlya_doz_lev] =  sets_ust_kol_slojov_dlya_doz_lev;
+sSetters[(int)gTags.ust_tjen1_temp] =  sets_ust_tjen1_temp;
+sSetters[(int)gTags.ust_tjen2_temp] =  sets_ust_tjen2_temp;
+sSetters[(int)gTags.ust_tjen3_temp] =  sets_ust_tjen3_temp;
+sSetters[(int)gTags.ust_kar_lev_skor] =  sets_ust_kar_lev_skor;
+sSetters[(int)gTags.ust_kar_lev_rast] =  sets_ust_kar_lev_rast;
+sSetters[(int)gTags.ust_kar_lev_poz] =  sets_ust_kar_lev_poz;
+sSetters[(int)gTags.ust_kar_prav_skor] =  sets_ust_kar_prav_skor;
+sSetters[(int)gTags.ust_kar_prav_rast] =  sets_ust_kar_prav_rast;
+sSetters[(int)gTags.ust_kar_prav_poz] =  sets_ust_kar_prav_poz;
+sSetters[(int)gTags.ust_bar_prav_skor] =  sets_ust_bar_prav_skor;
+sSetters[(int)gTags.ust_bar_lev_skor] =  sets_ust_bar_lev_skor;
+sSetters[(int)gTags.ust_doz_lev_vremya] =  sets_ust_doz_lev_vremya;
+sSetters[(int)gTags.ust_doz_prav_vremya] =  sets_ust_doz_prav_vremya;
+sSetters[(int)gTags.ust_tolk_lev_rasst] =  sets_ust_tolk_lev_rasst;
+sSetters[(int)gTags.ust_tolk_prav_rasst] =  sets_ust_tolk_prav_rasst;
+sSetters[(int)gTags.ust_doz_prav_skor] =  sets_ust_doz_prav_skor;
+sSetters[(int)gTags.ust_doz_lev_skor] =  sets_ust_doz_lev_skor;
+sSetters[(int)gTags.ust_tolk_lev_skor] =  sets_ust_tolk_lev_skor;
+sSetters[(int)gTags.ust_tolk_prav_skor] =  sets_ust_tolk_prav_skor;
+sSetters[(int)gTags.ust_sloj_kar_prav_nachalo] =  sets_ust_sloj_kar_prav_nachalo;
+sSetters[(int)gTags.ust_sloj_kar_prav_konec] =  sets_ust_sloj_kar_prav_konec;
+sSetters[(int)gTags.stol_rab] =  sets_stol_rab;
+sSetters[(int)gTags.tp_rab] =  sets_tp_rab;
+sSetters[(int)gTags.tp_zav] =  sets_tp_zav;
+sSetters[(int)gTags.stol_naverhu] =  sets_stol_naverhu;
+sSetters[(int)gTags.stol_vnizu] =  sets_stol_vnizu;
+sSetters[(int)gTags.stol_dom_zav] =  sets_stol_dom_zav;
+sSetters[(int)gTags.sloj_rab] =  sets_sloj_rab;
+sSetters[(int)gTags.kar_dom_got] =  sets_kar_dom_got;
+sSetters[(int)gTags.kar_na_poz] =  sets_kar_na_poz;
+sSetters[(int)gTags.process] =  sets_process;
+sSetters[(int)gTags.stol_na_poz] =  sets_stol_na_poz;
+sSetters[(int)gTags.stol_got] =  sets_stol_got;
+sSetters[(int)gTags.proc_obshh_rab] =  sets_proc_obshh_rab;
+sSetters[(int)gTags.stol_otn_got] =  sets_stol_otn_got;
+sSetters[(int)gTags.prozhig_rab] =  sets_prozhig_rab;
+sSetters[(int)gTags.sloi_nepr_rab] =  sets_sloi_nepr_rab;
+sSetters[(int)gTags.stol_otn_rab] =  sets_stol_otn_rab;
+sSetters[(int)gTags.rashod1_1] =  sets_rashod1_1;
+sSetters[(int)gTags.rashod1_2] =  sets_rashod1_2;
+sSetters[(int)gTags.rashod2_1] =  sets_rashod2_1;
+sSetters[(int)gTags.rashod2_2] =  sets_rashod2_2;
+sSetters[(int)gTags.prot1] =  sets_prot1;
+sSetters[(int)gTags.prot2] =  sets_prot2;
+sSetters[(int)gTags.prot3] =  sets_prot3;
+sSetters[(int)gTags.prot4] =  sets_prot4;
+sSetters[(int)gTags.prot5] =  sets_prot5;
+sSetters[(int)gTags.prot6] =  sets_prot6;
+}
+
+public Dictionary<string, gTags[]> groupingDict = new Dictionary<string, gTags[]> {
+{ "group1" ,new gTags [] {gTags.prot1,
+gTags.prot2,
+gTags.prot3,
+gTags.prot4,
+gTags.prot5,
+gTags.prot6,
+gTags.kom_pit_chil1,
+gTags.kom_pit_chil2,
+gTags.kom_kl_chil1,
+gTags.kom_kl_chil2,
+gTags.vyhd_pit_chil1,
+gTags.vyhd_pit_chil2,
+gTags.vyhd_kl_chil1,
+gTags.vyhd_kl_chil2,
+gTags.temp1,
+gTags.temp2,
+gTags.temp3,
+gTags.temp4,
+gTags.temp5,
+gTags.temp6,
+}},
+{ "group2" ,new gTags [] {gTags.kom_stol_abs,
+gTags.kom_stol_stop,
+gTags.kom_stol_sbros,
+gTags.kom_stol_ust_nulya,
+gTags.kom_stol_otn_pusk_vniz,
+gTags.kom_stol_otn_pusk_vverh,
+gTags.kom_stol_poisk_nulya,
+gTags.kom_obnulit_linejku,
+gTags.kom_pereschjot,
+gTags.vyhd_stol_abs,
+gTags.vyhd_stol_otn_vniz,
+gTags.vyhd_stol_otn_vverh,
+gTags.vyhd_stol_poisk_nulya,
+gTags.vyhd_pereschjot,
+gTags.linejka,
+gTags.tolshhina,
+gTags.stol_tek_poz,
+gTags.ust_stol_poziciya,
+gTags.ust_stol_skor_vverh,
+gTags.ust_stol_otn_rasst,
+}},
+{ "group3" ,new gTags [] {gTags.kom_kar_lev_sh1_vperjod,
+gTags.kom_kar_lev_sh1_nazad,
+gTags.kom_kar_lev_sh1_abs,
+gTags.kom_kar_lev_sh1_stop,
+gTags.kom_kar_prav_sh2_vperjod,
+gTags.kom_kar_prav_sh2_nazad,
+gTags.kom_kar_prav_sh2_abs,
+gTags.kom_kar_prav_sh2_stop,
+gTags.vyhd_kar_lev_otn_vper,
+gTags.vyhd_kar_lev_otn_naz,
+gTags.vyhd_kar_lev_abs,
+gTags.vyhd_kar_prav_otn_vper,
+gTags.vyhd_kar_prav_otn_naz,
+gTags.vyhd_kar_prav_abs,
+gTags.ust_kar_lev_skor,
+gTags.ust_kar_lev_rast,
+gTags.ust_kar_lev_poz,
+gTags.ust_kar_prav_skor,
+gTags.ust_kar_prav_rast,
+gTags.ust_kar_prav_poz,
+}},
+{ "group4" ,new gTags [] {gTags.kom_bar_prav_sh3_vperjod,
+gTags.kom_bar_prav_sh3_nazad,
+gTags.kom_bar_prav_sh3_stop,
+gTags.kom_bar_lev_sh4_vperjod,
+gTags.kom_bar_lev_sh4_nazad,
+gTags.kom_bar_lev_sh4_stop,
+gTags.kom_kl_bar_lev,
+gTags.kom_kl_bar_prav,
+gTags.kom_nas_otk_gaza,
+gTags.vyhd_bar_prav_vper,
+gTags.vyhd_bar_prav_nazad,
+gTags.vyhd_bar_lev_vper,
+gTags.vyhd_bar_lev_nazad,
+gTags.vyhd_kl_bar_lev,
+gTags.vyhd_kl_bar_prav,
+gTags.vyhd_nas_otk_gaza,
+gTags.ust_bar_lev_skor,
+gTags.ust_bar_prav_skor,
+}},
+{ "group5" ,new gTags [] {gTags.rashod1_1,
+gTags.rashod1_2,
+gTags.rashod2_1,
+gTags.rashod2_2,
+gTags.kom_pit_rec,
+gTags.kom_kje9,
+gTags.kom_kje10,
+gTags.kom_kv1,
+gTags.kom_kv2,
+gTags.vyhd_pit_rec,
+gTags.vyhd_kje9,
+gTags.vyhd_kje10,
+gTags.vyhd_kv1,
+gTags.vyhd_kv2,
+gTags.datch_kisl1,
+gTags.datch_kisl2,
+gTags.davl_och_gaza1,
+gTags.davl_och_gaza2,
+gTags.davl_och_gaza3,
+}},
+{ "group6" ,new gTags [] {gTags.kom_dozator_lev_vper,
+gTags.kom_dozator_lev_nazad,
+gTags.kom_dozator_prav_vper,
+gTags.kom_dozator_prav_nazad,
+gTags.vyhd_doz_lev_vper,
+gTags.vyhd_doz_lev_nazad,
+gTags.vyhd_doz_prav_vper,
+gTags.vyhd_doz_prav_nazad,
+gTags.ust_doz_lev_vremya,
+gTags.ust_doz_lev_skor,
+gTags.ust_doz_prav_vremya,
+gTags.ust_doz_prav_skor,
+}},
+{ "group7" ,new gTags [] {gTags.kom_pit_tjen1,
+gTags.kom_pit_tjen2,
+gTags.kom_pit_tjen3,
+gTags.vyhd_tjen1,
+gTags.vyhd_tjen2,
+gTags.vyhd_tjen3,
+gTags.tjen1_tek_moshhn,
+gTags.termopara1,
+gTags.tjen2_tek_moshhn,
+gTags.termopara2,
+gTags.tjen3_tek_moshhn,
+gTags.termopara3,
+gTags.ust_tjen1_moshhn,
+gTags.ust_tjen1_temp,
+gTags.ust_tjen2_moshhn,
+gTags.ust_tjen2_temp,
+gTags.ust_tjen3_moshhn,
+gTags.ust_tjen3_temp,
+}},
+{ "group8" ,new gTags [] {gTags.ust_sloj_kar_lev_nachalo,
+gTags.ust_sloj_kar_lev_konec,
+gTags.ust_tolshh_sloya,
+gTags.ust_stol_otn_rasst_avto,
+gTags.ust_kol_slojov_dlya_doz_prav,
+gTags.ust_kol_slojov_dlya_doz_lev,
+gTags.ust_sloj_kar_prav_nachalo,
+gTags.ust_sloj_kar_prav_konec,
+gTags.kom_tp_pusk,
+gTags.kom_tp_prer,
+gTags.kom_kar_abs,
+gTags.kom_karetka_stop,
+gTags.kom_karetka_sbros,
+gTags.kom_sloj,
+gTags.kom_prer,
+gTags.kom_rezerv,
+gTags.kom_rezerv_1,
+gTags.kom_rezerv_2,
+gTags.kom_process,
+gTags.kom_proc_obshh,
+gTags.kom_sloj_sbros_schjotchika,
+gTags.kom_pauza,
+gTags.kom_rab_do_pauzy,
+gTags.kom_dozator_avtomat,
+gTags.kom_bar_prav_sh3_abs,
+gTags.kom_bar_lev_sh4_abs,
+gTags.kar_tek_poz,
+gTags.schjot_slojov,
+gTags.ost_slojov,
+gTags.ost_slojov_dlya_dozatora,
+gTags.inkrement,
+}},
+};
+   
+
     }
  }
 //__+_________________________________________________________________________________________________

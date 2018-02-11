@@ -35,6 +35,23 @@ namespace laserScada
             Log.Write(LogLevel.Info, "set avar doz " + val.ToString());
         }
 
+        public enum activeType {
+            command,
+            led,
+            dataField,
+            invalid,
+        };
+
+        public activeType getActiveType(gTags tag)
+        {
+
+            if (group_com.Contains(tag)) return activeType.command;
+            if (group_outd.Contains(tag)) return activeType.led;
+            if (group_dm.Contains(tag)) return activeType.led;
+            if (group_usta.Contains(tag)) return activeType.dataField;
+            if (group_am.Contains(tag)) return activeType.dataField;
+            return activeType.invalid;
+        }
         Memory m_mem;
 
     }

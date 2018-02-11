@@ -7,10 +7,12 @@ open('TagsAg.cs', 'w') { |f|
 
 f.puts "using System;\n"
 f.puts "using log4netSample.Logging;\n"
+f.puts "using System.Collections.Generic;\n"
 f.puts " namespace laserScada {\n\n" +   "partial class Tags {\n" 
 result = ""
 
 globalTagNames = Array.new
+globalDebugNames = Array.new 
 
 usMap = Array.new(1000) 
 
@@ -89,6 +91,8 @@ stringGetter = "    public string gets_#{name3} () { \n"\
 getterName = "    public string debug_name_#{name3} () { \n"\
 "    return \"#{nameCyr}\";}\n\n"
 
+globalDebugNames << "#{nameCyr}"
+
 usMap[intAdrr.to_i] = 1
 usMap[intAdrr.to_i + 1] = 1 if width == "UInt32" || width == "UInt16"
 usMap[intAdrr.to_i + 2] = 1 if width == "UInt32" 
@@ -115,6 +119,13 @@ fileEnum += tagname.to_s + ",\n"
 end
 fileEnum += "};\n\n"
 
+fileEnum  += "public gTags[] group_" + namef + " = {\n"
+localTagNames.each do |tagname|
+fileEnum += "gTags." + tagname.to_s + ",\n"
+end
+fileEnum += "};\n\n"
+
+
 localTagNames.map do |e| globalTagNames << e.dup end
 
 #generate switch getter
@@ -130,11 +141,102 @@ end
 #generate global files enums
 globalFileEnum  = "public enum gTags" +  "{\n"
 globalTagNames.each do |tagname|
-globalFileEnum += tagname.to_s + ",\n"
+globalFileEnum +=  tagname.to_s  + ",\n"
 end
+globalFileEnum +=  "lastGTag,\n"
 globalFileEnum += "};\n\n"
 
 f.puts globalFileEnum
+
+
+#generate global debug names array
+globalDebugNamesArray  = "public string [] debugNames" +  " = {\n"
+globalDebugNames.each do |tagname|
+globalDebugNamesArray += "\"" + tagname.to_s + "\"" + ",\n"
+end
+globalDebugNamesArray += "};\n\n"
+globalDebugNamesArray += "public string getDebugName(gTags tag) {return debugNames[(int)tag];}\n\n"
+f.puts globalDebugNamesArray
+
+
+#generate init getters
+globalDebugNamesArray = " Func<string>[] sGetters  = new Func<string>[(int)gTags.lastGTag];\n"
+globalDebugNamesArray += "public string getSValue(gTags tag) { return sGetters[(int)tag]();}\n"
+globalDebugNamesArray  += "public void init_sGetters () {\n"
+
+globalTagNames.each do |tagname|
+globalDebugNamesArray += "sGetters[(int)gTags.#{tagname.to_s}] =  gets_#{tagname.to_s};\n"
+
+end
+globalDebugNamesArray += "}\n\n"
+f.puts globalDebugNamesArray
+#generate init setters
+globalDebugNamesArray = "Func<string, bool>[] sSetters = new Func<string, bool>[(int)gTags.lastGTag];\n"
+globalDebugNamesArray += "public bool setSValue(gTags tag, string val) { return sSetters[(int)tag](val); }\n"
+globalDebugNamesArray  += "public void init_sSetters () {\n"
+
+globalTagNames.each do |tagname|
+globalDebugNamesArray += "sSetters[(int)gTags.#{tagname.to_s}] =  sets_#{tagname.to_s};\n"
+
+end
+globalDebugNamesArray += "}\n\n"
+
+f.puts globalDebugNamesArray
+
+
+groupsCode = ""
+state = 0;
+groups = Hash.new("general")
+arrayInGroup = Array.new
+currentGroup = ""
+File.open("tegGroups.txt", "r:UTF-8").each_line do |line|
+  # name: "Angela"    job: "Writer"    ...
+  #line.gsub!(' ','')
+  line.gsub!("\n", '')
+   if line == ""
+  next
+  end
+   if line =~ /_start/
+   state = 1
+   next
+  end
+  
+  if line=~ /_end/
+  groups[currentGroup] = arrayInGroup 
+  state = 0
+  end
+   
+  if state == 1
+ currentGroup = line
+ arrayInGroup = Array.new
+
+ puts " --- " + state.to_s + "  " + currentGroup
+ state = 2
+ elsif state == 2
+
+line =  Translit.convert(line, :english).downcase
+line = line.gsub('(', '_').gsub(')','_').gsub('-','_').gsub(' ','_')
+line = line.gsub /[^A-Za-z0-9]/, '_'
+line = line.gsub /__/, '_'
+line = line.gsub /_$/, ''
+#puts line.to_s
+ arrayInGroup << line
+ end
+
+end
+
+
+groupCode = "public Dictionary<string, gTags[]> groupingDict = new Dictionary<string, gTags[]> {\n"
+groups.each do | key, value|
+groupCode+="{ \"#{key}\" ,new gTags [] {"
+value.each do |tst|
+groupCode += "gTags." + tst.to_s + ",\n"
+puts key.to_s  + "  --- "+ tst.to_s
+end
+groupCode+="}},\n"
+end
+groupCode+="};\n"
+f.puts groupCode
 
 switchGetter = "    public string get_by_name(string str) {\n"\
 "    switch (str){"
