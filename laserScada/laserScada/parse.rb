@@ -173,6 +173,7 @@ globalTagNames.each do |tagname|
 globalFileEnum +=  tagname.to_s  + ",\n"
 end
 globalFileEnum +=  "lastGTag,\n"
+globalFileEnum +=  "separator,\n"
 globalFileEnum += "};\n\n"
 
 f.puts globalFileEnum
@@ -254,13 +255,102 @@ line = line.gsub /_$/, ''
 
 end
 
+#reorder groups
+ctgr.each do | key, value|
+localGr = Hash.new()
+id =0
+
+value1 = value.sort
+
+value1.each do |tst|
+localGr[tst] = id;
+id=id +1
+end
+
+#puts localGr
+
+value1.each do |key|
+name = key.gsub(/^(kom_|am_|wyhd_|ust_)/, "")
+
+value1.each do |nkey|
+nname = nkey.gsub(/^(kom_|am_|wyhd_|ust_)/, "")
+localGr[nkey] = localGr[key] if nname =~/^#{name}/
+end
+
+#value1.each do |nkey|
+#nname = nkey.gsub(/(_.+?)(?!$)/,"")
+#puts "------------ " +nname + " --- " + nkey
+#localGr[nkey] = localGr[key] if !nname.gsub(/^(kom|am|wyhd|ust)/, "").empty? && key =~/^#{nname}/
+#end
+
+end
+maxGroupSize = 0;
+#move down single elements
+localGr.each do |nnkey, nnvalue|
+id = localGr[nnkey]
+#count group size
+gsize = 0
+value1.each do |nkey|
+gsize +=1 if localGr[nkey] == id
+end
+
+maxGroupSize = gsize if maxGroupSize < gsize
+
+localGr[nnkey] = 1000 if gsize == 1
+
+
+end
+
+
+
+
+count = 0
+tuner = 0
+value1.each do |nnnkey|
+puts "---- " + nnnkey #+ " -- " + localGr[nnnkey]
+if localGr[nnnkey] == 1000
+count = count + 1 
+localGr[nnnkey] += tuner
+end
+
+if count >= maxGroupSize
+count = 0
+tuner +=1
+end
+
+end
+
+
+localGr = localGr.sort_by {|_key, value| value}
+
+puts localGr
+#split ungrupped into maxGroupSize
+
+
+
+value.clear
+group = -1
+grArr = Array.new
+localGr.each do |nnkey, nnvalue|
+if group != nnvalue
+group = nnvalue
+value.concat( grArr.sort )<< "separator"
+grArr.clear
+end
+grArr << nnkey
+end
+value.concat( grArr.sort)
+
+end
+
+
 puts "ctgr = " + ctgr.to_s
 groupCode = "public Dictionary<string, gTags[]> groupingDict = new Dictionary<string, gTags[]> {\n"
 ctgr.each do | key, value|
-groupCode+="{ \"#{key}\" ,new gTags [] {"
+groupCode+="{ \"#{key}\" ,new gTags [] {\n"
 value.each do |tst|
 groupCode += "gTags." + tst.to_s + ",\n"
-puts key.to_s  + "  --- "+ tst.to_s
+#puts key.to_s  + "  --- "+ tst.to_s
 end
 groupCode+="}},\n"
 end

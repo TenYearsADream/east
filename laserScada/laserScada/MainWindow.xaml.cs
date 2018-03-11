@@ -82,37 +82,40 @@ namespace laserScada
             //newBtn.Content = "wwwww";
             // newBtn.Name = "Button" + "www";
             System.Windows.Controls.WrapPanel panel = new WrapPanel();
-            panel.Orientation = Orientation.Vertical;
+            panel.Orientation = Orientation.Horizontal;
             debugPanel.Content = panel;
             m_plc.tags.init_sSetters();
             m_plc.tags.init_sGetters();
 
-            
-           
 
             foreach (KeyValuePair<string, Tags.gTags[]> dicItem in m_plc.tags.groupingDict)
             {
                 System.Windows.Controls.GroupBox grBox = new GroupBox();
-                System.Windows.Controls.StackPanel panelH2 = new StackPanel();
+                System.Windows.Controls.WrapPanel panelH2 = new WrapPanel();
+                panelH2.Orientation = Orientation.Vertical;
                 grBox.Content = panelH2;
-               // grBox.Width = System.Windows.SystemParameters.PrimaryScreenWidth;
                 panel.Children.Add(grBox);
-                System.Windows.Controls.WrapPanel panelH1 = new WrapPanel();
-                panelH1.Orientation = Orientation.Horizontal;
-                panelH2.Children.Add(panelH1);
                 grBox.Header = dicItem.Key;
+
+                System.Windows.Controls.WrapPanel localgroup= new WrapPanel();
+                localgroup.Orientation = Orientation.Horizontal;
+                panelH2.Children.Add(localgroup);
+
                 foreach (Tags.gTags tag in dicItem.Value)
                 {
-                    panelH1.Children.Add(getControll(tag));
+                    if (tag == Tags.gTags.separator)
+                    {
+                        localgroup = new WrapPanel();
+                        localgroup.Orientation = Orientation.Horizontal;
+                        panelH2.Children.Add(localgroup);
+                    }
+                    else
+                    {
+                        localgroup.Children.Add(getControll(tag));
+                    }
+                    //   panelH2.Children.Add(getControll(tag));
                 }
             }
-
-            System.Windows.Controls.StackPanel panelH = new StackPanel();
-            panelH.Orientation = Orientation.Horizontal;
-            panel.Children.Add(panelH);
-
-            //panel.Children.Add(newBtn);
-
 
 
 

@@ -232,79 +232,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B163D2BEA761FB5DE7C2AFD34952B33B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AF7976B73DCD4781999BE6EAFD9D4BEC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AE3050EC980D4423B5B718AEEEA225CB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2E1FAC3FE8CB8D52A6A40C63E728EF4B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6B33D8726AA1A5EF9A6E0A149A09FE7F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_69492318A04260079A28A9CAA501516F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5569C0897EF2031512D0FDB08948900C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6A160F757F0CFDB9CC42562564E82487"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5BCD24F52F814922A9BE9CB526BBF4E7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_51AAA2EBE0AB41AC80164FF0EF939652"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_36C0AE10CB42481D964D644D13DCA2EB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_36503148D5C24C3492A58D57F9053829"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0221A7A2F0AE4C489C17BAB4FF4977E8"
+        "OwnerKey" = "8:_99D949C4CA12705A309F2EC06D9E91C9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -316,7 +244,79 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_99D949C4CA12705A309F2EC06D9E91C9"
+        "OwnerKey" = "8:_0221A7A2F0AE4C489C17BAB4FF4977E8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_36503148D5C24C3492A58D57F9053829"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_36C0AE10CB42481D964D644D13DCA2EB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_51AAA2EBE0AB41AC80164FF0EF939652"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5BCD24F52F814922A9BE9CB526BBF4E7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_6A160F757F0CFDB9CC42562564E82487"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5569C0897EF2031512D0FDB08948900C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_69492318A04260079A28A9CAA501516F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_6B33D8726AA1A5EF9A6E0A149A09FE7F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2E1FAC3FE8CB8D52A6A40C63E728EF4B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_AE3050EC980D4423B5B718AEEEA225CB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_AF7976B73DCD4781999BE6EAFD9D4BEC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B163D2BEA761FB5DE7C2AFD34952B33B"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -566,7 +566,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SpIceControllerLib, Version=1.1.6616.34010, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:SpIceControllerLib, Version=1.1.6639.42691, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_36503148D5C24C3492A58D57F9053829"
@@ -814,7 +814,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:laserScada, Version=1.0.6639.42637, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:laserScada, Version=1.0.6644.39758, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_80BB135153B84108B01CC04CC2DE4ACA"
@@ -1306,20 +1306,20 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:LaserScada"
-        "ProductCode" = "8:{BC226B79-9452-4CD9-A215-F120998A7C7A}"
-        "PackageCode" = "8:{2069939A-0E84-43E4-8771-4235E76AA911}"
+        "ProductCode" = "8:{2C3A8D3E-B0B5-46C1-A244-5908434EC9F7}"
+        "PackageCode" = "8:{238C5DAE-6A82-4401-A7A3-176EE516DEF0}"
         "UpgradeCode" = "8:{6565649E-BB37-4CC0-B582-2F262A905D02}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.4.12"
+        "ProductVersion" = "8:1.4.13"
         "Manufacturer" = "8:TestSuit"
         "ARPHELPTELEPHONE" = "8:8(977)8971404"
         "ARPHELPLINK" = "8:"
         "Title" = "8:LaserScada"
-        "Subject" = "8:1.4.12"
+        "Subject" = "8:1.4.13"
         "ARPCONTACT" = "8:TestSuit"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Установка черновой версии, программы упрвления двумя лазерам"
