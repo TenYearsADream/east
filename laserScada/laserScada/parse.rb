@@ -17,13 +17,13 @@ globalDebugNames = Array.new
 usMap = Array.new(1000) 
 
 files = Dir["tags/*"]
+ctgr = Hash.new()
 
 
 files.each do |file|
-doc = Nokogiri::XML(File.open(file))
+doc = Nokogiri::XML(File.open(file, "r:UTF-8"))
 
 localTagNames = Array.new 
-
 
 
 f.puts "//-----------------------------------------------------------------------------"
@@ -44,6 +44,16 @@ name3 = name3.gsub /_$/, ''
 path = el.xpath('Path').text
 type = el.xpath('Data_Type').text
 addr = el.xpath('Logical_Address').text
+hrname = el.xpath('Comment').text.strip
+category = hrname.scan(/\(([^\)]+)\)/).last
+if category.nil?
+category = "UDEFINED"
+else
+category = category.first
+end
+hrname = hrname.gsub(/\(.*\)/, '') 
+
+
 addrval = addr.gsub /[^0-9\.]/,''
 addrwidth = addr.gsub /[^A-Z]/ , ''
 #puts name3 + "  " + path  + "  " + type + "  " + addrval + "  " + addrwidth
@@ -53,6 +63,23 @@ nameCyr = el.xpath('Name').text.encode('windows-1251', {
     :undef   => :replace,
       :replace => '?'
       })
+
+category = category.encode('windows-1251', {
+  :invalid => :replace,
+    :undef   => :replace,
+      :replace => '?'
+      })
+ 
+hrname = hrname.encode('windows-1251', {
+  :invalid => :replace,
+    :undef   => :replace,
+      :replace => '?'
+      })
+	  
+if hrname == ""	 
+hrname = nameCyr
+category = "UDEFINED"
+end
 
 region = !!( addr =~ /M/)	  ? "M" : "X"
 width = !!( addr =~ /\%.D\d/) ? "UInt32" :!!( addr =~ /\%.W\d/) ? "UInt16" : !!( addr =~ /\%.\d/) ? "Bit" : "X"
@@ -66,7 +93,7 @@ signatura = type == "Bool" ? "#{intAdrr}, #{bitAddr}" : intAdrr
 	  
 getingType = type == "Real" ? "Float" : width	  
 	  
-f.puts "/\/\ #{nameCyr},   #{type}, #{addr}   reg = #{region}  width = #{width}"
+f.puts "/\/\ #{nameCyr} (#{hrname}/#{category}),   #{type}, #{addr}   reg = #{region}  width = #{width}"
 
 result = "    public #{varType} get_#{name3} ()\n" \
 "    { return (#{varType}) m_mem.get#{region}#{ getingType}(#{signatura}); }\n\n"
@@ -91,7 +118,7 @@ stringGetter = "    public string gets_#{name3} () { \n"\
 getterName = "    public string debug_name_#{name3} () { \n"\
 "    return \"#{nameCyr}\";}\n\n"
 
-globalDebugNames << "#{nameCyr}"
+globalDebugNames << "#{hrname.strip}"
 
 usMap[intAdrr.to_i] = 1
 usMap[intAdrr.to_i + 1] = 1 if width == "UInt32" || width == "UInt16"
@@ -100,6 +127,8 @@ usMap[intAdrr.to_i + 3] = 1 if width == "UInt32"
 
 localTagNames << "#{name3}"
 
+ctgr["#{category}"]   =  Array.new if !ctgr.key?("#{category}")
+ctgr["#{category}"] << "#{name3}"
 #fileEnum += name3 + ",\n"
 
 f.puts result
@@ -225,9 +254,9 @@ line = line.gsub /_$/, ''
 
 end
 
-
+puts "ctgr = " + ctgr.to_s
 groupCode = "public Dictionary<string, gTags[]> groupingDict = new Dictionary<string, gTags[]> {\n"
-groups.each do | key, value|
+ctgr.each do | key, value|
 groupCode+="{ \"#{key}\" ,new gTags [] {"
 value.each do |tst|
 groupCode += "gTags." + tst.to_s + ",\n"
@@ -237,6 +266,8 @@ groupCode+="}},\n"
 end
 groupCode+="};\n"
 f.puts groupCode
+
+
 
 switchGetter = "    public string get_by_name(string str) {\n"\
 "    switch (str){"

@@ -89,8 +89,7 @@ namespace laserScada
 
             
            
-            //panel.Children.Add(panelH1);
-            int count = 0;
+
             foreach (KeyValuePair<string, Tags.gTags[]> dicItem in m_plc.tags.groupingDict)
             {
                 System.Windows.Controls.GroupBox grBox = new GroupBox();
@@ -105,16 +104,6 @@ namespace laserScada
                 foreach (Tags.gTags tag in dicItem.Value)
                 {
                     panelH1.Children.Add(getControll(tag));
-
-                    if (panelH1.Width > System.Windows.SystemParameters.PrimaryScreenWidth)
-                    {
-                   //     panelH1 = new WrapPanel();
-                   //     panelH1.Orientation = Orientation.Horizontal;
-                   //     panelH2.Children.Add(panelH1);
-                     
-                        count = 0;
-                    }
-                    //     Console.WriteLine("Current entry for list {0}: {1}", dicItem.Key, entry);
                 }
             }
 
@@ -137,7 +126,7 @@ namespace laserScada
             if (type == Tags.activeType.command) {
                 System.Windows.Controls.Button newBtn = new Button();
                 newBtn.Content = m_plc.tags.getDebugName(tag);
-                //newBtn.Width = 180;
+                newBtn.MinWidth = 100;
                 newBtn.Click += (s, e) => { m_plc.tags.setSValue(tag, "true"); };
 
                 return newBtn;
@@ -148,7 +137,7 @@ namespace laserScada
                 LedControl.Led newLed = new LedControl.Led();
                 newLed.ColorOn = Colors.Green;
                 newLed.ColorOff = Colors.Gray;
-               // newLed.Width = 180;
+                newLed.MinWidth = 100;
                 newLed.Text = m_plc.tags.getDebugName(tag); 
                 m_checks.Add(() => {
                     bool val;
@@ -269,11 +258,11 @@ namespace laserScada
             //stol
          //   stol_tb_porsh_otn0.Text = m_plc.tags.get_ust_stol_poz_porsh_ot_nulya().ToString();
          //   stol_tb_plita_width.Text = m_plc.tags.get_ust_stol_tolshh_plity().ToString();
-            stol_tb_position.Text = m_plc.tags.get_ust_stol_poziciya().ToString();
-            stol_tb_step_value.Text = m_plc.tags.get_ust_stol_otn_rasst().ToString();
-            stol_tb_speed.Text = m_plc.tags.get_ust_stol_skor_vverh().ToString();
-            stol_tb_line.Text = m_plc.tags.get_linejka().ToString();
-            main_linejka_dublicate.Data = m_plc.tags.get_linejka().ToString();
+         //   stol_tb_position.Text = m_plc.tags.get_ust_stol_poziciya().ToString();
+        //    stol_tb_step_value.Text = m_plc.tags.get_ust_stol_otn_rasst().ToString();
+        //    stol_tb_speed.Text = m_plc.tags.get_ust_stol_skor_vverh().ToString();
+        //    stol_tb_line.Text = m_plc.tags.get_linejka().ToString();
+        //    main_linejka_dublicate.Data = m_plc.tags.get_linejka().ToString();
             main_laserCount.Data = SpIceControllerLib.SpIceController.laserCount.ToString();
           //  if (m_plc.tags.get_vyhd_pereschjot())
            //     stol_bt_line_control.Background = Brushes.Aqua;
@@ -281,11 +270,11 @@ namespace laserScada
            //     stol_bt_line_control.ClearValue(Button.BackgroundProperty);
 
 
-            if (m_plc.tags.get_vyhd_stol_poisk_nulya())
-                stol_bt_find_zero.Background = Brushes.Aqua;
-            else
-                stol_bt_find_zero.ClearValue(Button.BackgroundProperty);
-
+       //     if (m_plc.tags.get_vyhd_stol_poisk_nulya())
+     //           stol_bt_find_zero.Background = Brushes.Aqua;
+     //       else
+      //          stol_bt_find_zero.ClearValue(Button.BackgroundProperty);
+//
 
 
             //dat
@@ -334,8 +323,8 @@ namespace laserScada
             //laerFinish1 = (lastLaerFinish1 == true && !m_plc.tags.get_sloj_rab());
             //lastLaerFinish1 = m_plc.tags.get_sloj_rab();
 
-            pauseFinish = (lastPauseFinish == true && !m_plc.tags.get_kom_pauza());
-            lastPauseFinish = m_plc.tags.get_kom_pauza();
+         //   pauseFinish = (lastPauseFinish == true && !m_plc.tags.get_kom_pauza());
+          //  lastPauseFinish = m_plc.tags.get_kom_pauza();
            // pauseFinish = !m_plc.tags.get_kom_pauza();
           //  bool s1 = m_plc.tags.get_ust_kol_slojov() >0 && laerFinish && !m_plc.tags.get_kom_pauza() && !m_plc.tags.get_kom_prer();
           //  bool s2 = !m_plc.tags.get_sloj_rab() && pauseFinish && m_plc.tags.get_kom_rab_do_pauzy() &&  !m_plc.tags.get_kom_prer();
@@ -358,14 +347,14 @@ namespace laserScada
             //snek_s3_lo.IsActive = m_plc.tags.get_nizhn_ur_poroshka();
             //snek_s3_up.IsActive = m_plc.tags.get_verhn_ur_poroshka();
             //sloi
-            layer_widh.Data = m_plc.tags.get_ust_tolshh_sloya().ToString();
+           // layer_widh.Data = m_plc.tags.get_ust_tolshh_sloya().ToString();
            // layer_time_rot_m3.Data = m_plc.tags.get_ust_vrem_vrashh_na_meste().ToString();
            // layer_stop_m3.Data = m_plc.tags.get_ust_kar_poz_otkl_sh3().ToString();
            // layer_doz_num.Data = m_plc.tags.get_ust_kol_slojov_dlya_dozatora().ToString();
            // layer_doz_rem.Data = m_plc.tags.get_ost_slojov_dlya_dozatora().ToString();
           //  layer_pusk_num.Data = m_plc.tags.get_ust_kol_slojov().ToString();
-            layer_pusk_rem.Data = m_plc.tags.get_ost_slojov().ToString();
-            layer_pusk_gotov.Data = m_plc.tags.get_schjot_slojov().ToString();
+           // layer_pusk_rem.Data = m_plc.tags.get_ost_slojov().ToString();
+         ////   layer_pusk_gotov.Data = m_plc.tags.get_schjot_slojov().ToString();
             layer_scriptFile.Content = SpIceController.getScripFileName();
             //if (m_plc.tags.get_proc_obshh_rab())
             //    main_bt_process.Background = Brushes.Aqua;
@@ -472,12 +461,12 @@ namespace laserScada
 
         private void kar_bt_stop_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_karetka_stop(true);
+           // m_plc.tags.set_kom_karetka_stop(true);
         }
 
         private void kar_bt_start_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_kar_abs(true);
+          //  m_plc.tags.set_kom_kar_abs(true);
         }
 
         private void kar_bt_vlevo_Click(object sender, RoutedEventArgs e)
@@ -521,7 +510,7 @@ namespace laserScada
                     System.Windows.MessageBox.Show("Неправильное значение");
                     return;
                 }
-                m_plc.tags.set_ust_stol_poziciya(float.Parse(dialog.ResponseText));
+             //   m_plc.tags.set_ust_stol_poziciya(float.Parse(dialog.ResponseText));
             }
         }
 
@@ -551,7 +540,7 @@ namespace laserScada
                     System.Windows.MessageBox.Show("Неправильное значение");
                     return;
                 }
-                m_plc.tags.set_ust_stol_skor_vverh(float.Parse(dialog.ResponseText));
+               // m_plc.tags.set_ust_stol_skor_vverh(float.Parse(dialog.ResponseText));
             }
         }
 
@@ -566,18 +555,18 @@ namespace laserScada
                     System.Windows.MessageBox.Show("Неправильное значение");
                     return;
                 }
-                m_plc.tags.set_linejka(float.Parse(dialog.ResponseText));
+              //  m_plc.tags.set_linejka(float.Parse(dialog.ResponseText));
             }
         }
 
         private void stol_bt_find_zero_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_stol_poisk_nulya(true);
+          //  m_plc.tags.set_kom_stol_poisk_nulya(true);
         }
 
         private void stol_bt_set_zero_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_stol_ust_nulya(true);
+           // m_plc.tags.set_kom_stol_ust_nulya(true);
         }
 
         private void stol_bt_go_to_position_Click(object sender, RoutedEventArgs e)
@@ -587,12 +576,12 @@ namespace laserScada
 
         private void stol_bt_step_up_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_stol_otn_pusk_vverh(true);
+          //  m_plc.tags.set_kom_stol_otn_pusk_vverh(true);
         }
 
         private void stol_bt_step_down_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_stol_otn_pusk_vniz(true);
+          //  m_plc.tags.set_kom_stol_otn_pusk_vniz(true);
         }
 
         private void stol_bt_stop_Click(object sender, RoutedEventArgs e)
@@ -602,17 +591,17 @@ namespace laserScada
 
         private void stol_bt_cler_Error_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_stol_sbros(true);
+           // m_plc.tags.set_kom_stol_sbros(true);
         }
 
         private void stol_bt_line_clearing_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_obnulit_linejku(true);
+          //  m_plc.tags.set_kom_obnulit_linejku(true);
         }
 
         private void stol_bt_line_control_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_pereschjot(true);
+           // m_plc.tags.set_kom_pereschjot(true);
         }
 
         private void spIceCtl_Click(object sender, RoutedEventArgs e)
@@ -653,25 +642,25 @@ namespace laserScada
 
         private void main_bt_start_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_sloj(true);
+           // m_plc.tags.set_kom_sloj(true);
         }
 
         private void main_bt_process_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_proc_obshh(true);
+           // m_plc.tags.set_kom_proc_obshh(true);
 
         }
 
         private void main_bt_pause_Click(object sender, RoutedEventArgs e)
         {
             m_pause = !m_pause;
-            m_plc.tags.set_kom_pauza(m_pause);
+         //   m_plc.tags.set_kom_pauza(m_pause);
         }
 
         private void main_bt_interupt_Click(object sender, RoutedEventArgs e)
         {
             //  m_plc.tags.set_kom_p
-            m_plc.tags.set_kom_prer(true);
+           // m_plc.tags.set_kom_prer(true);
           //  Log.Write(LogLevel.Info, "Unimplemented!!!!");
         }
 
@@ -767,12 +756,12 @@ namespace laserScada
 
         private void layer_avtomat_d_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_dozator_avtomat(true);
+           // m_plc.tags.set_kom_dozator_avtomat(true);
         }
 
         private void layer_avtomat_pusk_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_sloj(true);
+            //m_plc.tags.set_kom_sloj(true);
         }
 
         private void layer_time_rot_m3_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -837,7 +826,7 @@ namespace laserScada
 
         private void layer_avtomat_reset_Click(object sender, RoutedEventArgs e)
         {
-            m_plc.tags.set_kom_sloj_sbros_schjotchika(true);
+          //  m_plc.tags.set_kom_sloj_sbros_schjotchika(true);
         }
 
         private void layer_widh_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -851,7 +840,7 @@ namespace laserScada
                     System.Windows.MessageBox.Show("Неправильное значение");
                     return;
                 }
-                m_plc.tags.set_ust_tolshh_sloya(short.Parse(dialog.ResponseText));
+               // m_plc.tags.set_ust_tolshh_sloya(short.Parse(dialog.ResponseText));
             }
         }
 
