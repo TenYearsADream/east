@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata">
+<PLC Tags><Name>ДМ_стол_абс_домГот</Name><Path>DM</Path><Data_Type>Bool</Data_Type><Logical_Address>%M521.1</Logical_Address><Comment>(Стол)&#160;Ноль&#160;установлен</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ДМ_Расход1-1</Name><Path>DM</Path><Data_Type>Bool</Data_Type><Logical_Address>%M528.6</Logical_Address><Comment>(Лазеры)&#160;Расход1-1</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ДМ_Расход1-2</Name><Path>DM</Path><Data_Type>Bool</Data_Type><Logical_Address>%M528.7</Logical_Address><Comment>(Лазеры)&#160;Расход1-2</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ДМ_Расход2-1</Name><Path>DM</Path><Data_Type>Bool</Data_Type><Logical_Address>%M529.0</Logical_Address><Comment>(Лазеры)&#160;Расход2-1</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ДМ_Расход2-2</Name><Path>DM</Path><Data_Type>Bool</Data_Type><Logical_Address>%M529.1</Logical_Address><Comment>(Лазеры)&#160;Расход2-2</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ДМ_прот1</Name><Path>DM</Path><Data_Type>Bool</Data_Type><Logical_Address>%M532.5</Logical_Address><Comment>(Чиллеры)&#160;Проток1</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ДМ_прот2</Name><Path>DM</Path><Data_Type>Bool</Data_Type><Logical_Address>%M532.6</Logical_Address><Comment>(Чиллеры)&#160;Проток2</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ДМ_прот3</Name><Path>DM</Path><Data_Type>Bool</Data_Type><Logical_Address>%M534.4</Logical_Address><Comment>(Чиллеры)&#160;Проток3</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ДМ_прот4</Name><Path>DM</Path><Data_Type>Bool</Data_Type><Logical_Address>%M534.5</Logical_Address><Comment>(Чиллеры)&#160;Проток4</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ДМ_прот5</Name><Path>DM</Path><Data_Type>Bool</Data_Type><Logical_Address>%M534.6</Logical_Address><Comment>(Чиллеры)&#160;Проток5</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ДМ_прот6</Name><Path>DM</Path><Data_Type>Bool</Data_Type><Logical_Address>%M534.7</Logical_Address><Comment>(Чиллеры)&#160;Проток6</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ДМ_карПрав_конц</Name><Path>DM</Path><Data_Type>Bool</Data_Type><Logical_Address>%M535.2</Logical_Address><Comment>(Каретки)&#160;Каретка&#160;правая-&#160;концевик</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ДМ_карЛев_конц</Name><Path>DM</Path><Data_Type>Bool</Data_Type><Logical_Address>%M535.3</Logical_Address><Comment>(Каретки)&#160;Каретка&#160;левая-&#160;концевик</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags></PLC Tags>
+</dataroot>

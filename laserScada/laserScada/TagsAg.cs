@@ -29,50 +29,6 @@ partial class Tags {
     public string debug_name_am_termopara1 () { 
     return "АМ_термопара1";}
 
-// АМ_термопара2 ( Температура2/Нагреватели),   Real, %MD608   reg = M  width = UInt32
-    public float get_am_termopara2 ()
-    { return (float) m_mem.getMFloat(608); }
-
-    public void set_am_termopara2 (float val)
-    { m_mem.setMFloat(608, (float) val); 
-      Log.Write(LogLevel.Info, "set am_termopara2 to " + val.ToString());}
-
-    public bool sets_am_termopara2 ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_am_termopara2 (val);
-    return true;}
-
-    public string gets_am_termopara2 () { 
-    return get_am_termopara2().ToString();}
-
-    public string debug_name_am_termopara2 () { 
-    return "АМ_термопара2";}
-
-// АМ_термопара3 ( Температура3/Нагреватели),   Real, %MD612   reg = M  width = UInt32
-    public float get_am_termopara3 ()
-    { return (float) m_mem.getMFloat(612); }
-
-    public void set_am_termopara3 (float val)
-    { m_mem.setMFloat(612, (float) val); 
-      Log.Write(LogLevel.Info, "set am_termopara3 to " + val.ToString());}
-
-    public bool sets_am_termopara3 ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_am_termopara3 (val);
-    return true;}
-
-    public string gets_am_termopara3 () { 
-    return get_am_termopara3().ToString();}
-
-    public string debug_name_am_termopara3 () { 
-    return "АМ_термопара3";}
-
 // АМ_диф датч расх ( Диф датчик расхода/Рецеркуляция),   Real, %MD616   reg = M  width = UInt32
     public float get_am_dif_datch_rash ()
     { return (float) m_mem.getMFloat(616); }
@@ -117,7 +73,7 @@ partial class Tags {
     public string debug_name_am_dawl_lew_fil_tr () { 
     return "АМ_давл лев фильтр";}
 
-// АМ_давл прав фильтр ( Давление левый фильтр/Рецеркуляция),   Real, %MD624   reg = M  width = UInt32
+// АМ_давл прав фильтр ( Давление правый фильтр/Рецеркуляция),   Real, %MD624   reg = M  width = UInt32
     public float get_am_dawl_praw_fil_tr ()
     { return (float) m_mem.getMFloat(624); }
 
@@ -226,72 +182,6 @@ partial class Tags {
 
     public string debug_name_am_stol_tek_poz () { 
     return "АМ_стол тек поз";}
-
-// АМ_инкремент ( Инкремент/Стол),   Int, %MW760   reg = M  width = UInt16
-    public Int16 get_am_inkrement ()
-    { return (Int16) m_mem.getMUInt16(760); }
-
-    public void set_am_inkrement (Int16 val)
-    { m_mem.setMUInt16(760, (UInt16) val); 
-      Log.Write(LogLevel.Info, "set am_inkrement to " + val.ToString());}
-
-    public bool sets_am_inkrement ( string str) {
-    Int16 val;
-    if (!Int16.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as Int16 ");
-        return false; }
-    set_am_inkrement (val);
-    return true;}
-
-    public string gets_am_inkrement () { 
-    return get_am_inkrement().ToString();}
-
-    public string debug_name_am_inkrement () { 
-    return "АМ_инкремент";}
-
-// АМ_ТЭН2 тек мощн ( ТЭН2текущая мощность/Нагреватели),   Real, %MD766   reg = M  width = UInt32
-    public float get_am_tjen2_tek_moschn ()
-    { return (float) m_mem.getMFloat(766); }
-
-    public void set_am_tjen2_tek_moschn (float val)
-    { m_mem.setMFloat(766, (float) val); 
-      Log.Write(LogLevel.Info, "set am_tjen2_tek_moschn to " + val.ToString());}
-
-    public bool sets_am_tjen2_tek_moschn ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_am_tjen2_tek_moschn (val);
-    return true;}
-
-    public string gets_am_tjen2_tek_moschn () { 
-    return get_am_tjen2_tek_moschn().ToString();}
-
-    public string debug_name_am_tjen2_tek_moschn () { 
-    return "АМ_ТЭН2 тек мощн";}
-
-// АМ_ТЭН3 тек мощн ( ТЭН3текущая мощность/Нагреватели),   Real, %MD770   reg = M  width = UInt32
-    public float get_am_tjen3_tek_moschn ()
-    { return (float) m_mem.getMFloat(770); }
-
-    public void set_am_tjen3_tek_moschn (float val)
-    { m_mem.setMFloat(770, (float) val); 
-      Log.Write(LogLevel.Info, "set am_tjen3_tek_moschn to " + val.ToString());}
-
-    public bool sets_am_tjen3_tek_moschn ( string str) {
-    float val;
-    if (!float.TryParse(str, out val)){
-        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
-        return false; }
-    set_am_tjen3_tek_moschn (val);
-    return true;}
-
-    public string gets_am_tjen3_tek_moschn () { 
-    return get_am_tjen3_tek_moschn().ToString();}
-
-    public string debug_name_am_tjen3_tek_moschn () { 
-    return "АМ_ТЭН3 тек мощн";}
 
 // АМ_темп1 ( Температура1/Чиллеры),   Real, %MD654   reg = M  width = UInt32
     public float get_am_temp1 ()
@@ -491,10 +381,74 @@ partial class Tags {
     public string debug_name_am_kar_praw_tek_poz () { 
     return "АМ_кар прав тек поз";}
 
+// АМ_давл в камере ( Давление в камере/Рецеркуляция),   Real, %MD636   reg = M  width = UInt32
+    public float get_am_dawl_w_kamere ()
+    { return (float) m_mem.getMFloat(636); }
+
+    public void set_am_dawl_w_kamere (float val)
+    { m_mem.setMFloat(636, (float) val); 
+      Log.Write(LogLevel.Info, "set am_dawl_w_kamere to " + val.ToString());}
+
+    public bool sets_am_dawl_w_kamere ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_am_dawl_w_kamere (val);
+    return true;}
+
+    public string gets_am_dawl_w_kamere () { 
+    return get_am_dawl_w_kamere().ToString();}
+
+    public string debug_name_am_dawl_w_kamere () { 
+    return "АМ_давл в камере";}
+
+// АМ_охл скан1 ( Расход возд скан1/Лазеры),   Real, %MD646   reg = M  width = UInt32
+    public float get_am_ohl_skan1 ()
+    { return (float) m_mem.getMFloat(646); }
+
+    public void set_am_ohl_skan1 (float val)
+    { m_mem.setMFloat(646, (float) val); 
+      Log.Write(LogLevel.Info, "set am_ohl_skan1 to " + val.ToString());}
+
+    public bool sets_am_ohl_skan1 ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_am_ohl_skan1 (val);
+    return true;}
+
+    public string gets_am_ohl_skan1 () { 
+    return get_am_ohl_skan1().ToString();}
+
+    public string debug_name_am_ohl_skan1 () { 
+    return "АМ_охл скан1";}
+
+// АМ_охл скан2 ( Расход возд скан2/Лазеры),   Real, %MD678   reg = M  width = UInt32
+    public float get_am_ohl_skan2 ()
+    { return (float) m_mem.getMFloat(678); }
+
+    public void set_am_ohl_skan2 (float val)
+    { m_mem.setMFloat(678, (float) val); 
+      Log.Write(LogLevel.Info, "set am_ohl_skan2 to " + val.ToString());}
+
+    public bool sets_am_ohl_skan2 ( string str) {
+    float val;
+    if (!float.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as float ");
+        return false; }
+    set_am_ohl_skan2 (val);
+    return true;}
+
+    public string gets_am_ohl_skan2 () { 
+    return get_am_ohl_skan2().ToString();}
+
+    public string debug_name_am_ohl_skan2 () { 
+    return "АМ_охл скан2";}
+
 public enum local_am{
 am_termopara1,
-am_termopara2,
-am_termopara3,
 am_dif_datch_rash,
 am_dawl_lew_fil_tr,
 am_dawl_praw_fil_tr,
@@ -502,9 +456,6 @@ am_linejka,
 am_tjen1_tek_moschn,
 am_kar_lew_tek_poz,
 am_stol_tek_poz,
-am_inkrement,
-am_tjen2_tek_moschn,
-am_tjen3_tek_moschn,
 am_temp1,
 am_temp2,
 am_temp3,
@@ -514,12 +465,13 @@ am_temp6,
 am_datch_kisl1,
 am_datch_kisl2,
 am_kar_praw_tek_poz,
+am_dawl_w_kamere,
+am_ohl_skan1,
+am_ohl_skan2,
 };
 
 public gTags[] group_am = {
 gTags.am_termopara1,
-gTags.am_termopara2,
-gTags.am_termopara3,
 gTags.am_dif_datch_rash,
 gTags.am_dawl_lew_fil_tr,
 gTags.am_dawl_praw_fil_tr,
@@ -527,9 +479,6 @@ gTags.am_linejka,
 gTags.am_tjen1_tek_moschn,
 gTags.am_kar_lew_tek_poz,
 gTags.am_stol_tek_poz,
-gTags.am_inkrement,
-gTags.am_tjen2_tek_moschn,
-gTags.am_tjen3_tek_moschn,
 gTags.am_temp1,
 gTags.am_temp2,
 gTags.am_temp3,
@@ -539,6 +488,9 @@ gTags.am_temp6,
 gTags.am_datch_kisl1,
 gTags.am_datch_kisl2,
 gTags.am_kar_praw_tek_poz,
+gTags.am_dawl_w_kamere,
+gTags.am_ohl_skan1,
+gTags.am_ohl_skan2,
 };
 
 //-----------------------------------------------------------------------------
@@ -676,27 +628,27 @@ gTags.am_kar_praw_tek_poz,
     public string debug_name_wyhd_stol_otn_wwerh () { 
     return "выхд_стол_отн_вверх";}
 
-// выхд_лаз_пит ( Питание/Лазеры),   Bool, %M506.5   reg = M  width = Bit
-    public bool get_wyhd_laz_pit ()
+// выхд_лаз_пит1 ( Питание лазера1/Лазеры),   Bool, %M506.5   reg = M  width = Bit
+    public bool get_wyhd_laz_pit1 ()
     { return (bool) m_mem.getMBit(506, 5); }
 
-    public void set_wyhd_laz_pit (bool val)
+    public void set_wyhd_laz_pit1 (bool val)
     { m_mem.setMBit(506, 5, (bool) val); 
-      Log.Write(LogLevel.Info, "set wyhd_laz_pit to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set wyhd_laz_pit1 to " + val.ToString());}
 
-    public bool sets_wyhd_laz_pit ( string str) {
+    public bool sets_wyhd_laz_pit1 ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_wyhd_laz_pit (val);
+    set_wyhd_laz_pit1 (val);
     return true;}
 
-    public string gets_wyhd_laz_pit () { 
-    return get_wyhd_laz_pit().ToString();}
+    public string gets_wyhd_laz_pit1 () { 
+    return get_wyhd_laz_pit1().ToString();}
 
-    public string debug_name_wyhd_laz_pit () { 
-    return "выхд_лаз_пит";}
+    public string debug_name_wyhd_laz_pit1 () { 
+    return "выхд_лаз_пит1";}
 
 // выхд_питЧил1 ( Питание чиллера1/Чиллеры),   Bool, %M506.6   reg = M  width = Bit
     public bool get_wyhd_pitchil1 ()
@@ -874,7 +826,7 @@ gTags.am_kar_praw_tek_poz,
     public string debug_name_wyhd_kv2 () { 
     return "выхд_КВ2";}
 
-// выхд_КЭ9 ( КЭ9/Рецеркуляция),   Bool, %M507.6   reg = M  width = Bit
+// выхд_КЭ9 ( КЭ9/Лазеры),   Bool, %M507.6   reg = M  width = Bit
     public bool get_wyhd_kje9 ()
     { return (bool) m_mem.getMBit(507, 6); }
 
@@ -896,7 +848,7 @@ gTags.am_kar_praw_tek_poz,
     public string debug_name_wyhd_kje9 () { 
     return "выхд_КЭ9";}
 
-// выхд_КЭ10 ( КЭ10/Рецеркуляция),   Bool, %M507.7   reg = M  width = Bit
+// выхд_КЭ10 ( КЭ10/Лазеры),   Bool, %M507.7   reg = M  width = Bit
     public bool get_wyhd_kje10 ()
     { return (bool) m_mem.getMBit(507, 7); }
 
@@ -1446,6 +1398,28 @@ gTags.am_kar_praw_tek_poz,
     public string debug_name_wyhd_tp_process () { 
     return "выхд_ТП_процесс";}
 
+// выхд_лаз_пит2 ( Питание лазера2/Лазеры),   Bool, %M510.5   reg = M  width = Bit
+    public bool get_wyhd_laz_pit2 ()
+    { return (bool) m_mem.getMBit(510, 5); }
+
+    public void set_wyhd_laz_pit2 (bool val)
+    { m_mem.setMBit(510, 5, (bool) val); 
+      Log.Write(LogLevel.Info, "set wyhd_laz_pit2 to " + val.ToString());}
+
+    public bool sets_wyhd_laz_pit2 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_wyhd_laz_pit2 (val);
+    return true;}
+
+    public string gets_wyhd_laz_pit2 () { 
+    return get_wyhd_laz_pit2().ToString();}
+
+    public string debug_name_wyhd_laz_pit2 () { 
+    return "выхд_лаз_пит2";}
+
 public enum local_outD{
 wyhd_stol_abs,
 wyhd_tjen1_pit,
@@ -1453,7 +1427,7 @@ wyhd_tjen2_pit,
 wyhd_tjen3_pit,
 wyhd_stol_otn_wniz,
 wyhd_stol_otn_wwerh,
-wyhd_laz_pit,
+wyhd_laz_pit1,
 wyhd_pitchil1,
 wyhd_pitchil2,
 wyhd_klchil1,
@@ -1488,6 +1462,7 @@ wyhd_klbarpraw,
 wyhd_nasotkgaza,
 wyhd_tp_sloj,
 wyhd_tp_process,
+wyhd_laz_pit2,
 };
 
 public gTags[] group_outD = {
@@ -1497,7 +1472,7 @@ gTags.wyhd_tjen2_pit,
 gTags.wyhd_tjen3_pit,
 gTags.wyhd_stol_otn_wniz,
 gTags.wyhd_stol_otn_wwerh,
-gTags.wyhd_laz_pit,
+gTags.wyhd_laz_pit1,
 gTags.wyhd_pitchil1,
 gTags.wyhd_pitchil2,
 gTags.wyhd_klchil1,
@@ -1532,6 +1507,328 @@ gTags.wyhd_klbarpraw,
 gTags.wyhd_nasotkgaza,
 gTags.wyhd_tp_sloj,
 gTags.wyhd_tp_process,
+gTags.wyhd_laz_pit2,
+};
+
+//-----------------------------------------------------------------------------
+//tags/dm.xml
+//-----------------------------------------------------------------------------
+// ДМ_стол_абс_домГот ( Ноль установлен/Стол),   Bool, %M521.1   reg = M  width = Bit
+    public bool get_dm_stol_abs_domgot ()
+    { return (bool) m_mem.getMBit(521, 1); }
+
+    public void set_dm_stol_abs_domgot (bool val)
+    { m_mem.setMBit(521, 1, (bool) val); 
+      Log.Write(LogLevel.Info, "set dm_stol_abs_domgot to " + val.ToString());}
+
+    public bool sets_dm_stol_abs_domgot ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_dm_stol_abs_domgot (val);
+    return true;}
+
+    public string gets_dm_stol_abs_domgot () { 
+    return get_dm_stol_abs_domgot().ToString();}
+
+    public string debug_name_dm_stol_abs_domgot () { 
+    return "ДМ_стол_абс_домГот";}
+
+// ДМ_Расход1-1 ( Расход1-1/Лазеры),   Bool, %M528.6   reg = M  width = Bit
+    public bool get_dm_rashod1_1 ()
+    { return (bool) m_mem.getMBit(528, 6); }
+
+    public void set_dm_rashod1_1 (bool val)
+    { m_mem.setMBit(528, 6, (bool) val); 
+      Log.Write(LogLevel.Info, "set dm_rashod1_1 to " + val.ToString());}
+
+    public bool sets_dm_rashod1_1 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_dm_rashod1_1 (val);
+    return true;}
+
+    public string gets_dm_rashod1_1 () { 
+    return get_dm_rashod1_1().ToString();}
+
+    public string debug_name_dm_rashod1_1 () { 
+    return "ДМ_Расход1-1";}
+
+// ДМ_Расход1-2 ( Расход1-2/Лазеры),   Bool, %M528.7   reg = M  width = Bit
+    public bool get_dm_rashod1_2 ()
+    { return (bool) m_mem.getMBit(528, 7); }
+
+    public void set_dm_rashod1_2 (bool val)
+    { m_mem.setMBit(528, 7, (bool) val); 
+      Log.Write(LogLevel.Info, "set dm_rashod1_2 to " + val.ToString());}
+
+    public bool sets_dm_rashod1_2 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_dm_rashod1_2 (val);
+    return true;}
+
+    public string gets_dm_rashod1_2 () { 
+    return get_dm_rashod1_2().ToString();}
+
+    public string debug_name_dm_rashod1_2 () { 
+    return "ДМ_Расход1-2";}
+
+// ДМ_Расход2-1 ( Расход2-1/Лазеры),   Bool, %M529.0   reg = M  width = Bit
+    public bool get_dm_rashod2_1 ()
+    { return (bool) m_mem.getMBit(529, 0); }
+
+    public void set_dm_rashod2_1 (bool val)
+    { m_mem.setMBit(529, 0, (bool) val); 
+      Log.Write(LogLevel.Info, "set dm_rashod2_1 to " + val.ToString());}
+
+    public bool sets_dm_rashod2_1 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_dm_rashod2_1 (val);
+    return true;}
+
+    public string gets_dm_rashod2_1 () { 
+    return get_dm_rashod2_1().ToString();}
+
+    public string debug_name_dm_rashod2_1 () { 
+    return "ДМ_Расход2-1";}
+
+// ДМ_Расход2-2 ( Расход2-2/Лазеры),   Bool, %M529.1   reg = M  width = Bit
+    public bool get_dm_rashod2_2 ()
+    { return (bool) m_mem.getMBit(529, 1); }
+
+    public void set_dm_rashod2_2 (bool val)
+    { m_mem.setMBit(529, 1, (bool) val); 
+      Log.Write(LogLevel.Info, "set dm_rashod2_2 to " + val.ToString());}
+
+    public bool sets_dm_rashod2_2 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_dm_rashod2_2 (val);
+    return true;}
+
+    public string gets_dm_rashod2_2 () { 
+    return get_dm_rashod2_2().ToString();}
+
+    public string debug_name_dm_rashod2_2 () { 
+    return "ДМ_Расход2-2";}
+
+// ДМ_прот1 ( Проток1/Чиллеры),   Bool, %M532.5   reg = M  width = Bit
+    public bool get_dm_prot1 ()
+    { return (bool) m_mem.getMBit(532, 5); }
+
+    public void set_dm_prot1 (bool val)
+    { m_mem.setMBit(532, 5, (bool) val); 
+      Log.Write(LogLevel.Info, "set dm_prot1 to " + val.ToString());}
+
+    public bool sets_dm_prot1 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_dm_prot1 (val);
+    return true;}
+
+    public string gets_dm_prot1 () { 
+    return get_dm_prot1().ToString();}
+
+    public string debug_name_dm_prot1 () { 
+    return "ДМ_прот1";}
+
+// ДМ_прот2 ( Проток2/Чиллеры),   Bool, %M532.6   reg = M  width = Bit
+    public bool get_dm_prot2 ()
+    { return (bool) m_mem.getMBit(532, 6); }
+
+    public void set_dm_prot2 (bool val)
+    { m_mem.setMBit(532, 6, (bool) val); 
+      Log.Write(LogLevel.Info, "set dm_prot2 to " + val.ToString());}
+
+    public bool sets_dm_prot2 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_dm_prot2 (val);
+    return true;}
+
+    public string gets_dm_prot2 () { 
+    return get_dm_prot2().ToString();}
+
+    public string debug_name_dm_prot2 () { 
+    return "ДМ_прот2";}
+
+// ДМ_прот3 ( Проток3/Чиллеры),   Bool, %M534.4   reg = M  width = Bit
+    public bool get_dm_prot3 ()
+    { return (bool) m_mem.getMBit(534, 4); }
+
+    public void set_dm_prot3 (bool val)
+    { m_mem.setMBit(534, 4, (bool) val); 
+      Log.Write(LogLevel.Info, "set dm_prot3 to " + val.ToString());}
+
+    public bool sets_dm_prot3 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_dm_prot3 (val);
+    return true;}
+
+    public string gets_dm_prot3 () { 
+    return get_dm_prot3().ToString();}
+
+    public string debug_name_dm_prot3 () { 
+    return "ДМ_прот3";}
+
+// ДМ_прот4 ( Проток4/Чиллеры),   Bool, %M534.5   reg = M  width = Bit
+    public bool get_dm_prot4 ()
+    { return (bool) m_mem.getMBit(534, 5); }
+
+    public void set_dm_prot4 (bool val)
+    { m_mem.setMBit(534, 5, (bool) val); 
+      Log.Write(LogLevel.Info, "set dm_prot4 to " + val.ToString());}
+
+    public bool sets_dm_prot4 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_dm_prot4 (val);
+    return true;}
+
+    public string gets_dm_prot4 () { 
+    return get_dm_prot4().ToString();}
+
+    public string debug_name_dm_prot4 () { 
+    return "ДМ_прот4";}
+
+// ДМ_прот5 ( Проток5/Чиллеры),   Bool, %M534.6   reg = M  width = Bit
+    public bool get_dm_prot5 ()
+    { return (bool) m_mem.getMBit(534, 6); }
+
+    public void set_dm_prot5 (bool val)
+    { m_mem.setMBit(534, 6, (bool) val); 
+      Log.Write(LogLevel.Info, "set dm_prot5 to " + val.ToString());}
+
+    public bool sets_dm_prot5 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_dm_prot5 (val);
+    return true;}
+
+    public string gets_dm_prot5 () { 
+    return get_dm_prot5().ToString();}
+
+    public string debug_name_dm_prot5 () { 
+    return "ДМ_прот5";}
+
+// ДМ_прот6 ( Проток6/Чиллеры),   Bool, %M534.7   reg = M  width = Bit
+    public bool get_dm_prot6 ()
+    { return (bool) m_mem.getMBit(534, 7); }
+
+    public void set_dm_prot6 (bool val)
+    { m_mem.setMBit(534, 7, (bool) val); 
+      Log.Write(LogLevel.Info, "set dm_prot6 to " + val.ToString());}
+
+    public bool sets_dm_prot6 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_dm_prot6 (val);
+    return true;}
+
+    public string gets_dm_prot6 () { 
+    return get_dm_prot6().ToString();}
+
+    public string debug_name_dm_prot6 () { 
+    return "ДМ_прот6";}
+
+// ДМ_карПрав_конц ( Каретка правая- концевик/Каретки),   Bool, %M535.2   reg = M  width = Bit
+    public bool get_dm_karpraw_konc ()
+    { return (bool) m_mem.getMBit(535, 2); }
+
+    public void set_dm_karpraw_konc (bool val)
+    { m_mem.setMBit(535, 2, (bool) val); 
+      Log.Write(LogLevel.Info, "set dm_karpraw_konc to " + val.ToString());}
+
+    public bool sets_dm_karpraw_konc ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_dm_karpraw_konc (val);
+    return true;}
+
+    public string gets_dm_karpraw_konc () { 
+    return get_dm_karpraw_konc().ToString();}
+
+    public string debug_name_dm_karpraw_konc () { 
+    return "ДМ_карПрав_конц";}
+
+// ДМ_карЛев_конц ( Каретка левая- концевик/Каретки),   Bool, %M535.3   reg = M  width = Bit
+    public bool get_dm_karlew_konc ()
+    { return (bool) m_mem.getMBit(535, 3); }
+
+    public void set_dm_karlew_konc (bool val)
+    { m_mem.setMBit(535, 3, (bool) val); 
+      Log.Write(LogLevel.Info, "set dm_karlew_konc to " + val.ToString());}
+
+    public bool sets_dm_karlew_konc ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_dm_karlew_konc (val);
+    return true;}
+
+    public string gets_dm_karlew_konc () { 
+    return get_dm_karlew_konc().ToString();}
+
+    public string debug_name_dm_karlew_konc () { 
+    return "ДМ_карЛев_конц";}
+
+public enum local_dm{
+dm_stol_abs_domgot,
+dm_rashod1_1,
+dm_rashod1_2,
+dm_rashod2_1,
+dm_rashod2_2,
+dm_prot1,
+dm_prot2,
+dm_prot3,
+dm_prot4,
+dm_prot5,
+dm_prot6,
+dm_karpraw_konc,
+dm_karlew_konc,
+};
+
+public gTags[] group_dm = {
+gTags.dm_stol_abs_domgot,
+gTags.dm_rashod1_1,
+gTags.dm_rashod1_2,
+gTags.dm_rashod2_1,
+gTags.dm_rashod2_2,
+gTags.dm_prot1,
+gTags.dm_prot2,
+gTags.dm_prot3,
+gTags.dm_prot4,
+gTags.dm_prot5,
+gTags.dm_prot6,
+gTags.dm_karpraw_konc,
+gTags.dm_karlew_konc,
 };
 
 //-----------------------------------------------------------------------------
@@ -1823,49 +2120,49 @@ gTags.wyhd_tp_process,
     public string debug_name_kom_stol_peresch_t () { 
     return "ком_стол_пересчёт";}
 
-// ком_лаз_пит ( Питание/Лазеры),   Bool, %M526.2   reg = M  width = Bit
-    public bool get_kom_laz_pit ()
+// ком_лаз_пит1 ( Питание лазера1/Лазеры),   Bool, %M526.2   reg = M  width = Bit
+    public bool get_kom_laz_pit1 ()
     { return (bool) m_mem.getMBit(526, 2); }
 
-    public void set_kom_laz_pit (bool val)
+    public void set_kom_laz_pit1 (bool val)
     { m_mem.setMBit(526, 2, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_laz_pit to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_laz_pit1 to " + val.ToString());}
 
-    public bool sets_kom_laz_pit ( string str) {
+    public bool sets_kom_laz_pit1 ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_laz_pit (val);
+    set_kom_laz_pit1 (val);
     return true;}
 
-    public string gets_kom_laz_pit () { 
-    return get_kom_laz_pit().ToString();}
+    public string gets_kom_laz_pit1 () { 
+    return get_kom_laz_pit1().ToString();}
 
-    public string debug_name_kom_laz_pit () { 
-    return "ком_лаз_пит";}
+    public string debug_name_kom_laz_pit1 () { 
+    return "ком_лаз_пит1";}
 
-// ком_лаз_гот ( Готовностть/Лазеры),   Bool, %M526.3   reg = M  width = Bit
-    public bool get_kom_laz_got ()
+// ком_лаз_гот1 ( Готовностть1/Лазеры),   Bool, %M526.3   reg = M  width = Bit
+    public bool get_kom_laz_got1 ()
     { return (bool) m_mem.getMBit(526, 3); }
 
-    public void set_kom_laz_got (bool val)
+    public void set_kom_laz_got1 (bool val)
     { m_mem.setMBit(526, 3, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_laz_got to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_laz_got1 to " + val.ToString());}
 
-    public bool sets_kom_laz_got ( string str) {
+    public bool sets_kom_laz_got1 ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_laz_got (val);
+    set_kom_laz_got1 (val);
     return true;}
 
-    public string gets_kom_laz_got () { 
-    return get_kom_laz_got().ToString();}
+    public string gets_kom_laz_got1 () { 
+    return get_kom_laz_got1().ToString();}
 
-    public string debug_name_kom_laz_got () { 
-    return "ком_лаз_гот";}
+    public string debug_name_kom_laz_got1 () { 
+    return "ком_лаз_гот1";}
 
 // ком_ТП_пауза ( Пауза/Автоматический процесс),   Bool, %M526.7   reg = M  width = Bit
     public bool get_kom_tp_pauza ()
@@ -2417,49 +2714,49 @@ gTags.wyhd_tp_process,
     public string debug_name_kom_dozpraw_nazad () { 
     return "ком_дозПрав_назад";}
 
-// ком_КЭ9 ( КЭ9/Рецеркуляция),   Bool, %M533.4   reg = M  width = Bit
-    public bool get_kom_kje9 ()
+// ком_КЭ9_охл_скан1 ( КЭ9 Клапан охл скан1/Лазеры),   Bool, %M533.4   reg = M  width = Bit
+    public bool get_kom_kje9_ohl_skan1 ()
     { return (bool) m_mem.getMBit(533, 4); }
 
-    public void set_kom_kje9 (bool val)
+    public void set_kom_kje9_ohl_skan1 (bool val)
     { m_mem.setMBit(533, 4, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_kje9 to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_kje9_ohl_skan1 to " + val.ToString());}
 
-    public bool sets_kom_kje9 ( string str) {
+    public bool sets_kom_kje9_ohl_skan1 ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_kje9 (val);
+    set_kom_kje9_ohl_skan1 (val);
     return true;}
 
-    public string gets_kom_kje9 () { 
-    return get_kom_kje9().ToString();}
+    public string gets_kom_kje9_ohl_skan1 () { 
+    return get_kom_kje9_ohl_skan1().ToString();}
 
-    public string debug_name_kom_kje9 () { 
-    return "ком_КЭ9";}
+    public string debug_name_kom_kje9_ohl_skan1 () { 
+    return "ком_КЭ9_охл_скан1";}
 
-// ком_КЭ10 ( КЭ10/Рецеркуляция),   Bool, %M533.7   reg = M  width = Bit
-    public bool get_kom_kje10 ()
+// ком_КЭ10_охл_скан2 ( КЭ10 Клапан охл скан2/Лазеры),   Bool, %M533.7   reg = M  width = Bit
+    public bool get_kom_kje10_ohl_skan2 ()
     { return (bool) m_mem.getMBit(533, 7); }
 
-    public void set_kom_kje10 (bool val)
+    public void set_kom_kje10_ohl_skan2 (bool val)
     { m_mem.setMBit(533, 7, (bool) val); 
-      Log.Write(LogLevel.Info, "set kom_kje10 to " + val.ToString());}
+      Log.Write(LogLevel.Info, "set kom_kje10_ohl_skan2 to " + val.ToString());}
 
-    public bool sets_kom_kje10 ( string str) {
+    public bool sets_kom_kje10_ohl_skan2 ( string str) {
     bool val;
     if (!bool.TryParse(str, out val)){
         System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
         return false; }
-    set_kom_kje10 (val);
+    set_kom_kje10_ohl_skan2 (val);
     return true;}
 
-    public string gets_kom_kje10 () { 
-    return get_kom_kje10().ToString();}
+    public string gets_kom_kje10_ohl_skan2 () { 
+    return get_kom_kje10_ohl_skan2().ToString();}
 
-    public string debug_name_kom_kje10 () { 
-    return "ком_КЭ10";}
+    public string debug_name_kom_kje10_ohl_skan2 () { 
+    return "ком_КЭ10_охл_скан2";}
 
 // ком_КВ1 ( КВ1/Рецеркуляция),   Bool, %M534.0   reg = M  width = Bit
     public bool get_kom_kv1 ()
@@ -2703,6 +3000,50 @@ gTags.wyhd_tp_process,
     public string debug_name_kom_karpraw_stop () { 
     return "ком_карПрав_стоп";}
 
+// ком_лаз_гот2 ( Готовностть2/Лазеры),   Bool, %M526.4   reg = M  width = Bit
+    public bool get_kom_laz_got2 ()
+    { return (bool) m_mem.getMBit(526, 4); }
+
+    public void set_kom_laz_got2 (bool val)
+    { m_mem.setMBit(526, 4, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_laz_got2 to " + val.ToString());}
+
+    public bool sets_kom_laz_got2 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_laz_got2 (val);
+    return true;}
+
+    public string gets_kom_laz_got2 () { 
+    return get_kom_laz_got2().ToString();}
+
+    public string debug_name_kom_laz_got2 () { 
+    return "ком_лаз_гот2";}
+
+// ком_лаз_пит2 ( Питание лазера2/Лазеры),   Bool, %M526.5   reg = M  width = Bit
+    public bool get_kom_laz_pit2 ()
+    { return (bool) m_mem.getMBit(526, 5); }
+
+    public void set_kom_laz_pit2 (bool val)
+    { m_mem.setMBit(526, 5, (bool) val); 
+      Log.Write(LogLevel.Info, "set kom_laz_pit2 to " + val.ToString());}
+
+    public bool sets_kom_laz_pit2 ( string str) {
+    bool val;
+    if (!bool.TryParse(str, out val)){
+        System.Windows.MessageBox.Show("Failed on try parse " + str + " as bool ");
+        return false; }
+    set_kom_laz_pit2 (val);
+    return true;}
+
+    public string gets_kom_laz_pit2 () { 
+    return get_kom_laz_pit2().ToString();}
+
+    public string debug_name_kom_laz_pit2 () { 
+    return "ком_лаз_пит2";}
+
 public enum local_com{
 kom_stol_abs,
 kom_tp_prer,
@@ -2717,8 +3058,8 @@ kom_tjen1,
 kom_tjen2,
 kom_tp_process,
 kom_stol_peresch_t,
-kom_laz_pit,
-kom_laz_got,
+kom_laz_pit1,
+kom_laz_got1,
 kom_tp_pauza,
 kom_pitchil1,
 kom_pitchil2,
@@ -2744,8 +3085,8 @@ kom_tolkpraw_wper_d,
 kom_tolkpraw_nazad,
 kom_dozlew_nazad,
 kom_dozpraw_nazad,
-kom_kje9,
-kom_kje10,
+kom_kje9_ohl_skan1,
+kom_kje10_ohl_skan2,
 kom_kv1,
 kom_kv2,
 kom_klbarlew,
@@ -2757,6 +3098,8 @@ kom_dozlew_stop,
 kom_dozpraw_stop,
 kom_karlew_stop,
 kom_karpraw_stop,
+kom_laz_got2,
+kom_laz_pit2,
 };
 
 public gTags[] group_com = {
@@ -2773,8 +3116,8 @@ gTags.kom_tjen1,
 gTags.kom_tjen2,
 gTags.kom_tp_process,
 gTags.kom_stol_peresch_t,
-gTags.kom_laz_pit,
-gTags.kom_laz_got,
+gTags.kom_laz_pit1,
+gTags.kom_laz_got1,
 gTags.kom_tp_pauza,
 gTags.kom_pitchil1,
 gTags.kom_pitchil2,
@@ -2800,8 +3143,8 @@ gTags.kom_tolkpraw_wper_d,
 gTags.kom_tolkpraw_nazad,
 gTags.kom_dozlew_nazad,
 gTags.kom_dozpraw_nazad,
-gTags.kom_kje9,
-gTags.kom_kje10,
+gTags.kom_kje9_ohl_skan1,
+gTags.kom_kje10_ohl_skan2,
 gTags.kom_kv1,
 gTags.kom_kv2,
 gTags.kom_klbarlew,
@@ -2813,6 +3156,8 @@ gTags.kom_dozlew_stop,
 gTags.kom_dozpraw_stop,
 gTags.kom_karlew_stop,
 gTags.kom_karpraw_stop,
+gTags.kom_laz_got2,
+gTags.kom_laz_pit2,
 };
 
 //-----------------------------------------------------------------------------
@@ -3546,8 +3891,6 @@ gTags.ust_tp_karpraw_konec,
 
 public enum gTags{
 am_termopara1,
-am_termopara2,
-am_termopara3,
 am_dif_datch_rash,
 am_dawl_lew_fil_tr,
 am_dawl_praw_fil_tr,
@@ -3555,9 +3898,6 @@ am_linejka,
 am_tjen1_tek_moschn,
 am_kar_lew_tek_poz,
 am_stol_tek_poz,
-am_inkrement,
-am_tjen2_tek_moschn,
-am_tjen3_tek_moschn,
 am_temp1,
 am_temp2,
 am_temp3,
@@ -3567,13 +3907,16 @@ am_temp6,
 am_datch_kisl1,
 am_datch_kisl2,
 am_kar_praw_tek_poz,
+am_dawl_w_kamere,
+am_ohl_skan1,
+am_ohl_skan2,
 wyhd_stol_abs,
 wyhd_tjen1_pit,
 wyhd_tjen2_pit,
 wyhd_tjen3_pit,
 wyhd_stol_otn_wniz,
 wyhd_stol_otn_wwerh,
-wyhd_laz_pit,
+wyhd_laz_pit1,
 wyhd_pitchil1,
 wyhd_pitchil2,
 wyhd_klchil1,
@@ -3608,6 +3951,20 @@ wyhd_klbarpraw,
 wyhd_nasotkgaza,
 wyhd_tp_sloj,
 wyhd_tp_process,
+wyhd_laz_pit2,
+dm_stol_abs_domgot,
+dm_rashod1_1,
+dm_rashod1_2,
+dm_rashod2_1,
+dm_rashod2_2,
+dm_prot1,
+dm_prot2,
+dm_prot3,
+dm_prot4,
+dm_prot5,
+dm_prot6,
+dm_karpraw_konc,
+dm_karlew_konc,
 kom_stol_abs,
 kom_tp_prer,
 kom_stol_stop,
@@ -3621,8 +3978,8 @@ kom_tjen1,
 kom_tjen2,
 kom_tp_process,
 kom_stol_peresch_t,
-kom_laz_pit,
-kom_laz_got,
+kom_laz_pit1,
+kom_laz_got1,
 kom_tp_pauza,
 kom_pitchil1,
 kom_pitchil2,
@@ -3648,8 +4005,8 @@ kom_tolkpraw_wper_d,
 kom_tolkpraw_nazad,
 kom_dozlew_nazad,
 kom_dozpraw_nazad,
-kom_kje9,
-kom_kje10,
+kom_kje9_ohl_skan1,
+kom_kje10_ohl_skan2,
 kom_kv1,
 kom_kv2,
 kom_klbarlew,
@@ -3661,6 +4018,8 @@ kom_dozlew_stop,
 kom_dozpraw_stop,
 kom_karlew_stop,
 kom_karpraw_stop,
+kom_laz_got2,
+kom_laz_pit2,
 ust_stol_abs_poz,
 ust_stol_skor,
 ust_stol_otn_rasst,
@@ -3697,18 +4056,13 @@ separator,
 
 public string [] debugNames = {
 " Температура1",
-" Температура2",
-" Температура3",
 " Диф датчик расхода",
 " Давление левый фильтр",
-" Давление левый фильтр",
+" Давление правый фильтр",
 " Линейка",
 " ТЭН1текущая мощность",
 " Каретка левая тек позиция",
 " тек позиция",
-" Инкремент",
-" ТЭН2текущая мощность",
-" ТЭН3текущая мощность",
 " Температура1",
 " Температура2",
 " Температура3",
@@ -3718,13 +4072,16 @@ public string [] debugNames = {
 " Кислород1",
 " Кмслород2",
 " Каретка правая тек позиция",
+" Давление в камере",
+" Расход возд скан1",
+" Расход возд скан2",
 " Позиция",
 " ТЭН1",
 " ТЭН2",
 " ТЭН3",
 " Вниз",
 " Вверх",
-" Питание",
+" Питание лазера1",
 " Питание чиллера1",
 " Питание чиллера2",
 " Клапаны чиллера1",
@@ -3759,6 +4116,20 @@ public string [] debugNames = {
 " Насос",
 " Слой",
 " Процесс",
+" Питание лазера2",
+" Ноль установлен",
+" Расход1-1",
+" Расход1-2",
+" Расход2-1",
+" Расход2-2",
+" Проток1",
+" Проток2",
+" Проток3",
+" Проток4",
+" Проток5",
+" Проток6",
+" Каретка правая- концевик",
+" Каретка левая- концевик",
 " Позиция",
 " Прерывание",
 " Стоп",
@@ -3772,8 +4143,8 @@ public string [] debugNames = {
 " ТЭН2",
 " Процесс",
 " Пересчёт",
-" Питание",
-" Готовностть",
+" Питание лазера1",
+" Готовностть1",
 " Пауза",
 " Питание чиллера1",
 " Питание чиллера2",
@@ -3799,8 +4170,8 @@ public string [] debugNames = {
 " Толкатель правый - назад",
 " Дозатор левый - назад",
 " Дозатор правый - назад",
-" КЭ9",
-" КЭ10",
+" КЭ9 Клапан охл скан1",
+" КЭ10 Клапан охл скан2",
 " КВ1",
 " КВ2",
 " Клапан барабана левого",
@@ -3812,6 +4183,8 @@ public string [] debugNames = {
 " Дозатор правый - стоп",
 " Каретка левая - стоп",
 " Каретка правая - стоп",
+" Готовностть2",
+" Питание лазера2",
 " Позиция",
 " Скорость",
 " Расстояние",
@@ -3850,8 +4223,6 @@ public string getDebugName(gTags tag) {return debugNames[(int)tag];}
 public string getSValue(gTags tag) { return sGetters[(int)tag]();}
 public void init_sGetters () {
 sGetters[(int)gTags.am_termopara1] =  gets_am_termopara1;
-sGetters[(int)gTags.am_termopara2] =  gets_am_termopara2;
-sGetters[(int)gTags.am_termopara3] =  gets_am_termopara3;
 sGetters[(int)gTags.am_dif_datch_rash] =  gets_am_dif_datch_rash;
 sGetters[(int)gTags.am_dawl_lew_fil_tr] =  gets_am_dawl_lew_fil_tr;
 sGetters[(int)gTags.am_dawl_praw_fil_tr] =  gets_am_dawl_praw_fil_tr;
@@ -3859,9 +4230,6 @@ sGetters[(int)gTags.am_linejka] =  gets_am_linejka;
 sGetters[(int)gTags.am_tjen1_tek_moschn] =  gets_am_tjen1_tek_moschn;
 sGetters[(int)gTags.am_kar_lew_tek_poz] =  gets_am_kar_lew_tek_poz;
 sGetters[(int)gTags.am_stol_tek_poz] =  gets_am_stol_tek_poz;
-sGetters[(int)gTags.am_inkrement] =  gets_am_inkrement;
-sGetters[(int)gTags.am_tjen2_tek_moschn] =  gets_am_tjen2_tek_moschn;
-sGetters[(int)gTags.am_tjen3_tek_moschn] =  gets_am_tjen3_tek_moschn;
 sGetters[(int)gTags.am_temp1] =  gets_am_temp1;
 sGetters[(int)gTags.am_temp2] =  gets_am_temp2;
 sGetters[(int)gTags.am_temp3] =  gets_am_temp3;
@@ -3871,13 +4239,16 @@ sGetters[(int)gTags.am_temp6] =  gets_am_temp6;
 sGetters[(int)gTags.am_datch_kisl1] =  gets_am_datch_kisl1;
 sGetters[(int)gTags.am_datch_kisl2] =  gets_am_datch_kisl2;
 sGetters[(int)gTags.am_kar_praw_tek_poz] =  gets_am_kar_praw_tek_poz;
+sGetters[(int)gTags.am_dawl_w_kamere] =  gets_am_dawl_w_kamere;
+sGetters[(int)gTags.am_ohl_skan1] =  gets_am_ohl_skan1;
+sGetters[(int)gTags.am_ohl_skan2] =  gets_am_ohl_skan2;
 sGetters[(int)gTags.wyhd_stol_abs] =  gets_wyhd_stol_abs;
 sGetters[(int)gTags.wyhd_tjen1_pit] =  gets_wyhd_tjen1_pit;
 sGetters[(int)gTags.wyhd_tjen2_pit] =  gets_wyhd_tjen2_pit;
 sGetters[(int)gTags.wyhd_tjen3_pit] =  gets_wyhd_tjen3_pit;
 sGetters[(int)gTags.wyhd_stol_otn_wniz] =  gets_wyhd_stol_otn_wniz;
 sGetters[(int)gTags.wyhd_stol_otn_wwerh] =  gets_wyhd_stol_otn_wwerh;
-sGetters[(int)gTags.wyhd_laz_pit] =  gets_wyhd_laz_pit;
+sGetters[(int)gTags.wyhd_laz_pit1] =  gets_wyhd_laz_pit1;
 sGetters[(int)gTags.wyhd_pitchil1] =  gets_wyhd_pitchil1;
 sGetters[(int)gTags.wyhd_pitchil2] =  gets_wyhd_pitchil2;
 sGetters[(int)gTags.wyhd_klchil1] =  gets_wyhd_klchil1;
@@ -3912,6 +4283,20 @@ sGetters[(int)gTags.wyhd_klbarpraw] =  gets_wyhd_klbarpraw;
 sGetters[(int)gTags.wyhd_nasotkgaza] =  gets_wyhd_nasotkgaza;
 sGetters[(int)gTags.wyhd_tp_sloj] =  gets_wyhd_tp_sloj;
 sGetters[(int)gTags.wyhd_tp_process] =  gets_wyhd_tp_process;
+sGetters[(int)gTags.wyhd_laz_pit2] =  gets_wyhd_laz_pit2;
+sGetters[(int)gTags.dm_stol_abs_domgot] =  gets_dm_stol_abs_domgot;
+sGetters[(int)gTags.dm_rashod1_1] =  gets_dm_rashod1_1;
+sGetters[(int)gTags.dm_rashod1_2] =  gets_dm_rashod1_2;
+sGetters[(int)gTags.dm_rashod2_1] =  gets_dm_rashod2_1;
+sGetters[(int)gTags.dm_rashod2_2] =  gets_dm_rashod2_2;
+sGetters[(int)gTags.dm_prot1] =  gets_dm_prot1;
+sGetters[(int)gTags.dm_prot2] =  gets_dm_prot2;
+sGetters[(int)gTags.dm_prot3] =  gets_dm_prot3;
+sGetters[(int)gTags.dm_prot4] =  gets_dm_prot4;
+sGetters[(int)gTags.dm_prot5] =  gets_dm_prot5;
+sGetters[(int)gTags.dm_prot6] =  gets_dm_prot6;
+sGetters[(int)gTags.dm_karpraw_konc] =  gets_dm_karpraw_konc;
+sGetters[(int)gTags.dm_karlew_konc] =  gets_dm_karlew_konc;
 sGetters[(int)gTags.kom_stol_abs] =  gets_kom_stol_abs;
 sGetters[(int)gTags.kom_tp_prer] =  gets_kom_tp_prer;
 sGetters[(int)gTags.kom_stol_stop] =  gets_kom_stol_stop;
@@ -3925,8 +4310,8 @@ sGetters[(int)gTags.kom_tjen1] =  gets_kom_tjen1;
 sGetters[(int)gTags.kom_tjen2] =  gets_kom_tjen2;
 sGetters[(int)gTags.kom_tp_process] =  gets_kom_tp_process;
 sGetters[(int)gTags.kom_stol_peresch_t] =  gets_kom_stol_peresch_t;
-sGetters[(int)gTags.kom_laz_pit] =  gets_kom_laz_pit;
-sGetters[(int)gTags.kom_laz_got] =  gets_kom_laz_got;
+sGetters[(int)gTags.kom_laz_pit1] =  gets_kom_laz_pit1;
+sGetters[(int)gTags.kom_laz_got1] =  gets_kom_laz_got1;
 sGetters[(int)gTags.kom_tp_pauza] =  gets_kom_tp_pauza;
 sGetters[(int)gTags.kom_pitchil1] =  gets_kom_pitchil1;
 sGetters[(int)gTags.kom_pitchil2] =  gets_kom_pitchil2;
@@ -3952,8 +4337,8 @@ sGetters[(int)gTags.kom_tolkpraw_wper_d] =  gets_kom_tolkpraw_wper_d;
 sGetters[(int)gTags.kom_tolkpraw_nazad] =  gets_kom_tolkpraw_nazad;
 sGetters[(int)gTags.kom_dozlew_nazad] =  gets_kom_dozlew_nazad;
 sGetters[(int)gTags.kom_dozpraw_nazad] =  gets_kom_dozpraw_nazad;
-sGetters[(int)gTags.kom_kje9] =  gets_kom_kje9;
-sGetters[(int)gTags.kom_kje10] =  gets_kom_kje10;
+sGetters[(int)gTags.kom_kje9_ohl_skan1] =  gets_kom_kje9_ohl_skan1;
+sGetters[(int)gTags.kom_kje10_ohl_skan2] =  gets_kom_kje10_ohl_skan2;
 sGetters[(int)gTags.kom_kv1] =  gets_kom_kv1;
 sGetters[(int)gTags.kom_kv2] =  gets_kom_kv2;
 sGetters[(int)gTags.kom_klbarlew] =  gets_kom_klbarlew;
@@ -3965,6 +4350,8 @@ sGetters[(int)gTags.kom_dozlew_stop] =  gets_kom_dozlew_stop;
 sGetters[(int)gTags.kom_dozpraw_stop] =  gets_kom_dozpraw_stop;
 sGetters[(int)gTags.kom_karlew_stop] =  gets_kom_karlew_stop;
 sGetters[(int)gTags.kom_karpraw_stop] =  gets_kom_karpraw_stop;
+sGetters[(int)gTags.kom_laz_got2] =  gets_kom_laz_got2;
+sGetters[(int)gTags.kom_laz_pit2] =  gets_kom_laz_pit2;
 sGetters[(int)gTags.ust_stol_abs_poz] =  gets_ust_stol_abs_poz;
 sGetters[(int)gTags.ust_stol_skor] =  gets_ust_stol_skor;
 sGetters[(int)gTags.ust_stol_otn_rasst] =  gets_ust_stol_otn_rasst;
@@ -4001,8 +4388,6 @@ Func<string, bool>[] sSetters = new Func<string, bool>[(int)gTags.lastGTag];
 public bool setSValue(gTags tag, string val) { return sSetters[(int)tag](val); }
 public void init_sSetters () {
 sSetters[(int)gTags.am_termopara1] =  sets_am_termopara1;
-sSetters[(int)gTags.am_termopara2] =  sets_am_termopara2;
-sSetters[(int)gTags.am_termopara3] =  sets_am_termopara3;
 sSetters[(int)gTags.am_dif_datch_rash] =  sets_am_dif_datch_rash;
 sSetters[(int)gTags.am_dawl_lew_fil_tr] =  sets_am_dawl_lew_fil_tr;
 sSetters[(int)gTags.am_dawl_praw_fil_tr] =  sets_am_dawl_praw_fil_tr;
@@ -4010,9 +4395,6 @@ sSetters[(int)gTags.am_linejka] =  sets_am_linejka;
 sSetters[(int)gTags.am_tjen1_tek_moschn] =  sets_am_tjen1_tek_moschn;
 sSetters[(int)gTags.am_kar_lew_tek_poz] =  sets_am_kar_lew_tek_poz;
 sSetters[(int)gTags.am_stol_tek_poz] =  sets_am_stol_tek_poz;
-sSetters[(int)gTags.am_inkrement] =  sets_am_inkrement;
-sSetters[(int)gTags.am_tjen2_tek_moschn] =  sets_am_tjen2_tek_moschn;
-sSetters[(int)gTags.am_tjen3_tek_moschn] =  sets_am_tjen3_tek_moschn;
 sSetters[(int)gTags.am_temp1] =  sets_am_temp1;
 sSetters[(int)gTags.am_temp2] =  sets_am_temp2;
 sSetters[(int)gTags.am_temp3] =  sets_am_temp3;
@@ -4022,13 +4404,16 @@ sSetters[(int)gTags.am_temp6] =  sets_am_temp6;
 sSetters[(int)gTags.am_datch_kisl1] =  sets_am_datch_kisl1;
 sSetters[(int)gTags.am_datch_kisl2] =  sets_am_datch_kisl2;
 sSetters[(int)gTags.am_kar_praw_tek_poz] =  sets_am_kar_praw_tek_poz;
+sSetters[(int)gTags.am_dawl_w_kamere] =  sets_am_dawl_w_kamere;
+sSetters[(int)gTags.am_ohl_skan1] =  sets_am_ohl_skan1;
+sSetters[(int)gTags.am_ohl_skan2] =  sets_am_ohl_skan2;
 sSetters[(int)gTags.wyhd_stol_abs] =  sets_wyhd_stol_abs;
 sSetters[(int)gTags.wyhd_tjen1_pit] =  sets_wyhd_tjen1_pit;
 sSetters[(int)gTags.wyhd_tjen2_pit] =  sets_wyhd_tjen2_pit;
 sSetters[(int)gTags.wyhd_tjen3_pit] =  sets_wyhd_tjen3_pit;
 sSetters[(int)gTags.wyhd_stol_otn_wniz] =  sets_wyhd_stol_otn_wniz;
 sSetters[(int)gTags.wyhd_stol_otn_wwerh] =  sets_wyhd_stol_otn_wwerh;
-sSetters[(int)gTags.wyhd_laz_pit] =  sets_wyhd_laz_pit;
+sSetters[(int)gTags.wyhd_laz_pit1] =  sets_wyhd_laz_pit1;
 sSetters[(int)gTags.wyhd_pitchil1] =  sets_wyhd_pitchil1;
 sSetters[(int)gTags.wyhd_pitchil2] =  sets_wyhd_pitchil2;
 sSetters[(int)gTags.wyhd_klchil1] =  sets_wyhd_klchil1;
@@ -4063,6 +4448,20 @@ sSetters[(int)gTags.wyhd_klbarpraw] =  sets_wyhd_klbarpraw;
 sSetters[(int)gTags.wyhd_nasotkgaza] =  sets_wyhd_nasotkgaza;
 sSetters[(int)gTags.wyhd_tp_sloj] =  sets_wyhd_tp_sloj;
 sSetters[(int)gTags.wyhd_tp_process] =  sets_wyhd_tp_process;
+sSetters[(int)gTags.wyhd_laz_pit2] =  sets_wyhd_laz_pit2;
+sSetters[(int)gTags.dm_stol_abs_domgot] =  sets_dm_stol_abs_domgot;
+sSetters[(int)gTags.dm_rashod1_1] =  sets_dm_rashod1_1;
+sSetters[(int)gTags.dm_rashod1_2] =  sets_dm_rashod1_2;
+sSetters[(int)gTags.dm_rashod2_1] =  sets_dm_rashod2_1;
+sSetters[(int)gTags.dm_rashod2_2] =  sets_dm_rashod2_2;
+sSetters[(int)gTags.dm_prot1] =  sets_dm_prot1;
+sSetters[(int)gTags.dm_prot2] =  sets_dm_prot2;
+sSetters[(int)gTags.dm_prot3] =  sets_dm_prot3;
+sSetters[(int)gTags.dm_prot4] =  sets_dm_prot4;
+sSetters[(int)gTags.dm_prot5] =  sets_dm_prot5;
+sSetters[(int)gTags.dm_prot6] =  sets_dm_prot6;
+sSetters[(int)gTags.dm_karpraw_konc] =  sets_dm_karpraw_konc;
+sSetters[(int)gTags.dm_karlew_konc] =  sets_dm_karlew_konc;
 sSetters[(int)gTags.kom_stol_abs] =  sets_kom_stol_abs;
 sSetters[(int)gTags.kom_tp_prer] =  sets_kom_tp_prer;
 sSetters[(int)gTags.kom_stol_stop] =  sets_kom_stol_stop;
@@ -4076,8 +4475,8 @@ sSetters[(int)gTags.kom_tjen1] =  sets_kom_tjen1;
 sSetters[(int)gTags.kom_tjen2] =  sets_kom_tjen2;
 sSetters[(int)gTags.kom_tp_process] =  sets_kom_tp_process;
 sSetters[(int)gTags.kom_stol_peresch_t] =  sets_kom_stol_peresch_t;
-sSetters[(int)gTags.kom_laz_pit] =  sets_kom_laz_pit;
-sSetters[(int)gTags.kom_laz_got] =  sets_kom_laz_got;
+sSetters[(int)gTags.kom_laz_pit1] =  sets_kom_laz_pit1;
+sSetters[(int)gTags.kom_laz_got1] =  sets_kom_laz_got1;
 sSetters[(int)gTags.kom_tp_pauza] =  sets_kom_tp_pauza;
 sSetters[(int)gTags.kom_pitchil1] =  sets_kom_pitchil1;
 sSetters[(int)gTags.kom_pitchil2] =  sets_kom_pitchil2;
@@ -4103,8 +4502,8 @@ sSetters[(int)gTags.kom_tolkpraw_wper_d] =  sets_kom_tolkpraw_wper_d;
 sSetters[(int)gTags.kom_tolkpraw_nazad] =  sets_kom_tolkpraw_nazad;
 sSetters[(int)gTags.kom_dozlew_nazad] =  sets_kom_dozlew_nazad;
 sSetters[(int)gTags.kom_dozpraw_nazad] =  sets_kom_dozpraw_nazad;
-sSetters[(int)gTags.kom_kje9] =  sets_kom_kje9;
-sSetters[(int)gTags.kom_kje10] =  sets_kom_kje10;
+sSetters[(int)gTags.kom_kje9_ohl_skan1] =  sets_kom_kje9_ohl_skan1;
+sSetters[(int)gTags.kom_kje10_ohl_skan2] =  sets_kom_kje10_ohl_skan2;
 sSetters[(int)gTags.kom_kv1] =  sets_kom_kv1;
 sSetters[(int)gTags.kom_kv2] =  sets_kom_kv2;
 sSetters[(int)gTags.kom_klbarlew] =  sets_kom_klbarlew;
@@ -4116,6 +4515,8 @@ sSetters[(int)gTags.kom_dozlew_stop] =  sets_kom_dozlew_stop;
 sSetters[(int)gTags.kom_dozpraw_stop] =  sets_kom_dozpraw_stop;
 sSetters[(int)gTags.kom_karlew_stop] =  sets_kom_karlew_stop;
 sSetters[(int)gTags.kom_karpraw_stop] =  sets_kom_karpraw_stop;
+sSetters[(int)gTags.kom_laz_got2] =  sets_kom_laz_got2;
+sSetters[(int)gTags.kom_laz_pit2] =  sets_kom_laz_pit2;
 sSetters[(int)gTags.ust_stol_abs_poz] =  sets_ust_stol_abs_poz;
 sSetters[(int)gTags.ust_stol_skor] =  sets_ust_stol_skor;
 sSetters[(int)gTags.ust_stol_otn_rasst] =  sets_ust_stol_otn_rasst;
@@ -4157,29 +4558,19 @@ gTags.ust_tjen1_moschn,
 gTags.ust_tjen1_temp,
 gTags.wyhd_tjen1_pit,
 gTags.separator,
-gTags.am_tjen2_tek_moschn,
 gTags.kom_tjen2,
 gTags.ust_tjen2_moschn,
 gTags.ust_tjen2_temp,
 gTags.wyhd_tjen2_pit,
 gTags.separator,
-gTags.am_tjen3_tek_moschn,
 gTags.kom_tjen3,
 gTags.ust_tjen3_moschn,
 gTags.ust_tjen3_temp,
 gTags.wyhd_tjen3_pit,
 gTags.separator,
 gTags.am_termopara1,
-gTags.am_termopara2,
-gTags.am_termopara3,
 }},
 { "Рецеркуляция" ,new gTags [] {
-gTags.separator,
-gTags.kom_kje10,
-gTags.wyhd_kje10,
-gTags.separator,
-gTags.kom_kje9,
-gTags.wyhd_kje9,
 gTags.separator,
 gTags.kom_kv1,
 gTags.wyhd_kv1,
@@ -4196,6 +4587,7 @@ gTags.separator,
 gTags.am_dawl_lew_fil_tr,
 gTags.am_dawl_praw_fil_tr,
 gTags.separator,
+gTags.am_dawl_w_kamere,
 gTags.am_dif_datch_rash,
 }},
 { "Стол" ,new gTags [] {
@@ -4213,9 +4605,9 @@ gTags.separator,
 gTags.kom_stol_peresch_t,
 gTags.wyhd_stol_peresch_t,
 gTags.separator,
-gTags.am_inkrement,
 gTags.am_linejka,
 gTags.am_stol_tek_poz,
+gTags.dm_stol_abs_domgot,
 gTags.separator,
 gTags.kom_stol_obnulit_linejku,
 gTags.kom_stol_stop,
@@ -4251,13 +4643,16 @@ gTags.wyhd_pitmps,
 gTags.separator,
 gTags.am_kar_lew_tek_poz,
 gTags.am_kar_praw_tek_poz,
-gTags.kom_karlew_stop,
+gTags.dm_karlew_konc,
 gTags.separator,
+gTags.dm_karpraw_konc,
+gTags.kom_karlew_stop,
 gTags.kom_karpraw_stop,
+gTags.separator,
 gTags.ust_karlew_otn_rast,
 gTags.ust_karlew_skor,
-gTags.separator,
 gTags.ust_karpraw_otn_rast,
+gTags.separator,
 gTags.ust_karpraw_skor,
 }},
 { "Чиллеры" ,new gTags [] {
@@ -4282,13 +4677,41 @@ gTags.am_temp4,
 gTags.separator,
 gTags.am_temp5,
 gTags.am_temp6,
+gTags.separator,
+gTags.dm_prot1,
+gTags.dm_prot2,
+gTags.separator,
+gTags.dm_prot3,
+gTags.dm_prot4,
+gTags.separator,
+gTags.dm_prot5,
+gTags.dm_prot6,
 }},
 { "Лазеры" ,new gTags [] {
 gTags.separator,
-gTags.kom_laz_pit,
-gTags.wyhd_laz_pit,
+gTags.kom_laz_pit1,
+gTags.wyhd_laz_pit1,
 gTags.separator,
-gTags.kom_laz_got,
+gTags.kom_laz_pit2,
+gTags.wyhd_laz_pit2,
+gTags.separator,
+gTags.kom_kje10_ohl_skan2,
+gTags.wyhd_kje10,
+gTags.separator,
+gTags.kom_kje9_ohl_skan1,
+gTags.wyhd_kje9,
+gTags.separator,
+gTags.am_ohl_skan1,
+gTags.am_ohl_skan2,
+gTags.separator,
+gTags.dm_rashod1_1,
+gTags.dm_rashod1_2,
+gTags.separator,
+gTags.dm_rashod2_1,
+gTags.dm_rashod2_2,
+gTags.separator,
+gTags.kom_laz_got1,
+gTags.kom_laz_got2,
 }},
 { "Дозаторы" ,new gTags [] {
 gTags.separator,
@@ -4385,10 +4808,6 @@ gTags.ust_tp_tolschsloq,
     public string get_by_name(string str) {
     switch (str){case "am_termopara1":
    return gets_am_termopara1();
-case "am_termopara2":
-   return gets_am_termopara2();
-case "am_termopara3":
-   return gets_am_termopara3();
 case "am_dif_datch_rash":
    return gets_am_dif_datch_rash();
 case "am_dawl_lew_fil_tr":
@@ -4403,12 +4822,6 @@ case "am_kar_lew_tek_poz":
    return gets_am_kar_lew_tek_poz();
 case "am_stol_tek_poz":
    return gets_am_stol_tek_poz();
-case "am_inkrement":
-   return gets_am_inkrement();
-case "am_tjen2_tek_moschn":
-   return gets_am_tjen2_tek_moschn();
-case "am_tjen3_tek_moschn":
-   return gets_am_tjen3_tek_moschn();
 case "am_temp1":
    return gets_am_temp1();
 case "am_temp2":
@@ -4427,6 +4840,12 @@ case "am_datch_kisl2":
    return gets_am_datch_kisl2();
 case "am_kar_praw_tek_poz":
    return gets_am_kar_praw_tek_poz();
+case "am_dawl_w_kamere":
+   return gets_am_dawl_w_kamere();
+case "am_ohl_skan1":
+   return gets_am_ohl_skan1();
+case "am_ohl_skan2":
+   return gets_am_ohl_skan2();
 case "wyhd_stol_abs":
    return gets_wyhd_stol_abs();
 case "wyhd_tjen1_pit":
@@ -4439,8 +4858,8 @@ case "wyhd_stol_otn_wniz":
    return gets_wyhd_stol_otn_wniz();
 case "wyhd_stol_otn_wwerh":
    return gets_wyhd_stol_otn_wwerh();
-case "wyhd_laz_pit":
-   return gets_wyhd_laz_pit();
+case "wyhd_laz_pit1":
+   return gets_wyhd_laz_pit1();
 case "wyhd_pitchil1":
    return gets_wyhd_pitchil1();
 case "wyhd_pitchil2":
@@ -4509,6 +4928,34 @@ case "wyhd_tp_sloj":
    return gets_wyhd_tp_sloj();
 case "wyhd_tp_process":
    return gets_wyhd_tp_process();
+case "wyhd_laz_pit2":
+   return gets_wyhd_laz_pit2();
+case "dm_stol_abs_domgot":
+   return gets_dm_stol_abs_domgot();
+case "dm_rashod1_1":
+   return gets_dm_rashod1_1();
+case "dm_rashod1_2":
+   return gets_dm_rashod1_2();
+case "dm_rashod2_1":
+   return gets_dm_rashod2_1();
+case "dm_rashod2_2":
+   return gets_dm_rashod2_2();
+case "dm_prot1":
+   return gets_dm_prot1();
+case "dm_prot2":
+   return gets_dm_prot2();
+case "dm_prot3":
+   return gets_dm_prot3();
+case "dm_prot4":
+   return gets_dm_prot4();
+case "dm_prot5":
+   return gets_dm_prot5();
+case "dm_prot6":
+   return gets_dm_prot6();
+case "dm_karpraw_konc":
+   return gets_dm_karpraw_konc();
+case "dm_karlew_konc":
+   return gets_dm_karlew_konc();
 case "kom_stol_abs":
    return gets_kom_stol_abs();
 case "kom_tp_prer":
@@ -4535,10 +4982,10 @@ case "kom_tp_process":
    return gets_kom_tp_process();
 case "kom_stol_peresch_t":
    return gets_kom_stol_peresch_t();
-case "kom_laz_pit":
-   return gets_kom_laz_pit();
-case "kom_laz_got":
-   return gets_kom_laz_got();
+case "kom_laz_pit1":
+   return gets_kom_laz_pit1();
+case "kom_laz_got1":
+   return gets_kom_laz_got1();
 case "kom_tp_pauza":
    return gets_kom_tp_pauza();
 case "kom_pitchil1":
@@ -4589,10 +5036,10 @@ case "kom_dozlew_nazad":
    return gets_kom_dozlew_nazad();
 case "kom_dozpraw_nazad":
    return gets_kom_dozpraw_nazad();
-case "kom_kje9":
-   return gets_kom_kje9();
-case "kom_kje10":
-   return gets_kom_kje10();
+case "kom_kje9_ohl_skan1":
+   return gets_kom_kje9_ohl_skan1();
+case "kom_kje10_ohl_skan2":
+   return gets_kom_kje10_ohl_skan2();
 case "kom_kv1":
    return gets_kom_kv1();
 case "kom_kv2":
@@ -4615,6 +5062,10 @@ case "kom_karlew_stop":
    return gets_kom_karlew_stop();
 case "kom_karpraw_stop":
    return gets_kom_karpraw_stop();
+case "kom_laz_got2":
+   return gets_kom_laz_got2();
+case "kom_laz_pit2":
+   return gets_kom_laz_pit2();
 case "ust_stol_abs_poz":
    return gets_ust_stol_abs_poz();
 case "ust_stol_skor":
@@ -4682,10 +5133,6 @@ default:
     public bool set_by_name(string str, string val) {
     switch (str){case "am_termopara1":
    return sets_am_termopara1(val);
-case "am_termopara2":
-   return sets_am_termopara2(val);
-case "am_termopara3":
-   return sets_am_termopara3(val);
 case "am_dif_datch_rash":
    return sets_am_dif_datch_rash(val);
 case "am_dawl_lew_fil_tr":
@@ -4700,12 +5147,6 @@ case "am_kar_lew_tek_poz":
    return sets_am_kar_lew_tek_poz(val);
 case "am_stol_tek_poz":
    return sets_am_stol_tek_poz(val);
-case "am_inkrement":
-   return sets_am_inkrement(val);
-case "am_tjen2_tek_moschn":
-   return sets_am_tjen2_tek_moschn(val);
-case "am_tjen3_tek_moschn":
-   return sets_am_tjen3_tek_moschn(val);
 case "am_temp1":
    return sets_am_temp1(val);
 case "am_temp2":
@@ -4724,6 +5165,12 @@ case "am_datch_kisl2":
    return sets_am_datch_kisl2(val);
 case "am_kar_praw_tek_poz":
    return sets_am_kar_praw_tek_poz(val);
+case "am_dawl_w_kamere":
+   return sets_am_dawl_w_kamere(val);
+case "am_ohl_skan1":
+   return sets_am_ohl_skan1(val);
+case "am_ohl_skan2":
+   return sets_am_ohl_skan2(val);
 case "wyhd_stol_abs":
    return sets_wyhd_stol_abs(val);
 case "wyhd_tjen1_pit":
@@ -4736,8 +5183,8 @@ case "wyhd_stol_otn_wniz":
    return sets_wyhd_stol_otn_wniz(val);
 case "wyhd_stol_otn_wwerh":
    return sets_wyhd_stol_otn_wwerh(val);
-case "wyhd_laz_pit":
-   return sets_wyhd_laz_pit(val);
+case "wyhd_laz_pit1":
+   return sets_wyhd_laz_pit1(val);
 case "wyhd_pitchil1":
    return sets_wyhd_pitchil1(val);
 case "wyhd_pitchil2":
@@ -4806,6 +5253,34 @@ case "wyhd_tp_sloj":
    return sets_wyhd_tp_sloj(val);
 case "wyhd_tp_process":
    return sets_wyhd_tp_process(val);
+case "wyhd_laz_pit2":
+   return sets_wyhd_laz_pit2(val);
+case "dm_stol_abs_domgot":
+   return sets_dm_stol_abs_domgot(val);
+case "dm_rashod1_1":
+   return sets_dm_rashod1_1(val);
+case "dm_rashod1_2":
+   return sets_dm_rashod1_2(val);
+case "dm_rashod2_1":
+   return sets_dm_rashod2_1(val);
+case "dm_rashod2_2":
+   return sets_dm_rashod2_2(val);
+case "dm_prot1":
+   return sets_dm_prot1(val);
+case "dm_prot2":
+   return sets_dm_prot2(val);
+case "dm_prot3":
+   return sets_dm_prot3(val);
+case "dm_prot4":
+   return sets_dm_prot4(val);
+case "dm_prot5":
+   return sets_dm_prot5(val);
+case "dm_prot6":
+   return sets_dm_prot6(val);
+case "dm_karpraw_konc":
+   return sets_dm_karpraw_konc(val);
+case "dm_karlew_konc":
+   return sets_dm_karlew_konc(val);
 case "kom_stol_abs":
    return sets_kom_stol_abs(val);
 case "kom_tp_prer":
@@ -4832,10 +5307,10 @@ case "kom_tp_process":
    return sets_kom_tp_process(val);
 case "kom_stol_peresch_t":
    return sets_kom_stol_peresch_t(val);
-case "kom_laz_pit":
-   return sets_kom_laz_pit(val);
-case "kom_laz_got":
-   return sets_kom_laz_got(val);
+case "kom_laz_pit1":
+   return sets_kom_laz_pit1(val);
+case "kom_laz_got1":
+   return sets_kom_laz_got1(val);
 case "kom_tp_pauza":
    return sets_kom_tp_pauza(val);
 case "kom_pitchil1":
@@ -4886,10 +5361,10 @@ case "kom_dozlew_nazad":
    return sets_kom_dozlew_nazad(val);
 case "kom_dozpraw_nazad":
    return sets_kom_dozpraw_nazad(val);
-case "kom_kje9":
-   return sets_kom_kje9(val);
-case "kom_kje10":
-   return sets_kom_kje10(val);
+case "kom_kje9_ohl_skan1":
+   return sets_kom_kje9_ohl_skan1(val);
+case "kom_kje10_ohl_skan2":
+   return sets_kom_kje10_ohl_skan2(val);
 case "kom_kv1":
    return sets_kom_kv1(val);
 case "kom_kv2":
@@ -4912,6 +5387,10 @@ case "kom_karlew_stop":
    return sets_kom_karlew_stop(val);
 case "kom_karpraw_stop":
    return sets_kom_karpraw_stop(val);
+case "kom_laz_got2":
+   return sets_kom_laz_got2(val);
+case "kom_laz_pit2":
+   return sets_kom_laz_pit2(val);
 case "ust_stol_abs_poz":
    return sets_ust_stol_abs_poz(val);
 case "ust_stol_skor":
@@ -4979,10 +5458,6 @@ default:
     public string get_debug_by_name(string str) {
     switch (str){case "am_termopara1":
    return debug_name_am_termopara1();
-case "am_termopara2":
-   return debug_name_am_termopara2();
-case "am_termopara3":
-   return debug_name_am_termopara3();
 case "am_dif_datch_rash":
    return debug_name_am_dif_datch_rash();
 case "am_dawl_lew_fil_tr":
@@ -4997,12 +5472,6 @@ case "am_kar_lew_tek_poz":
    return debug_name_am_kar_lew_tek_poz();
 case "am_stol_tek_poz":
    return debug_name_am_stol_tek_poz();
-case "am_inkrement":
-   return debug_name_am_inkrement();
-case "am_tjen2_tek_moschn":
-   return debug_name_am_tjen2_tek_moschn();
-case "am_tjen3_tek_moschn":
-   return debug_name_am_tjen3_tek_moschn();
 case "am_temp1":
    return debug_name_am_temp1();
 case "am_temp2":
@@ -5021,6 +5490,12 @@ case "am_datch_kisl2":
    return debug_name_am_datch_kisl2();
 case "am_kar_praw_tek_poz":
    return debug_name_am_kar_praw_tek_poz();
+case "am_dawl_w_kamere":
+   return debug_name_am_dawl_w_kamere();
+case "am_ohl_skan1":
+   return debug_name_am_ohl_skan1();
+case "am_ohl_skan2":
+   return debug_name_am_ohl_skan2();
 case "wyhd_stol_abs":
    return debug_name_wyhd_stol_abs();
 case "wyhd_tjen1_pit":
@@ -5033,8 +5508,8 @@ case "wyhd_stol_otn_wniz":
    return debug_name_wyhd_stol_otn_wniz();
 case "wyhd_stol_otn_wwerh":
    return debug_name_wyhd_stol_otn_wwerh();
-case "wyhd_laz_pit":
-   return debug_name_wyhd_laz_pit();
+case "wyhd_laz_pit1":
+   return debug_name_wyhd_laz_pit1();
 case "wyhd_pitchil1":
    return debug_name_wyhd_pitchil1();
 case "wyhd_pitchil2":
@@ -5103,6 +5578,34 @@ case "wyhd_tp_sloj":
    return debug_name_wyhd_tp_sloj();
 case "wyhd_tp_process":
    return debug_name_wyhd_tp_process();
+case "wyhd_laz_pit2":
+   return debug_name_wyhd_laz_pit2();
+case "dm_stol_abs_domgot":
+   return debug_name_dm_stol_abs_domgot();
+case "dm_rashod1_1":
+   return debug_name_dm_rashod1_1();
+case "dm_rashod1_2":
+   return debug_name_dm_rashod1_2();
+case "dm_rashod2_1":
+   return debug_name_dm_rashod2_1();
+case "dm_rashod2_2":
+   return debug_name_dm_rashod2_2();
+case "dm_prot1":
+   return debug_name_dm_prot1();
+case "dm_prot2":
+   return debug_name_dm_prot2();
+case "dm_prot3":
+   return debug_name_dm_prot3();
+case "dm_prot4":
+   return debug_name_dm_prot4();
+case "dm_prot5":
+   return debug_name_dm_prot5();
+case "dm_prot6":
+   return debug_name_dm_prot6();
+case "dm_karpraw_konc":
+   return debug_name_dm_karpraw_konc();
+case "dm_karlew_konc":
+   return debug_name_dm_karlew_konc();
 case "kom_stol_abs":
    return debug_name_kom_stol_abs();
 case "kom_tp_prer":
@@ -5129,10 +5632,10 @@ case "kom_tp_process":
    return debug_name_kom_tp_process();
 case "kom_stol_peresch_t":
    return debug_name_kom_stol_peresch_t();
-case "kom_laz_pit":
-   return debug_name_kom_laz_pit();
-case "kom_laz_got":
-   return debug_name_kom_laz_got();
+case "kom_laz_pit1":
+   return debug_name_kom_laz_pit1();
+case "kom_laz_got1":
+   return debug_name_kom_laz_got1();
 case "kom_tp_pauza":
    return debug_name_kom_tp_pauza();
 case "kom_pitchil1":
@@ -5183,10 +5686,10 @@ case "kom_dozlew_nazad":
    return debug_name_kom_dozlew_nazad();
 case "kom_dozpraw_nazad":
    return debug_name_kom_dozpraw_nazad();
-case "kom_kje9":
-   return debug_name_kom_kje9();
-case "kom_kje10":
-   return debug_name_kom_kje10();
+case "kom_kje9_ohl_skan1":
+   return debug_name_kom_kje9_ohl_skan1();
+case "kom_kje10_ohl_skan2":
+   return debug_name_kom_kje10_ohl_skan2();
 case "kom_kv1":
    return debug_name_kom_kv1();
 case "kom_kv2":
@@ -5209,6 +5712,10 @@ case "kom_karlew_stop":
    return debug_name_kom_karlew_stop();
 case "kom_karpraw_stop":
    return debug_name_kom_karpraw_stop();
+case "kom_laz_got2":
+   return debug_name_kom_laz_got2();
+case "kom_laz_pit2":
+   return debug_name_kom_laz_pit2();
 case "ust_stol_abs_poz":
    return debug_name_ust_stol_abs_poz();
 case "ust_stol_skor":
@@ -5281,7 +5788,7 @@ default:
 //++++++++++++++++++++++++++++++++________++++________++++++++++++++++++++++++++++++++________________
 //________________________++++++++++++++++____++++++++++++++++________________++++++++++++++++________
 //+__+_++++++_______++_++_+_++++++++++________________________________________________________________
-//____++++++++++++++++++++++++++++++++______++++____++++++++++++++++++++++++++++______________________
-//__________________________________++++++++++++______________++____++++++++__________________________
+//____++++________++++++++++++++++++++++++__++++++++++++++++++++++++++++++++++++++++__________________
+//__________________________________++++++++++++______________________________________________________
 //____________________________________________________________________________________________________
 //____________________________________________________________________________________________________
