@@ -37,6 +37,7 @@ namespace SpIceControllerLib
         public UInt16 mode;
         public UInt16 power;
         public string corrFilePatch;
+        public string corrFilePatch2;
         public float scale;
         public double gainX;
         public double gainY;
@@ -50,7 +51,7 @@ namespace SpIceControllerLib
 
         public styles style1;
         public string workSpacePath;
-        // public styles style2;
+        public styles style2;
         // public styles style3;
         public bool debug;
         public UInt64 startLayer;

@@ -538,5 +538,17 @@ namespace SpIceControllerLib.Properties {
                 this["debugOutput"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("AS-50-Y_0700-1200_570.gdc")]
+        public string correctionFile2 {
+            get {
+                return ((string)(this["correctionFile2"]));
+            }
+            set {
+                this["correctionFile2"] = value;
+            }
+        }
     }
 }

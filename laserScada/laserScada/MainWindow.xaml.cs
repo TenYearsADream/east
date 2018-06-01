@@ -39,6 +39,24 @@ namespace laserScada
         bool pauseFinish = false;
         bool lastPauseFinish = false;
         bool m_pause = false;
+
+
+        bool processEnabled = false;
+
+        public enum processState
+        {
+            waitStart,
+            setNumber,
+            setRedy,
+            waitEnable,
+            work,
+            waitWorkFinish,
+            waitClearEnable,
+        };
+
+        processState m_processState;
+
+
         bool pr_main_connect
         {
            
@@ -66,8 +84,9 @@ namespace laserScada
 
             pr_main_connect = m_plc.connect();
 
-            
-          
+            m_processState = processState.waitStart;
+
+
 
             this.Loaded += MainWindow_Loaded;
             this.Closing += MainWindow_Closing;
@@ -138,6 +157,7 @@ namespace laserScada
             if (type == Tags.activeType.led)
             {
                 LedControl.Led newLed = new LedControl.Led();
+                newLed.ActiveValue = -1;
                 newLed.ColorOn = Colors.Green;
                 newLed.ColorOff = Colors.Gray;
                 newLed.MinWidth = 100;
@@ -146,7 +166,31 @@ namespace laserScada
                     bool val;
                     string text = m_plc.tags.getSValue(tag);
                     if (bool.TryParse(text, out val))
-                        newLed.IsActive = bool.Parse(text);
+                        newLed.IsActive =  bool.Parse(text);
+                }
+                );
+
+                return newLed;
+            }
+
+            if (type == Tags.activeType.multyLed)
+            {
+                LedControl.Led newLed = new LedControl.Led();
+                newLed.ActiveValue = -1;
+                newLed.Color_0 = Colors.Gray;
+                newLed.Color_1 = Colors.Yellow;
+                newLed.Color_2 = Colors.Green;
+                newLed.Color_3 = Colors.Red;
+               
+                newLed.MinWidth = 100;
+                newLed.Text = m_plc.tags.getDebugName(tag);
+                m_checks.Add(() => {
+                    int val;
+                    string text = m_plc.tags.getSValue(tag);
+                    if (int.TryParse(text, out val))
+                        newLed.ActiveValue =  int.Parse(text);
+                   
+                   // newLed.IsActive = !newLed.IsActive;
                 }
                 );
 
@@ -366,12 +410,12 @@ namespace laserScada
 
             //modul postroenia
             // build_led1.IsActive = m_plc.tags.get_
-         
+
 
             //bool errVal = !m_plc.tags.get_prot_skanator() || m_plc.tags.get_vys_temp_skanator() ||
             //     !m_plc.tags.get_prot_gol_laz_i_kalimator() || m_plc.tags.get_vys_temp_gol_laz_i_kalimator() ||
             //     !m_plc.tags.get_prot_lazer() || m_plc.tags.get_vys_temp_lazer() || m_plc.tags.get_ohl_skan() != 1;
-           
+
             //    main_bt_startLayer.IsEnabled = !errVal;
             //layer_avtomat_pusk.IsEnabled = !errVal;
 
@@ -395,7 +439,78 @@ namespace laserScada
             //    System.Windows.MessageBox.Show("Принудительная приостановка процесса прожига " + reason);
             //}
 
+            m_main_state_debug.Text ="  debug.state = " + m_processState.ToString();
 
+            if (processEnabled)
+            {
+                switch (m_processState)
+                {
+                    case processState.waitStart:
+                        if (SpIceController.getCurrentCardId() !=0)
+                             m_processState = processState.setNumber;
+                        break;
+
+                    case processState.setNumber:
+                        m_plc.tags.set_nomer((short)SpIceController.getCurrentCardId());
+                        m_processState = processState.setRedy;
+                        break;
+
+                    case processState.setRedy:
+                        m_plc.tags.set_gotownost(true);
+                        m_processState = processState.waitEnable;
+                        break;
+
+                    case processState.waitEnable:
+                        if (m_plc.tags.get_razreshenie())
+                        m_processState = processState.work;
+                        break;
+
+                    case processState.work:
+                        SpIceController.StartLayer_(true);
+                        SpIceController.layerFinish = false;
+                        m_processState = processState.waitWorkFinish;
+                        break;
+
+                    case processState.waitWorkFinish:
+                        if (SpIceController.layerFinish)
+                        {
+                            m_processState = processState.waitClearEnable;
+                            m_plc.tags.set_nomer(0);
+                            m_plc.tags.set_gotownost(false);
+                        }
+                        break;
+
+                    case processState.waitClearEnable:
+                        if (!m_plc.tags.get_razreshenie())
+                            m_processState = processState.waitStart;
+                        break;
+
+                }
+
+
+                       
+            }
+
+        }
+
+        private void main_bt_process_Click(object sender, RoutedEventArgs e)
+        {
+            // m_plc.tags.set_kom_proc_obshh(true);
+            processEnabled = true;
+
+
+        }
+
+
+        private void main_bt_interupt_Click(object sender, RoutedEventArgs e)
+        {
+            processEnabled = false;
+        }
+
+        private void main_bt_startLayer_Click(object sender, RoutedEventArgs e)
+        {
+            Log.Write(LogLevel.Info, "start layer ");
+            SpIceController.StartLayer_(true);
         }
 
         private void tbDeviceIP_TextChanged(object sender, TextChangedEventArgs e)
@@ -612,11 +727,7 @@ namespace laserScada
             SpIceControllerLib.SpIceController.initForm();
         }
 
-        private void main_bt_startLayer_Click(object sender, RoutedEventArgs e)
-        {
-            Log.Write(LogLevel.Info, "start layer ");
-            SpIceController.StartLayer_(true);
-        }
+  
 
         private void main_bt_light(object sender, RoutedEventArgs e)
         {
@@ -648,11 +759,7 @@ namespace laserScada
            // m_plc.tags.set_kom_sloj(true);
         }
 
-        private void main_bt_process_Click(object sender, RoutedEventArgs e)
-        {
-           // m_plc.tags.set_kom_proc_obshh(true);
-
-        }
+        
 
         private void main_bt_pause_Click(object sender, RoutedEventArgs e)
         {
@@ -660,12 +767,7 @@ namespace laserScada
          //   m_plc.tags.set_kom_pauza(m_pause);
         }
 
-        private void main_bt_interupt_Click(object sender, RoutedEventArgs e)
-        {
-            //  m_plc.tags.set_kom_p
-           // m_plc.tags.set_kom_prer(true);
-          //  Log.Write(LogLevel.Info, "Unimplemented!!!!");
-        }
+        
 
         private void snek_s1_bt_start_Click(object sender, RoutedEventArgs e)
         {

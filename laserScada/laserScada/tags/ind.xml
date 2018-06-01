@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata">
+<PLC Tags><Name>ИНД_скан1_охл</Name><Path>ИНД</Path><Data_Type>Int</Data_Type><Logical_Address>%MW608</Logical_Address><Comment>(Лазеры)&#160;Сканатор1&#160;-&#160;охлаждение</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ИНД_скан2_охл</Name><Path>ИНД</Path><Data_Type>Int</Data_Type><Logical_Address>%MW610</Logical_Address><Comment>(Лазеры)&#160;Сканатор2&#160;-&#160;охлаждение</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ИНД_лаз1_охл</Name><Path>ИНД</Path><Data_Type>Int</Data_Type><Logical_Address>%MW612</Logical_Address><Comment>(Лазеры)&#160;Лазер1&#160;-&#160;охлаждение</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ИНД_лаз2_охл</Name><Path>ИНД</Path><Data_Type>Int</Data_Type><Logical_Address>%MW614</Logical_Address><Comment>(Лазеры)&#160;Лазер2&#160;-&#160;охлаждение</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ИНД_кислород</Name><Path>ИНД</Path><Data_Type>Int</Data_Type><Logical_Address>%MW640</Logical_Address><Comment>(Лазеры)&#160;Содержание&#160;кислорода</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ИНД_давлКам</Name><Path>ИНД</Path><Data_Type>Int</Data_Type><Logical_Address>%MW682</Logical_Address><Comment>(Лазеры)&#160;Давление&#160;в&#160;камере</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags></PLC Tags>
+</dataroot>

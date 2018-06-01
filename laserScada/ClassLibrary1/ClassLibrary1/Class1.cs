@@ -45,7 +45,7 @@ namespace SpIceControllerLib
         static Thread m_mainThread;
         static Thread m_controllFormThread;
         static bool dbg = false;
-
+        public static bool layerFinish;
         static public int laserCount
         { get; set; }
 
@@ -93,12 +93,14 @@ namespace SpIceControllerLib
 
             string result = "";
             m_isIntiialize = true;
+            string corrFile;
             //start with number 1
             for (ushort cardNumber = 1; cardNumber < laserCount + 1; cardNumber++)
             {
+                corrFile = cardNumber == 1 ? e.cs.corrFilePatch : e.cs.corrFilePatch2;
 
                 rInit = NativeMethods.PCI_Init_Scan_Card_Ex(cardNumber);
-                rLoad = NativeMethods.PCI_Load_Corr_N(e.cs.corrFilePatch, (short)cardNumber);
+                rLoad = NativeMethods.PCI_Load_Corr_N(corrFile, (short)cardNumber);
                 rSetAct = NativeMethods.PCI_Set_Active_Card((UInt16)cardNumber);
                 setGain = NativeMethods.PCI_Set_Gain(e.cs.gainX, e.cs.gainY, 0, 0, (UInt16)e.cs.num);
                 rSetMode = NativeMethods.PCI_Set_Mode(e.cs.mode);
@@ -113,6 +115,9 @@ namespace SpIceControllerLib
                  "Oscillator on ", rOsc ? "Ok" : "Fail",
                  "Set gain ", setGain ? "Ok" : "Fail");
 
+                result += string.Format("{0} ... {2, -10}   ({1}) \n   ",
+                 "Load correction ", corrFile, rLoad.ToString());
+
                 m_isIntiialize =  m_isIntiialize && rInit && rSetAct && rSetMode && rOsc;
 
             }
@@ -126,8 +131,7 @@ namespace SpIceControllerLib
             m_state = IntState.Wait ;
 
             result += string.Format("\n\n{0} ... {1, -10} \n", "Open script ", openScript.ToString(), e.cs.scriptPath);
-            result += string.Format("{0} ... {2, -10}   ({1}) \n   ",
-                 "Load correction ", e.cs.corrFilePatch, rLoad.ToString());
+            
 
             m_isIntiialize  = m_isIntiialize &&   openScript;
 
@@ -267,6 +271,8 @@ namespace SpIceControllerLib
             {
                 m_layersFinishid = PrefetchList.m_lastListReady;
             }
+
+            layerFinish = (m_state == IntState.Wait);
         }
 
         private static void WaitState()
@@ -301,6 +307,12 @@ namespace SpIceControllerLib
             m_dirtyRunSignal = val;
         }
 
+
+        public static int getCurrentCardId()
+        {
+            return PrefetchList.getTopCardNumber();
+
+        }
         public static void StartLayer_(bool val)
         {
             if (m_state == IntState.Wait)

@@ -39,6 +39,7 @@ namespace laserScada
             command,
             led,
             dataField,
+            multyLed,
             invalid,
         };
 
@@ -50,6 +51,7 @@ namespace laserScada
             if (group_usta.Contains(tag)) return activeType.dataField;
             if (group_am.Contains(tag)) return activeType.dataField;
             if (group_dm.Contains(tag)) return activeType.led;
+            if (group_ind.Contains(tag)) return activeType.multyLed; 
             return activeType.invalid;
         }
         Memory m_mem;

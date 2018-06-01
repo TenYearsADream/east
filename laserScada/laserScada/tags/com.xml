@@ -15,7 +15,6 @@
 <PLC Tags><Name>ком_стол_пересчёт</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M526.1</Logical_Address><Comment>(Стол)&#160;Пересчёт</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_лаз_пит1</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M526.2</Logical_Address><Comment>(Лазеры)&#160;Питание&#160;лазера1</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_лаз_гот1</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M526.3</Logical_Address><Comment>(Лазеры)&#160;Готовностть1</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>ком_ТП_пауза</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M526.7</Logical_Address><Comment>(Автоматический&#160;процесс)&#160;Пауза</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_питЧил1</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M527.7</Logical_Address><Comment>(Чиллеры)&#160;Питание&#160;чиллера1</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_питЧил2</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M528.0</Logical_Address><Comment>(Чиллеры)&#160;Питание&#160;чиллера2</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_клЧил1</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M528.1</Logical_Address><Comment>(Чиллеры)&#160;Клапаны&#160;чиллера1</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
@@ -55,5 +54,8 @@
 <PLC Tags><Name>ком_карПрав_стоп</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M531.3</Logical_Address><Comment>(Каретки)&#160;Каретка&#160;правая&#160;-&#160;стоп</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_лаз_гот2</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M526.4</Logical_Address><Comment>(Лазеры)&#160;Готовностть2</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_лаз_пит2</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M526.5</Logical_Address><Comment>(Лазеры)&#160;Питание&#160;лазера2</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ком_сбросАварии</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M526.6</Logical_Address><Comment>(Лазеры)&#160;Сброс&#160;аварии</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ком_Блокировки</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M526.7</Logical_Address><Comment>(Лазеры)&#160;Блокировки</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ком_ТП_пауза</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M521.6</Logical_Address><Comment>(Автоматический&#160;процесс)&#160;Пауза</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags></PLC Tags>
 </dataroot>

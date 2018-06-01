@@ -72,7 +72,7 @@
                         <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Visibility="Hidden" />
                         <local:dataField x:Name="main_linejka_dublicate" Text=" Линейка" Grid.Column="1" Grid.Row="0" MouseDoubleClick="snek_s1_tb_MouseDoubleClick"/>
                         <local:dataField x:Name="main_laserCount" Text=" Кол-во лазеров" Grid.Column="1" Grid.Row="0" MouseDoubleClick="main_laserCount_MouseDoubleClick" />
-
+                        <TextBox x:Name="m_main_state_debug"  Height="23"  TextWrapping="Wrap" Text="*" VerticalAlignment="Top" Width="346"/>
                     </StackPanel>
                     <Separator Visibility="Hidden"/>
                     <StackPanel Orientation="Horizontal">

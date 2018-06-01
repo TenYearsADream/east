@@ -156,7 +156,7 @@ namespace SpIceControllerLib
             else
                 NativeMethods.PCI_Set_Start_List_2();
 
-            styles st1 = fileLoader.m_cs.style1;
+            styles st1 = m_curListState.cardNumber == 1 ? fileLoader.m_cs.style1: fileLoader.m_cs.style2;
 
             st1.lMarkSize = fileLoader.m_globalStyle.lMarkSize;
             st1.lPower = fileLoader.m_globalStyle.lPower;
@@ -167,12 +167,15 @@ namespace SpIceControllerLib
                 if (m_lastedStyle.lMarkSize != long.MaxValue) st1.lMarkSize = m_lastedStyle.lMarkSize; 
             }
 
-            NativeMethods.PCI_Set_Delays((UInt16)st1.lStep, (UInt16)st1.lJampDelay, (UInt16)st1.lMarkDelay, (UInt16)st1.lPolygon, (UInt16)st1.lLaserOff, (UInt16)st1.lLaserOn, (UInt16)st1.lQt1, (UInt16)st1.lQt2, 0);
-            NativeMethods.PCI_Set_Mark_Parameters_List((UInt16)st1.lStep, (UInt16)st1.lMarkSize);
-            NativeMethods.PCI_Long_Delay(10);
-            NativeMethods.PCI_Write_DA_List((UInt16)st1.lPower);
-            NativeMethods.PCI_Write_Port_List(0xC, 0x010);
 
+           
+                NativeMethods.PCI_Set_Delays((UInt16)st1.lStep, (UInt16)st1.lJampDelay, (UInt16)st1.lMarkDelay, (UInt16)st1.lPolygon, (UInt16)st1.lLaserOff, (UInt16)st1.lLaserOn, (UInt16)st1.lQt1, (UInt16)st1.lQt2, 0);
+                NativeMethods.PCI_Set_Mark_Parameters_List((UInt16)st1.lStep, (UInt16)st1.lMarkSize);
+                NativeMethods.PCI_Long_Delay(10);
+                NativeMethods.PCI_Write_DA_List((UInt16)st1.lPower);
+                NativeMethods.PCI_Write_Port_List(0xC, 0x010);
+          
+            
             m_layerNumber++;
 
             m_curListState.exeListNumber = m_layerNumber;
