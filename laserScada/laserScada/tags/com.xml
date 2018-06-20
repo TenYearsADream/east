@@ -57,5 +57,6 @@
 <PLC Tags><Name>ком_сбросАварии</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M526.6</Logical_Address><Comment>(Лазеры)&#160;Сброс&#160;аварии</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_Блокировки</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M526.7</Logical_Address><Comment>(Лазеры)&#160;Блокировки</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_ТП_пауза</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M521.6</Logical_Address><Comment>(Автоматический&#160;процесс)&#160;Пауза</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ком_клНапГаза</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M521.7</Logical_Address><Comment>(Рецеркуляция)&#160;Клапан&#160;напуска&#160;газа</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags></PLC Tags>
 </dataroot>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-   // DLL support
+// DLL support
 using System.Windows.Forms;
 using System.Security;
 using System.IO;
@@ -16,6 +16,7 @@ namespace SpIceControllerLib
 {
     public static class SpIceController
     {
+
         static SpIceController()
         {
             m_mainThreadPermission = true;
@@ -48,7 +49,7 @@ namespace SpIceControllerLib
         public static bool layerFinish;
         static public int laserCount
         { get; set; }
-
+        static public IntPtr owner2;
         static ListNumber m_runningLIst = ListNumber.Undefine;
         internal static Mutex m_mut = new Mutex();
 
@@ -138,7 +139,7 @@ namespace SpIceControllerLib
 
             m_isIntiialize  = m_isIntiialize &&   openScript;
 
-
+          //  m_isIntiialize = true;
 
             MessageBox.Show(result,
                  (m_isIntiialize ? "Инициализация прошла успешно!" : "Ошибка при инициализации"),
@@ -166,7 +167,6 @@ namespace SpIceControllerLib
         public static void ThreadProc()
         {
             var frm = new Form1();
-
             Assembly assembly = Assembly.GetExecutingAssembly();
             FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
             string version = fileVersionInfo.ProductVersion;
@@ -174,16 +174,21 @@ namespace SpIceControllerLib
             frm.Text = "SP-ICE initialization, ver - " + version;
 
             frm.cardSetting += initCard;
-            frm.ShowDialog();
-        //    frm.Dispose(); ////
+            
+            IWin32Window win32Window = new NativeWindow();
+            ((NativeWindow)win32Window).AssignHandle(owner2);
+
+             frm.ShowDialog(win32Window);
+  
         }
 
 
         public static void initForm()
         {
+            
             m_controllFormThread = new Thread(new ThreadStart(ThreadProc));
             m_controllFormThread.SetApartmentState(ApartmentState.STA);
-            m_controllFormThread.Start();
+             m_controllFormThread.Start();
         }
 
         public static void processSignals()
@@ -218,8 +223,8 @@ namespace SpIceControllerLib
                     if ((s & (IntSignals.Reset)) != 0)
                         processStopRequest();
 
-                  //  if (m_isIntiialize)
-                  //      PrefetchList.stepExecution();
+                    if (m_isIntiialize)
+                        PrefetchList.stepExecution();
 
                     break;
 

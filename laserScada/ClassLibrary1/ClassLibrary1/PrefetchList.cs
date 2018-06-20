@@ -284,10 +284,10 @@ namespace SpIceControllerLib
             NativeMethods.PCI_Set_Active_Card((ushort)m_currentCardNumber);
            // NativeMethods.PCI_Write_Port_List(0xC, 0x000);
             NativeMethods.PCI_Set_End_Of_List();
-            if(m_curListState.size>0)
+           // if(m_curListState.size>0)
             m_curListState.filling = ListStateFill.ready;
-            else
-                m_curListState.filling = ListStateFill.free;
+         //   else
+          //      m_curListState.filling = ListStateFill.free;
 
             m_isNeedRestoreStyleOnProlog = !m_curListState.finished;
             m_currentCardNumber = m_nextCardNumber;

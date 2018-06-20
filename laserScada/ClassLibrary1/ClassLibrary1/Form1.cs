@@ -52,7 +52,7 @@ namespace SpIceControllerLib
         {
             this.Closing += Form1_Closing;
 
-
+           // SpIceController.m_curForm = (IntPtr)this;
         
 
             InitializeComponent();

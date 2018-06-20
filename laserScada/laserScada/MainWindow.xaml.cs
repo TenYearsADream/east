@@ -19,6 +19,8 @@ using SpIceControllerLib;
 using log4netSample.Logging;
 using System.Reflection;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
+using System.Windows.Interop;
 
 namespace laserScada
 {
@@ -28,6 +30,7 @@ namespace laserScada
     public partial class MainWindow : MetroWindow
 
     {
+
         public delegate void checkState();
         List<checkState> m_checks = new List<checkState>();
 
@@ -85,7 +88,7 @@ namespace laserScada
             pr_main_connect = m_plc.connect();
 
             m_processState = processState.waitStart;
-
+            
 
 
             this.Loaded += MainWindow_Loaded;
@@ -264,6 +267,7 @@ namespace laserScada
 
         private void updateSignals(object sender, EventArgs e)
         {
+            
             // Log.Write(LogLevel.Debug, "tst");
 
             foreach (checkState ch in m_checks)
@@ -536,8 +540,6 @@ namespace laserScada
         {
             // m_plc.tags.set_kom_proc_obshh(true);
             processEnabled = true;
-
-
         }
 
 
@@ -773,6 +775,8 @@ namespace laserScada
         private void spIceCtl_Click(object sender, RoutedEventArgs e)
         {
             SpIceControllerLib.SpIceController.initForm();
+          
+           // SetOwner(SpIceController.m_curForm, this);
         }
 
   
@@ -1045,6 +1049,9 @@ namespace laserScada
             }
         }
 
-      
+        private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            SpIceController.owner2 = new WindowInteropHelper(this).Handle;
+        }
     }
 }

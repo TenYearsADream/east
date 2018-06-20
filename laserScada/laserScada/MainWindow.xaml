@@ -10,7 +10,7 @@
                       xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         mc:Ignorable="d"
         Title="Лазерный принтер" Height="869.535" Width="1500"
-                      WindowStartupLocation="CenterScreen" WindowState="Maximized">
+                      WindowStartupLocation="CenterScreen" WindowState="Maximized" Loaded="MetroWindow_Loaded">
 
 
 

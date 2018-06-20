@@ -21,5 +21,7 @@
 <PLC Tags><Name>АМ_охл&#160;скан1</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD646</Logical_Address><Comment>(Лазеры)&#160;Расход&#160;возд&#160;скан1</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>АМ_охл&#160;скан2</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD678</Logical_Address><Comment>(Лазеры)&#160;Расход&#160;возд&#160;скан2</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>номер</Name><Path>AM</Path><Data_Type>Int</Data_Type><Logical_Address>%MW684</Logical_Address><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>АМ_давл&#160;в&#160;камере&#160;дублёр</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD686</Logical_Address><Comment>(Рецеркуляция)&#160;Давление&#160;в&#160;камере&#160;дублёр</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>АМ_оксик</Name><Path>AM</Path><Data_Type>Real</Data_Type><Logical_Address>%MD690</Logical_Address><Comment>(Рецеркуляция)&#160;Датчик&#160;кислорода</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags></PLC Tags>
 </dataroot>
