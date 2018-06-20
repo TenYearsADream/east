@@ -149,7 +149,25 @@ namespace laserScada
                 System.Windows.Controls.Button newBtn = new Button();
                 newBtn.Content = m_plc.tags.getDebugName(tag);
                 newBtn.MinWidth = 100;
-                newBtn.Click += (s, e) => { m_plc.tags.setSValue(tag, "true"); };
+                newBtn.Click += (s, e) => {
+
+                    m_plc.tags.setSValue(tag, "true");
+
+                    if (tag == Tags.gTags.kom_tp_process)
+                    {
+                        start_enabled();
+                    }
+                    else if (tag == Tags.gTags.kom_tp_pauza)
+                    {
+                        pause_enabled();
+                    }
+                    else if (tag == Tags.gTags.kom_tp_prer)
+                    {
+                        iterrupt_enabled();
+                    }
+                };
+
+               
 
                 return newBtn;
             }
@@ -441,12 +459,12 @@ namespace laserScada
 
             m_main_state_debug.Text ="  debug.state = " + m_processState.ToString();
 
-            if (processEnabled)
+            //if (processEnabled)
             {
                 switch (m_processState)
                 {
                     case processState.waitStart:
-                        if (SpIceController.getCurrentCardId() !=0)
+                        if (SpIceController.getCurrentCardId() !=0 && processEnabled)
                              m_processState = processState.setNumber;
                         break;
 
@@ -493,6 +511,27 @@ namespace laserScada
 
         }
 
+
+        private void start_enabled()
+        {
+            Log.Write(LogLevel.Info, "! process started ! ");
+            processEnabled = true;
+        }
+
+        private void pause_enabled()
+        {
+            Log.Write(LogLevel.Info, "! pause ! ");
+            processEnabled = true;
+        }
+
+        private void iterrupt_enabled()
+        {
+            Log.Write(LogLevel.Info, "! interupt ! ");
+            processEnabled = false;
+            SpIceController.ResetSignal(true);
+            SpIceController.ResetSignal(false);
+        }
+
         private void main_bt_process_Click(object sender, RoutedEventArgs e)
         {
             // m_plc.tags.set_kom_proc_obshh(true);
@@ -505,6 +544,7 @@ namespace laserScada
         private void main_bt_interupt_Click(object sender, RoutedEventArgs e)
         {
             processEnabled = false;
+            SpIceController.ResetSignal(true);
         }
 
         private void main_bt_startLayer_Click(object sender, RoutedEventArgs e)
@@ -512,6 +552,14 @@ namespace laserScada
             Log.Write(LogLevel.Info, "start layer ");
             SpIceController.StartLayer_(true);
         }
+
+        private void main_bt_pause_Click(object sender, RoutedEventArgs e)
+        {
+            m_pause = !m_pause;
+            m_plc.tags.set_kom_tp_pauza(true);
+            //   m_plc.tags.set_kom_pauza(m_pause);
+        }
+
 
         private void tbDeviceIP_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -761,12 +809,7 @@ namespace laserScada
 
         
 
-        private void main_bt_pause_Click(object sender, RoutedEventArgs e)
-        {
-            m_pause = !m_pause;
-         //   m_plc.tags.set_kom_pauza(m_pause);
-        }
-
+       
         
 
         private void snek_s1_bt_start_Click(object sender, RoutedEventArgs e)

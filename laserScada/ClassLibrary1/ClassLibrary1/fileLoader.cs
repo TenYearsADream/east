@@ -272,23 +272,26 @@ namespace SpIceControllerLib
                                         addCommandAtEnd(Command.MarkSize, (Int16)m_cs.style1.lStep, (Int16)markSize, 0, 0, str);
 
                                     break;
-                                case "LaserActive":
-                                   
-                                    correctLastPol(Int16.MaxValue, Int16.MaxValue, true);
-
-                                    UInt32 cardNumber = 0;
-                                    MatchCollection cn = regexOperand.Matches(str);
-                                    if (cn.Count == 1)
+                                case "Laser.Active":
+                                    if (SpIceController.laserCount > 1)
                                     {
-                                        string strPower = cn[0].Value;
-                                        cardNumber = UInt32.Parse(strPower);
-                                        addCommandAtEnd(Command.LaserActive, (Int16)cardNumber, 0, 0, 0, str);
+                                        correctLastPol(Int16.MaxValue, Int16.MaxValue, true);
 
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Invalid command:  str = " + str + ", requre 1 arg for Laser.MarkSpeed");
-                                        isValidFile = 0;
+                                        UInt32 cardNumber = 0;
+                                        MatchCollection cn = regexOperand.Matches(str);
+                                        if (cn.Count == 1)
+                                        {
+                                            correctLastPol(0, 0, true);
+                                            string strPower = cn[0].Value;
+                                            cardNumber = UInt32.Parse(strPower);
+                                            addCommandAtEnd(Command.LaserActive, (Int16)cardNumber, 0, 0, 0, str);
+
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Invalid command:  str = " + str + ", requre 1 arg for Laser.MarkSpeed");
+                                            isValidFile = 0;
+                                        }
                                     }
                                     break;
                                 case "Image.Polyline3D":
@@ -406,7 +409,7 @@ namespace SpIceControllerLib
         static bool isPolA(Int16 x, Int16 y)
         {
             long pos = (endPosition - 1) % BUFFER_SIZE;
-            if ((m_listJob[pos].cmd & (Command.StarLayer | Command.EndLayer | Command.Jamp | Command.PolC_Abs | Command.Mark | Command.Nop | Command.Style | Command.Power | Command.MarkSize)) != 0) return true;
+            if ((m_listJob[pos].cmd & (Command.StarLayer | Command.EndLayer | Command.Jamp | Command.PolC_Abs | Command.Mark | Command.Nop | Command.Style | Command.Power | Command.MarkSize | Command.LaserActive)) != 0) return true;
             return false;
         }
 

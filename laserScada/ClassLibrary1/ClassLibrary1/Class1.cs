@@ -101,11 +101,14 @@ namespace SpIceControllerLib
 
                 rInit = NativeMethods.PCI_Init_Scan_Card_Ex(cardNumber);
                 rLoad = NativeMethods.PCI_Load_Corr_N(corrFile, (short)cardNumber);
+                
                 rSetAct = NativeMethods.PCI_Set_Active_Card((UInt16)cardNumber);
+              
                 setGain = NativeMethods.PCI_Set_Gain(e.cs.gainX, e.cs.gainY, 0, 0, (UInt16)e.cs.num);
                 rSetMode = NativeMethods.PCI_Set_Mode(e.cs.mode);
                 NativeMethods.PCI_Stop_Execution();
-                rOsc = NativeMethods.PCI_Write_Port_List(0xC, 0x00);
+                 rOsc = NativeMethods.PCI_Write_Port(0xC, 0x010);
+                //rOsc = NativeMethods.PCI_Write_Port_List(0xC, 0x10);
                 result += string.Format("\n {0} ... {1, -15}\n {2} ... {3, -15}\n {4} ... {5, -15}\n {6} ... {7, -15}\n {8} ... {9, -15}  \n {10} ... {11, -15} \n",
                  
                  "Initializing card ", cardNumber,   
@@ -146,6 +149,16 @@ namespace SpIceControllerLib
 
             m_layersFinishid = false;
 
+
+            if (!m_isIntiialize)
+            {
+                for (ushort cardNumber = 1; cardNumber < laserCount + 1; cardNumber++)
+                {
+                    NativeMethods.PCI_Set_Active_Card((UInt16)cardNumber);
+                    NativeMethods.PCI_Write_Port(0xC, 0x000);
+                }
+            }
+
             fileLoader.m_mut.ReleaseMutex();
             m_mut.ReleaseMutex();
         }
@@ -178,8 +191,7 @@ namespace SpIceControllerLib
             for(int i =0; i <= laserCount; i++)
            NativeMethods.readStatus(ref m_cardStatus[i], i);
 
-            if (m_isIntiialize)
-                PrefetchList.stepExecution();
+            
 
             IntSignals s = m_inputSignals;
             switch (m_state)
@@ -190,7 +202,13 @@ namespace SpIceControllerLib
                     {
                         m_inputSignals &= ~IntSignals.Run;
                         m_state = IntState.WaitListReady;
+                        if ((s & (IntSignals.Reset)) != 0)
+                            processStopRequest();
+
                     }
+
+                    if (m_isIntiialize)
+                        PrefetchList.stepExecution();
                     break;
 
                 case IntState.WaitListReady:
@@ -199,6 +217,9 @@ namespace SpIceControllerLib
 
                     if ((s & (IntSignals.Reset)) != 0)
                         processStopRequest();
+
+                  //  if (m_isIntiialize)
+                  //      PrefetchList.stepExecution();
 
                     break;
 
@@ -217,6 +238,7 @@ namespace SpIceControllerLib
         {
             NativeMethods.PCI_Stop_Execution();
             NativeMethods.PCI_Write_Port(0xC, 0x000);
+            NativeMethods.PCI_Write_DA_List((UInt16)0);
             fileLoader.m_mut.WaitOne();    //lock file loader thread
             fileLoader.resetFile();
             PrefetchList.resetList();
@@ -241,7 +263,7 @@ namespace SpIceControllerLib
             m_layersFinishid = false;
 
             m_stopWatch.Restart();
-
+            int card = (ushort)PrefetchList.getTopCardNumber();
             NativeMethods.PCI_Set_Active_Card((ushort)PrefetchList.getTopCardNumber());
             if (m_runningLIst == ListNumber.list1)
                 NativeMethods.PCI_Execute_List_1();
@@ -327,11 +349,12 @@ namespace SpIceControllerLib
         }
         public static void ResetSignal(bool val)
         {
-            if (m_state != IntState.Wait)
+            //if (m_state != IntState.Wait)
             {
-                if (val && !m_dirtyResetSignal)
+                //if (val && !m_dirtyResetSignal)
                 {
                     m_inputSignals |= IntSignals.Reset;
+                  //  processStopRequest();
                 }
 
             }

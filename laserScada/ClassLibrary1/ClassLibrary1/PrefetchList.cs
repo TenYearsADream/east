@@ -264,6 +264,7 @@ namespace SpIceControllerLib
                 case Command.LaserActive:
                     if (fileLoader.m_listJob[iterator].x != m_currentCardNumber)
                     {
+                       // m_curListState.finished = true;
                         m_nextCardNumber = fileLoader.m_listJob[iterator].x;
                         result = true;
                     }
@@ -281,7 +282,7 @@ namespace SpIceControllerLib
         private static void fillEpilog()
         {
             NativeMethods.PCI_Set_Active_Card((ushort)m_currentCardNumber);
-            NativeMethods.PCI_Write_Port_List(0xC, 0x000);
+           // NativeMethods.PCI_Write_Port_List(0xC, 0x000);
             NativeMethods.PCI_Set_End_Of_List();
             if(m_curListState.size>0)
             m_curListState.filling = ListStateFill.ready;

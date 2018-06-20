@@ -432,9 +432,11 @@ dg_EditingControlShowing);
                 Properties.Settings.Default.s2MarkSize = float.Parse(dg.Rows[(int)prm.lMarkSize].Cells[i].Value.ToString(), System.Globalization.NumberStyles.Float);
                 Properties.Settings.Default.s2Power = long.Parse(dg.Rows[(int)prm.lPower].Cells[i].Value.ToString());
 
+                Properties.Settings.Default.correctionFile2 = dg.Rows[(int)prm.lCorrect].Cells[i].Value.ToString();
+
                 Properties.Settings.Default.gainX = korr_x;
                 Properties.Settings.Default.gainY = korr_y;
-                Properties.Settings.Default.debugOutput = dg.Rows[(int)prm.lWorkSpace].Cells[i].Value.ToString();
+                //Properties.Settings.Default.debugOutput = dg.Rows[(int)prm.lWorkSpace].Cells[i].Value.ToString();
                 Properties.Settings.Default.Save();
             }
         }
