@@ -540,6 +540,7 @@ namespace laserScada
         {
             // m_plc.tags.set_kom_proc_obshh(true);
             processEnabled = true;
+        
         }
 
 

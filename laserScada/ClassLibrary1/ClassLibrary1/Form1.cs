@@ -534,24 +534,28 @@ dg_EditingControlShowing);
 
         private void bt_default_Click(object sender, EventArgs e)
         {
-           // for (int i = 1; i < 4; i++)
-            int i = 1;
+            for (int i = 1; i < 3; i++)
+           
             {
 
 
                 dg.Rows[(int)prm.lStep].Cells[i].Value = 60;
-                dg.Rows[(int)prm.lLaserOn].Cells[i].Value = 200;
-                dg.Rows[(int)prm.lLaserOff].Cells[i].Value = 100;
-                dg.Rows[(int)prm.lPolygon].Cells[i].Value = 50;
-                dg.Rows[(int)prm.lMarkDelay].Cells[i].Value = 100;
-                dg.Rows[(int)prm.lJampDelay].Cells[i].Value = 200;
+                dg.Rows[(int)prm.lLaserOn].Cells[i].Value = 700;
+                dg.Rows[(int)prm.lLaserOff].Cells[i].Value = 1000;
+                dg.Rows[(int)prm.lPolygon].Cells[i].Value = 300;
+                dg.Rows[(int)prm.lMarkDelay].Cells[i].Value = 200;
+                dg.Rows[(int)prm.lJampDelay].Cells[i].Value = 800;
                 dg.Rows[(int)prm.lFps].Cells[i].Value = 0;
                 dg.Rows[(int)prm.lQt1].Cells[i].Value = 1000;
                 dg.Rows[(int)prm.lQt2].Cells[i].Value = 500;
-                dg.Rows[(int)prm.lJampSize].Cells[i].Value = "8000,34";
-                dg.Rows[(int)prm.lMarkSize].Cells[i].Value = "8000,34";
+                dg.Rows[(int)prm.lJampSize].Cells[i].Value = "2000";
+                dg.Rows[(int)prm.lMarkSize].Cells[i].Value = "850";
                 dg.Rows[(int)prm.lPower].Cells[i].Value = 20;
             }
+            NativeMethods.PCI_Set_Active_Card(1);
+            NativeMethods.PCI_Write_Port(0xC, 0x010);
+            NativeMethods.PCI_Set_Active_Card(2);
+            NativeMethods.PCI_Write_Port(0xC, 0x010);
         }
 
         private void label3_Click(object sender, EventArgs e)
