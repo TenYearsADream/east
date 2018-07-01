@@ -17,6 +17,9 @@ using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using SpIceControllerLib;
 using log4netSample.Logging;
+using System.Runtime.InteropServices;
+using System.Windows.Interop;
+
 namespace laserScada
 {
     /// <summary>
@@ -770,6 +773,11 @@ namespace laserScada
         private void layer_widh_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void tabControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            SpIceController.ownerForm = new WindowInteropHelper(this).Handle;
         }
     }
 }

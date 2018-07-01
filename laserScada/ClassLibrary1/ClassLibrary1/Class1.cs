@@ -44,6 +44,7 @@ namespace SpIceControllerLib
         static Thread m_mainThread;
         static Thread m_controllFormThread;
         static bool dbg = false;
+        static public IntPtr ownerForm;
 
         static ListNumber m_runningLIst = ListNumber.Undefine;
         internal static Mutex m_mut = new Mutex();
@@ -134,8 +135,13 @@ namespace SpIceControllerLib
             frm.Text = "SP-ICE initialization, ver - " + version;
 
             frm.cardSetting += initCard;
-            frm.ShowDialog();
-        //    frm.Dispose(); ////
+
+            IWin32Window win32Window = new NativeWindow();
+            ((NativeWindow)win32Window).AssignHandle(ownerForm);
+            
+            frm.ShowDialog(win32Window);
+
+            //    frm.Dispose(); ////
         }
 
 

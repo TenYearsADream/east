@@ -123,7 +123,7 @@
 
                 </StackPanel>
             </GroupBox>
-            <TabControl x:Name="tabControl"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" >
+            <TabControl x:Name="tabControl"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Loaded="tabControl_Loaded" >
                 <TabItem Header="Предпусковая настройка">
                     <StackPanel  >
                         <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
@@ -301,7 +301,7 @@
 
                                         <Label Content="Дозатор порошка" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                         <local:dataField x:Name="snek_s3_tb" Text="Время" Grid.Column="1" Grid.Row="2"  PreviewMouseDoubleClick="snek_s3_tb_PreviewMouseDoubleClick"/>
-                                        <local:dataField x:Name="snek_s3_tb_nagr" Text="Нагрузка" Grid.Column="1" Grid.Row="3" Loaded="snek_s3_tb_nagr_Loaded" PreviewMouseDoubleClick="snek_s3_tb_nagr_PreviewMouseDoubleClick"/>
+                                        <local:dataField x:Name="snek_s3_tb_nagr" Text="Нагр." Grid.Column="1" Grid.Row="3" Loaded="snek_s3_tb_nagr_Loaded" PreviewMouseDoubleClick="snek_s3_tb_nagr_PreviewMouseDoubleClick"/>
                                         <Button x:Name="snek_s3_bt"  Content="Пуск" Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Center" Click="snek_s3_bt_Click"/>
                                         <uc:Led x:Name="snek_s3_up" IsActive="{Binding LedStatus, Mode=OneWay}" Flashing="{Binding Flash}" HorizontalAlignment="Left" ColorNull="Gray"  Grid.Column="3" Grid.Row="2" Text="Верх. ур." ColorOn="Red" ColorOff="Gray"/>
                                         <uc:Led x:Name="snek_s3_lo" IsActive="{Binding LedStatus, Mode=OneWay}" Flashing="{Binding Flash}" HorizontalAlignment="Left" ColorNull="Gray"  Grid.Column="3" Grid.Row="3" Text="Низ. ур." ColorOn="Red" ColorOff="Gray"/>
@@ -480,9 +480,6 @@
             <Grid HorizontalAlignment="Stretch" Grid.Row="2">
                 <Grid.ColumnDefinitions>
 
-                    <ColumnDefinition Width="250*"/>
-                    <ColumnDefinition Width="497*"/>
-
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -491,9 +488,7 @@
 
 
                 </Grid.RowDefinitions>
-                <GroupBox  Header="Пред просмотр слоя" Grid.Column="0" >
-                    <Image x:Name="image" MinWidth="100" MinHeight="100"/>
-                </GroupBox>
+             
                 <GroupBox  x:Name="gb_log" Header="Лог команд" Grid.Column="1" >
 
                     <vw:NotificationView   Height="100"/>
