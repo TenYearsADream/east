@@ -48,7 +48,7 @@ namespace laserScada
 
             if (group_com.Contains(tag)) return activeType.command;
             if (group_outD.Contains(tag)) return activeType.led;
-            if (group_usta.Contains(tag)) return activeType.dataField;
+            if (group_usta.Contains(tag)|| group_usttp.Contains(tag)) return activeType.dataField;
             if (group_am.Contains(tag)) return activeType.dataField;
             if (group_dm.Contains(tag)) return activeType.led;
             if (group_ind.Contains(tag)) return activeType.multyLed; 
