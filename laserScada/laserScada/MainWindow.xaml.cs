@@ -532,8 +532,8 @@ namespace laserScada
         {
             Log.Write(LogLevel.Info, "! interupt ! ");
             processEnabled = false;
-            SpIceController.ResetSignal(true);
-            SpIceController.ResetSignal(false);
+           // SpIceController.ResetSignal(true);
+           // SpIceController.ResetSignal(false);
         }
 
         private void main_bt_process_Click(object sender, RoutedEventArgs e)
