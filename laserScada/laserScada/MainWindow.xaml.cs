@@ -531,9 +531,10 @@ namespace laserScada
         private void iterrupt_enabled()
         {
             Log.Write(LogLevel.Info, "! interupt ! ");
+            //processEnabled = false;
             processEnabled = false;
-           // SpIceController.ResetSignal(true);
-           // SpIceController.ResetSignal(false);
+            // SpIceController.ResetSignal(true);
+            // SpIceController.ResetSignal(false);
         }
 
         private void main_bt_process_Click(object sender, RoutedEventArgs e)

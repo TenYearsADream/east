@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LedTest", "Led Wpf\WpfLed\L
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{D68EF9A0-3733-453E-8701-0D757AEEC988}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup2", "Setup2\Setup2.vdproj", "{B62AF0B7-FDF9-40B0-9E49-FF295276A5C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -137,6 +139,16 @@ Global
 		{D68EF9A0-3733-453E-8701-0D757AEEC988}.Release|x86.ActiveCfg = Release
 		{D68EF9A0-3733-453E-8701-0D757AEEC988}.SingleImage|Any CPU.ActiveCfg = Release
 		{D68EF9A0-3733-453E-8701-0D757AEEC988}.SingleImage|x86.ActiveCfg = Release
+		{B62AF0B7-FDF9-40B0-9E49-FF295276A5C5}.CD_ROM|Any CPU.ActiveCfg = Release
+		{B62AF0B7-FDF9-40B0-9E49-FF295276A5C5}.CD_ROM|x86.ActiveCfg = Release
+		{B62AF0B7-FDF9-40B0-9E49-FF295276A5C5}.Debug|Any CPU.ActiveCfg = Debug
+		{B62AF0B7-FDF9-40B0-9E49-FF295276A5C5}.Debug|x86.ActiveCfg = Debug
+		{B62AF0B7-FDF9-40B0-9E49-FF295276A5C5}.DVD-5|Any CPU.ActiveCfg = Debug
+		{B62AF0B7-FDF9-40B0-9E49-FF295276A5C5}.DVD-5|x86.ActiveCfg = Debug
+		{B62AF0B7-FDF9-40B0-9E49-FF295276A5C5}.Release|Any CPU.ActiveCfg = Release
+		{B62AF0B7-FDF9-40B0-9E49-FF295276A5C5}.Release|x86.ActiveCfg = Release
+		{B62AF0B7-FDF9-40B0-9E49-FF295276A5C5}.SingleImage|Any CPU.ActiveCfg = Release
+		{B62AF0B7-FDF9-40B0-9E49-FF295276A5C5}.SingleImage|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
