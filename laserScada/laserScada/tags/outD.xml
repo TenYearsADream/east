@@ -43,5 +43,6 @@
 <PLC Tags><Name>выхд_Блокировки</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M280.1</Logical_Address><Comment>(Лазеры)&#160;</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>выхд_ТП_пауза</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M522.3</Logical_Address><Comment>(Автоматический&#160;процесс)&#160;</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>выхд_клНапГаза</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M522.4</Logical_Address><Comment>(Рецеркуляция)&#160;</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>выхд_ТП_паузаПослеРаскладки</Name><Path>ВыхД</Path><Data_Type>Bool</Data_Type><Logical_Address>%M523.0</Logical_Address><Comment>(Автоматический&#160;процесс)&#160;</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags></PLC Tags>
 </dataroot>

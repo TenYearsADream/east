@@ -6,7 +6,6 @@
 <PLC Tags><Name>ком_стол_устНуля</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M521.0</Logical_Address><Comment>(Стол)&#160;Установить&#160;ноль</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_стол_отн_вниз</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M521.2</Logical_Address><Comment>(Стол)&#160;Вниз</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_стол_отн_вверх</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M521.3</Logical_Address><Comment>(Стол)&#160;Вверх</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
-<PLC Tags><Name>ком_ТП_слой</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M521.5</Logical_Address><Comment>(Автоматический&#160;процесс)&#160;Слой</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_стол_обнулитьЛинейку</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M522.7</Logical_Address><Comment>(Стол)&#160;Обнулить&#160;линейку</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_ТЭН1</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M524.3</Logical_Address><Comment>(Нагреватели)&#160;ТЭН1</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_ТП_процесс</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M521.4</Logical_Address><Comment>(Автоматический&#160;процесс)&#160;Процесс</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
@@ -53,5 +52,6 @@
 <PLC Tags><Name>ком_ТП_пауза</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M521.6</Logical_Address><Comment>(Автоматический&#160;процесс)&#160;Пауза</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_клНапГаза</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M521.7</Logical_Address><Comment>(Рецеркуляция)&#160;Клапан&#160;напуска&#160;газа</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags><Name>ком_ТП_стоп</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M522.5</Logical_Address><Comment>(Автоматический&#160;процесс)&#160;СТОП</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
+<PLC Tags><Name>ком_ТП_паузаПослеРаскладки</Name><Path>ком</Path><Data_Type>Bool</Data_Type><Logical_Address>%M522.6</Logical_Address><Comment>(Автоматический&#160;процесс)&#160;Пауза&#160;после&#160;раскладки</Comment><Hmi_Visible>True</Hmi_Visible><Hmi_Accessible>True</Hmi_Accessible></PLC Tags>
 <PLC Tags></PLC Tags>
 </dataroot>
