@@ -23,6 +23,7 @@ namespace SpIceControllerLib
         public Int64 size;
         public bool finished;
         public UInt64 layerNumber;
+        public uint powder; 
 
         public listState(ListNumber num, int cardNum)
         {
@@ -33,6 +34,7 @@ namespace SpIceControllerLib
             finished = false;
             layerNumber = 0;
             cardNumber = cardNum;
+            powder = 0;
         }
 
         public void reset()
@@ -42,6 +44,7 @@ namespace SpIceControllerLib
             size = 0;
             finished = false;
             layerNumber = 0;
+            powder = 0;
         }
     }
 
@@ -53,6 +56,8 @@ namespace SpIceControllerLib
         static StreamWriter m_logFile;
         static ListNumber m_currentList;
         static int m_currentCardNumber;
+        static uint m_currentPowder;
+        static uint m_nextPowder;
         static int m_nextCardNumber;
         static Int64 m_layerNumber;
         static public  bool m_lastListReady = false;
@@ -81,7 +86,9 @@ namespace SpIceControllerLib
             m_sheldule.Clear();
             m_currentCardNumber = 1;
             m_nextCardNumber = 1;
-           
+            m_currentPowder = 0;
+
+
         }
 
         static internal void terminate() //(object sender, EventArgs e)
@@ -116,6 +123,7 @@ namespace SpIceControllerLib
                 //                m_currentList = getNextFreeList();
                 m_currentList = findFreeExeList(m_currentCardNumber);
                 m_curListState.filling = ListStateFill.free;
+                m_curListState.size = 0;
                 if (m_currentList == ListNumber.Undefine) return;
             }
 
@@ -123,7 +131,8 @@ namespace SpIceControllerLib
             switch (m_curListState.filling)
             {
                 case ListStateFill.free:
-                    openList();
+                    //openList(); 
+                    m_curListState.filling = ListStateFill.prolog;
                     break;
                 case ListStateFill.prolog:
                     fillProlog();
@@ -148,6 +157,7 @@ namespace SpIceControllerLib
         {
             m_curListState.cardNumber = m_currentCardNumber;
             m_curListState.number = m_currentList;
+            m_curListState.powder =  m_currentPowder;
 
             if (!fileLoader.m_isPreambuleFinish) return;
             NativeMethods.PCI_Set_Active_Card((ushort)m_currentCardNumber);
@@ -215,6 +225,19 @@ namespace SpIceControllerLib
             bool skipIncrement = false;
             Int64 iterator = fileLoader.getStartPos();
             NativeMethods.PCI_Set_Active_Card((ushort)m_currentCardNumber);
+            Command currCmd =fileLoader.m_listJob[iterator].cmd;
+            bool isListCommand = currCmd == Command.Jamp ||
+                currCmd == Command.Mark ||
+                currCmd == Command.PolA_Abs ||
+                currCmd == Command.PolB_Abs || 
+                currCmd == Command.PolC_Abs || 
+                currCmd == Command.Power || 
+                currCmd == Command.Mark || 
+                currCmd == Command.MarkSize;
+
+            if (isListCommand && m_curListState.size ==0)
+                openList();
+
             switch (fileLoader.m_listJob[iterator].cmd)
             {
                 case Command.EndF:
@@ -255,6 +278,11 @@ namespace SpIceControllerLib
                     m_curListState.size++;
                     m_lastedStyle.lPower = (UInt16)fileLoader.m_listJob[iterator].x;
                     break;
+                case Command.Powder:
+                    m_curListState.powder = (UInt16)fileLoader.m_listJob[iterator].x;
+                    m_nextPowder = (UInt16)fileLoader.m_listJob[iterator].x;
+                    m_curListState.finished = true;
+                    break;
                 case Command.MarkSize:
                     NativeMethods.PCI_Set_Mark_Parameters_List((UInt16)fileLoader.m_listJob[iterator].x, (UInt16)fileLoader.m_listJob[iterator].y);
                     m_curListState.size++;
@@ -264,7 +292,7 @@ namespace SpIceControllerLib
                 case Command.LaserActive:
                     if (fileLoader.m_listJob[iterator].x != m_currentCardNumber)
                     {
-                       // m_curListState.finished = true;
+                        // m_curListState.finished = true;
                         m_nextCardNumber = fileLoader.m_listJob[iterator].x;
                         result = true;
                     }
@@ -281,16 +309,29 @@ namespace SpIceControllerLib
 
         private static void fillEpilog()
         {
-            NativeMethods.PCI_Set_Active_Card((ushort)m_currentCardNumber);
-           // NativeMethods.PCI_Write_Port_List(0xC, 0x000);
-            NativeMethods.PCI_Set_End_Of_List();
-           // if(m_curListState.size>0)
-            m_curListState.filling = ListStateFill.ready;
-         //   else
-          //      m_curListState.filling = ListStateFill.free;
+
+            //////!!!!!!!!!!!!!!!!! < check me
+            if (m_curListState.size > 0)
+            {
+                NativeMethods.PCI_Set_Active_Card((ushort)m_currentCardNumber);
+                // NativeMethods.PCI_Write_Port_List(0xC, 0x000);
+                NativeMethods.PCI_Set_End_Of_List();
+
+                m_curListState.filling = ListStateFill.ready;
+
+                if(m_currentPowder!=0 && m_currentPowder!=m_nextPowder)
+                    m_curListState.finished = true;
+
+            }
+            else
+            {
+                m_curListState.filling = ListStateFill.free;
+                m_currentList = ListNumber.Undefine;
+            }
 
             m_isNeedRestoreStyleOnProlog = !m_curListState.finished;
             m_currentCardNumber = m_nextCardNumber;
+            m_currentPowder = m_nextPowder;
         }
 
 
@@ -317,6 +358,11 @@ namespace SpIceControllerLib
         public static int getTopCardNumber()
         {
             return m_sheldule.Count > 0 ? m_sheldule.First().cardNumber : 0;
+        }
+
+        public static uint getTopPowderNumber()
+        {
+            return m_sheldule.Count > 0 ? m_sheldule.First().powder : 0;
         }
 
         public static void setFree(ListNumber list)

@@ -340,6 +340,12 @@ namespace SpIceControllerLib
             return PrefetchList.getTopCardNumber();
 
         }
+
+        public static uint getCurrentPowderNumber()
+        {
+            return PrefetchList.getTopPowderNumber();
+
+        }
         public static void StartLayer_(bool val)
         {
             if (m_state == IntState.Wait)

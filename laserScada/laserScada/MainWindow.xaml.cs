@@ -474,6 +474,8 @@ namespace laserScada
 
                     case processState.setNumber:
                         m_plc.tags.set_nomer((short)SpIceController.getCurrentCardId());
+                        uint powder = SpIceController.getCurrentPowderNumber();
+                        m_plc.tags.set_poroshok((short)powder);
                         m_processState = processState.setRedy;
                         break;
 

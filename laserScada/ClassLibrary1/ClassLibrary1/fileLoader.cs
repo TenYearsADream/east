@@ -218,6 +218,22 @@ namespace SpIceControllerLib
                                     addCommandAtEnd(Command.EndLayer, (Int16)m_layerReaded, 0, 0, 0, str);
                                     m_settingStace = SettingStace.globalSpace;
                                     break;
+                                case "powder":
+                                    MatchCollection cn1 = regexOperand.Matches(str);
+                                    if (cn1.Count == 1)
+                                    {
+                                        correctLastPol(0, 0, true);
+                                        string strPower = cn1[0].Value;
+                                        uint powder = UInt32.Parse(strPower);
+                                        addCommandAtEnd(Command.Powder, (Int16)powder, 0, 0, 0, str);
+
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Invalid command:  str = " + str + ", requre 1 arg for Laser.MarkSpeed");
+                                        isValidFile = 0;
+                                    }
+                                    break;
                                 case "Laser.Power":
                                     if (m_cs.ignoreLocalSetting) break;
                                     correctLastPol(Int16.MaxValue, Int16.MaxValue, true);
