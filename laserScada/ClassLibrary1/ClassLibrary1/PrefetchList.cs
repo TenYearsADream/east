@@ -279,9 +279,10 @@ namespace SpIceControllerLib
                     m_lastedStyle.lPower = (UInt16)fileLoader.m_listJob[iterator].x;
                     break;
                 case Command.Powder:
-                    m_curListState.powder = (UInt16)fileLoader.m_listJob[iterator].x;
+                 //   m_curListState.powder = (UInt16)fileLoader.m_listJob[iterator].x;
                     m_nextPowder = (UInt16)fileLoader.m_listJob[iterator].x;
                     m_curListState.finished = true;
+                    m_currentPowder = m_nextPowder;
                     break;
                 case Command.MarkSize:
                     NativeMethods.PCI_Set_Mark_Parameters_List((UInt16)fileLoader.m_listJob[iterator].x, (UInt16)fileLoader.m_listJob[iterator].y);

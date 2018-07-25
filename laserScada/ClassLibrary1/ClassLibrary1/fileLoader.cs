@@ -218,7 +218,8 @@ namespace SpIceControllerLib
                                     addCommandAtEnd(Command.EndLayer, (Int16)m_layerReaded, 0, 0, 0, str);
                                     m_settingStace = SettingStace.globalSpace;
                                     break;
-                                case "powder":
+                                case "Powder":
+                                    correctLastPol(Int16.MaxValue, Int16.MaxValue, true);
                                     MatchCollection cn1 = regexOperand.Matches(str);
                                     if (cn1.Count == 1)
                                     {
@@ -425,7 +426,7 @@ namespace SpIceControllerLib
         static bool isPolA(Int16 x, Int16 y)
         {
             long pos = (endPosition - 1) % BUFFER_SIZE;
-            if ((m_listJob[pos].cmd & (Command.StarLayer | Command.EndLayer | Command.Jamp | Command.PolC_Abs | Command.Mark | Command.Nop | Command.Style | Command.Power | Command.MarkSize | Command.LaserActive)) != 0) return true;
+            if ((m_listJob[pos].cmd & (Command.StarLayer | Command.EndLayer | Command.Jamp | Command.PolC_Abs | Command.Mark | Command.Nop | Command.Style | Command.Power | Command.MarkSize | Command.LaserActive | Command.Powder)) != 0) return true;
             return false;
         }
 
