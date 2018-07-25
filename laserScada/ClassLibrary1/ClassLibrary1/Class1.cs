@@ -139,8 +139,7 @@ namespace SpIceControllerLib
 
             m_isIntiialize  = m_isIntiialize &&   openScript;
 
-          //  m_isIntiialize = true;
-
+         
             MessageBox.Show(result,
                  (m_isIntiialize ? "Инициализация прошла успешно!" : "Ошибка при инициализации"),
                  MessageBoxButtons.OK,
@@ -150,7 +149,7 @@ namespace SpIceControllerLib
 
             m_layersFinishid = false;
 
-
+            //m_isIntiialize = true; ///!!!!!!!! debug
             if (!m_isIntiialize)
             {
                 for (ushort cardNumber = 1; cardNumber < laserCount + 1; cardNumber++)

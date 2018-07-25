@@ -281,8 +281,13 @@ namespace SpIceControllerLib
                 case Command.Powder:
                  //   m_curListState.powder = (UInt16)fileLoader.m_listJob[iterator].x;
                     m_nextPowder = (UInt16)fileLoader.m_listJob[iterator].x;
-                    m_curListState.finished = true;
+                   
                     m_currentPowder = m_nextPowder;
+                    if (m_curListState.size > 0)
+                    {
+                        result = true;
+                        m_curListState.finished = true;
+                    }
                     break;
                 case Command.MarkSize:
                     NativeMethods.PCI_Set_Mark_Parameters_List((UInt16)fileLoader.m_listJob[iterator].x, (UInt16)fileLoader.m_listJob[iterator].y);
@@ -291,11 +296,13 @@ namespace SpIceControllerLib
                     m_lastedStyle.lMarkSize = (UInt16)fileLoader.m_listJob[iterator].y;
                     break;
                 case Command.LaserActive:
-                    if (fileLoader.m_listJob[iterator].x != m_currentCardNumber)
+                  //  if (fileLoader.m_listJob[iterator].x != m_currentCardNumber)
                     {
                         // m_curListState.finished = true;
                         m_nextCardNumber = fileLoader.m_listJob[iterator].x;
-                        result = true;
+                        m_currentCardNumber = m_nextCardNumber;
+                   //     if (m_curListState.size > 0)
+                            result = true;
                     }
                     break;
 
@@ -320,8 +327,6 @@ namespace SpIceControllerLib
 
                 m_curListState.filling = ListStateFill.ready;
 
-                if(m_currentPowder!=0 && m_currentPowder!=m_nextPowder)
-                    m_curListState.finished = true;
 
             }
             else
@@ -331,7 +336,7 @@ namespace SpIceControllerLib
             }
 
             m_isNeedRestoreStyleOnProlog = !m_curListState.finished;
-            m_currentCardNumber = m_nextCardNumber;
+            m_currentCardNumber =               m_nextCardNumber;
             m_currentPowder = m_nextPowder;
         }
 
