@@ -74,7 +74,7 @@ namespace SpIceControllerLib
 
 
             m_currentList = ListNumber.Undefine;
-            m_logFile = new StreamWriter("prefetchLog.txt", false);
+            //m_logFile = new StreamWriter("prefetchLog.txt", false);
 
             //if (AppDomain.CurrentDomain.IsDefaultAppDomain())
             //    AppDomain.CurrentDomain.ProcessExit += terminate;
@@ -93,7 +93,7 @@ namespace SpIceControllerLib
 
         static internal void terminate() //(object sender, EventArgs e)
         {
-            m_logFile.Close();
+           // m_logFile.Close();
         }
 
         static public void resetList()

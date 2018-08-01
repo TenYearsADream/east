@@ -485,6 +485,8 @@ namespace laserScada
                         break;
 
                     case processState.waitEnable:
+                         powder = SpIceController.getCurrentPowderNumber();
+                        m_plc.tags.set_poroshok_woDbg((short)powder);
                         if (m_plc.tags.get_razreshenie())
                         m_processState = processState.work;
                         break;

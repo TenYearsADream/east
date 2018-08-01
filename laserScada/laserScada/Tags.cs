@@ -17,6 +17,12 @@ namespace laserScada
 
         }
 
+        public void set_poroshok_woDbg(Int16 val)
+        {
+            m_mem.setMUInt16(694, (UInt16)val);
+            
+        }
+
         public bool get_avar_doz()
         { return (bool)m_mem.getMBit(527, 4); }
 

@@ -15,212 +15,266 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_0196FCE997B74DFAB437BAFD8391AD84"
+        "MsmKey" = "8:_0830FF8575E348E1B52D4212CFFB5B2C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_0221A7A2F0AE4C489C17BAB4FF4977E8"
+        "MsmKey" = "8:_084B6491BA074A48B10CCCEFE0174706"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_074F9905AFF14D43A000FD39F12D11C2"
+        "MsmKey" = "8:_151AEEE7E5B948ABAAA6C25B46F354AD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_3008117A7A0049A3834792991CBBF5EB"
+        "MsmKey" = "8:_1CFCC28E7485421AA81BD309C86E2AE2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_36503148D5C24C3492A58D57F9053829"
+        "MsmKey" = "8:_2E1FAC3FE8CB8D52A6A40C63E728EF4B"
+        "OwnerKey" = "8:_ACB8A96E10244BF79D9234DAABB744EB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2E1FAC3FE8CB8D52A6A40C63E728EF4B"
+        "OwnerKey" = "8:_084B6491BA074A48B10CCCEFE0174706"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_34356503F330488397284684C7F24D45"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_36C0AE10CB42481D964D644D13DCA2EB"
+        "MsmKey" = "8:_3F8870B350F74D6FAF27BA91AF62D058"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_51AAA2EBE0AB41AC80164FF0EF939652"
+        "MsmKey" = "8:_4475A39D8C054D47A2B94BB248AD501E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5BCD24F52F814922A9BE9CB526BBF4E7"
+        "MsmKey" = "8:_5569C0897EF2031512D0FDB08948900C"
+        "OwnerKey" = "8:_ACB8A96E10244BF79D9234DAABB744EB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5569C0897EF2031512D0FDB08948900C"
+        "OwnerKey" = "8:_084B6491BA074A48B10CCCEFE0174706"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_610B496012E547E4BE4892B2A32F8D14"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6BEB2DA937EDA3CB4EE1621B4302E7CA"
-        "OwnerKey" = "8:_80BB135153B84108B01CC04CC2DE4ACA"
+        "MsmKey" = "8:_69492318A04260079A28A9CAA501516F"
+        "OwnerKey" = "8:_ACB8A96E10244BF79D9234DAABB744EB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6BEB2DA937EDA3CB4EE1621B4302E7CA"
-        "OwnerKey" = "8:_AF7976B73DCD4781999BE6EAFD9D4BEC"
+        "MsmKey" = "8:_69492318A04260079A28A9CAA501516F"
+        "OwnerKey" = "8:_084B6491BA074A48B10CCCEFE0174706"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6D396D2D868F20DC187407EFFFA98D09"
-        "OwnerKey" = "8:_80BB135153B84108B01CC04CC2DE4ACA"
+        "MsmKey" = "8:_6A160F757F0CFDB9CC42562564E82487"
+        "OwnerKey" = "8:_ACB8A96E10244BF79D9234DAABB744EB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6D396D2D868F20DC187407EFFFA98D09"
-        "OwnerKey" = "8:_AF7976B73DCD4781999BE6EAFD9D4BEC"
+        "MsmKey" = "8:_6A160F757F0CFDB9CC42562564E82487"
+        "OwnerKey" = "8:_084B6491BA074A48B10CCCEFE0174706"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_74C6D3F0AEE05EBAC856C5868F620DE1"
-        "OwnerKey" = "8:_80BB135153B84108B01CC04CC2DE4ACA"
+        "MsmKey" = "8:_6B33D8726AA1A5EF9A6E0A149A09FE7F"
+        "OwnerKey" = "8:_ACB8A96E10244BF79D9234DAABB744EB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_74C6D3F0AEE05EBAC856C5868F620DE1"
-        "OwnerKey" = "8:_AF7976B73DCD4781999BE6EAFD9D4BEC"
+        "MsmKey" = "8:_6B33D8726AA1A5EF9A6E0A149A09FE7F"
+        "OwnerKey" = "8:_084B6491BA074A48B10CCCEFE0174706"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_76FA1D0A50EFA41DF5334C215D2EFAB8"
-        "OwnerKey" = "8:_80BB135153B84108B01CC04CC2DE4ACA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_76FA1D0A50EFA41DF5334C215D2EFAB8"
-        "OwnerKey" = "8:_AF7976B73DCD4781999BE6EAFD9D4BEC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_802B3C525E17472C82429283CD4C9C46"
+        "MsmKey" = "8:_76C261133EC7430086857865D7704670"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_80BB135153B84108B01CC04CC2DE4ACA"
+        "MsmKey" = "8:_817AC7BC695B458291D1914E5C283F46"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8125FAB9A743491CAFF92043AAC7A0E3"
+        "MsmKey" = "8:_9753150E450D47A9AD33B606ED78B7E5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_96E341773DF241E290BE677977AE6969"
+        "MsmKey" = "8:_99D949C4CA12705A309F2EC06D9E91C9"
+        "OwnerKey" = "8:_69492318A04260079A28A9CAA501516F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_99D949C4CA12705A309F2EC06D9E91C9"
+        "OwnerKey" = "8:_1CFCC28E7485421AA81BD309C86E2AE2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A7BD465B74334ECCAD42381C3414CD0D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_98DDD94F171A4C59B3D443261098AFAE"
-        "OwnerKey" = "8:_0196FCE997B74DFAB437BAFD8391AD84"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_98DDD94F171A4C59B3D443261098AFAE"
-        "OwnerKey" = "8:_E2B8F577AAFA12DF71CA2D2BA32EF232"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_AACBBD65ACD049D99709EA9C9881D586"
+        "MsmKey" = "8:_A876162BDF554E399C4816CC022F7C1B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_AE3050EC980D4423B5B718AEEEA225CB"
+        "MsmKey" = "8:_ACB8A96E10244BF79D9234DAABB744EB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_AF7976B73DCD4781999BE6EAFD9D4BEC"
+        "MsmKey" = "8:_B0F2E855EF15492A93AE68D0AC9DCE19"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_B163D2BEA761FB5DE7C2AFD34952B33B"
-        "OwnerKey" = "8:_0221A7A2F0AE4C489C17BAB4FF4977E8"
+        "OwnerKey" = "8:_151AEEE7E5B948ABAAA6C25B46F354AD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B4FA8522C35744BDA0C72E66AC3F6CBA"
+        "MsmKey" = "8:_B453D2A9569D49249CD1BD69F0E6FE4F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CE6B27B7D84F4199B537783A94FDEB6D"
+        "MsmKey" = "8:_BA7C85D92134496E8C3759F4F6EAC85E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E2B8F577AAFA12DF71CA2D2BA32EF232"
-        "OwnerKey" = "8:_80BB135153B84108B01CC04CC2DE4ACA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E2B8F577AAFA12DF71CA2D2BA32EF232"
-        "OwnerKey" = "8:_AF7976B73DCD4781999BE6EAFD9D4BEC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F36024F12C5E46898BEA7AE963FE1AA7"
+        "MsmKey" = "8:_BDADDCA467064E08AEAD5BA57A3FD0C9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F6832543AA03422CAC55E5CA2141C659"
+        "MsmKey" = "8:_C6A07C7F0C91444494803D93B2E773B3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F9CEA8A4973A42D6BB73628CCEB4FBE8"
+        "MsmKey" = "8:_DE36B16A1D984EDF94BC9DC19178C22C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_FCF970393D2A4C4F8EE5417964EEA41C"
+        "MsmKey" = "8:_DF49345D9F4844DBA22F87F8D1126C38"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FB3F698F76D24883A90D8CE5FB24486E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_80BB135153B84108B01CC04CC2DE4ACA"
+        "OwnerKey" = "8:_6A160F757F0CFDB9CC42562564E82487"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_DF49345D9F4844DBA22F87F8D1126C38"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0830FF8575E348E1B52D4212CFFB5B2C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A876162BDF554E399C4816CC022F7C1B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_1CFCC28E7485421AA81BD309C86E2AE2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_BA7C85D92134496E8C3759F4F6EAC85E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_34356503F330488397284684C7F24D45"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_084B6491BA074A48B10CCCEFE0174706"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_151AEEE7E5B948ABAAA6C25B46F354AD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -232,85 +286,37 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AF7976B73DCD4781999BE6EAFD9D4BEC"
+        "OwnerKey" = "8:_ACB8A96E10244BF79D9234DAABB744EB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AE3050EC980D4423B5B718AEEEA225CB"
+        "OwnerKey" = "8:_2E1FAC3FE8CB8D52A6A40C63E728EF4B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6D396D2D868F20DC187407EFFFA98D09"
+        "OwnerKey" = "8:_6B33D8726AA1A5EF9A6E0A149A09FE7F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6BEB2DA937EDA3CB4EE1621B4302E7CA"
+        "OwnerKey" = "8:_69492318A04260079A28A9CAA501516F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E2B8F577AAFA12DF71CA2D2BA32EF232"
+        "OwnerKey" = "8:_99D949C4CA12705A309F2EC06D9E91C9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_74C6D3F0AEE05EBAC856C5868F620DE1"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_76FA1D0A50EFA41DF5334C215D2EFAB8"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5BCD24F52F814922A9BE9CB526BBF4E7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_51AAA2EBE0AB41AC80164FF0EF939652"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_36C0AE10CB42481D964D644D13DCA2EB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_36503148D5C24C3492A58D57F9053829"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0221A7A2F0AE4C489C17BAB4FF4977E8"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0196FCE997B74DFAB437BAFD8391AD84"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_98DDD94F171A4C59B3D443261098AFAE"
+        "OwnerKey" = "8:_5569C0897EF2031512D0FDB08948900C"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -408,116 +414,14 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0196FCE997B74DFAB437BAFD8391AD84"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0830FF8575E348E1B52D4212CFFB5B2C"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MahApps.Metro, Version=1.4.3.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:SpIceControllerLib, Version=1.1.6787.16953, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_0196FCE997B74DFAB437BAFD8391AD84"
-                    {
-                    "Name" = "8:MahApps.Metro.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\MahApps.Metro.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0221A7A2F0AE4C489C17BAB4FF4977E8"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:vshost32, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                    "_0221A7A2F0AE4C489C17BAB4FF4977E8"
-                    {
-                    "Name" = "8:laserScada.vshost.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\laserScada.vshost.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_074F9905AFF14D43A000FD39F12D11C2"
-            {
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\log4net.xml"
-            "TargetName" = "8:log4net.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3008117A7A0049A3834792991CBBF5EB"
-            {
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\laserScada.exe.config"
-            "TargetName" = "8:laserScada.exe.config"
-            "Tag" = "8:"
-            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_36503148D5C24C3492A58D57F9053829"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SpIceControllerLib, Version=1.1.6778.21265, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_36503148D5C24C3492A58D57F9053829"
+                    "_0830FF8575E348E1B52D4212CFFB5B2C"
                     {
                     "Name" = "8:SpIceControllerLib.dll"
                     "Attributes" = "3:512"
@@ -541,20 +445,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_36C0AE10CB42481D964D644D13DCA2EB"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_084B6491BA074A48B10CCCEFE0174706"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:sharp7, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:laserScada, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_36C0AE10CB42481D964D644D13DCA2EB"
+                    "_084B6491BA074A48B10CCCEFE0174706"
                     {
-                    "Name" = "8:sharp7.dll"
+                    "Name" = "8:laserScada_dark.exe"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\sharp7.dll"
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\laserScada_dark.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
@@ -572,20 +476,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_51AAA2EBE0AB41AC80164FF0EF939652"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_151AEEE7E5B948ABAAA6C25B46F354AD"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:vshost32, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_51AAA2EBE0AB41AC80164FF0EF939652"
+                    "_151AEEE7E5B948ABAAA6C25B46F354AD"
                     {
-                    "Name" = "8:System.Windows.Interactivity.dll"
+                    "Name" = "8:laserScada.vshost.exe"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\System.Windows.Interactivity.dll"
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\laserScada.vshost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
@@ -603,20 +507,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5BCD24F52F814922A9BE9CB526BBF4E7"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1CFCC28E7485421AA81BD309C86E2AE2"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:MahApps.Metro, Version=1.4.3.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_5BCD24F52F814922A9BE9CB526BBF4E7"
+                    "_1CFCC28E7485421AA81BD309C86E2AE2"
                     {
-                    "Name" = "8:log4net.dll"
+                    "Name" = "8:MahApps.Metro.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\log4net.dll"
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\MahApps.Metro.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
@@ -634,49 +538,13 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6BEB2DA937EDA3CB4EE1621B4302E7CA"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2E1FAC3FE8CB8D52A6A40C63E728EF4B"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:sharp7, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:SpIceControllerLib, Version=1.1.6779.3091, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6BEB2DA937EDA3CB4EE1621B4302E7CA"
-                    {
-                    "Name" = "8:sharp7.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:sharp7.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6D396D2D868F20DC187407EFFFA98D09"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SpIceControllerLib, Version=1.1.6778.21265, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_6D396D2D868F20DC187407EFFFA98D09"
-                    {
-                    "Name" = "8:SpIceControllerLib.DLL"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:SpIceControllerLib.DLL"
             "TargetName" = "8:"
@@ -696,218 +564,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_74C6D3F0AEE05EBAC856C5868F620DE1"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_74C6D3F0AEE05EBAC856C5868F620DE1"
-                    {
-                    "Name" = "8:log4net.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:log4net.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_76FA1D0A50EFA41DF5334C215D2EFAB8"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_34356503F330488397284684C7F24D45"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:LedControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_76FA1D0A50EFA41DF5334C215D2EFAB8"
-                    {
-                    "Name" = "8:LedControl.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:LedControl.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_802B3C525E17472C82429283CD4C9C46"
-            {
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\laserScada.vshost.exe.config"
-            "TargetName" = "8:laserScada.vshost.exe.config"
-            "Tag" = "8:"
-            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_80BB135153B84108B01CC04CC2DE4ACA"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:laserScada, Version=1.0.6778.21267, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_80BB135153B84108B01CC04CC2DE4ACA"
-                    {
-                    "Name" = "8:laserScada.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\laserScada.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8125FAB9A743491CAFF92043AAC7A0E3"
-            {
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\MahApps.Metro.xml"
-            "TargetName" = "8:MahApps.Metro.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_96E341773DF241E290BE677977AE6969"
-            {
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\LedControl.pdb"
-            "TargetName" = "8:LedControl.pdb"
-            "Tag" = "8:"
-            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_98DDD94F171A4C59B3D443261098AFAE"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_98DDD94F171A4C59B3D443261098AFAE"
-                    {
-                    "Name" = "8:System.Windows.Interactivity.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:System.Windows.Interactivity.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AACBBD65ACD049D99709EA9C9881D586"
-            {
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\laserScada.pdb"
-            "TargetName" = "8:laserScada.pdb"
-            "Tag" = "8:"
-            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AE3050EC980D4423B5B718AEEEA225CB"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:LedControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_AE3050EC980D4423B5B718AEEEA225CB"
+                    "_34356503F330488397284684C7F24D45"
                     {
                     "Name" = "8:LedControl.dll"
                     "Attributes" = "3:512"
@@ -931,21 +595,342 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AF7976B73DCD4781999BE6EAFD9D4BEC"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3F8870B350F74D6FAF27BA91AF62D058"
+            {
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\laserScada.exe.config"
+            "TargetName" = "8:laserScada.exe.config"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4475A39D8C054D47A2B94BB248AD501E"
+            {
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\laserScada.vshost.exe.manifest"
+            "TargetName" = "8:laserScada.vshost.exe.manifest"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5569C0897EF2031512D0FDB08948900C"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:laserScada, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_AF7976B73DCD4781999BE6EAFD9D4BEC"
+                }
+            "SourcePath" = "8:log4net.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_610B496012E547E4BE4892B2A32F8D14"
+            {
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\SpIceControllerLib.pdb"
+            "TargetName" = "8:SpIceControllerLib.pdb"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_69492318A04260079A28A9CAA501516F"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:MahApps.Metro, Version=1.4.3.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                }
+            "SourcePath" = "8:MahApps.Metro.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6A160F757F0CFDB9CC42562564E82487"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:LedControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                }
+            "SourcePath" = "8:LedControl.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6B33D8726AA1A5EF9A6E0A149A09FE7F"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:sharp7, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                }
+            "SourcePath" = "8:sharp7.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_76C261133EC7430086857865D7704670"
+            {
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\laserScada.vshost.exe.config"
+            "TargetName" = "8:laserScada.vshost.exe.config"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_817AC7BC695B458291D1914E5C283F46"
+            {
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\LedControl.pdb"
+            "TargetName" = "8:LedControl.pdb"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9753150E450D47A9AD33B606ED78B7E5"
+            {
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\laserScada.pdb"
+            "TargetName" = "8:laserScada.pdb"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_99D949C4CA12705A309F2EC06D9E91C9"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                }
+            "SourcePath" = "8:System.Windows.Interactivity.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A7BD465B74334ECCAD42381C3414CD0D"
+            {
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\sharp7.pdb"
+            "TargetName" = "8:sharp7.pdb"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A876162BDF554E399C4816CC022F7C1B"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:sharp7, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_A876162BDF554E399C4816CC022F7C1B"
                     {
-                    "Name" = "8:laserScada_dark.exe"
+                    "Name" = "8:sharp7.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\laserScada_dark.exe"
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\sharp7.dll"
             "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_ACB8A96E10244BF79D9234DAABB744EB"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:laserScada, Version=1.0.6787.16956, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_ACB8A96E10244BF79D9234DAABB744EB"
+                    {
+                    "Name" = "8:laserScada.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\laserScada.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B0F2E855EF15492A93AE68D0AC9DCE19"
+            {
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\MahApps.Metro.pdb"
+            "TargetName" = "8:MahApps.Metro.pdb"
             "Tag" = "8:"
             "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
             "Condition" = "8:"
@@ -993,10 +978,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B4FA8522C35744BDA0C72E66AC3F6CBA"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B453D2A9569D49249CD1BD69F0E6FE4F"
             {
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\MahApps.Metro.pdb"
-            "TargetName" = "8:MahApps.Metro.pdb"
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\log4net.xml"
+            "TargetName" = "8:log4net.xml"
             "Tag" = "8:"
             "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
             "Condition" = "8:"
@@ -1013,40 +998,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CE6B27B7D84F4199B537783A94FDEB6D"
-            {
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\SpIceControllerLib.pdb"
-            "TargetName" = "8:SpIceControllerLib.pdb"
-            "Tag" = "8:"
-            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E2B8F577AAFA12DF71CA2D2BA32EF232"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BA7C85D92134496E8C3759F4F6EAC85E"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MahApps.Metro, Version=1.4.3.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E2B8F577AAFA12DF71CA2D2BA32EF232"
+                    "_BA7C85D92134496E8C3759F4F6EAC85E"
                     {
-                    "Name" = "8:MahApps.Metro.DLL"
+                    "Name" = "8:log4net.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:MahApps.Metro.DLL"
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\log4net.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
@@ -1061,30 +1026,10 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F36024F12C5E46898BEA7AE963FE1AA7"
-            {
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\sharp7.pdb"
-            "TargetName" = "8:sharp7.pdb"
-            "Tag" = "8:"
-            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F6832543AA03422CAC55E5CA2141C659"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BDADDCA467064E08AEAD5BA57A3FD0C9"
             {
             "SourcePath" = "8:..\\laserScada\\bin\\Release\\log4net_internal.log"
             "TargetName" = "8:log4net_internal.log"
@@ -1104,10 +1049,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F9CEA8A4973A42D6BB73628CCEB4FBE8"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C6A07C7F0C91444494803D93B2E773B3"
             {
-            "SourcePath" = "8:..\\laserScada\\bin\\Release\\prefetchLog.txt"
-            "TargetName" = "8:prefetchLog.txt"
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\MahApps.Metro.xml"
+            "TargetName" = "8:MahApps.Metro.xml"
             "Tag" = "8:"
             "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
             "Condition" = "8:"
@@ -1124,10 +1069,61 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FCF970393D2A4C4F8EE5417964EEA41C"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DE36B16A1D984EDF94BC9DC19178C22C"
             {
             "SourcePath" = "8:..\\laserScada\\bin\\Release\\SP-ICE.dll"
             "TargetName" = "8:SP-ICE.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DF49345D9F4844DBA22F87F8D1126C38"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_DF49345D9F4844DBA22F87F8D1126C38"
+                    {
+                    "Name" = "8:System.Windows.Interactivity.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\System.Windows.Interactivity.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FB3F698F76D24883A90D8CE5FB24486E"
+            {
+            "SourcePath" = "8:..\\laserScada\\bin\\Release\\prefetchLog.txt"
+            "TargetName" = "8:prefetchLog.txt"
             "Tag" = "8:"
             "Folder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
             "Condition" = "8:"
@@ -1160,116 +1156,6 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_07BE2194D73241EE9345DE79295199F3"
-                    {
-                    "Name" = "8:hu"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_8561D7E8AF71402EB1ECBC3520DA7964"
-                        "Folders"
-                        {
-                        }
-                    }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_202F40AD7CE34E5FA446060D6DAA293C"
-                    {
-                    "Name" = "8:pt-BR"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_E884931A1BE6478E8A6E08FB06174FD2"
-                        "Folders"
-                        {
-                        }
-                    }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_40FDA9B2FEAE4F20AD0AD45FC40380B5"
-                    {
-                    "Name" = "8:de"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_F2A60483ECAF449DA6837CDC4109EF2E"
-                        "Folders"
-                        {
-                        }
-                    }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_7D38498F91FA46138035DDC2B5DA2F5A"
-                    {
-                    "Name" = "8:fr"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_9A7B49A35CF64E11864A9CED975B93FA"
-                        "Folders"
-                        {
-                        }
-                    }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_7E6F7994CF554B71BF42AC718A99ED12"
-                    {
-                    "Name" = "8:es"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_D50DBEE1561149C1800F14782AF9EBF3"
-                        "Folders"
-                        {
-                        }
-                    }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_8E65A3A003764E78B635151F1418A175"
-                    {
-                    "Name" = "8:it"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_516AF9639DB24FDF8AFBF47DB80695CF"
-                        "Folders"
-                        {
-                        }
-                    }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_B27E2BEE35414CCD824713DF8441BFB2"
-                    {
-                    "Name" = "8:sv"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_C0A6A98484F548F19BE872F75E69A895"
-                        "Folders"
-                        {
-                        }
-                    }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_B38A8A94776D4893A9952752542812F9"
-                    {
-                    "Name" = "8:zh-Hans"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_4A1DC5914CBF4B4ABC535F7E8CF58D31"
-                        "Folders"
-                        {
-                        }
-                    }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_C3D0C4D2AA544EDE8B3AFCF25BEBDE73"
-                    {
-                    "Name" = "8:ru"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_A5D01216E89F46C8A0BC139026522F2F"
-                        "Folders"
-                        {
-                        }
-                    }
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_CAABC425DAFB47D89A0088666FC59986"
-                    {
-                    "Name" = "8:ro"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_97A88D16C95F49B7AE5BB8FA39AECA66"
-                        "Folders"
-                        {
-                        }
-                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_65AC5736083D4E78BDF4CE7AE5B366CD"
@@ -1310,20 +1196,20 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:LaserScada"
-        "ProductCode" = "8:{FEF5ADFE-3067-4EB9-A5E2-4695A05CF345}"
-        "PackageCode" = "8:{E215AC83-A9FC-40D0-AAE3-AD1B58E25479}"
+        "ProductCode" = "8:{A903CEE4-CB8A-4431-9419-3C2D16434658}"
+        "PackageCode" = "8:{487C18C8-32BD-4F5B-B1C5-3632A2354D73}"
         "UpgradeCode" = "8:{6565649E-BB37-4CC0-B582-2F262A905D02}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.4.26"
+        "ProductVersion" = "8:1.4.31"
         "Manufacturer" = "8:TestSuit"
         "ARPHELPTELEPHONE" = "8:8(977)8971404"
         "ARPHELPLINK" = "8:"
         "Title" = "8:LaserScada"
-        "Subject" = "8:1.4.26"
+        "Subject" = "8:1.4.31"
         "ARPCONTACT" = "8:TestSuit"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Установка черновой версии, программы упрвления двумя лазерам"
@@ -1332,7 +1218,7 @@
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
-        "TargetPlatform" = "3:2"
+        "TargetPlatform" = "3:1"
         "PreBuildEvent" = "8:"
         "PostBuildEvent" = "8:"
         "RunPostBuildEvent" = "3:0"
@@ -1431,21 +1317,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2237AEA2C8CB4D4E8BA50E656BA9C9EB"
-            {
-            "Name" = "8:laserScada2.exe"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_80BB135153B84108B01CC04CC2DE4ACA"
-            "Folder" = "8:_65AC5736083D4E78BDF4CE7AE5B366CD"
-            "WorkingFolder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F0F67BF932CE4CA49F3C7370ABE37925"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_84E6E2E8DDA0421680B49DC9A12E8172"
             {
             "Name" = "8:laserScada.exe"
             "Arguments" = "8:"
@@ -1453,8 +1325,8 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_80BB135153B84108B01CC04CC2DE4ACA"
-            "Folder" = "8:_F14C65CD548240ECB2A0ED5B2CD9846E"
+            "Target" = "8:_ACB8A96E10244BF79D9234DAABB744EB"
+            "Folder" = "8:_65AC5736083D4E78BDF4CE7AE5B366CD"
             "WorkingFolder" = "8:_3DA0EA5CCCDB4281B51491A4026A1A18"
             "Icon" = "8:"
             "Feature" = "8:"
@@ -1478,7 +1350,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_E3A7C8EE00AA46DEA1ACAB4318344758"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Готово"
+                    "DisplayName" = "8:Finished"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminFinishedDlg.wid"
@@ -1509,7 +1381,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_09C7A10DE80A4C08927D7A144847EAE1"
                     {
                     "Sequence" = "3:200"
-                    "DisplayName" = "8:Папка установки"
+                    "DisplayName" = "8:Installation Folder"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdFolderDlg.wid"
@@ -1544,7 +1416,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_4AC5F7EB418448659177EA82E43C9106"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Добро пожаловать!"
+                    "DisplayName" = "8:Welcome"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdWelcomeDlg.wid"
@@ -1592,7 +1464,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_5E17B3C60B1E48EBA03B2C204CF98CC3"
                     {
                     "Sequence" = "3:300"
-                    "DisplayName" = "8:Подтверждение установки"
+                    "DisplayName" = "8:Confirm Installation"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdConfirmDlg.wid"
@@ -1623,7 +1495,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_129BD6D69594434EAEDC6DF468199885"
                     {
                     "Sequence" = "3:200"
-                    "DisplayName" = "8:Папка установки"
+                    "DisplayName" = "8:Installation Folder"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminFolderDlg.wid"
@@ -1645,7 +1517,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_8B542E81978A4F41A23BA49FCE61D38A"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Добро пожаловать!"
+                    "DisplayName" = "8:Welcome"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminWelcomeDlg.wid"
@@ -1693,7 +1565,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_F20CBC98F0DB4C05BD09B09B1815674F"
                     {
                     "Sequence" = "3:300"
-                    "DisplayName" = "8:Подтверждение установки"
+                    "DisplayName" = "8:Confirm Installation"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminConfirmDlg.wid"
@@ -1724,7 +1596,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_02F8686D7F4042C3B5054D177FBB3D2B"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Ход выполнения"
+                    "DisplayName" = "8:Progress"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdProgressDlg.wid"
@@ -1768,7 +1640,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_C579ED90BC6145A6862EE05499320609"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Ход выполнения"
+                    "DisplayName" = "8:Progress"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminProgressDlg.wid"
@@ -1818,7 +1690,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_6FF8376A2CED41AFB05A9980C9930A5A"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Готово"
+                    "DisplayName" = "8:Finished"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdFinishedDlg.wid"
