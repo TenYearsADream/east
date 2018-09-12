@@ -46,11 +46,13 @@ namespace SpIceControllerLib
         static Thread m_mainThread;
         static Thread m_controllFormThread;
         static bool dbg = false;
+
+        static bool[] cardActive = { false,false, false};
         public static bool layerFinish;
         static public int laserCount
         { get; set; }
         static public IntPtr owner2;
-        static ListNumber m_runningLIst = ListNumber.Undefine;
+      //  static ListNumber m_runningLIst = ListNumber.Undefine;
         internal static Mutex m_mut = new Mutex();
 
         static Stopwatch m_stopWatch = new Stopwatch();
@@ -58,7 +60,7 @@ namespace SpIceControllerLib
 
         static private bool m_dirtyRunSignal = false;
         static private bool m_dirtyResetSignal = false;
-
+        static bool isRunningListFinishing = false; 
         static private string m_workSpacePath = "";
         static public string workStacePath
         {
@@ -108,7 +110,10 @@ namespace SpIceControllerLib
                 setGain = NativeMethods.PCI_Set_Gain(e.cs.gainX, e.cs.gainY, 0, 0, (UInt16)e.cs.num);
                 rSetMode = NativeMethods.PCI_Set_Mode(e.cs.mode);
                 NativeMethods.PCI_Stop_Execution();
-                 rOsc = NativeMethods.PCI_Write_Port(0xC, 0x010);
+                rOsc = NativeMethods.PCI_Write_Port(0xC, 0x000);
+                //NativeMethods.PCI_Long_Delay(1000);
+                Thread.Sleep(500);
+                rOsc |= NativeMethods.PCI_Write_Port(0xC, 0x010);
                 //rOsc = NativeMethods.PCI_Write_Port_List(0xC, 0x10);
                 result += string.Format("\n {0} ... {1, -15}\n {2} ... {3, -15}\n {4} ... {5, -15}\n {6} ... {7, -15}\n {8} ... {9, -15}  \n {10} ... {11, -15} \n",
                  
@@ -246,7 +251,7 @@ namespace SpIceControllerLib
             fileLoader.m_mut.WaitOne();    //lock file loader thread
             fileLoader.resetFile();
             PrefetchList.resetList();
-            m_runningLIst = ListNumber.Undefine;
+            //m_runningLIst = ListNumber.Undefine;
             fileLoader.m_mut.ReleaseMutex();
             m_inputSignals &= ~(IntSignals.Reset);
             m_state = IntState.Wait;      // after reset always to wait State.
@@ -255,8 +260,9 @@ namespace SpIceControllerLib
         private static void fillList()
         {
             //wait list ready
-            m_runningLIst = PrefetchList.getTopListNumber();
-          
+
+            ListNumber m_runningLIst = PrefetchList.getTopListNumber();
+
             if (m_runningLIst == ListNumber.Undefine)
             {
                 m_layersFinishid = PrefetchList.m_lastListReady;
@@ -264,34 +270,59 @@ namespace SpIceControllerLib
                 return;
             }
 
+            m_stopWatch.Restart();
+
+            tryFillList();
+          
+
+         
+            m_state = IntState.Work;
+        }
+
+        private static void tryFillList()
+        {
+
+            ListNumber m_runningLIst = PrefetchList.getTopListNumber();
+
+            if (m_runningLIst == ListNumber.Undefine)
+                return;
+
             m_layersFinishid = false;
 
-            m_stopWatch.Restart();
             int card = (ushort)PrefetchList.getTopCardNumber();
+
+            if (cardActive[card])
+                return;
+
             NativeMethods.PCI_Set_Active_Card((ushort)PrefetchList.getTopCardNumber());
             if (m_runningLIst == ListNumber.list1)
                 NativeMethods.PCI_Execute_List_1();
             else
                 NativeMethods.PCI_Execute_List_2();
 
-            m_currenlList = (Int32) PrefetchList.getTopLayerNumber(m_runningLIst);
-                ;
-            m_state = IntState.Work;
+            cardActive[card] = true;
+            //second list 
+            m_currenlList = (Int32)PrefetchList.getTopLayerNumber(m_runningLIst);
+            isRunningListFinishing = PrefetchList.getTopFinished(m_runningLIst);
+            PrefetchList.setFree(m_runningLIst);
         }
 
         private static void WorkState()
         {
-            int num = PrefetchList.getTopCardNumber();
-
-
-            if (m_cardStatus[PrefetchList.getTopCardNumber()].scanComlete) //wait until escan comlete
+            if ((!cardActive[1] || m_cardStatus[1].scanComlete) &&
+                (!cardActive[2] || m_cardStatus[2].scanComlete)) //wait until escan comlete
             {
-                bool finish = PrefetchList.getTopFinished(m_runningLIst);
-                PrefetchList.setFree(m_runningLIst);
+                bool finish = isRunningListFinishing;// PrefetchList.getTopFinished(m_runningLIst);
+                //PrefetchList.setFree(m_runningLIst);
                 m_state = finish ? IntState.Wait : IntState.WaitListReady;
                 m_stopWatch.Stop();
                 m_timeExecutinLayer = m_stopWatch.Elapsed;
+                cardActive[1] = false;
+                cardActive[2] = false;
             }
+
+            if (!isRunningListFinishing)
+                tryFillList();
 
             if (PrefetchList.getTopListNumber() == ListNumber.Undefine)
             {
@@ -408,7 +439,7 @@ namespace SpIceControllerLib
         public static string getStateStringDebug()
         {
             return string.Format("List: {0, -10}",
-                m_runningLIst);
+                0);
         }
 
     }

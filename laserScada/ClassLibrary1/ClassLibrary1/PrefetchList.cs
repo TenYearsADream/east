@@ -53,7 +53,7 @@ namespace SpIceControllerLib
         const long LIST_SIZE = 1000000;
         //const long LIST_SIZE = 10000;
         static listState m_curListState;
-        static StreamWriter m_logFile;
+        //static StreamWriter m_logFile;
         static ListNumber m_currentList;
         static int m_currentCardNumber;
         static uint m_currentPowder;
