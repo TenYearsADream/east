@@ -321,7 +321,7 @@ namespace SpIceControllerLib
             //////!!!!!!!!!!!!!!!!! < check me
             if (m_curListState.size > 0)
             {
-                NativeMethods.PCI_Set_Active_Card((ushort)m_currentCardNumber);
+                NativeMethods.PCI_Set_Active_Card((ushort)m_curListState.cardNumber);
                 // NativeMethods.PCI_Write_Port_List(0xC, 0x000);
                 NativeMethods.PCI_Set_End_Of_List();
 

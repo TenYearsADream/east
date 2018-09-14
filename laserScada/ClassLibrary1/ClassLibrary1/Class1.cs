@@ -314,14 +314,14 @@ namespace SpIceControllerLib
             {
                 bool finish = isRunningListFinishing;// PrefetchList.getTopFinished(m_runningLIst);
                 //PrefetchList.setFree(m_runningLIst);
-                m_state = finish ? IntState.Wait : IntState.WaitListReady;
+                m_state = finish ? IntState.Wait : IntState.Work;
                 m_stopWatch.Stop();
                 m_timeExecutinLayer = m_stopWatch.Elapsed;
                 cardActive[1] = false;
                 cardActive[2] = false;
             }
 
-            if (!isRunningListFinishing)
+            if (!isRunningListFinishing && m_state ==IntState.Work)
                 tryFillList();
 
             if (PrefetchList.getTopListNumber() == ListNumber.Undefine)
