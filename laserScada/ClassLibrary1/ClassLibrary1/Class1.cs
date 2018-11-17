@@ -136,10 +136,11 @@ namespace SpIceControllerLib
 
             frm.cardSetting += initCard;
 
-            IWin32Window win32Window = new NativeWindow();
-            ((NativeWindow)win32Window).AssignHandle(ownerForm);
+          //  IWin32Window win32Window = new NativeWindow();
+          //  ((NativeWindow)win32Window).AssignHandle(ownerForm);
             
-            frm.ShowDialog(win32Window);
+         //   frm.ShowDialog(win32Window);
+            frm.ShowDialog();
 
             //    frm.Dispose(); ////
         }

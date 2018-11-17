@@ -336,9 +336,9 @@ namespace SpIceControllerLib
                 m_mut.ReleaseMutex();
                 if (m_isBufferFull)
                     Thread.Sleep(10);
-                else if (multilp > 1000)
+                else if (multilp > 100000)
                 {
-                    Thread.Sleep(0);
+                   // Thread.Sleep(0);
                     multilp = 0;
                 }
               //  else
